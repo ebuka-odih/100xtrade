@@ -1,469 +1,190 @@
-
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
-
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Bitrader - Professional Multipurpose HTML Template for Your Crypto, Forex, Stocks & Day Trading Business
-  </title>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Premium HTML5 Template by Indonez">
+    <meta name="keywords" content="blockit, uikit3, indonez, handlebars, scss, javascript">
+    <meta name="author" content="Indonez">
+    <meta name="theme-color" content="#FC5B3F">
+    <!-- preload assets -->
+    <link rel="preload" href="{{ asset('fonts/fa-brands-400.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('fonts/fa-solid-900.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('fonts/inter-v12-latin-regular.woff2') }}" as="font" type="font/woff2"
+          crossorigin>
+    <link rel="preload" href="{{ asset('fonts/inter-v12-latin-500.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('fonts/inter-v12-latin-700.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('css/style.css') }}" as="style">
+    <link rel="preload" href="{{ asset('js/vendors/uikit.min.js') }}" as="script">
+    <link rel="preload" href="{{ asset('js/utilities.min.js') }}" as="script">
+    <link rel="preload" href="{{ asset('js/config-theme.js') }}" as="script">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!-- uikit -->
+    <script src="{{ asset('js/vendors/uikit.min.js') }}"></script>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- touch icon -->
+    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon.png">
+    <title>{{ env('APP_NAME') }}</title>
+    <script src="//code.jivosite.com/widget/lBR9ssOUXB" async></script>
 
-  <!-- Sites meta Data -->
-  <meta name="application-name"
-    content="Bitrader - Professional Multipurpose HTML Template for Your Crypto, Forex, Stocks & Day Trading Business">
-  <meta name="author" content="thetork">
-  <meta name="keywords" content="Bitrader, Crypto, Forex, and Stocks Trading Business">
-  <meta name="description"
-    content="Experience the power of Bitrader, the ultimate HTML template designed to transform your trading business. With its sleek design and advanced features, Bitrader empowers you to showcase your expertise, engage clients, and dominate the markets. Elevate your online presence and unlock new trading possibilities with Bitrader.">
+    <style>
+        /* Default: hide on large screens */
+        .mobile-register-btn {
+            display: none;
+        }
 
-  <!-- OG meta data -->
-  <meta property="og:title"
-    content="Bitrader - Professional Multipurpose HTML Template for Your Crypto, Forex, Stocks & Day Trading Business">
-  <meta property="og:site_name" content=Bitrader>
-  <meta property="og:url" content="index-2.html">
-  <meta property="og:description"
-    content="Welcome to Bitrader, the game-changing HTML template meticulously crafted to revolutionize your trading business. With its sleek and modern design, Bitrader provides a cutting-edge platform to showcase your expertise, attract clients, and stay ahead in the competitive trading markets.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/images/og.png">
-
-
-
-  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/aos.css">
-  <link rel="stylesheet" href="assets/css/all.min.css">
-
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
-
-
-  <!-- main css for template -->
-  <link rel="stylesheet" href="assets/css/style.css">
+        /* Show on mobile (screen width 768px and below) */
+        @media (max-width: 768px) {
+            .mobile-register-btn {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
+<!-- page loader begin -->
+<div class="page-loader">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<!-- page loader end -->
+<!-- header begin -->
+<header>
+    <div class="uk-section uk-padding-remove-vertical">
+        <nav class="uk-navbar-container" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
+            <div class="uk-container" data-uk-navbar>
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-logo" href="{{ route('index') }}">
+                        <img src="{{ asset('img/logo.png') }}" alt="logo" width="200" height="80">
+                    </a>
+                    <ul class="uk-navbar-nav uk-visible@m">
 
-  <!-- ===============>> Preloader start here <<================= -->
-  <div class="preloader">
-    <img src="assets/images/logo/preloader.png" alt="preloader icon">
-  </div>
-  <!-- ===============>> Preloader end here <<================= -->
-
-
-
-  <!-- ===============>> light&dark switch start here <<================= -->
-  <div class="lightdark-switch">
-    <span class="switch-btn" id="btnSwitch"><img src="assets/images/icon/moon.svg" alt="light-dark-switchbtn"
-        class="swtich-icon"></span>
-  </div>
-  <!-- ===============>> light&dark switch start here <<================= -->
-
-
-
-
-  <!-- ===============>> Header section start here <<================= -->
-  <header class="header-section header-section--style2">
-    <div class="header-bottom">
-      <div class="container">
-        <div class="header-wrapper">
-          <div class="logo">
-            <a href="index.html">
-              <img class="dark" src="assets/images/logo/logo.png" alt="logo">
-            </a>
-          </div>
-          <div class="menu-area">
-            <ul class="menu menu--style1">
-              <li class="megamenu">
-                <a href="#">Demos </a>
-                <ul class="submenu">
-                  <li>
-                    <div class="home-showcase">
-                      <div class="row g-4 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-                        <div class="col order-first">
-                          <div class="home-showcase__item">
-                            <div class="home-showcase__image">
-                              <img src="assets/images/demo/1.png" alt="home-showcase">
-                              <div class="home-showcase__buttons">
-                                <a href="index6a08.html?theme=light"
-                                  class="trk-btn trk-btn--primary home-showcase__buttons-item mt-3"><span>Preview</span></a>
-                              </div>
-                            </div>
-                            <h3 class="home-showcase__title"><a href="index6a08.html?theme=light">Stock Trading</a>
-                            </h3>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="home-showcase__item">
-                            <div class="home-showcase__image">
-                              <img src="assets/images/demo/1-dark.png" alt="home-showcase">
-                              <div class="home-showcase__buttons">
-                                <a href="index4965.html?theme=dark"
-                                  class="trk-btn trk-btn--primary home-showcase__buttons-item mt-3"><span>Preview</span></a>
-                              </div>
-                            </div>
-                            <h3 class="home-showcase__title"><a href="index4965.html?theme=dark">Stock Trading Dark</a>
-                            </h3>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="home-showcase__item">
-                            <div class="home-showcase__image">
-                              <img src="assets/images/demo/2.png" alt="home-showcase">
-                              <div class="home-showcase__buttons">
-                                <a href="index-26a08.html?theme=light"
-                                  class="trk-btn trk-btn--primary home-showcase__buttons-item mt-3"><span>Preview</span></a>
-                              </div>
-                            </div>
-                            <h3 class="home-showcase__title"> <a href="index-26a08.html?theme=light">Crypto Trading</a>
-                            </h3>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="home-showcase__item">
-                            <div class="home-showcase__image">
-                              <img src="assets/images/demo/2-dark.png" alt="home-showcase">
-                              <div class="home-showcase__buttons">
-                                <a href="index-24965.html?theme=dark"
-                                  class="trk-btn trk-btn--primary home-showcase__buttons-item mt-3"><span>Preview</span></a>
-                              </div>
-                            </div>
-                            <h3 class="home-showcase__title"> <a href="index-24965.html?theme=dark">Crypto Trading Dark</a>
-                            </h3>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="home-showcase__item">
-                            <div class="home-showcase__image">
-                              <img src="assets/images/demo/3.png" alt="home-showcase">
-                              <div class="home-showcase__buttons">
-                                <a href="index-36a08.html?theme=light"
-                                  class="trk-btn trk-btn--primary home-showcase__buttons-item mt-3"><span>Preview</span></a>
-                              </div>
-                            </div>
-                            <h3 class="home-showcase__title"><a href="index-36a08.html?theme=light">Forex Trading</a>
-                            </h3>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="home-showcase__item">
-                            <div class="home-showcase__image">
-                              <img src="assets/images/demo/3-dark.png" alt="home-showcase">
-                              <div class="home-showcase__buttons">
-                                <a href="index-34965.html?theme=dark"
-                                  class="trk-btn trk-btn--primary home-showcase__buttons-item mt-3"><span>Preview</span></a>
-                              </div>
-                            </div>
-                            <h3 class="home-showcase__title"><a href="index-34965.html?theme=dark">Forex Trading Dark</a>
-                            </h3>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="home-showcase__item">
-                            <div class="home-showcase__image">
-                              <img src="assets/images/demo/4.png" alt="home-showcase">
-                              <div class="home-showcase__badge">
-                                <span>New</span>
-                              </div>
-                              <div class="home-showcase__buttons">
-                                <a href="index-46a08.html?theme=light"
-                                  class="trk-btn trk-btn--primary home-showcase__buttons-item mt-3"><span>Preview</span></a>
-                              </div>
-                            </div>
-                            <h3 class="home-showcase__title"><a href="index-46a08.html?theme=light">Day Trading</a>
-                            </h3>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="home-showcase__item">
-                            <div class="home-showcase__image">
-                              <img src="assets/images/demo/4-dark.png" alt="home-showcase">
-                              <div class="home-showcase__badge">
-                                <span>New</span>
-                              </div>
-                              <div class="home-showcase__buttons">
-                                <a href="index-44965.html?theme=dark"
-                                  class="trk-btn trk-btn--primary home-showcase__buttons-item mt-3"><span>Preview</span></a>
-                              </div>
-                            </div>
-                            <h3 class="home-showcase__title"><a href="index-44965.html?theme=dark">Day Trading Dark</a>
-                            </h3>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="home-showcase__item">
-                            <div class="home-showcase__image">
-                              <img src="assets/images/demo/5.png" alt="home-showcase">
-                              <div class="home-showcase__badge">
-                                <span>New</span>
-                              </div>
-                              <div class="home-showcase__buttons">
-                                <a href="index-56a08.html?theme=light"
-                                  class="trk-btn trk-btn--primary home-showcase__buttons-item mt-3"><span>Preview</span></a>
-                              </div>
-                            </div>
-                            <h3 class="home-showcase__title"><a href="index-56a08.html?theme=light">Trading Platform</a>
-                            </h3>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="home-showcase__item">
-                            <div class="home-showcase__image">
-                              <img src="assets/images/demo/5-dark.png" alt="home-showcase">
-                              <div class="home-showcase__badge">
-                                <span>New</span>
-                              </div>
-                              <div class="home-showcase__buttons">
-                                <a href="index-54965.html?theme=dark"
-                                  class="trk-btn trk-btn--primary home-showcase__buttons-item mt-3"><span>Preview</span></a>
-                              </div>
-                            </div>
-                            <h3 class="home-showcase__title"><a href="index-54965.html?theme=dark">Trading Platform Dark</a>
-                            </h3>
-                          </div>
-                        </div>
-                        <div class="col order-last">
-                          <div class="home-showcase__item">
-                            <div class="home-showcase__image">
-                              <img src="assets/images/demo/new.png" alt="home-showcase">
-                            </div>
-                            <h3 class="home-showcase__title"> <a href="#">New Demos</a>
-                            </h3>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Services</a>
-                <ul class="submenu">
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="service-details.html">Services Details</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">About</a>
-                <ul class="submenu">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="price.html">Price</a></li>
-                  <li><a href="team.html">Team</a></li>
-                  <li><a href="team-2.html">Team 2</a></li>
-                  <li><a href="team-details.html">Team Details</a></li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="#">Pages</a>
-                <ul class="submenu">
-                  <li><a href="blogs.html">Blogs</a></li>
-                  <li><a href="blog-sidebar.html">Blog - Side Bar</a></li>
-                  <li><a href="blog-details.html">Blog Details</a></li>
-                  <li><a href="signup.html">Sign Up</a></li>
-                  <li><a href="signup-2.html">Sign Up 2</a></li>
-                  <li><a href="signin.html">Sign In</a></li>
-                  <li><a href="signin-2.html">Sign In 2</a></li>
-                  <li><a href="forgot-pass.html">Reset Password</a></li>
-                  <li><a href="forgot-pass-2.html">Reset Password 2</a></li>
-                  <li><a href="404.html">404 Error</a></li>
-                </ul>
-
-              </li>
-              <li>
-                <a href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-
-          </div>
-          <div class="header-action">
-            <div class="menu-area">
-              <div class="header-btn">
-                <a href="signup.html" class="trk-btn trk-btn--border trk-btn--primary">
-                  <span>Join Now</span>
-                </a>
-              </div>
-
-              <!-- toggle icons -->
-              <div class="header-bar d-lg-none header-bar--style1">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- ===============>> Header section end here <<================= -->
-
-
-
-  @yield('content')
-
-
-  <!-- ===============>> footer start here <<================= -->
-  <footer class="footer ">
-    <div class="container">
-      <div class="footer__wrapper">
-        <div class="footer__top footer__top--style1">
-          <div class="row gy-5 gx-4">
-            <div class="col-md-6">
-              <div class="footer__about">
-                <a href="index.html" class="footer__about-logo"><img src="assets/images/logo/logo-dark.png"
-                    alt="Logo"></a>
-                <p class="footer__about-moto ">Welcome to our trading site! We offer the best, most
-                  affordable products and services around. Shop now and start finding great deals!</p>
-                <div class="footer__app">
-                  <div class="footer__app-item footer__app-item--apple">
-                    <div class="footer__app-inner">
-                      <div class="footer__app-thumb">
-                        <a href="https://www.apple.com/app-store/" target="_blank" class="stretched-link">
-                          <img src="assets/images/footer/apple.png" alt="apple-icon">
+                        <li><a href="{{ route('index') }}">Home</a></li>
+                        <li><a href="{{ route('about') }}">About STP</a></li>
+                        <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                        <a
+                            style="padding: 10px; font-size: 17px; text-align: center; width: 100%; height: 50px"
+                            class="uk-button uk-button-primary uk-border-rounded mobile-register-btn"
+                            href="{{ route('register') }}"
+                        >
+                            Register
                         </a>
-                      </div>
-                      <div class="footer__app-content">
-                        <span>Download on the</span>
-                        <p class="mb-0">App Store</p>
-                      </div>
+                    </ul>
+                </div>
+                <div class="uk-navbar-right">
+                    <div class="uk-navbar-item uk-visible@m in-optional-nav">
+                        <a href="{{ route('register') }}" class="uk-button uk-button-primary uk-border-rounded">Create
+                            account</a>
+                        <a href="{{ route('login') }}" class="uk-button uk-button-link">Sign in<i
+                                class="fas fa-user-circle"></i></a>
                     </div>
-                  </div>
-                  <div class="footer__app-item footer__app-item--playstore">
-                    <div class="footer__app-inner">
-                      <div class="footer__app-thumb">
-                        <a href="https://play.google.com/store" target="_blank" class="stretched-link">
-                          <img src="assets/images/footer/play.png" alt="playstore-icon">
-                        </a>
-                      </div>
-                      <div class="footer__app-content">
-                        <span>GET IT ON</span>
-                        <p class="mb-0">Google Play</p>
-                      </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- header end -->
+@yield('content')
+<!-- footer begin -->
+<footer>
+    <div class="uk-section uk-section-secondary in-footer-feature uk-margin-medium-top">
+        <div class="uk-container">
+            <div class="uk-grid uk-flex uk-flex-center">
+                <div class="uk-width-5-6@m">
+                    <div class="uk-grid uk-grid-collapse uk-child-width-1-3@s" data-uk-grid="">
+                        <div class="uk-flex uk-flex-middle">
+                            <div class="in-icon-wrap uk-margin-right">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <div>
+                                <h6 class="uk-margin-remove">12 years of Excellence</h6>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-middle uk-flex-center@m">
+                            <div class="in-icon-wrap uk-margin-right">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div>
+                                <h6 class="uk-margin-remove">15+ Global Awards</h6>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-middle uk-flex-right@m">
+                            <div class="in-icon-wrap uk-margin-right">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h6 class="uk-margin-remove">24/7 Customer Support</h6>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-            <div class="col-md-2 col-sm-4 col-6">
-              <div class="footer__links">
-                <div class="footer__links-tittle">
-                  <h6>Quick links</h6>
-                </div>
-                <div class="footer__links-content">
-                  <ul class="footer__linklist">
-                    <li class="footer__linklist-item"> <a href="about.html">About Us</a>
-                    </li>
-                    <li class="footer__linklist-item"> <a href="team.html">Teams</a>
-                    </li>
-                    <li class="footer__linklist-item"> <a href="service.html">Services</a> </li>
-                    <li class="footer__linklist-item"> <a href="#">Features</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-            <div class="col-md-2 col-sm-4 col-6">
-              <div class="footer__links">
-                <div class="footer__links-tittle">
-                  <h6>Support</h6>
-                </div>
-                <div class="footer__links-content">
-                  <ul class="footer__linklist">
-                    <li class="footer__linklist-item"> <a href="#">Terms & Conditions</a>
-                    </li>
-                    <li class="footer__linklist-item"> <a href="#">Privacy Policy</a>
-                    </li>
-                    <li class="footer__linklist-item"> <a href="#">FAQs</a></li>
-                    <li class="footer__linklist-item"> <a href="#">Support Center</a> </li>
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-            <div class="col-md-2 col-sm-4">
-              <div class="footer__links">
-                <div class="footer__links-tittle">
-                  <h6>Company</h6>
-                </div>
-                <div class="footer__links-content">
-                  <ul class="footer__linklist">
-                    <li class="footer__linklist-item"> <a href="#">Careers</a>
-                    </li>
-                    <li class="footer__linklist-item"> <a href="#">Updates</a>
-                    </li>
-                    <li class="footer__linklist-item"> <a href="#">Job</a> </li>
-                    <li class="footer__linklist-item"> <a href="#">Announce</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-          </div>
         </div>
-        <div class="footer__bottom">
-          <div class="footer__end">
-            <div class="footer__end-copyright">
-              <p class=" mb-0">© 2024 All Rights Reserved By <a href="https://themeforest.net/user/thetork/portfolio"
-                  target="_blank">Thetork</a> </p>
+    </div>
+    <div class="uk-section uk-background-secondary uk-light">
+        <div class="uk-container uk-text-small">
+            <div class="uk-child-width-1-2@m" data-uk-grid="">
+                <div class="in-footer-logo">
+                    <img src="{{ asset('img/logo.png') }}" alt="logo" width="200" height="80">
+                    {{--						<img src="img/in-lazy.gif" data-src="img/in-logo.svg" alt="logo" width="127" height="27" data-uk-img="">--}}
+                </div>
             </div>
-            <div>
-              <ul class="social">
-                <li class="social__item">
-                  <a href="#" class="social__link social__link--style22"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link social__link--style22 "><i class="fab fa-instagram"></i></a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link social__link--style22"><i class="fa-brands fa-linkedin-in"></i></a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link social__link--style22"><i class="fab fa-youtube"></i></a>
-                </li>
-                <li class="social__item">
-                  <a href="#" class="social__link social__link--style22 "><i class="fab fa-twitter"></i></a>
-                </li>
-              </ul>
+            <div class="uk-child-width-1-2@s uk-child-width-1-4@m uk-margin-large-top" data-uk-grid="">
+                <div>
+                    <h5>Markets</h5>
+                    <ul class="uk-list uk-link-text">
+                        <li><a href="{{ route('user.dashboard') }}">Stocks</a></li>
+                        <li><a href="{{ route('user.dashboard') }}">Forex</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Company</h5>
+                    <ul class="uk-list uk-link-text">
+                        <li><a href="{{ route('disclosure') }}">FCM Disclosure</a></li>
+                        <li><a href="{{ route('terms') }}">Terms & Condition </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Account Types</h5>
+                    <ul class="uk-list uk-link-text">
+                        <li><a href="{{ route('user.dashboard') }}">Demo account</a></li>
+                        <li><a href="{{ route('user.dashboard') }}">Standard account</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Learn to Trade</h5>
+                    <ul class="uk-list uk-link-text">
+                        <li><a href="{{ route('user.dashboard') }}">News and trade ideas</a></li>
+                        <li><a href="{{ route('user.dashboard') }}">Trading strategy</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
+            <div class="uk-grid uk-margin-large-top">
+                <div class="uk-width-1-1">
+                    <p class="copyright-text uk-heading-line"><span>Copyright ©{{ Date('Y') }} {{ env('APP_NAME') }} Inc. All Rights Reserved.</span>
+                    </p>
+
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="footer__shape">
-      <span class="footer__shape-item footer__shape-item--1"><img src="assets/images/footer/1.png"
-          alt="shape icon"></span>
-      <span class="footer__shape-item footer__shape-item--2"> <span></span> </span>
-    </div>
-  </footer>
-  <!-- ===============>> footer end here <<================= -->
-
-
-
-  <!-- ===============>> scrollToTop start here <<================= -->
-  <a href="#" class="scrollToTop scrollToTop--style1"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
-  <!-- ===============>> scrollToTop ending here <<================= -->
-
-
-  <!-- vendor plugins -->
-
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/all.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/aos.js"></script>
-  <script src="assets/js/fslightbox.js"></script>
-  <script src="assets/js/purecounter_vanilla.js"></script>
-
-
-
-  <script src="assets/js/custom.js"></script>
-
-
+</footer>
+<!-- footer end -->
+<!-- to top begin -->
+<a href="#" class="to-top uk-visible@m" data-uk-scroll>
+    Top<i class="fas fa-chevron-up"></i>
+</a>
+<!-- to top end -->
+<!-- javascript -->
+<script src="{{ asset('js/utilities.min.js') }}"></script>
+<script src="{{ asset('js/config-theme.js') }}"></script>
 </body>
 
 
-<!-- Mirrored from thetork.com/demos/html/bitrader/index.html?theme=dark by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Mar 2025 11:18:57 GMT -->
+<!-- Mirrored from www.indonez.com/html-demo/liquid/homepage4.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 22:31:41 GMT -->
 </html>

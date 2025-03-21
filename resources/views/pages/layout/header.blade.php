@@ -1,75 +1,161 @@
-<header>
-		<div class="uk-section uk-padding-remove-vertical in-header-inner uk-background-cover uk-background-top-center" style="background-image: url(img/in-liquid-slide-bg.png);">
-			<nav class="uk-navbar-container uk-sticky" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
-				<div class="uk-container uk-navbar" data-uk-navbar="">
-					<div class="uk-navbar-left">
-						<a class="uk-navbar-item uk-logo" href="{{ route('index') }}">
-{{--                            <h2 style="color: white; font-weight: bolder">{{ env('APP_NAME') }}</h2>--}}
-							<img src="{{ asset('img/logo.png') }}" alt="logo" width="200" height="80">
-						</a>
-						<ul class="uk-navbar-nav uk-visible@m">
-
-							<li><a href="{{ route('index') }}">Home</a></li>
-							<li><a href="{{ route('about') }}">About STP</a></li>
-
-						</ul>
-					</div>
-					<div class="uk-navbar-right">
-						<div class="uk-navbar-item uk-visible@m in-optional-nav">
-							<a href="#" class="uk-button uk-button-primary uk-border-rounded">Create account</a>
-							<a href="signin.html" class="uk-button uk-button-link">Sign in<i class="fas fa-user-circle"></i></a>
-						</div>
-					<div class="uk-navbar-item in-mobile-nav uk-hidden@m"><a class="uk-button" href="#modal-full" data-uk-toggle="" role="button"><i class="fas fa-bars"></i></a><div id="modal-full" class="uk-modal-full uk-modal" data-uk-modal="">
-        <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-uk-height-viewport="" role="dialog" aria-modal="true">
-            <a class="uk-modal-close-full uk-button"><i class="fas fa-times"></i></a>
-            <div class="uk-width-large uk-padding-large">
-                <ul class="uk-nav-default uk-nav" data-uk-nav="">
-							<li class="uk-parent"><a href="index.html" role="button" aria-haspopup="true" id="uk-nav-33-title-0" aria-controls="uk-nav-33-content-0" aria-expanded="false" aria-disabled="false">Home<span uk-nav-parent-icon="" class="uk-icon uk-nav-parent-icon"><svg width="12" height="12" viewBox="0 0 12 12"><polyline fill="none" stroke="#000" stroke-width="1.1" points="1 3.5 6 8.5 11 3.5"></polyline></svg></span></a>
-
-									<ul class="uk-nav-sub" hidden="" id="uk-nav-33-content-0" role="region" aria-labelledby="uk-nav-33-title-0">
-										<li role="presentation"><a href="homepage2.html">Homepage 2</a></li>
-										<li role="presentation"><a href="homepage3.html">Homepage 3</a></li>
-										<li role="presentation"><a href="homepage4.html">Homepage 4</a></li>
-									</ul>
-
-							</li>
-							<li><a href="markets.html">Markets</a>
-							</li>
-							<li class="uk-active uk-parent"><a href="#" role="button" aria-haspopup="true" id="uk-nav-33-title-1" aria-controls="uk-nav-33-content-1" aria-expanded="false" aria-disabled="false">Company<span uk-nav-parent-icon="" class="uk-icon uk-nav-parent-icon"><svg width="12" height="12" viewBox="0 0 12 12"><polyline fill="none" stroke="#000" stroke-width="1.1" points="1 3.5 6 8.5 11 3.5"></polyline></svg></span></a>
-
-									<ul class="uk-nav-sub" hidden="" id="uk-nav-33-content-1" role="region" aria-labelledby="uk-nav-33-title-1">
-										<li class="uk-active" role="presentation"><a href="about.html">About</a></li>
-										<li role="presentation"><a href="blog.html">Blog</a></li>
-										<li role="presentation"><a href="careers.html">Careers</a></li>
-										<li role="presentation"><a href="contact.html">Contact</a></li>
-									</ul>
-
-							</li>
-							<li><a href="education.html">Education</a>
-							</li>
-							<li class="uk-parent"><a href="#" role="button" aria-haspopup="true" id="uk-nav-33-title-2" aria-controls="uk-nav-33-content-2" aria-expanded="false" aria-disabled="false">Resources<span uk-nav-parent-icon="" class="uk-icon uk-nav-parent-icon"><svg width="12" height="12" viewBox="0 0 12 12"><polyline fill="none" stroke="#000" stroke-width="1.1" points="1 3.5 6 8.5 11 3.5"></polyline></svg></span></a>
-
-
-
-											<ul class="uk-nav-sub" hidden="" id="uk-nav-33-content-2" role="region" aria-labelledby="uk-nav-33-title-2">
-												<li role="presentation"><a href="https://getuikit.com/docs/introduction">Documentation<i class="fas fa-square-arrow-up-right fa-sm"></i></a></li>
-												<li role="presentation"><a href="help-center.html">Help Center</a></li>
-												<li role="presentation"><a href="customers.html">Customers</a></li>
-												<li role="presentation"><a href="roadmap.html">Roadmap</a></li>
-												<li role="presentation"><a href="legal-docs.html">Legal Docs<i class="fas fa-gavel fa-sm"></i></a></li>
-											</ul>
-
-
-
-
-
-
-							</li>
-						</ul>
-                <a href="signin.html" class="uk-button uk-button-primary uk-border-rounded uk-align-center" style="margin-bottom : -12px">Log in<i class="fas fa-sign-in-alt uk-margin-small-left"></i></a>
+<div data-elementor-type="header" data-elementor-id="418" class="elementor elementor-418 elementor-location-header"
+     data-elementor-post-type="elementor_library">
+    <div class="elementor-element elementor-element-99441e1 e-flex e-con-boxed e-con e-parent" data-id="99441e1"
+         data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="e-con-inner">
+            <div class="elementor-element elementor-element-dce299f e-con-full e-flex e-con e-child" data-id="dce299f"
+                 data-element_type="container">
+                <div class="elementor-element elementor-element-ca9d8f2 elementor-widget elementor-widget-image"
+                     data-id="ca9d8f2" data-element_type="widget" data-widget_type="image.default">
+                    <div class="elementor-widget-container">
+                        <style></style>
+                        <a href="{{ route('index')}}">
+                            <h3 style="font-weight: bolder; color: white">{{ env('APP_NAME') }}</h3>
+{{--                            <img width="107" height="57" src="wp-content/uploads/2024/05/MT-Logo_white-text.png"--}}
+{{--                                 class="attachment-full size-full wp-image-424" alt=""/>--}}
+                        </a>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-aa45581 elementor-hidden-desktop elementor-hidden-tablet elementor-absolute elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu"
+                     data-id="aa45581" data-element_type="widget"
+                     data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}"
+                     data-widget_type="nav-menu.default">
+                    <div class="elementor-widget-container">
+                        <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
+                            <ul id="menu-1-aa45581" class="elementor-nav-menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-416 current_page_item menu-item-1397">
+                                    <a href="{{ route('index') }}" aria-current="page"
+                                       class="elementor-item elementor-item-active">Home</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a
+                                        href="{{ route('about') }}" class="elementor-item">About Us</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1396"><a
+                                        href="{{ route('our-solutions') }}" class="elementor-item">Our Solutions</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
+                                        href="profit-calculator/index.html" class="elementor-item">Profit Calculator</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
+                                        href="{{ route('contact') }}" class="elementor-item">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                        <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
+                             aria-expanded="false">
+                            <svg aria-hidden="true" role="presentation"
+                                 class="elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar"
+                                 viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z"></path>
+                            </svg>
+                            <svg aria-hidden="true" role="presentation"
+                                 class="elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close"
+                                 viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z"></path>
+                            </svg>
+                            <span class="elementor-screen-only">Menu</span>
+                        </div>
+                        <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+                            <ul id="menu-2-aa45581" class="elementor-nav-menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-416 current_page_item menu-item-1397">
+                                     <a href="{{ route('index') }}" aria-current="page"
+                                       class="elementor-item elementor-item-active">Home</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a
+                                        href="{{ route('about') }}" class="elementor-item">About Us</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1396"><a
+                                        href="{{ route('our-solutions') }}" class="elementor-item">Our Solutions</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
+                                        href="profit-calculator/index.html" class="elementor-item">Profit Calculator</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
+                                        href="{{ route('contact') }}" class="elementor-item">Contact Us</a></li>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
-        </div></div></div></div>
-				</div>
-			</nav><div class="uk-sticky-placeholder" hidden="" style="height: 80px; width: 1905px; margin: 21px 0px 23px;"></div>
-		</div>
-	</header>
+            <div class="elementor-element elementor-element-15b044c elementor-hidden-mobile e-con-full e-flex e-con e-child"
+                 data-id="15b044c" data-element_type="container">
+                <div class="elementor-element elementor-element-25d9422 elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu"
+                     data-id="25d9422" data-element_type="widget"
+                     data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}"
+                     data-widget_type="nav-menu.default">
+                    <div class="elementor-widget-container">
+                        <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
+                            <ul id="menu-1-25d9422" class="elementor-nav-menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-416 current_page_item menu-item-1397">
+                                    <a href="{{ route('index') }}" aria-current="page"
+                                       class="elementor-item elementor-item-active">Home</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a
+                                        href="{{ route('about') }}" class="elementor-item">About Us</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1396"><a
+                                        href="{{ route('our-solutions') }}" class="elementor-item">Our Solutions</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
+                                        href="profit-calculator/index.html" class="elementor-item">Profit Calculator</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
+                                        href="{{ route('contact') }}" class="elementor-item">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                        <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
+                             aria-expanded="false">
+                            <svg aria-hidden="true" role="presentation"
+                                 class="elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar"
+                                 viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z"></path>
+                            </svg>
+                            <svg aria-hidden="true" role="presentation"
+                                 class="elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close"
+                                 viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z"></path>
+                            </svg>
+                            <span class="elementor-screen-only">Menu</span>
+                        </div>
+                        <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+                            <ul id="menu-2-25d9422" class="elementor-nav-menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-416 current_page_item menu-item-1397">
+                                    <a href="index.html" aria-current="page"
+                                       class="elementor-item elementor-item-active" tabindex="-1">Home</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a
+                                        href="about-us/index.html" class="elementor-item" tabindex="-1">About Us</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1396"><a
+                                        href="our-solutions/index.html" class="elementor-item" tabindex="-1">Our
+                                    Solutions</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
+                                        href="profit-calculator/index.html" class="elementor-item" tabindex="-1">Profit
+                                    Calculator</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
+                                        href="contact-us/index.html" class="elementor-item" tabindex="-1">Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-4324b6b elementor-widget elementor-widget-button"
+                     data-id="4324b6b" data-element_type="widget" data-widget_type="button.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-button-wrapper">
+                            <a class="elementor-button elementor-button-link elementor-size-sm"
+                               href="http://portal.metatrading.ai/" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Client Portal</span>
+					</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-a535265 elementor-widget elementor-widget-button"
+                     data-id="a535265" data-element_type="widget" data-widget_type="button.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-button-wrapper">
+                            <a class="elementor-button elementor-button-link elementor-size-sm"
+                               href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjIxMCIsInRvZ2dsZSI6ZmFsc2V9">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Get Started</span>
+					</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

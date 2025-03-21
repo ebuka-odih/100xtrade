@@ -13573,17 +13573,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <!-- Google tag (gtag.js) snippet added by Site Kit -->
 
-    <!-- Google Analytics snippet added by Site Kit -->
-    <script type="rocketlazyloadscript" data-rocket-src="https://www.googletagmanager.com/gtag/js?id=GT-NS9Z33SB"
-            id="google_gtagjs-js" async></script>
-    <script type="rocketlazyloadscript" id="google_gtagjs-js-after">
-        window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
-gtag("set","linker",{"domains":["metatrading.ai"]});
-gtag("js", new Date());
-gtag("set", "developer_id.dZTNiMT", true);
-gtag("config", "GT-NS9Z33SB");
-    </script>
-
     <!-- End Google tag (gtag.js) snippet added by Site Kit -->
     <link rel="https://api.w.org/" href="wp-json/index.html"/>
     <link rel="alternate" title="JSON" type="application/json" href="wp-json/wp/v2/pages/416.json"/>
@@ -13603,15 +13592,7 @@ gtag("config", "GT-NS9Z33SB");
     <meta name="redi-version" content="1.2.2"/>
     <style></style>
     <!-- Google tag (gtag.js) -->
-    <script type="rocketlazyloadscript" async
-            data-rocket-src="https://www.googletagmanager.com/gtag/js?id=AW-16673513135"></script>
-    <script type="rocketlazyloadscript">
-        window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'AW-16673513135');
-    </script><!-- Meta Pixel Code -->
     <script type="rocketlazyloadscript">
         !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -13624,9 +13605,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '654546949094432');
 fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-                   src="https://www.facebook.com/tr?id=654546949094432&amp;ev=PageView&amp;noscript=1"
-    /></noscript>
+
     <!-- End Meta Pixel Code -->
     <script type="rocketlazyloadscript">
         var head = document.head;
@@ -13713,7 +13692,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             --wpr-bg-fe3043e6-a523-499b-b89b-ef99c8b836a1: url('wp-content/plugins/wpforms/assets/pro/images/times-solid-white.svg');
         }</style>
     </noscript>
-    <script type="application/javascript">const rocket_pairs = [{
+    <script type="application/javascript">
+        const rocket_pairs = [{
         "selector": ".elementor-416 .elementor-element.elementor-element-c138ff6:not(.elementor-motion-effects-element-type-background),.elementor-416 .elementor-element.elementor-element-c138ff6>.elementor-motion-effects-container>.elementor-motion-effects-layer",
         "style": ".elementor-416 .elementor-element.elementor-element-c138ff6:not(.elementor-motion-effects-element-type-background),.elementor-416 .elementor-element.elementor-element-c138ff6>.elementor-motion-effects-container>.elementor-motion-effects-layer{--wpr-bg-7c17ae11-2629-49cd-9b52-b53e68bea03f: url('https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Background-Image-2.png');}",
         "hash": "7c17ae11-2629-49cd-9b52-b53e68bea03f",
@@ -13786,362 +13766,11 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-<div data-elementor-type="header" data-elementor-id="418" class="elementor elementor-418 elementor-location-header"
-     data-elementor-post-type="elementor_library">
-    <div class="elementor-element elementor-element-99441e1 e-flex e-con-boxed e-con e-parent" data-id="99441e1"
-         data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-        <div class="e-con-inner">
-            <div class="elementor-element elementor-element-dce299f e-con-full e-flex e-con e-child" data-id="dce299f"
-                 data-element_type="container">
-                <div class="elementor-element elementor-element-ca9d8f2 elementor-widget elementor-widget-image"
-                     data-id="ca9d8f2" data-element_type="widget" data-widget_type="image.default">
-                    <div class="elementor-widget-container">
-                        <style></style>
-                        <a href="{{ route('index')}}">
-                            <h3 style="font-weight: bolder; color: white">{{ env('APP_NAME') }}</h3>
-{{--                            <img width="107" height="57" src="wp-content/uploads/2024/05/MT-Logo_white-text.png"--}}
-{{--                                 class="attachment-full size-full wp-image-424" alt=""/>--}}
-                        </a>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-aa45581 elementor-hidden-desktop elementor-hidden-tablet elementor-absolute elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu"
-                     data-id="aa45581" data-element_type="widget"
-                     data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}"
-                     data-widget_type="nav-menu.default">
-                    <div class="elementor-widget-container">
-                        <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
-                            <ul id="menu-1-aa45581" class="elementor-nav-menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-416 current_page_item menu-item-1397">
-                                    <a href="index.html" aria-current="page"
-                                       class="elementor-item elementor-item-active">Home</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a
-                                        href="about-us/index.html" class="elementor-item">About Us</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1396"><a
-                                        href="our-solutions/index.html" class="elementor-item">Our Solutions</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
-                                        href="profit-calculator/index.html" class="elementor-item">Profit Calculator</a>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
-                                        href="contact-us/index.html" class="elementor-item">Contact Us</a></li>
-                            </ul>
-                        </nav>
-                        <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
-                             aria-expanded="false">
-                            <svg aria-hidden="true" role="presentation"
-                                 class="elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar"
-                                 viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z"></path>
-                            </svg>
-                            <svg aria-hidden="true" role="presentation"
-                                 class="elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close"
-                                 viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z"></path>
-                            </svg>
-                            <span class="elementor-screen-only">Menu</span>
-                        </div>
-                        <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-                            <ul id="menu-2-aa45581" class="elementor-nav-menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-416 current_page_item menu-item-1397">
-                                    <a href="index.html" aria-current="page"
-                                       class="elementor-item elementor-item-active" tabindex="-1">Home</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a
-                                        href="about-us/index.html" class="elementor-item" tabindex="-1">About Us</a>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1396"><a
-                                        href="our-solutions/index.html" class="elementor-item" tabindex="-1">Our
-                                    Solutions</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
-                                        href="profit-calculator/index.html" class="elementor-item" tabindex="-1">Profit
-                                    Calculator</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
-                                        href="contact-us/index.html" class="elementor-item" tabindex="-1">Contact Us</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-15b044c elementor-hidden-mobile e-con-full e-flex e-con e-child"
-                 data-id="15b044c" data-element_type="container">
-                <div class="elementor-element elementor-element-25d9422 elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu"
-                     data-id="25d9422" data-element_type="widget"
-                     data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}"
-                     data-widget_type="nav-menu.default">
-                    <div class="elementor-widget-container">
-                        <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
-                            <ul id="menu-1-25d9422" class="elementor-nav-menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-416 current_page_item menu-item-1397">
-                                    <a href="index.html" aria-current="page"
-                                       class="elementor-item elementor-item-active">Home</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a
-                                        href="about-us/index.html" class="elementor-item">About Us</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1396"><a
-                                        href="our-solutions/index.html" class="elementor-item">Our Solutions</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
-                                        href="profit-calculator/index.html" class="elementor-item">Profit Calculator</a>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
-                                        href="contact-us/index.html" class="elementor-item">Contact Us</a></li>
-                            </ul>
-                        </nav>
-                        <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
-                             aria-expanded="false">
-                            <svg aria-hidden="true" role="presentation"
-                                 class="elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar"
-                                 viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z"></path>
-                            </svg>
-                            <svg aria-hidden="true" role="presentation"
-                                 class="elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close"
-                                 viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z"></path>
-                            </svg>
-                            <span class="elementor-screen-only">Menu</span>
-                        </div>
-                        <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-                            <ul id="menu-2-25d9422" class="elementor-nav-menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-416 current_page_item menu-item-1397">
-                                    <a href="index.html" aria-current="page"
-                                       class="elementor-item elementor-item-active" tabindex="-1">Home</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a
-                                        href="about-us/index.html" class="elementor-item" tabindex="-1">About Us</a>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1396"><a
-                                        href="our-solutions/index.html" class="elementor-item" tabindex="-1">Our
-                                    Solutions</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
-                                        href="profit-calculator/index.html" class="elementor-item" tabindex="-1">Profit
-                                    Calculator</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
-                                        href="contact-us/index.html" class="elementor-item" tabindex="-1">Contact Us</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-4324b6b elementor-widget elementor-widget-button"
-                     data-id="4324b6b" data-element_type="widget" data-widget_type="button.default">
-                    <div class="elementor-widget-container">
-                        <div class="elementor-button-wrapper">
-                            <a class="elementor-button elementor-button-link elementor-size-sm"
-                               href="http://portal.metatrading.ai/" target="_blank">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Client Portal</span>
-					</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-a535265 elementor-widget elementor-widget-button"
-                     data-id="a535265" data-element_type="widget" data-widget_type="button.default">
-                    <div class="elementor-widget-container">
-                        <div class="elementor-button-wrapper">
-                            <a class="elementor-button elementor-button-link elementor-size-sm"
-                               href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjIxMCIsInRvZ2dsZSI6ZmFsc2V9">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Get Started</span>
-					</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@include('pages.layout.header')
 
 @yield('content')
 
-<div data-elementor-type="footer" data-elementor-id="593" class="elementor elementor-593 elementor-location-footer"
-     data-elementor-post-type="elementor_library">
-    <div class="elementor-element elementor-element-e6dd587 e-flex e-con-boxed e-con e-parent" data-id="e6dd587"
-         data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-        <div class="e-con-inner">
-            <div class="elementor-element elementor-element-0dbb581 e-flex e-con-boxed e-con e-child" data-id="0dbb581"
-                 data-element_type="container">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-8b522ee e-con-full e-flex e-con e-child"
-                         data-id="8b522ee" data-element_type="container">
-                        <div class="elementor-element elementor-element-f7d61ae elementor-widget elementor-widget-theme-site-logo elementor-widget-image"
-                             data-id="f7d61ae" data-element_type="widget" data-widget_type="theme-site-logo.default">
-                            <div class="elementor-widget-container">
-                                <a href="index.html">
-                                    <img width="512" height="512"
-                                         src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3E%3C/svg%3E"
-                                         class="attachment-full size-full wp-image-369" alt=""
-                                         data-lazy-srcset="https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png 512w, https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e-300x300.png 300w, https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e-150x150.png 150w, https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e-270x270.png 270w, https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e-192x192.png 192w, https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e-180x180.png 180w, https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e-32x32.png 32w"
-                                         data-lazy-sizes="(max-width: 512px) 100vw, 512px"
-                                         data-lazy-src="wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png"/>
-                                    <noscript><img width="512" height="512"
-                                                   src="wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png"
-                                                   class="attachment-full size-full wp-image-369" alt=""
-                                                   srcset="https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png 512w, https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e-300x300.png 300w, https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e-150x150.png 150w, https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e-270x270.png 270w, https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e-192x192.png 192w, https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e-180x180.png 180w, https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e-32x32.png 32w"
-                                                   sizes="(max-width: 512px) 100vw, 512px"/></noscript>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-02a1ae7 e-con-full e-flex e-con e-child"
-                         data-id="02a1ae7" data-element_type="container">
-                        <div class="elementor-element elementor-element-a0a8070 elementor-widget elementor-widget-heading"
-                             data-id="a0a8070" data-element_type="widget" data-widget_type="heading.default">
-                            <div class="elementor-widget-container">
-                                <h4 class="elementor-heading-title elementor-size-default">quick links</h4></div>
-                        </div>
-                        <div class="elementor-element elementor-element-5d47e23 elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                             data-id="5d47e23" data-element_type="widget" data-widget_type="icon-list.default">
-                            <div class="elementor-widget-container">
-                                <ul class="elementor-icon-list-items elementor-inline-items">
-                                    <li class="elementor-icon-list-item elementor-inline-item">
-                                        <a href="index.html">
-
-                                            <span class="elementor-icon-list-text">home</span>
-                                        </a>
-                                    </li>
-                                    <li class="elementor-icon-list-item elementor-inline-item">
-                                        <a href="about-us/index.html">
-
-                                            <span class="elementor-icon-list-text">about us</span>
-                                        </a>
-                                    </li>
-                                    <li class="elementor-icon-list-item elementor-inline-item">
-                                        <a href="our-solutions/index.html">
-
-                                            <span class="elementor-icon-list-text">our solution</span>
-                                        </a>
-                                    </li>
-                                    <li class="elementor-icon-list-item elementor-inline-item">
-                                        <a href="profit-calculator/index.html">
-
-                                            <span class="elementor-icon-list-text">Profit Calculator</span>
-                                        </a>
-                                    </li>
-                                    <li class="elementor-icon-list-item elementor-inline-item">
-                                        <a href="blog/index.html">
-
-                                            <span class="elementor-icon-list-text">Blog</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-9edf05f e-flex e-con-boxed e-con e-child"
-                         data-id="9edf05f" data-element_type="container">
-                        <div class="e-con-inner">
-                            <div class="elementor-element elementor-element-3c132da elementor-widget elementor-widget-heading"
-                                 data-id="3c132da" data-element_type="widget" data-widget_type="heading.default">
-                                <div class="elementor-widget-container">
-                                    <h4 class="elementor-heading-title elementor-size-default">contact us</h4></div>
-                            </div>
-                            <div class="elementor-element elementor-element-5a6bf55 elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                                 data-id="5a6bf55" data-element_type="widget" data-widget_type="icon-list.default">
-                                <div class="elementor-widget-container">
-                                    <ul class="elementor-icon-list-items elementor-inline-items">
-                                        <li class="elementor-icon-list-item elementor-inline-item">
-                                            <a href="tel:0017863965546">
-
-												<span class="elementor-icon-list-icon">
-							<svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-alt" viewBox="0 0 512 512"
-                                 xmlns="http://www.w3.org/2000/svg"><path
-                                    d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path></svg>						</span>
-                                                <span class="elementor-icon-list-text">+17863965546</span>
-                                            </a>
-                                        </li>
-                                        <li class="elementor-icon-list-item elementor-inline-item">
-                                            <a href="mailto:support@metatrading.ai">
-
-												<span class="elementor-icon-list-icon">
-							<svg aria-hidden="true" class="e-font-icon-svg e-fas-envelope" viewBox="0 0 512 512"
-                                 xmlns="http://www.w3.org/2000/svg"><path
-                                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>						</span>
-                                                <span class="elementor-icon-list-text">support@metatrading.ai</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-bb9123f e-flex e-con-boxed e-con e-child" data-id="bb9123f"
-                 data-element_type="container">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-3f2ccee elementor-widget elementor-widget-text-editor"
-                         data-id="3f2ccee" data-element_type="widget" data-widget_type="text-editor.default">
-                        <div class="elementor-widget-container">
-                            <p><strong>MetaTrading.ai is an AI technology and financial software company, offering tools
-                                for trading enhancement. We do not offer personalized trading or investment advice, nor
-                                do we manage client accounts. Our solutions, including the Quantum AI Alpha and related
-                                algorithms, are designed to assist in trading decision-making, not to serve as direct
-                                trading or financial advice. </strong><br/><strong
-                                    style="color: #0044ff;">Disclaimer:</strong> Trading involves risk and is not
-                                suitable for all investors. The high level of leverage can work both for and against
-                                traders. Before trading, consider your investment objectives, experience level, and risk
-                                tolerance. You could lose some or all of your initial investment; do not invest money
-                                that you cannot afford to lose. Educate yourself on the risks associated with trading
-                                and seek advice from an independent financial or tax advisor if you have
-                                questions.Performance data for the Quantum AI Alpha and other algorithms represents past
-                                performance, which is not a reliable indicator of future results. No representation is
-                                made that any account will or is likely to achieve profits or losses similar to those
-                                shown. <strong style="color: #0044ff;">Risk Warning</strong>: Investing in forex,
-                                stocks, cryptocurrencies, and commodities involves significant risk and may not be
-                                suitable for all investors. Trading may result in the loss of your capital. Required
-                                <strong style="color: #0044ff;">Disclaimer for Trading</strong>: Our products and
-                                services are intended for informational and educational purposes only. Consult with a
-                                licensed broker or financial advisor before implementing any trading strategy. We are
-                                not registered as a securities broker-dealer or an investment adviser either with the
-                                U.S. Securities and Exchange Commission (SEC) or with any state securities regulatory
-                                authority. <strong style="color: #0044ff;">Hypothetical Performance Disclosure</strong>:
-                                Hypothetical or simulated performance results have certain limitations. Unlike actual
-                                performance records, simulated results do not represent actual trading. Also, since the
-                                trades have not been executed, the results may have under-or-over compensated for the
-                                impact, if any, of certain market factors, such as lack of liquidity. Simulated trading
-                                programs, in general, are also subject to the fact that they are designed with the
-                                benefit of hindsight. <strong style="color: #0044ff;">No Guarantee of Results</strong>:
-                                MetaTrading.ai makes no guarantees of profit or avoidance of losses when trading.
-                                Hypothetical trading does not involve financial risk, and no hypothetical trading record
-                                can completely account for the impact of financial risk in actual trading.</p>
-                            <p><strong>Florida Growth Ventures LLC,1501 Belvedere Rd Suite 543, West Palm Beach, FL
-                                33406. We Use Cookies To Help Improve, Promote And Protect Our Services. By Continuing
-                                To Use This Site, You Agree To Our Privacy Policy And Terms Of Use.The Site Is Not A
-                                Part Of Facebook Website Or Facebook, Inc.This Site Is Not Endorsed By Facebook In Any
-                                Way. FACEBOOK Is A Trademark Of FACEBOOK, INC.</strong></p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-123e18b e-flex e-con-boxed e-con e-child" data-id="123e18b"
-                 data-element_type="container">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-6893b86 e-flex e-con-boxed e-con e-child"
-                         data-id="6893b86" data-element_type="container">
-                        <div class="e-con-inner">
-                            <div class="elementor-element elementor-element-712a224 elementor-widget elementor-widget-text-editor"
-                                 data-id="712a224" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    <p>© 2024 MetaTrading &#8211; All rights reserved</p></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-1d54d7a e-flex e-con-boxed e-con e-child"
-                         data-id="1d54d7a" data-element_type="container">
-                        <div class="e-con-inner">
-                            <div class="elementor-element elementor-element-13f9af8 elementor-widget elementor-widget-text-editor"
-                                 data-id="13f9af8" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    <a style="color: #0044ff;" href="index5277.html?page_id=765&amp;preview=true">Terms
-                                        &amp; Conditions </a>  |  <a style="color: #0044ff;"
-                                                                     href="index309b.html?page_id=770&amp;preview=true">Privacy
-                                    &amp; Policy</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@include('pages.layout.footer')
 
 <div data-elementor-type="popup" data-elementor-id="210" class="elementor elementor-210 elementor-location-popup"
      data-elementor-settings="{&quot;prevent_close_on_background_click&quot;:&quot;yes&quot;,&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}"
@@ -14786,7 +14415,7 @@ window.addEventListener('LazyLoad::Initialized', function (e) {
     }
 }, !1)
 </script>
-<script data-no-minify="1" async src="wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script>
+<script data-no-minify="1" async src="{{ asset('wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js') }}"></script>
 <script>class RocketElementorAnimation {
     constructor() {
         this.deviceMode = document.createElement("span"), this.deviceMode.id = "elementor-device-mode-wpr", this.deviceMode.setAttribute("class", "elementor-screen-only"), document.body.appendChild(this.deviceMode)

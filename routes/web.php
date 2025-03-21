@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'pages.index2')->name('index');
 Route::view('/about', 'pages.about')->name('about');
 Route::view('/contact', 'pages.contact')->name('contact');
+Route::view('/our-solutions', 'pages.our-solutions')->name('our-solutions');
 Route::view('/fcm-disclosure', 'pages.disclosure')->name('disclosure');
 Route::view('/terms-condition', 'pages.terms')->name('terms');
 
