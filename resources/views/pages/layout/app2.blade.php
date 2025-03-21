@@ -331,7 +331,7 @@
     <style></style>
 
     <!-- This site is optimized with the Yoast SEO plugin v22.8 - https://yoast.com/wordpress/plugins/seo/ -->
-    <title>Best AI Forex Trading Bot | AI Trading Robots | Meta Trading</title>
+    <title>Best AI Forex Trading Bot | AI Trading Robots | {{ env('APP_NAME') }}</title>
     <link rel="preload" data-rocket-preload as="font"
           href="https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin>
     <link rel="preload" data-rocket-preload as="font"
@@ -13436,119 +13436,19 @@
     <link rel="preload" data-rocket-preload as="image" href="wp-content/uploads/2024/08/Background-Image.jpg"
           fetchpriority="high">
     <meta name="description"
-          content="If you are looking for top AI forex trading bots then Meta Trading AI financial Software is best automated forex trading robots for trading enhancement."/>
+          content="If you are looking for top AI forex trading bots then {{ env('APP_NAME') }} AI financial Software is best automated forex trading robots for trading enhancement."/>
     <link rel="canonical" href="index.html"/>
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Best AI Forex Trading Bot | AI Trading Robots | Meta Trading"/>
+    <meta property="og:title" content="Best AI Forex Trading Bot | AI Trading Robots | {{ env('APP_NAME') }}"/>
     <meta property="og:description"
-          content="If you are looking for top AI forex trading bots then Meta Trading AI financial Software is best automated forex trading robots for trading enhancement."/>
+          content="If you are looking for top AI forex trading bots then {{ env('APP_NAME') }} AI financial Software is best automated forex trading robots for trading enhancement."/>
     <meta property="og:url" content="https://metatrading.ai/"/>
     <meta property="og:site_name" content="Metatrading.ai"/>
     <meta property="article:modified_time" content="2024-10-30T21:27:23+00:00"/>
     <meta property="og:image" content="https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg"/>
     <meta name="twitter:card" content="summary_large_image"/>
-    <script type="application/ld+json" class="yoast-schema-graph">
-		{
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebPage",
-                "@id": "https://metatrading.ai/",
-                "url": "https://metatrading.ai/",
-                "name": "Best AI Forex Trading Bot | AI Trading Robots | Meta Trading",
-                "isPartOf": {
-                    "@id": "https://metatrading.ai/#website"
-                },
-                "about": {
-                    "@id": "https://metatrading.ai/#organization"
-                },
-                "primaryImageOfPage": {
-                    "@id": "https://metatrading.ai/#primaryimage"
-                },
-                "image": {
-                    "@id": "https://metatrading.ai/#primaryimage"
-                },
-                "thumbnailUrl": "https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg",
-                "datePublished": "2024-06-16T18:00:14+00:00",
-                "dateModified": "2024-10-30T21:27:23+00:00",
-                "description": "If you are looking for top AI forex trading bots then Meta Trading AI financial Software is best automated forex trading robots for trading enhancement.",
-                "breadcrumb": {
-                    "@id": "https://metatrading.ai/#breadcrumb"
-                },
-                "inLanguage": "en-US",
-                "potentialAction": [
-                    {
-                        "@type": "ReadAction",
-                        "target": [
-                            "https://metatrading.ai/"
-                        ]
-                    }
-                ]
-            },
-            {
-                "@type": "ImageObject",
-                "inLanguage": "en-US",
-                "@id": "https://metatrading.ai/#primaryimage",
-                "url": "https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg",
-                "contentUrl": "https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg",
-                "width": 809,
-                "height": 834
-            },
-            {
-                "@type": "BreadcrumbList",
-                "@id": "https://metatrading.ai/#breadcrumb",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home"
-                    }
-                ]
-            },
-            {
-                "@type": "WebSite",
-                "@id": "https://metatrading.ai/#website",
-                "url": "https://metatrading.ai/",
-                "name": "Metatrading.ai",
-                "description": "",
-                "publisher": {
-                    "@id": "https://metatrading.ai/#organization"
-                },
-                "potentialAction": [
-                    {
-                        "@type": "SearchAction",
-                        "target": {
-                            "@type": "EntryPoint",
-                            "urlTemplate": "https://metatrading.ai/?s={search_term_string}"
-                        },
-                        "query-input": "required name=search_term_string"
-                    }
-                ],
-                "inLanguage": "en-US"
-            },
-            {
-                "@type": "Organization",
-                "@id": "https://metatrading.ai/#organization",
-                "name": "Metatrading.ai",
-                "url": "https://metatrading.ai/",
-                "logo": {
-                    "@type": "ImageObject",
-                    "inLanguage": "en-US",
-                    "@id": "https://metatrading.ai/#/schema/logo/image/",
-                    "url": "https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png",
-                    "contentUrl": "https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png",
-                    "width": 512,
-                    "height": 512,
-                    "caption": "Metatrading.ai"
-                },
-                "image": {
-                    "@id": "https://metatrading.ai/#/schema/logo/image/"
-                }
-            }
-        ]
-    }</script>
-    <!-- / Yoast SEO plugin. -->
+    
 
 
     <link rel='dns-prefetch' href='http://www.googletagmanager.com/'/>

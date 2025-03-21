@@ -339,14 +339,15 @@
     <style></style>
 
     <!-- This site is optimized with the Yoast SEO plugin v22.8 - https://yoast.com/wordpress/plugins/seo/ -->
-    <title>Profit Calculator - Metatrading.ai</title>
+    <title>Profit Calculator - {{ env('APP_NAME') }}</title>
     <link rel="preload" data-rocket-preload as="font"
           href="https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin>
     <link rel="preload" data-rocket-preload as="font"
           href="https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2" crossorigin>
     <link rel="preload" data-rocket-preload as="font"
           href="https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2" crossorigin>
-    <style id="wpr-usedcss">.premium-banner-ib {
+    <style id="wpr-usedcss">
+        .premium-banner-ib {
             display: block;
             position: relative;
             z-index: 1;
@@ -8696,18 +8697,16 @@
     <link rel="canonical" href="index.html"/>
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Profit Calculator - Metatrading.ai"/>
+    <meta property="og:title" content="Profit Calculator - {{ env('APP_NAME') }}"/>
     <meta property="og:description"
           content="Profit Calculator Profit Calculator Profit Calculator Initial Deposit ($) Monthly Deposit ($) Risk Setting: Recommended Settings Time (Years) Time (Months) Total Profit $0 Account Balance $0 Total Invested $0 Monthly Gain 0% Drawdown 0%"/>
     <meta property="og:url" content="https://metatrading.ai/profit-calculator/"/>
-    <meta property="og:site_name" content="Metatrading.ai"/>
+    <meta property="og:site_name" content="{{ env('APP_NAME') }}"/>
     <meta property="article:modified_time" content="2024-07-11T17:23:03+00:00"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:label1" content="Est. reading time"/>
     <meta name="twitter:data1" content="1 minute"/>
-    <script type="application/ld+json" class="yoast-schema-graph">
-        {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://metatrading.ai/profit-calculator/","url":"https://metatrading.ai/profit-calculator/","name":"Profit Calculator - Metatrading.ai","isPartOf":{"@id":"https://metatrading.ai/#website"},"datePublished":"2024-06-16T18:00:14+00:00","dateModified":"2024-07-11T17:23:03+00:00","breadcrumb":{"@id":"https://metatrading.ai/profit-calculator/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://metatrading.ai/profit-calculator/"]}]},{"@type":"BreadcrumbList","@id":"https://metatrading.ai/profit-calculator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://metatrading.ai/"},{"@type":"ListItem","position":2,"name":"Profit Calculator"}]},{"@type":"WebSite","@id":"https://metatrading.ai/#website","url":"https://metatrading.ai/","name":"Metatrading.ai","description":"","publisher":{"@id":"https://metatrading.ai/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://metatrading.ai/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://metatrading.ai/#organization","name":"Metatrading.ai","url":"https://metatrading.ai/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://metatrading.ai/#/schema/logo/image/","url":"https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png","contentUrl":"https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png","width":512,"height":512,"caption":"Metatrading.ai"},"image":{"@id":"https://metatrading.ai/#/schema/logo/image/"}}]}
-    </script>
+
     <!-- / Yoast SEO plugin. -->
 
 
@@ -8721,8 +8720,8 @@
     <link rel='dns-prefetch' href='http://www.clarity.ms/'/>
     <link rel='dns-prefetch' href='http://www.fxblue.com/'/>
 
-    <link rel="alternate" type="application/rss+xml" title="Metatrading.ai &raquo; Feed" href="../feed/index.html"/>
-    <link rel="alternate" type="application/rss+xml" title="Metatrading.ai &raquo; Comments Feed"
+    <link rel="alternate" type="application/rss+xml" title="{{ env('APP_NAME') }} &raquo; Feed" href="../feed/index.html"/>
+    <link rel="alternate" type="application/rss+xml" title="{{ env('APP_NAME') }} &raquo; Comments Feed"
           href="../comments/feed/index.html"/>
 
     <style id='wp-emoji-styles-inline-css'></style>

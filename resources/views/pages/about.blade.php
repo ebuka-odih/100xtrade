@@ -339,7 +339,7 @@
     <style></style>
 
     <!-- This site is optimized with the Yoast SEO plugin v22.8 - https://yoast.com/wordpress/plugins/seo/ -->
-    <title>About Us - Metatrading.ai</title>
+    <title>About Us - {{ env('APP_NAME') }}</title>
     <link rel="preload" data-rocket-preload as="font"
           href="https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin>
     <link rel="preload" data-rocket-preload as="font"
@@ -12020,18 +12020,18 @@
     <link rel="canonical" href="index.html"/>
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:title" content="About Us - Metatrading.ai"/>
+    <meta property="og:title" content="About Us - {{ env('APP_NAME') }}"/>
     <meta property="og:description"
           content="About us Welcome to the Future of Trading with {{ env('APP_NAME') }} Welcome to {{ env('APP_NAME') }}, where the future of trading unfolds. Our vision is to revolutionize trading by integrating the precision of artificial intelligence with the dynamics of the financial markets. At the heart of {{ env('APP_NAME') }} lies a commitment to innovation, empowerment, and excellence. We offer our [&hellip;]"/>
     <meta property="og:url" content="https://metatrading.ai/about-us/"/>
-    <meta property="og:site_name" content="Metatrading.ai"/>
+    <meta property="og:site_name" content="{{ env('APP_NAME') }}"/>
     <meta property="article:modified_time" content="2024-12-04T17:28:04+00:00"/>
     <meta property="og:image" content="https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:label1" content="Est. reading time"/>
     <meta name="twitter:data1" content="18 minutes"/>
     <script type="application/ld+json" class="yoast-schema-graph">
-        {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://metatrading.ai/about-us/","url":"https://metatrading.ai/about-us/","name":"About Us - Metatrading.ai","isPartOf":{"@id":"https://metatrading.ai/#website"},"primaryImageOfPage":{"@id":"https://metatrading.ai/about-us/#primaryimage"},"image":{"@id":"https://metatrading.ai/about-us/#primaryimage"},"thumbnailUrl":"https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg","datePublished":"2024-06-16T18:00:14+00:00","dateModified":"2024-12-04T17:28:04+00:00","breadcrumb":{"@id":"https://metatrading.ai/about-us/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://metatrading.ai/about-us/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://metatrading.ai/about-us/#primaryimage","url":"https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg","contentUrl":"https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg","width":809,"height":834},{"@type":"BreadcrumbList","@id":"https://metatrading.ai/about-us/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://metatrading.ai/"},{"@type":"ListItem","position":2,"name":"About Us"}]},{"@type":"WebSite","@id":"https://metatrading.ai/#website","url":"https://metatrading.ai/","name":"Metatrading.ai","description":"","publisher":{"@id":"https://metatrading.ai/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://metatrading.ai/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://metatrading.ai/#organization","name":"Metatrading.ai","url":"https://metatrading.ai/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://metatrading.ai/#/schema/logo/image/","url":"https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png","contentUrl":"https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png","width":512,"height":512,"caption":"Metatrading.ai"},"image":{"@id":"https://metatrading.ai/#/schema/logo/image/"}}]}
+        {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://metatrading.ai/about-us/","url":"https://metatrading.ai/about-us/","name":"About Us - {{ env('APP_NAME') }}","isPartOf":{"@id":"https://metatrading.ai/#website"},"primaryImageOfPage":{"@id":"https://metatrading.ai/about-us/#primaryimage"},"image":{"@id":"https://metatrading.ai/about-us/#primaryimage"},"thumbnailUrl":"https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg","datePublished":"2024-06-16T18:00:14+00:00","dateModified":"2024-12-04T17:28:04+00:00","breadcrumb":{"@id":"https://metatrading.ai/about-us/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://metatrading.ai/about-us/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://metatrading.ai/about-us/#primaryimage","url":"https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg","contentUrl":"https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg","width":809,"height":834},{"@type":"BreadcrumbList","@id":"https://metatrading.ai/about-us/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://metatrading.ai/"},{"@type":"ListItem","position":2,"name":"About Us"}]},{"@type":"WebSite","@id":"https://metatrading.ai/#website","url":"https://metatrading.ai/","name":"{{ env('APP_NAME') }}","description":"","publisher":{"@id":"https://metatrading.ai/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://metatrading.ai/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://metatrading.ai/#organization","name":"{{ env('APP_NAME') }}","url":"https://metatrading.ai/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://metatrading.ai/#/schema/logo/image/","url":"https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png","contentUrl":"https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png","width":512,"height":512,"caption":"{{ env('APP_NAME') }}"},"image":{"@id":"https://metatrading.ai/#/schema/logo/image/"}}]}
     </script>
     <!-- / Yoast SEO plugin. -->
 
@@ -12046,8 +12046,8 @@
     <link rel='dns-prefetch' href='http://www.clarity.ms/'/>
     <link rel='dns-prefetch' href='http://www.fxblue.com/'/>
 
-    <link rel="alternate" type="application/rss+xml" title="Metatrading.ai &raquo; Feed" href="../feed/index.html"/>
-    <link rel="alternate" type="application/rss+xml" title="Metatrading.ai &raquo; Comments Feed"
+    <link rel="alternate" type="application/rss+xml" title="{{ env('APP_NAME') }} &raquo; Feed" href="../feed/index.html"/>
+    <link rel="alternate" type="application/rss+xml" title="{{ env('APP_NAME') }} &raquo; Comments Feed"
           href="../comments/feed/index.html"/>
 
     <style id='wp-emoji-styles-inline-css'></style>
