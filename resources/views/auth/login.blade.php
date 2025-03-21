@@ -16,7 +16,8 @@
     <section class="signin">
         <div class="signin-inner">
             <div class="text-center mb-3">
-                 <img src="{{ asset('img/logo2.png') }}" style="width:200px; height: 50px" alt=""/>
+                <h2 class="text-white">{{ env('APP_NAME') }}</h2>
+{{--                 <img src="{{ asset('img/logo2.png') }}" style="width:200px; height: 50px" alt=""/>--}}
             </div>
             <div class="row d-flex align-items-center g-3">
                 <div class="col-md-6 offset-md-3">

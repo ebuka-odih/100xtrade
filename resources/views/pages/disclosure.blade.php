@@ -1,4 +1,4 @@
-@extends('pages.layout.app2')
+@extends('pages.layout.app')
 @section('content')
 
     <main>

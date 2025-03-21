@@ -54,7 +54,7 @@
 </div>
 <!-- page loader end -->
 <!-- header begin -->
-<header>
+<header style="display: none">
     <div class="uk-section uk-padding-remove-vertical">
         <nav class="uk-navbar-container" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
             <div class="uk-container" data-uk-navbar>
@@ -91,7 +91,7 @@
 <!-- header end -->
 @yield('content')
 <!-- footer begin -->
-<footer>
+<footer style="display: none">
     <div class="uk-section uk-section-secondary in-footer-feature uk-margin-medium-top">
         <div class="uk-container">
             <div class="uk-grid uk-flex uk-flex-center">

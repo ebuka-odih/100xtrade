@@ -1,8 +1,9 @@
-@extends('pages.layout.app2')
+@extends('pages.layout.app')
 @section('content')
 
     <main>
         <div class="uk-section in-liquid-13">
+             <h2 style="text-align: center">{{ env('APP_NAME') }}</h2>
             <div class="uk-container">
                 <h4 style="text-align: center">Terms and Conditions</h4>
 
