@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-US">
 
-<!-- Mirrored from metatrading.ai/about-us/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 09:01:40 GMT -->
+<!-- Mirrored from metatrading.ai/profit-calculator/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 09:02:05 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8"/><!-- /Added by HTTrack -->
 <head>
@@ -339,16 +339,14 @@
     <style></style>
 
     <!-- This site is optimized with the Yoast SEO plugin v22.8 - https://yoast.com/wordpress/plugins/seo/ -->
-    <title>About Us - Metatrading.ai</title>
+    <title>Profit Calculator - Metatrading.ai</title>
     <link rel="preload" data-rocket-preload as="font"
           href="https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin>
     <link rel="preload" data-rocket-preload as="font"
           href="https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2" crossorigin>
-    <style id="wpr-usedcss">img:is([sizes=auto i],[sizes^="auto," i]) {
-            contain-intrinsic-size: 3000px 1500px
-        }
-
-        .premium-banner-ib {
+    <link rel="preload" data-rocket-preload as="font"
+          href="https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2" crossorigin>
+    <style id="wpr-usedcss">.premium-banner-ib {
             display: block;
             position: relative;
             z-index: 1;
@@ -2745,10 +2743,6 @@
             background: 0 0
         }
 
-        .page-content a {
-            text-decoration: underline
-        }
-
         .pagination {
             margin: 20px auto
         }
@@ -2788,39 +2782,39 @@
             z-index: 100000
         }
 
-        .site-header:not(.dynamic-header), body:not([class*=elementor-page-]) .site-main {
+        .site-header:not(.dynamic-header) {
             margin-inline-start: auto;
             margin-inline-end: auto;
             width: 100%
         }
 
         @media (max-width: 575px) {
-            .site-header:not(.dynamic-header), body:not([class*=elementor-page-]) .site-main {
+            .site-header:not(.dynamic-header) {
                 padding-inline-start: 10px;
                 padding-inline-end: 10px
             }
         }
 
         @media (min-width: 576px) {
-            .site-header:not(.dynamic-header), body:not([class*=elementor-page-]) .site-main {
+            .site-header:not(.dynamic-header) {
                 max-width: 500px
             }
         }
 
         @media (min-width: 768px) {
-            .site-header:not(.dynamic-header), body:not([class*=elementor-page-]) .site-main {
+            .site-header:not(.dynamic-header) {
                 max-width: 600px
             }
         }
 
         @media (min-width: 992px) {
-            .site-header:not(.dynamic-header), body:not([class*=elementor-page-]) .site-main {
+            .site-header:not(.dynamic-header) {
                 max-width: 800px
             }
         }
 
         @media (min-width: 1200px) {
-            .site-header:not(.dynamic-header), body:not([class*=elementor-page-]) .site-main {
+            .site-header:not(.dynamic-header) {
                 max-width: 1140px
             }
         }
@@ -3173,6 +3167,10 @@
             box-shadow: none
         }
 
+        .elementor .elementor-widget:not(.elementor-widget-text-editor):not(.elementor-widget-theme-post-content) figure {
+            margin: 0
+        }
+
         .elementor iframe, .elementor object, .elementor video {
             max-width: 100%;
             width: 100%;
@@ -3233,10 +3231,6 @@
 
         .e-con-inner > .elementor-element.elementor-absolute, .e-con > .elementor-element.elementor-absolute, .elementor-widget-wrap > .elementor-element.elementor-absolute {
             position: absolute
-        }
-
-        .elementor-widget-wrap .elementor-element.elementor-widget__width-auto {
-            max-width: 100%
         }
 
         .elementor-element {
@@ -3336,7 +3330,7 @@
             margin-bottom: 20px
         }
 
-        .elementor-widget:not(:last-child).elementor-absolute, .elementor-widget:not(:last-child).elementor-widget__width-auto {
+        .elementor-widget:not(:last-child).elementor-absolute {
             margin-bottom: 0
         }
 
@@ -3640,32 +3634,6 @@
             text-decoration: inherit
         }
 
-        .elementor-icon {
-            display: inline-block;
-            line-height: 1;
-            transition: all .3s;
-            color: #69727d;
-            font-size: 50px;
-            text-align: center
-        }
-
-        .elementor-icon:hover {
-            color: #69727d
-        }
-
-        .elementor-icon svg {
-            width: 1em;
-            height: 1em;
-            position: relative;
-            display: block
-        }
-
-        .elementor-icon svg:before {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%)
-        }
-
         .elementor-element, .elementor-lightbox {
             --swiper-theme-color: #000;
             --swiper-navigation-size: 44px;
@@ -3739,11 +3707,11 @@
             top: 0
         }
 
-        .elementor-element.elementor-pagination-position-outside .swiper, .elementor-element.elementor-pagination-position-outside .swiper-container, .elementor-lightbox.elementor-pagination-position-outside .swiper, .elementor-lightbox.elementor-pagination-position-outside .swiper-container {
+        .elementor-element.elementor-pagination-position-outside .swiper-container, .elementor-lightbox.elementor-pagination-position-outside .swiper, .elementor-lightbox.elementor-pagination-position-outside .swiper-container {
             padding-bottom: 30px
         }
 
-        .elementor-element.elementor-pagination-position-outside .swiper .elementor-swiper-button, .elementor-element.elementor-pagination-position-outside .swiper-container .elementor-swiper-button, .elementor-element.elementor-pagination-position-outside .swiper-container ~ .elementor-swiper-button, .elementor-element.elementor-pagination-position-outside .swiper ~ .elementor-swiper-button, .elementor-lightbox.elementor-pagination-position-outside .swiper .elementor-swiper-button, .elementor-lightbox.elementor-pagination-position-outside .swiper-container .elementor-swiper-button, .elementor-lightbox.elementor-pagination-position-outside .swiper-container ~ .elementor-swiper-button, .elementor-lightbox.elementor-pagination-position-outside .swiper ~ .elementor-swiper-button {
+        .elementor-element.elementor-pagination-position-outside .swiper-container .elementor-swiper-button, .elementor-element.elementor-pagination-position-outside .swiper-container ~ .elementor-swiper-button, .elementor-lightbox.elementor-pagination-position-outside .swiper .elementor-swiper-button, .elementor-lightbox.elementor-pagination-position-outside .swiper-container .elementor-swiper-button, .elementor-lightbox.elementor-pagination-position-outside .swiper-container ~ .elementor-swiper-button, .elementor-lightbox.elementor-pagination-position-outside .swiper ~ .elementor-swiper-button {
             top: calc(50% - 30px / 2)
         }
 
@@ -4212,6 +4180,12 @@
         .site-header {
             padding-inline-end: 0px;
             padding-inline-start: 0px
+        }
+
+        @media (max-width: 1024px) {
+            .e-con {
+                --container-max-width: 1024px
+            }
         }
 
         :root {
@@ -4990,25 +4964,10 @@
             background-color: var(--e-global-color-accent)
         }
 
-        .elementor-widget-icon-box.elementor-view-default .elementor-icon {
-            fill: var(--e-global-color-primary);
+        .elementor-widget-image-box .elementor-image-box-title {
             color: var(--e-global-color-primary);
-            border-color: var(--e-global-color-primary)
-        }
-
-        .elementor-widget-icon-box .elementor-icon-box-title {
-            color: var(--e-global-color-primary)
-        }
-
-        .elementor-widget-icon-box .elementor-icon-box-title, .elementor-widget-icon-box .elementor-icon-box-title a {
             font-family: var(--e-global-typography-primary-font-family), Sans-serif;
             font-weight: var(--e-global-typography-primary-font-weight)
-        }
-
-        .elementor-widget-icon-box .elementor-icon-box-description {
-            color: var(--e-global-color-text);
-            font-family: var(--e-global-typography-text-font-family), Sans-serif;
-            font-weight: var(--e-global-typography-text-font-weight)
         }
 
         .elementor-widget-icon-list .elementor-icon-list-item:not(:last-child):after {
@@ -5086,7 +5045,7 @@
             font-weight: var(--e-global-typography-secondary-font-weight)
         }
 
-        .elementor-609 .elementor-element.elementor-element-7c8662c {
+        .elementor-915 .elementor-element.elementor-element-d1d2202 {
             --display: flex;
             --min-height: 236px;
             --flex-direction: column;
@@ -5098,21 +5057,21 @@
             --background-transition: 0.3s
         }
 
-        .elementor-609 .elementor-element.elementor-element-7c8662c:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-7c8662c > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-image: var(--wpr-bg-ca91e55f-5763-4a61-b123-b3b5cd6758ec);
+        .elementor-915 .elementor-element.elementor-element-d1d2202:not(.elementor-motion-effects-element-type-background), .elementor-915 .elementor-element.elementor-element-d1d2202 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+            background-image: var(--wpr-bg-f60a2d13-8da8-46e8-8b99-fff077474c19);
             background-repeat: no-repeat;
             background-size: cover
         }
 
-        .elementor-609 .elementor-element.elementor-element-7c8662c, .elementor-609 .elementor-element.elementor-element-7c8662c::before {
+        .elementor-915 .elementor-element.elementor-element-d1d2202, .elementor-915 .elementor-element.elementor-element-d1d2202::before {
             --border-transition: 0.3s
         }
 
-        .elementor-609 .elementor-element.elementor-element-87064d3 {
+        .elementor-915 .elementor-element.elementor-element-162fba8 {
             text-align: center
         }
 
-        .elementor-609 .elementor-element.elementor-element-87064d3 .elementor-heading-title {
+        .elementor-915 .elementor-element.elementor-element-162fba8 .elementor-heading-title {
             color: var(--e-global-color-d81dce3);
             font-family: Inter, Sans-serif;
             font-size: 34px;
@@ -5121,2729 +5080,31 @@
             letter-spacing: .01em
         }
 
-        .elementor-609 .elementor-element.elementor-element-08be443 a {
+        .elementor-915 .elementor-element.elementor-element-a2927cc a {
             color: var(--e-global-color-1fd20c4)
         }
 
-        .elementor-609 .elementor-element.elementor-element-42a63b7 {
+        .elementor-915 .elementor-element.elementor-element-2bbdf4d {
             --display: flex;
             --flex-direction: column;
-            --container-widget-width: 100%;
+            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
             --container-widget-height: initial;
             --container-widget-flex-grow: 0;
             --container-widget-align-self: initial;
+            --align-items: center;
             --background-transition: 0.3s;
-            --overlay-opacity: 0.5;
-            --margin-top: 0px;
-            --margin-bottom: 0px;
-            --margin-left: 0px;
-            --margin-right: 0px;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-42a63b7::before, .elementor-609 .elementor-element.elementor-element-42a63b7 > .e-con-inner > .elementor-background-slideshow::before, .elementor-609 .elementor-element.elementor-element-42a63b7 > .e-con-inner > .elementor-background-video-container::before, .elementor-609 .elementor-element.elementor-element-42a63b7 > .elementor-background-slideshow::before, .elementor-609 .elementor-element.elementor-element-42a63b7 > .elementor-background-video-container::before, .elementor-609 .elementor-element.elementor-element-42a63b7 > .elementor-motion-effects-container > .elementor-motion-effects-layer::before {
-            --background-overlay: ''
-        }
-
-        .elementor-609 .elementor-element.elementor-element-42a63b7, .elementor-609 .elementor-element.elementor-element-42a63b7::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-dcb26eb {
-            --display: flex;
-            --background-transition: 0.3s;
-            --margin-top: 0px;
-            --margin-bottom: 0px;
-            --margin-left: 0px;
-            --margin-right: 0px
-        }
-
-        body:not(.rtl) .elementor-609 .elementor-element.elementor-element-dec1a3b {
-            right: 0
-        }
-
-        body.rtl .elementor-609 .elementor-element.elementor-element-dec1a3b {
-            left: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-dec1a3b {
-            top: 0
-        }
-
-        body:not(.rtl) .elementor-609 .elementor-element.elementor-element-9e8e85f {
-            right: 0
-        }
-
-        body.rtl .elementor-609 .elementor-element.elementor-element-9e8e85f {
-            left: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-9e8e85f {
-            top: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-cfb7b65 {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --background-transition: 0.3s;
-            --overlay-opacity: 0.45;
-            --margin-top: 50px;
-            --margin-bottom: 0px;
-            --margin-left: 0px;
-            --margin-right: 0px;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-            --z-index: 1
-        }
-
-        .elementor-609 .elementor-element.elementor-element-cfb7b65::before, .elementor-609 .elementor-element.elementor-element-cfb7b65 > .e-con-inner > .elementor-background-slideshow::before, .elementor-609 .elementor-element.elementor-element-cfb7b65 > .e-con-inner > .elementor-background-video-container::before, .elementor-609 .elementor-element.elementor-element-cfb7b65 > .elementor-background-slideshow::before, .elementor-609 .elementor-element.elementor-element-cfb7b65 > .elementor-background-video-container::before, .elementor-609 .elementor-element.elementor-element-cfb7b65 > .elementor-motion-effects-container > .elementor-motion-effects-layer::before {
-            --background-overlay: ''
-        }
-
-        .elementor-609 .elementor-element.elementor-element-cfb7b65, .elementor-609 .elementor-element.elementor-element-cfb7b65::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3ad9cd9 {
-            --display: flex;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6a9e06b {
-            text-align: left
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6a9e06b img {
-            border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 36px 0 rgba(0, 68, 255, .32941176470588235)
-        }
-
-        .elementor-609 .elementor-element.elementor-element-23bbe8a {
-            --display: flex;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --justify-content: space-between;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-dc25f46 .elementor-heading-title {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 34px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-0b6711b {
-            color: #fff;
-            font-family: Inter, Sans-serif;
-            font-size: 15px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-72b6888 {
-            --display: flex;
-            --background-transition: 0.3s;
-            --margin-top: 0px;
-            --margin-bottom: 0px;
-            --margin-left: 0px;
-            --margin-right: 0px;
-            --z-index: 0
-        }
-
-        body:not(.rtl) .elementor-609 .elementor-element.elementor-element-7166233 {
-            right: 0
-        }
-
-        body.rtl .elementor-609 .elementor-element.elementor-element-7166233 {
-            left: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-7166233 {
-            top: 0
-        }
-
-        body:not(.rtl) .elementor-609 .elementor-element.elementor-element-fae6aff {
-            left: 0
-        }
-
-        body.rtl .elementor-609 .elementor-element.elementor-element-fae6aff {
-            right: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-fae6aff {
-            top: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-fe5046a {
-            --display: flex;
-            --background-transition: 0.3s;
-            --overlay-opacity: 1;
-            --margin-top: 0px;
-            --margin-bottom: 100px;
-            --margin-left: 0px;
-            --margin-right: 0px;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-fe5046a::before, .elementor-609 .elementor-element.elementor-element-fe5046a > .e-con-inner > .elementor-background-slideshow::before, .elementor-609 .elementor-element.elementor-element-fe5046a > .e-con-inner > .elementor-background-video-container::before, .elementor-609 .elementor-element.elementor-element-fe5046a > .elementor-background-slideshow::before, .elementor-609 .elementor-element.elementor-element-fe5046a > .elementor-background-video-container::before, .elementor-609 .elementor-element.elementor-element-fe5046a > .elementor-motion-effects-container > .elementor-motion-effects-layer::before {
-            --background-overlay: ''
-        }
-
-        .elementor-609 .elementor-element.elementor-element-19c2028 {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-19c2028 .elementor-heading-title {
-            color: var(--e-global-color-1fd20c4);
-            font-family: Inter, Sans-serif;
-            font-size: 26px;
-            font-weight: 500;
-            text-transform: capitalize;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-92d3bd3 {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-92d3bd3 .elementor-heading-title {
-            color: var(--e-global-color-d81dce3);
-            font-family: Inter, Sans-serif;
-            font-size: 34px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-0de229a {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --background-transition: 0.3s;
-            --margin-top: 50px;
-            --margin-bottom: 0px;
-            --margin-left: 0px;
-            --margin-right: 0px;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-            --z-index: 2
-        }
-
-        .elementor-609 .elementor-element.elementor-element-0de229a, .elementor-609 .elementor-element.elementor-element-0de229a::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5ca7078 {
-            --display: flex;
-            --justify-content: space-around;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, .5882352941176471);
-            --padding-top: 25px;
-            --padding-bottom: 25px;
-            --padding-left: 25px;
-            --padding-right: 25px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5ca7078:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-5ca7078 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF3D
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5ca7078, .elementor-609 .elementor-element.elementor-element-5ca7078::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5ca7078.e-con {
-            --align-self: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b88375d {
-            --icon-box-icon-margin: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b88375d .elementor-icon-box-title {
-            margin-bottom: 36px;
-            color: var(--e-global-color-0024921)
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b88375d.elementor-view-stacked .elementor-icon {
-            background-color: var(--e-global-color-0024921)
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b88375d.elementor-view-default .elementor-icon, .elementor-609 .elementor-element.elementor-element-b88375d.elementor-view-framed .elementor-icon {
-            fill: var(--e-global-color-0024921);
-            color: var(--e-global-color-0024921);
-            border-color: var(--e-global-color-0024921)
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b88375d .elementor-icon {
-            font-size: 146px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b88375d .elementor-icon-box-title, .elementor-609 .elementor-element.elementor-element-b88375d .elementor-icon-box-title a {
-            font-family: Inter, Sans-serif;
-            font-size: 30px;
-            font-weight: 800;
-            line-height: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b88375d .elementor-icon-box-description {
-            color: #e4e4e4;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            text-transform: capitalize;
-            line-height: 17px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-27aa1ac {
-            --display: flex;
-            --justify-content: space-around;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, .5882352941176471);
-            --padding-top: 25px;
-            --padding-bottom: 25px;
-            --padding-left: 25px;
-            --padding-right: 25px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-27aa1ac:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-27aa1ac > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF3D
-        }
-
-        .elementor-609 .elementor-element.elementor-element-27aa1ac, .elementor-609 .elementor-element.elementor-element-27aa1ac::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-27aa1ac.e-con {
-            --align-self: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-03751dc {
-            --icon-box-icon-margin: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-03751dc .elementor-icon-box-title {
-            margin-bottom: 36px;
-            color: var(--e-global-color-0024921)
-        }
-
-        .elementor-609 .elementor-element.elementor-element-03751dc.elementor-view-stacked .elementor-icon {
-            background-color: var(--e-global-color-0024921)
-        }
-
-        .elementor-609 .elementor-element.elementor-element-03751dc.elementor-view-default .elementor-icon, .elementor-609 .elementor-element.elementor-element-03751dc.elementor-view-framed .elementor-icon {
-            fill: var(--e-global-color-0024921);
-            color: var(--e-global-color-0024921);
-            border-color: var(--e-global-color-0024921)
-        }
-
-        .elementor-609 .elementor-element.elementor-element-03751dc .elementor-icon {
-            font-size: 146px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-03751dc .elementor-icon-box-title, .elementor-609 .elementor-element.elementor-element-03751dc .elementor-icon-box-title a {
-            font-family: Inter, Sans-serif;
-            font-size: 30px;
-            font-weight: 800;
-            line-height: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-03751dc .elementor-icon-box-description {
-            color: #e4e4e4;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            text-transform: capitalize;
-            line-height: 17px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5fb0d87 {
-            --display: flex;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, .5882352941176471);
-            --padding-top: 25px;
-            --padding-bottom: 25px;
-            --padding-left: 25px;
-            --padding-right: 25px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5fb0d87:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-5fb0d87 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF3D
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5fb0d87, .elementor-609 .elementor-element.elementor-element-5fb0d87::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5fb0d87.e-con {
-            --align-self: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-9c52c49 {
-            --icon-box-icon-margin: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-9c52c49 .elementor-icon-box-title {
-            margin-bottom: 36px;
-            color: var(--e-global-color-0024921)
-        }
-
-        .elementor-609 .elementor-element.elementor-element-9c52c49.elementor-view-stacked .elementor-icon {
-            background-color: var(--e-global-color-0024921)
-        }
-
-        .elementor-609 .elementor-element.elementor-element-9c52c49.elementor-view-default .elementor-icon, .elementor-609 .elementor-element.elementor-element-9c52c49.elementor-view-framed .elementor-icon {
-            fill: var(--e-global-color-0024921);
-            color: var(--e-global-color-0024921);
-            border-color: var(--e-global-color-0024921)
-        }
-
-        .elementor-609 .elementor-element.elementor-element-9c52c49 .elementor-icon {
-            font-size: 146px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-9c52c49 .elementor-icon-box-title, .elementor-609 .elementor-element.elementor-element-9c52c49 .elementor-icon-box-title a {
-            font-family: Inter, Sans-serif;
-            font-size: 30px;
-            font-weight: 800;
-            line-height: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-9c52c49 .elementor-icon-box-description {
-            color: #e4e4e4;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            text-transform: capitalize;
-            line-height: 17px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c3e3eac {
-            --display: flex;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 100px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-869a96b {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-869a96b .elementor-heading-title {
-            color: var(--e-global-color-1fd20c4);
-            font-family: Inter, Sans-serif;
-            font-size: 26px;
-            font-weight: 500;
-            text-transform: capitalize;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b467bb7 {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b467bb7 .elementor-heading-title {
-            color: var(--e-global-color-d81dce3);
-            font-family: Inter, Sans-serif;
-            font-size: 34px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-caf37f8 {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --background-transition: 0.3s;
-            --margin-top: 50px;
-            --margin-bottom: 0px;
-            --margin-left: 0px;
-            --margin-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-713f85c {
-            --display: flex;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            --padding-top: 20px;
-            --padding-bottom: 20px;
+            --padding-top: 50px;
+            --padding-bottom: 50px;
             --padding-left: 20px;
             --padding-right: 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-713f85c:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-713f85c > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-713f85c, .elementor-609 .elementor-element.elementor-element-713f85c::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b79028c img {
-            border-radius: 20px 20px 20px 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-eaf34c5 {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-eaf34c5 .elementor-heading-title {
-            color: var(--e-global-color-d81dce3);
-            font-family: Inter, Sans-serif;
-            font-size: 25px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-20132af {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-20132af .elementor-heading-title {
-            color: var(--e-global-color-1fd20c4);
-            font-family: Inter, Sans-serif;
-            font-size: 19px;
-            font-weight: 500;
-            text-transform: capitalize;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-a6fdf2d {
-            text-align: center;
-            color: #e4e4e4;
-            font-family: Inter, Sans-serif;
-            font-size: 15px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-03b73fe {
-            --display: flex;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            --padding-top: 20px;
-            --padding-bottom: 20px;
-            --padding-left: 20px;
-            --padding-right: 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-03b73fe:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-03b73fe > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-03b73fe, .elementor-609 .elementor-element.elementor-element-03b73fe::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-69b4434 img {
-            border-radius: 20px 20px 20px 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5bc9486 {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5bc9486 .elementor-heading-title {
-            color: var(--e-global-color-d81dce3);
-            font-family: Inter, Sans-serif;
-            font-size: 25px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-24181e2 {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-24181e2 .elementor-heading-title {
-            color: var(--e-global-color-1fd20c4);
-            font-family: Inter, Sans-serif;
-            font-size: 19px;
-            font-weight: 500;
-            text-transform: capitalize;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6852cc2 {
-            text-align: center;
-            color: #e4e4e4;
-            font-family: Inter, Sans-serif;
-            font-size: 15px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d798c67 {
-            --display: flex;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            --padding-top: 20px;
-            --padding-bottom: 20px;
-            --padding-left: 20px;
-            --padding-right: 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d798c67:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-d798c67 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d798c67, .elementor-609 .elementor-element.elementor-element-d798c67::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6569fe8 img {
-            border-radius: 20px 20px 20px 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-f1f8448 {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-f1f8448 .elementor-heading-title {
-            color: var(--e-global-color-d81dce3);
-            font-family: Inter, Sans-serif;
-            font-size: 25px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-285de57 {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-285de57 .elementor-heading-title {
-            color: var(--e-global-color-1fd20c4);
-            font-family: Inter, Sans-serif;
-            font-size: 19px;
-            font-weight: 500;
-            text-transform: capitalize;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-f99e084 {
-            text-align: center;
-            color: #e4e4e4;
-            font-family: Inter, Sans-serif;
-            font-size: 15px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3b80a6e {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --background-transition: 0.3s;
-            --margin-top: 0px;
-            --margin-bottom: 0px;
-            --margin-left: 0px;
-            --margin-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-f120975 {
-            --display: flex;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            --padding-top: 20px;
-            --padding-bottom: 20px;
-            --padding-left: 20px;
-            --padding-right: 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-f120975:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-f120975 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-f120975, .elementor-609 .elementor-element.elementor-element-f120975::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c33adc1 img {
-            border-radius: 20px 20px 20px 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-ae29821 {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-ae29821 .elementor-heading-title {
-            color: var(--e-global-color-d81dce3);
-            font-family: Inter, Sans-serif;
-            font-size: 25px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-af8475f {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-af8475f .elementor-heading-title {
-            color: var(--e-global-color-1fd20c4);
-            font-family: Inter, Sans-serif;
-            font-size: 19px;
-            font-weight: 500;
-            text-transform: capitalize;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-daf0f5b {
-            text-align: center;
-            color: #e4e4e4;
-            font-family: Inter, Sans-serif;
-            font-size: 15px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-2f9a86b {
-            --display: flex;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            --padding-top: 20px;
-            --padding-bottom: 20px;
-            --padding-left: 20px;
-            --padding-right: 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-2f9a86b:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-2f9a86b > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-2f9a86b, .elementor-609 .elementor-element.elementor-element-2f9a86b::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-9fd288d img {
-            border-radius: 20px 20px 20px 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-ebd522b {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-ebd522b .elementor-heading-title {
-            color: var(--e-global-color-d81dce3);
-            font-family: Inter, Sans-serif;
-            font-size: 25px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c240176 {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c240176 .elementor-heading-title {
-            color: var(--e-global-color-1fd20c4);
-            font-family: Inter, Sans-serif;
-            font-size: 19px;
-            font-weight: 500;
-            text-transform: capitalize;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-08f1d84 {
-            text-align: center;
-            color: #e4e4e4;
-            font-family: Inter, Sans-serif;
-            font-size: 15px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-cb7e720 {
-            --display: flex;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            --padding-top: 20px;
-            --padding-bottom: 20px;
-            --padding-left: 20px;
-            --padding-right: 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-cb7e720:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-cb7e720 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-cb7e720, .elementor-609 .elementor-element.elementor-element-cb7e720::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3e26c9f img {
-            border-radius: 20px 20px 20px 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-bfedd49 {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-bfedd49 .elementor-heading-title {
-            color: var(--e-global-color-d81dce3);
-            font-family: Inter, Sans-serif;
-            font-size: 25px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-57a259a {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-57a259a .elementor-heading-title {
-            color: var(--e-global-color-1fd20c4);
-            font-family: Inter, Sans-serif;
-            font-size: 19px;
-            font-weight: 500;
-            text-transform: capitalize;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-61aa611 {
-            text-align: center;
-            color: #e4e4e4;
-            font-family: Inter, Sans-serif;
-            font-size: 15px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-92a7db4 {
-            --display: flex;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            --padding-top: 20px;
-            --padding-bottom: 20px;
-            --padding-left: 20px;
-            --padding-right: 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-92a7db4:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-92a7db4 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-92a7db4, .elementor-609 .elementor-element.elementor-element-92a7db4::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d942665 img {
-            border-radius: 20px 20px 20px 20px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-cab4bf0 {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-cab4bf0 .elementor-heading-title {
-            color: var(--e-global-color-d81dce3);
-            font-family: Inter, Sans-serif;
-            font-size: 25px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-68f2a2f {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-68f2a2f .elementor-heading-title {
-            color: var(--e-global-color-1fd20c4);
-            font-family: Inter, Sans-serif;
-            font-size: 19px;
-            font-weight: 500;
-            text-transform: capitalize;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-84f53e4 {
-            text-align: center;
-            color: #e4e4e4;
-            font-family: Inter, Sans-serif;
-            font-size: 15px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-7e1b586 {
-            --display: flex;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --margin-top: 0px;
-            --margin-bottom: 0px;
-            --margin-left: 0px;
-            --margin-right: 0px;
-            --padding-top: 100px;
-            --padding-bottom: 100px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-            --z-index: 2
-        }
-
-        .elementor-609 .elementor-element.elementor-element-7e1b586:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-7e1b586 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-image: var(--wpr-bg-8b8dccc5-8ed2-49ee-841e-90a0202f1c07);
-            background-repeat: no-repeat;
-            background-size: cover
-        }
-
-        .elementor-609 .elementor-element.elementor-element-7e1b586, .elementor-609 .elementor-element.elementor-element-7e1b586::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-1c3ba2e {
-            --display: flex;
-            --flex-direction: column;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --justify-content: center;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --margin-top: 0px;
-            --margin-bottom: 40px;
-            --margin-left: 0px;
-            --margin-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-e88a248 {
-            text-align: right;
-            width: auto;
-            max-width: auto
-        }
-
-        .elementor-609 .elementor-element.elementor-element-e88a248 .elementor-heading-title {
-            color: var(--e-global-color-d81dce3);
-            font-family: Inter, Sans-serif;
-            font-size: 34px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: .01em
-        }
-
-        .elementor-609 .elementor-element.elementor-element-e88a248 > .elementor-widget-container {
-            margin: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-1dcb0de {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-8356144 {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-275a0ef {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-275a0ef:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-275a0ef > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-275a0ef, .elementor-609 .elementor-element.elementor-element-275a0ef::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d9abe37 {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d9756cc {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c3c228a {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c3c228a.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3845053 .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-02861d8 {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-f430423 {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6e7e5c5 {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6e7e5c5:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-6e7e5c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6e7e5c5, .elementor-609 .elementor-element.elementor-element-6e7e5c5::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-bf0e30c {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-508dbab {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-bda5aea {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-bda5aea.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-13ffbdf .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6997e27 {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-1297329 {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-1917a39 {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-1917a39:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-1917a39 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-1917a39, .elementor-609 .elementor-element.elementor-element-1917a39::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-e7a3c94 {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-33216f1 {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-e939147 {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-e939147.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-8dac88a .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-600fc94 {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-e1856b5 {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b6504b9 {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b6504b9:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-b6504b9 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b6504b9, .elementor-609 .elementor-element.elementor-element-b6504b9::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-fa78e70 {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-eebeabb {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-eb3aeff {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-eb3aeff.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-bb2b4d7 .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-aa3e427 {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3b95ff5 {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-746c569 {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-746c569:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-746c569 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-746c569, .elementor-609 .elementor-element.elementor-element-746c569::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-86bd619 {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-921772c {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6766ace {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6766ace.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3b7b599 .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-60f3667 {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-16f8295 {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d73ae20 {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d73ae20:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-d73ae20 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d73ae20, .elementor-609 .elementor-element.elementor-element-d73ae20::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c3a3680 {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-696bb2f {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-e764a89 {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-e764a89.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-bf2c0a6 .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c601033 {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-ed6c047 {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-937c93f {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-937c93f:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-937c93f > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-937c93f, .elementor-609 .elementor-element.elementor-element-937c93f::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-09e070e {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-28cecd6 {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-002e8a4 {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-002e8a4.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c07753d .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-2e9317d {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-172c594 {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c5eff99 {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c5eff99:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-c5eff99 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c5eff99, .elementor-609 .elementor-element.elementor-element-c5eff99::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-9680aa8 {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-85e425a {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d029138 {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d029138.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3cc7cad .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c7315e5 {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-950a59f {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3a6ec18 {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3a6ec18:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-3a6ec18 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3a6ec18, .elementor-609 .elementor-element.elementor-element-3a6ec18::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-f8f482a {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-0bc89d9 {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-02d26fe {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-02d26fe.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5e34b2a .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-4404223 {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d1c3dfd {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5ceb063 {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5ceb063:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-5ceb063 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5ceb063, .elementor-609 .elementor-element.elementor-element-5ceb063::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-e64a0ad {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-707a9d9 {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5949079 {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5949079.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6883d88 .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-fdb7499 {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d0451a3 {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-a98e42a {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-a98e42a:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-a98e42a > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-a98e42a, .elementor-609 .elementor-element.elementor-element-a98e42a::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5930344 {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-9d0d12d {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-e1c8c24 {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-e1c8c24.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-35161e9 .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-7211ad4 {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b89bfe2 {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c7a89b5 {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c7a89b5:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-c7a89b5 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c7a89b5, .elementor-609 .elementor-element.elementor-element-c7a89b5::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-819429f {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-4c56761 {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-06e7259 {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-06e7259.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-89989f8 .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-e9f078c {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-4658cf5 {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b891ab4 {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b891ab4:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-b891ab4 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b891ab4, .elementor-609 .elementor-element.elementor-element-b891ab4::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-1311b3d {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b212e43 {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-06358b4 {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-06358b4.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-ed17fab .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-492bed4 {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-ec99bda {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-cf74ea8 {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-cf74ea8:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-cf74ea8 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-cf74ea8, .elementor-609 .elementor-element.elementor-element-cf74ea8::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-2bcd3e1 {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-ad31cc9 {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3f32ef7 {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3f32ef7.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b0f7f84 .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6c8addc {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-bb40055 {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-fb7b96d {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-fb7b96d:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-fb7b96d > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-fb7b96d, .elementor-609 .elementor-element.elementor-element-fb7b96d::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-313f45c {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-08baeb8 {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-2935ee2 {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-2935ee2.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-d20973e .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-704faf1 {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3132420 {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-1b410b9 {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-1b410b9:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-1b410b9 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-1b410b9, .elementor-609 .elementor-element.elementor-element-1b410b9::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-5e0ff0e {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3e86f4f {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-342fbea {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-342fbea.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6dd3dec .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-337b8cd {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6216c2f {
-            --display: flex;
-            --background-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6565272 {
-            --display: flex;
-            --min-height: 287px;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 0 18px 0 rgba(0, 0, 0, .6705882352941176);
-            --padding-top: 30px;
-            --padding-bottom: 30px;
-            --padding-left: 30px;
-            --padding-right: 30px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6565272:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-6565272 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF30
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6565272, .elementor-609 .elementor-element.elementor-element-6565272::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-2ee1305 {
-            color: var(--e-global-color-0024921);
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-6c25304 {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: space-between;
-            --gap: 0px 0px;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-333f0ae {
-            --display: flex;
-            --flex-direction: row-reverse;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --justify-content: flex-end;
-            --align-items: center;
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-333f0ae.e-con {
-            --flex-grow: 0;
-            --flex-shrink: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-74c1565 .elementor-heading-title {
-            color: #ebebeb;
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 500
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3e60a8f {
-            --display: flex;
-            --justify-content: center;
-            --align-items: flex-end;
-            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-b241f05 {
-            --e-n-carousel-slide-height: auto;
-            --e-n-carousel-slide-container-height: 100%;
-            --e-n-carousel-swiper-slides-gap: 10px;
-            --e-n-carousel-swiper-pagination-size: 7px;
-            --e-n-carousel-dots-normal-color: var(--e-global-color-1fd20c4);
-            --e-n-carousel-dots-hover-color: var(--e-global-color-1fd20c4)
-        }
-
-        .elementor-609 .elementor-element.elementor-element-2071190 {
-            --display: flex;
-            --background-transition: 0.3s;
-            --margin-top: 0px;
-            --margin-bottom: 0px;
-            --margin-left: 0px;
-            --margin-right: 0px;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-            --z-index: 1
-        }
-
-        body:not(.rtl) .elementor-609 .elementor-element.elementor-element-a5707ea {
-            left: 0
-        }
-
-        body.rtl .elementor-609 .elementor-element.elementor-element-a5707ea {
-            right: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-a5707ea {
-            top: 0
-        }
-
-        body:not(.rtl) .elementor-609 .elementor-element.elementor-element-2678074 {
-            right: 0
-        }
-
-        body.rtl .elementor-609 .elementor-element.elementor-element-2678074 {
-            left: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-2678074 {
-            top: 0
-        }
-
-        .elementor-609 .elementor-element.elementor-element-cfa8dc3 {
-            --display: flex;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s;
-            --margin-top: 0px;
-            --margin-bottom: 0px;
-            --margin-left: 0px;
-            --margin-right: 0px;
-            --padding-top: 0px;
-            --padding-bottom: 100px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-            --z-index: 2
-        }
-
-        .elementor-609 .elementor-element.elementor-element-cfa8dc3, .elementor-609 .elementor-element.elementor-element-cfa8dc3::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c0049e2 {
-            --display: flex;
-            --flex-direction: row;
-            --container-widget-width: initial;
-            --container-widget-height: 100%;
-            --container-widget-flex-grow: 1;
-            --container-widget-align-self: stretch;
-            --background-transition: 0.3s;
-            --margin-top: 100px;
-            --margin-bottom: 0px;
-            --margin-left: 0px;
-            --margin-right: 0px;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px;
-            --z-index: 2
-        }
-
-        .elementor-609 .elementor-element.elementor-element-c0049e2, .elementor-609 .elementor-element.elementor-element-c0049e2::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-7459bcb {
-            --display: flex;
-            --background-transition: 0.3s;
-            --border-radius: 25px 25px 25px 25px;
-            box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, .5882352941176471);
-            --padding-top: 25px;
-            --padding-bottom: 25px;
-            --padding-left: 25px;
-            --padding-right: 25px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-7459bcb:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-7459bcb > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-color: #0044FF3D;
-            background-image: var(--wpr-bg-a4ea0272-3f00-42be-887b-580141ffb811);
-            background-repeat: no-repeat;
-            background-size: cover
-        }
-
-        .elementor-609 .elementor-element.elementor-element-7459bcb, .elementor-609 .elementor-element.elementor-element-7459bcb::before {
-            --border-transition: 0.3s
-        }
-
-        .elementor-609 .elementor-element.elementor-element-7459bcb.e-con {
-            --align-self: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-8f88947 {
-            --display: flex;
-            --background-transition: 0.3s;
-            --margin-top: 80px;
-            --margin-bottom: 80px;
-            --margin-left: 0px;
-            --margin-right: 0px
-        }
-
-        .elementor-609 .elementor-element.elementor-element-141e55d {
-            text-align: center
-        }
-
-        .elementor-609 .elementor-element.elementor-element-141e55d .elementor-heading-title {
-            color: var(--e-global-color-d81dce3);
-            font-family: Inter, Sans-serif;
-            font-size: 45px;
-            font-weight: 700;
-            text-transform: uppercase
-        }
-
-        .elementor-609 .elementor-element.elementor-element-3dfff34 {
-            text-align: center;
-            color: #f2f2f2;
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 700
-        }
-
-        .elementor-609 .elementor-element.elementor-element-11ff2a2 {
-            text-align: center;
-            color: #f2f2f2;
-            font-family: Inter, Sans-serif;
-            font-size: 16px;
-            font-weight: 400
-        }
-
-        .elementor-609 .elementor-element.elementor-element-4969e8c .elementor-button {
-            font-family: Inter, Sans-serif;
-            font-size: 14px;
-            font-weight: 800;
-            text-transform: uppercase;
-            background-color: var(--e-global-color-3f7b2c6);
-            border-radius: 20px 20px 20px 20px;
-            box-shadow: 0 0 15px 0 rgba(0, 68, 255, .9803921568627451)
         }
 
         :root {
             --page-title-display: none
         }
 
-        body.elementor-page-609:not(.elementor-motion-effects-element-type-background), body.elementor-page-609 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+        body.elementor-page-915:not(.elementor-motion-effects-element-type-background), body.elementor-page-915 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
             background-color: var(--e-global-color-3f7b2c6)
-        }
-
-        @media (max-width: 1024px) {
-            .e-con {
-                --container-max-width: 1024px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-b241f05 {
-                --e-n-carousel-swiper-slides-to-display: 2
-            }
         }
 
         @media (max-width: 767px) {
@@ -7851,146 +5112,7 @@
                 --container-max-width: 767px
             }
 
-            .elementor-609 .elementor-element.elementor-element-87064d3 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-cfb7b65 {
-                --margin-top: 30px;
-                --margin-bottom: 0px;
-                --margin-left: 0px;
-                --margin-right: 0px;
-                --padding-top: 0px;
-                --padding-bottom: 0px;
-                --padding-left: 10px;
-                --padding-right: 10px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-dc25f46 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-0b6711b {
-                font-size: 16px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-fe5046a {
-                --margin-top: 50px;
-                --margin-bottom: 0px;
-                --margin-left: 0px;
-                --margin-right: 0px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-19c2028 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-92d3bd3 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-0de229a {
-                --padding-top: 0px;
-                --padding-bottom: 0px;
-                --padding-left: 10px;
-                --padding-right: 10px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-c3e3eac {
-                --padding-top: 80px;
-                --padding-bottom: 0px;
-                --padding-left: 0px;
-                --padding-right: 0px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-869a96b .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-b467bb7 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-eaf34c5 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-20132af .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-5bc9486 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-24181e2 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-f1f8448 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-285de57 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-ae29821 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-af8475f .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-ebd522b .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-c240176 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-bfedd49 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-57a259a .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-cab4bf0 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-68f2a2f .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-e88a248 {
-                text-align: center
-            }
-
-            .elementor-609 .elementor-element.elementor-element-e88a248 .elementor-heading-title {
-                font-size: 30px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-e88a248 > .elementor-widget-container {
-                padding: 0 10px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-b241f05 {
-                --e-n-carousel-swiper-slides-to-display: 1
-            }
-
-            .elementor-609 .elementor-element.elementor-element-c0049e2 {
-                --padding-top: 0px;
-                --padding-bottom: 0px;
-                --padding-left: 10px;
-                --padding-right: 10px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-141e55d .elementor-heading-title {
+            .elementor-915 .elementor-element.elementor-element-162fba8 .elementor-heading-title {
                 font-size: 30px
             }
         }
@@ -8056,20 +5178,12 @@
             background-color: var(--e-global-color-1fd20c4)
         }
 
-        .elementor-418 .elementor-element.elementor-element-aa45581 .e--pointer-framed .elementor-item:after, .elementor-418 .elementor-element.elementor-element-aa45581 .e--pointer-framed .elementor-item:before {
-            border-color: var(--e-global-color-1fd20c4)
-        }
-
         .elementor-418 .elementor-element.elementor-element-aa45581 .elementor-nav-menu--main .elementor-item.elementor-item-active {
             color: var(--e-global-color-0024921)
         }
 
         .elementor-418 .elementor-element.elementor-element-aa45581 .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item.elementor-item-active:after, .elementor-418 .elementor-element.elementor-element-aa45581 .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item.elementor-item-active:before {
             background-color: var(--e-global-color-1fd20c4)
-        }
-
-        .elementor-418 .elementor-element.elementor-element-aa45581 .e--pointer-framed .elementor-item.elementor-item-active:after, .elementor-418 .elementor-element.elementor-element-aa45581 .e--pointer-framed .elementor-item.elementor-item-active:before {
-            border-color: var(--e-global-color-1fd20c4)
         }
 
         body:not(.rtl) .elementor-418 .elementor-element.elementor-element-aa45581 {
@@ -8120,20 +5234,12 @@
             background-color: var(--e-global-color-1fd20c4)
         }
 
-        .elementor-418 .elementor-element.elementor-element-25d9422 .e--pointer-framed .elementor-item:after, .elementor-418 .elementor-element.elementor-element-25d9422 .e--pointer-framed .elementor-item:before {
-            border-color: var(--e-global-color-1fd20c4)
-        }
-
         .elementor-418 .elementor-element.elementor-element-25d9422 .elementor-nav-menu--main .elementor-item.elementor-item-active {
             color: var(--e-global-color-0024921)
         }
 
         .elementor-418 .elementor-element.elementor-element-25d9422 .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item.elementor-item-active:after, .elementor-418 .elementor-element.elementor-element-25d9422 .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item.elementor-item-active:before {
             background-color: var(--e-global-color-1fd20c4)
-        }
-
-        .elementor-418 .elementor-element.elementor-element-25d9422 .e--pointer-framed .elementor-item.elementor-item-active:after, .elementor-418 .elementor-element.elementor-element-25d9422 .e--pointer-framed .elementor-item.elementor-item-active:before {
-            border-color: var(--e-global-color-1fd20c4)
         }
 
         .elementor-418 .elementor-element.elementor-element-4324b6b .elementor-button {
@@ -8198,7 +5304,7 @@
         }
 
         .elementor-593 .elementor-element.elementor-element-e6dd587:not(.elementor-motion-effects-element-type-background), .elementor-593 .elementor-element.elementor-element-e6dd587 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            background-image: var(--wpr-bg-f69b1e91-c971-43cc-96ad-4b5ae61fb46a);
+            background-image: var(--wpr-bg-b55458fa-2e09-4e92-9bd2-246dde5515ff);
             background-repeat: no-repeat;
             background-size: cover
         }
@@ -8294,10 +5400,6 @@
             right: calc(-34px / 2)
         }
 
-        .elementor-593 .elementor-element.elementor-element-5d47e23 .elementor-icon-list-icon i {
-            transition: color .3s
-        }
-
         .elementor-593 .elementor-element.elementor-element-5d47e23 .elementor-icon-list-icon svg {
             transition: fill .3s
         }
@@ -8337,11 +5439,6 @@
             font-size: 15px;
             font-weight: 700;
             text-transform: capitalize
-        }
-
-        .elementor-593 .elementor-element.elementor-element-5a6bf55 .elementor-icon-list-icon i {
-            color: var(--e-global-color-1fd20c4);
-            transition: color .3s
         }
 
         .elementor-593 .elementor-element.elementor-element-5a6bf55 .elementor-icon-list-icon svg {
@@ -8401,16 +5498,37 @@
             --border-transition: 0.3s
         }
 
-        .elementor-593 .elementor-element.elementor-element-6893b86 {
+        .elementor-593 .elementor-element.elementor-element-8ddd329 {
             --display: flex;
-            --justify-content: center;
             --align-items: flex-start;
             --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
+            --background-transition: 0.3s
+        }
+
+        .elementor-593 .elementor-element.elementor-element-4ab1aa2.elementor-position-left .elementor-image-box-img {
+            margin-right: 10px
+        }
+
+        .elementor-593 .elementor-element.elementor-element-4ab1aa2 .elementor-image-box-wrapper .elementor-image-box-img {
+            width: 10%
+        }
+
+        .elementor-593 .elementor-element.elementor-element-4ab1aa2 .elementor-image-box-img img {
+            transition-duration: .3s
+        }
+
+        .elementor-593 .elementor-element.elementor-element-4ab1aa2 .elementor-image-box-title {
+            color: #fff;
+            font-family: "Plus Jakarta Sans", Sans-serif;
+            font-size: 16px;
+            font-weight: 600
+        }
+
+        .elementor-593 .elementor-element.elementor-element-6893b86 {
+            --display: flex;
+            --align-items: center;
+            --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
+            --background-transition: 0.3s
         }
 
         .elementor-593 .elementor-element.elementor-element-712a224 {
@@ -8422,14 +5540,9 @@
 
         .elementor-593 .elementor-element.elementor-element-1d54d7a {
             --display: flex;
-            --justify-content: center;
             --align-items: flex-end;
             --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
-            --background-transition: 0.3s;
-            --padding-top: 0px;
-            --padding-bottom: 0px;
-            --padding-left: 0px;
-            --padding-right: 0px
+            --background-transition: 0.3s
         }
 
         .elementor-593 .elementor-element.elementor-element-13f9af8 {
@@ -8448,6 +5561,15 @@
                 max-width: 29%
             }
 
+            .elementor-593 .elementor-element.elementor-element-8ddd329 {
+                --align-items: flex-start;
+                --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%)
+            }
+
+            .elementor-593 .elementor-element.elementor-element-4ab1aa2 .elementor-image-box-img {
+                margin-bottom: 10px
+            }
+
             .elementor-593 .elementor-element.elementor-element-6893b86 {
                 --align-items: flex-start;
                 --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%)
@@ -8460,186 +5582,6 @@
         }
 
         @media (min-width: 768px) {
-            .elementor-609 .elementor-element.elementor-element-cfb7b65 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-3ad9cd9 {
-                --width: 50%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-23bbe8a {
-                --width: 50%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-0de229a {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-c3e3eac {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-caf37f8 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-3b80a6e {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-7e1b586 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-8356144 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-c3c228a {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-f430423 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-bda5aea {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-1297329 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-e939147 {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-e1856b5 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-eb3aeff {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-3b95ff5 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-6766ace {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-16f8295 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-e764a89 {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-ed6c047 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-002e8a4 {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-172c594 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-d029138 {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-950a59f {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-02d26fe {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-d1c3dfd {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-5949079 {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-d0451a3 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-e1c8c24 {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-b89bfe2 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-06e7259 {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-4658cf5 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-06358b4 {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-ec99bda {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-3f32ef7 {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-bb40055 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-2935ee2 {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-3132420 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-342fbea {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-6216c2f {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-333f0ae {
-                --width: 60.013%
-            }
-
-            .elementor-609 .elementor-element.elementor-element-cfa8dc3 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-c0049e2 {
-                --content-width: 1240px
-            }
-
-            .elementor-609 .elementor-element.elementor-element-8f88947 {
-                --content-width: 700px
-            }
-
             .elementor-418 .elementor-element.elementor-element-99441e1 {
                 --content-width: 1240px
             }
@@ -8675,134 +5617,6 @@
             .elementor-593 .elementor-element.elementor-element-123e18b {
                 --content-width: 1240px
             }
-        }
-
-        .elementor-670 .elementor-element.elementor-element-9feaccc {
-            --display: flex;
-            --flex-direction: column;
-            --container-widget-width: 100%;
-            --container-widget-height: initial;
-            --container-widget-flex-grow: 0;
-            --container-widget-align-self: initial;
-            --background-transition: 0.3s
-        }
-
-        .elementor-670 .elementor-element.elementor-element-1dafeda .premium-progressbar-bar, .elementor-670 .elementor-element.elementor-element-1dafeda .premium-progressbar-bar-wrap {
-            height: 34px
-        }
-
-        .elementor-670 .elementor-element.elementor-element-1dafeda .premium-progressbar-bar, .elementor-670 .elementor-element.elementor-element-1dafeda .segment-inner {
-            background-color: var(--e-global-color-1fd20c4)
-        }
-
-        .elementor-670 .elementor-element.elementor-element-1dafeda .premium-progressbar-left-label {
-            color: #fff;
-            margin: 19px 0 -29px 20px
-        }
-
-        .elementor-670 .elementor-element.elementor-element-1dafeda > .elementor-widget-container {
-            margin: 0 0 -40px
-        }
-
-        .elementor-670 .elementor-element.elementor-element-2c9ac6f {
-            text-align: center
-        }
-
-        .elementor-670 .elementor-element.elementor-element-2c9ac6f .elementor-heading-title {
-            color: #000;
-            font-family: Roboto, Sans-serif;
-            font-size: 28px;
-            font-weight: 600
-        }
-
-        .elementor-670 .elementor-element.elementor-element-2c9ac6f > .elementor-widget-container {
-            margin: 0 0 13px
-        }
-
-        .elementor-670 .elementor-element.elementor-element-4cc3451 {
-            --display: flex;
-            --background-transition: 0.3s;
-            --border-radius: 5px 5px 5px 5px;
-            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .18);
-            --padding-top: 35px;
-            --padding-bottom: 35px;
-            --padding-left: 35px;
-            --padding-right: 35px
-        }
-
-        .elementor-670 .elementor-element.elementor-element-28ee838 > .elementor-widget-container {
-            margin: -42px 0 -24px
-        }
-
-        .elementor-670 .elementor-element.elementor-element-3bd8e01 img {
-            width: 120px
-        }
-
-        .elementor-670 .elementor-element.elementor-element-8b21e1a img {
-            width: 350px
-        }
-
-        .elementor-670 .elementor-element.elementor-element-8c697f2 {
-            text-align: center;
-            color: #141414;
-            font-family: "Plus Jakarta Sans", Sans-serif;
-            font-size: 14px;
-            font-weight: 400
-        }
-
-        #elementor-popup-modal-670 .dialog-message {
-            width: 700px;
-            height: auto;
-            padding: 20px
-        }
-
-        #elementor-popup-modal-670 {
-            justify-content: center;
-            align-items: center;
-            pointer-events: all;
-            background-color: rgba(0, 0, 0, .8)
-        }
-
-        #elementor-popup-modal-670 .dialog-close-button {
-            display: flex;
-            top: 0;
-            background-color: #1f1f1f;
-            font-size: 26px
-        }
-
-        #elementor-popup-modal-670 .dialog-widget-content {
-            border-style: solid;
-            border-width: 11px;
-            border-color: #cbd5e0;
-            box-shadow: 2px 8px 23px 3px rgba(0, 0, 0, .2)
-        }
-
-        body:not(.rtl) #elementor-popup-modal-670 .dialog-close-button {
-            right: 0
-        }
-
-        body.rtl #elementor-popup-modal-670 .dialog-close-button {
-            left: 0
-        }
-
-        #elementor-popup-modal-670 .dialog-close-button i {
-            color: #fff
-        }
-
-        #elementor-popup-modal-670 .dialog-close-button svg {
-            fill: #FFFFFF
-        }
-
-        .elementor-670 .elementor-element.elementor-element-1dafeda .premium-progressbar-left-label {
-            z-index: 99999999 !important;
-            position: relative !important
-        }
-
-        .elementor-670 .elementor-element.elementor-element-28ee838 .SubmitButton {
-            width: 100%;
-            font-size: 20px;
-            font-weight: 600;
-            height: 60px
         }
 
         .elementor-210 .elementor-element.elementor-element-9feaccc {
@@ -8940,7 +5754,7 @@
             font-weight: 100;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -8949,7 +5763,7 @@
             font-weight: 200;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -8958,7 +5772,7 @@
             font-weight: 300;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -8967,7 +5781,7 @@
             font-weight: 400;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -8976,7 +5790,7 @@
             font-weight: 500;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -8985,7 +5799,7 @@
             font-weight: 600;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -8994,7 +5808,7 @@
             font-weight: 700;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -9003,7 +5817,7 @@
             font-weight: 800;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -9012,7 +5826,7 @@
             font-weight: 900;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -9021,7 +5835,7 @@
             font-weight: 200;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -9030,7 +5844,7 @@
             font-weight: 300;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -9039,7 +5853,7 @@
             font-weight: 400;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -9048,7 +5862,7 @@
             font-weight: 500;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -9057,7 +5871,7 @@
             font-weight: 600;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -9066,7 +5880,7 @@
             font-weight: 700;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         @font-face {
@@ -9075,7 +5889,7 @@
             font-weight: 800;
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
         .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload), .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
@@ -9092,10 +5906,6 @@
             .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload), .e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
                 background-image: none !important
             }
-        }
-
-        body:not(.ltr) .elementor-416 .elementor-element.elementor-element-9e8e85f1 {
-            right: unset !important
         }
 
         .overlay {
@@ -9327,7 +6137,7 @@
         }
 
         .elementor-nav-menu:after {
-            content: " ";
+            content: " ";
             display: block;
             height: 0;
             font: 0/0 serif;
@@ -9536,6 +6346,14 @@
             .elementor-nav-menu--dropdown-mobile .elementor-nav-menu--main {
                 display: none
             }
+
+            .elementor-widget:not(.elementor-mobile-align-right) .elementor-icon-list-item:after {
+                left: 0
+            }
+
+            .elementor-widget:not(.elementor-mobile-align-left) .elementor-icon-list-item:after {
+                right: 0
+            }
         }
 
         @media (min-width: 768px) {
@@ -9654,309 +6472,128 @@
             margin-bottom: 0
         }
 
-        .elementor-widget-icon-box .elementor-icon-box-wrapper {
+        .calculator h2 {
+            display: none
+        }
+
+        .calculator {
+            background: 0 0 !important;
+            color: #fff;
+            font-size: 24px;
+            font-family: Inter;
+            font-weight: 600
+        }
+
+        .calculator input {
+            background: #0c1429 !important;
+            border-radius: 35px !important;
+            border: 2px solid #04f !important;
+            color: #fff !important
+        }
+
+        .results {
+            background-image: url(https://metatrading.ai/wp-content/uploads/2024/05/Rectangle-124.jpg) !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important
+        }
+
+        @font-face {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        :root {
+            --main-bg-color: #ecf0f3;
+            --input-bg-color: #fff;
+            --button-color: #007bff;
+            --button-hover-color: #0056b3;
+            --result-bg: linear-gradient(160deg, #009688 0%, #007bff 100%);
+            --font-family: 'Poppins', sans-serif;
+            --risk-very-low: #48C78E;
+            --risk-low: #F1C40F;
+            --risk-medium: #E67E22;
+            --risk-high: #E74C3C;
+            --risk-very-high: #C0392B
+        }
+
+        body {
+            font-family: var(--font-family);
+            background: var(--main-bg-color);
+            margin: 0;
+            padding: 0;
             display: block;
-            text-align: center
+            justify-content: center;
+            align-items: center;
+            height: 100vh
         }
 
-        .elementor-widget-icon-box .elementor-icon-box-icon {
-            margin-bottom: var(--icon-box-icon-margin, 15px);
-            margin-right: auto;
-            margin-left: auto
+        .calculator {
+            background: var(--input-bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+            width: 100%;
+            max-width: 450px
         }
 
-        .elementor-widget-icon-box.elementor-position-top .elementor-icon-box-wrapper {
+        button, input[type=number], input[type=range] {
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 22px);
+            background: var(--main-bg-color);
+            font-family: var(--font-family)
+        }
+
+        button {
+            background-color: var(--button-color);
+            color: #fff;
+            cursor: pointer
+        }
+
+        button:hover {
+            background-color: var(--button-hover-color)
+        }
+
+        .results {
+            background: var(--result-bg);
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .result-item {
+            flex-basis: calc(50% - 10px);
+            text-align: center;
+            margin-bottom: 10px
+        }
+
+        .result-label, .result-value {
+            font-size: 18px;
+            margin-bottom: 5px
+        }
+
+        .result-value {
+            font-weight: 700;
+            font-size: 24px
+        }
+
+        #riskOutput {
             display: block;
             text-align: center;
-            flex-direction: unset
-        }
-
-        .elementor-widget-icon-box.elementor-position-top .elementor-icon-box-icon {
-            margin-bottom: var(--icon-box-icon-margin, 15px);
-            margin-right: auto;
-            margin-left: auto
-        }
-
-        @media (max-width: 767px) {
-            .elementor-widget-icon-box.elementor-mobile-position-top .elementor-icon-box-wrapper {
-                display: block;
-                text-align: center;
-                flex-direction: unset
-            }
-
-            .elementor-widget-icon-box.elementor-mobile-position-top .elementor-icon-box-icon {
-                margin-bottom: var(--icon-box-icon-margin, 15px);
-                margin-right: auto;
-                margin-left: auto
-            }
-
-            .elementor-widget:not(.elementor-mobile-align-right) .elementor-icon-list-item:after {
-                left: 0
-            }
-
-            .elementor-widget:not(.elementor-mobile-align-left) .elementor-icon-list-item:after {
-                right: 0
-            }
-        }
-
-        .elementor-widget-icon-box .elementor-icon-box-title a {
-            color: inherit
-        }
-
-        .elementor-widget-icon-box .elementor-icon-box-content {
-            flex-grow: 1
-        }
-
-        .elementor-widget-icon-box .elementor-icon-box-description {
-            margin: 0
-        }
-
-        .elementor-widget-n-carousel {
-            --e-n-carousel-slides-to-show: 3;
-            --e-n-carousel-swiper-slides-gap: 10px;
-            --e-n-carousel-swiper-slides-to-display: 3;
-            --e-n-carousel-swiper-pagination-size: 0;
-            --e-n-carousel-swiper-pagination-spacing: 10px;
-            --e-n-carousel-swiper-offset-size: 0;
-            height: -moz-fit-content;
-            height: fit-content;
-            --e-n-carousel-arrow-prev-top-align: 50%;
-            --e-n-carousel-arrow-prev-top-position: 0px;
-            --e-n-carousel-arrow-prev-caption-spacing: 15px;
-            --e-n-carousel-arrow-next-top-align: 50%;
-            --e-n-carousel-arrow-next-top-position: 0px;
-            --e-n-carousel-arrow-next-caption-spacing: 15px;
-            --e-n-carousel-arrow-prev-left-align: 0px;
-            --e-n-carousel-arrow-prev-left-position: 0px;
-            --e-n-carousel-arrow-next-right-align: 0px;
-            --e-n-carousel-arrow-next-right-position: 0px;
-            --e-n-carousel-arrow-next-translate-x: 0px;
-            --e-n-carousel-arrow-next-translate-y: 0px;
-            --e-n-carousel-arrow-prev-translate-x: 0px;
-            --e-n-carousel-arrow-prev-translate-y: 0px;
-            --e-n-carousel-swiper-padding-bottom: calc(var(--e-n-carousel-swiper-pagination-size) + var(--e-n-carousel-swiper-pagination-spacing));
-            --e-n-carousel-dots-vertical-position: 100%;
-            --e-n-carousel-dots-vertical-offset: 0px;
-            --e-n-carousel-dots-horizontal-position: 50%;
-            --e-n-carousel-dots-horizontal-offset: 0px;
-            --e-n-carousel-dots-horizontal-transform: -50%;
-            --e-n-carousel-dots-vertical-transform: -100%;
-            --e-n-carousel-fraction-vertical-position: 100%;
-            --e-n-carousel-fraction-vertical-offset: 0px;
-            --e-n-carousel-fraction-horizontal-position: 50%;
-            --e-n-carousel-fraction-horizontal-offset: 0px;
-            --e-n-carousel-fraction-horizontal-transform: -50%;
-            --e-n-carousel-fraction-vertical-transform: -100%;
-            --e-n-carousel-horizontal-transform-modifier: 1
-        }
-
-        .elementor-widget-n-carousel .e-n-carousel {
-            display: flex;
-            min-width: 0
-        }
-
-        .elementor-widget-n-carousel .e-n-carousel > .swiper-wrapper > .swiper-slide-active.elementor-edit-area-active {
-            overflow: initial
-        }
-
-        .elementor-widget-n-carousel .e-n-carousel.offset-left {
-            padding-inline-start: var(--e-n-carousel-swiper-offset-size, 0)
-        }
-
-        .elementor-widget-n-carousel .e-n-carousel.offset-both, .elementor-widget-n-carousel .e-n-carousel.offset-right {
-            padding-inline-end: var(--e-n-carousel-swiper-offset-size, 0)
-        }
-
-        .elementor-widget-n-carousel .e-n-carousel.offset-both {
-            padding-inline-start: var(--e-n-carousel-swiper-offset-size, 0)
-        }
-
-        .elementor-widget-n-carousel .e-n-carousel > .swiper-wrapper .swiper-slide a.e-con {
-            display: var(--display)
-        }
-
-        .elementor-widget-n-carousel .e-n-carousel > .swiper-wrapper > .swiper-slide {
-            flex-shrink: 0;
-            height: var(--e-n-carousel-slide-height, initial)
-        }
-
-        .elementor-widget-n-carousel .e-n-carousel > .swiper-wrapper > .swiper-slide > .e-con {
-            max-width: calc(100% - var(--margin-inline-start, var(--margin-left)) - var(--margin-inline-end, var(--margin-right)));
-            height: var(--e-n-carousel-slide-container-height, initial)
-        }
-
-        .elementor-widget-n-carousel .elementor-swiper-button.elementor-swiper-button-next, .elementor-widget-n-carousel .elementor-swiper-button.elementor-swiper-button-prev {
-            font-size: var(--e-n-carousel-arrow-size, 25px);
-            color: var(--e-n-carousel-arrow-normal-color, hsla(0, 0%, 93.3%, .9));
-            border-style: var(--e-n-carousel-arrow-normal-border-type);
-            transition-duration: .25s;
-            z-index: 2
-        }
-
-        .elementor-widget-n-carousel .elementor-swiper-button.elementor-swiper-button-next svg, .elementor-widget-n-carousel .elementor-swiper-button.elementor-swiper-button-prev svg {
-            fill: var(--e-n-carousel-arrow-normal-color, hsla(0, 0%, 93.3%, .9))
-        }
-
-        .elementor-widget-n-carousel .elementor-swiper-button.elementor-swiper-button-next:hover, .elementor-widget-n-carousel .elementor-swiper-button.elementor-swiper-button-prev:hover {
-            color: var(--e-n-carousel-arrow-hover-color, hsla(0, 0%, 93.3%, .9));
-            border-style: var(--e-n-carousel-arrow-hover-border-type)
-        }
-
-        .elementor-widget-n-carousel .elementor-swiper-button.elementor-swiper-button-next:hover svg, .elementor-widget-n-carousel .elementor-swiper-button.elementor-swiper-button-prev:hover svg {
-            fill: var(--e-n-carousel-arrow-hover-color, hsla(0, 0%, 93.3%, .9))
-        }
-
-        .elementor-widget-n-carousel.elementor-element :is(.swiper,.swiper-container) ~ .elementor-swiper-button-next {
-            top: calc(var(--e-n-carousel-arrow-next-top-align) + var(--e-n-carousel-arrow-next-top-position) - var(--e-n-carousel-arrow-next-caption-spacing));
-            right: calc(var(--e-n-carousel-arrow-next-right-align) + var(--e-n-carousel-arrow-next-right-position));
-            transform: translate(var(--e-n-carousel-arrow-next-translate-x), var(--e-n-carousel-arrow-next-translate-y))
-        }
-
-        .elementor-widget-n-carousel.elementor-element :is(.swiper,.swiper-container) ~ .elementor-swiper-button-prev {
-            top: calc(var(--e-n-carousel-arrow-prev-top-align) + var(--e-n-carousel-arrow-prev-top-position) - var(--e-n-carousel-arrow-prev-caption-spacing));
-            left: calc(var(--e-n-carousel-arrow-prev-left-align) + var(--e-n-carousel-arrow-prev-left-position));
-            transform: translate(var(--e-n-carousel-arrow-prev-translate-x), var(--e-n-carousel-arrow-prev-translate-y))
-        }
-
-        .elementor-widget-n-carousel.elementor-pagination-type-bullets {
-            --e-n-carousel-swiper-pagination-size: 6px
-        }
-
-        .elementor-widget-n-carousel .swiper-pagination-progressbar {
-            height: var(--e-n-carousel-swiper-pagination-size)
-        }
-
-        .elementor-widget-n-carousel .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-            background: var(--e-n-carousel-progressbar-normal-color, #000)
-        }
-
-        .elementor-widget-n-carousel .swiper-pagination-progressbar .swiper-pagination-progressbar-fill:hover {
-            background: var(--e-n-carousel-progressbar-hover-color, #000)
-        }
-
-        .elementor-widget-n-carousel .swiper-pagination-fraction {
-            color: var(--e-n-carousel-fraction-color, #000)
-        }
-
-        .elementor-widget-n-carousel .swiper-pagination-bullet {
-            width: var(--e-n-carousel-swiper-pagination-size);
-            height: var(--e-n-carousel-swiper-pagination-size);
-            background: var(--e-n-carousel-dots-normal-color, #000)
-        }
-
-        .elementor-widget-n-carousel .swiper-pagination-bullet:hover {
-            background: var(--e-n-carousel-dots-hover-color, #000);
-            opacity: 1
-        }
-
-        .elementor-widget-n-carousel .swiper-horizontal > .swiper-pagination-bullets, .elementor-widget-n-carousel .swiper-pagination, .elementor-widget-n-carousel .swiper-pagination-bullets.swiper-pagination-horizontal, .elementor-widget-n-carousel .swiper-pagination-custom, .elementor-widget-n-carousel .swiper-pagination-fraction {
-            font-size: var(--e-n-carousel-swiper-pagination-size);
-            line-height: var(--e-n-carousel-swiper-pagination-size)
-        }
-
-        .elementor-widget-n-carousel.elementor-pagination-position-outside > .elementor-widget-container > .swiper, .elementor-widget-n-carousel.elementor-pagination-position-outside > .elementor-widget-container > .swiper-container {
-            padding-bottom: var(--e-n-carousel-swiper-padding-bottom)
-        }
-
-        .elementor-widget-n-carousel.elementor-pagination-position-outside > .elementor-widget-container > .swiper .elementor-background-slideshow, .elementor-widget-n-carousel.elementor-pagination-position-outside > .elementor-widget-container > .swiper-container .elementor-background-slideshow {
-            padding-bottom: 0
-        }
-
-        .elementor-widget-n-carousel.elementor-pagination-position-outside > .elementor-widget-container .swiper-pagination-bullet {
-            vertical-align: top
-        }
-
-        .elementor-widget-n-carousel .swiper-pagination-bullets {
-            top: calc(var(--e-n-carousel-dots-vertical-position) + var(--e-n-carousel-dots-vertical-offset));
-            left: calc(var(--e-n-carousel-dots-horizontal-position) + var(--e-n-carousel-dots-horizontal-offset));
-            transform: translate(calc(var(--e-n-carousel-dots-horizontal-transform) * var(--e-n-carousel-horizontal-transform-modifier)), var(--e-n-carousel-dots-vertical-transform));
-            width: -moz-max-content;
-            width: max-content;
-            height: -moz-max-content;
-            height: max-content;
-            z-index: 3
-        }
-
-        .elementor-widget-n-carousel .swiper-pagination-fraction {
-            top: calc(var(--e-n-carousel-fraction-vertical-position) + var(--e-n-carousel-fraction-vertical-offset));
-            left: calc(var(--e-n-carousel-fraction-horizontal-position) + var(--e-n-carousel-fraction-horizontal-offset));
-            transform: translate(calc(var(--e-n-carousel-fraction-horizontal-transform) * var(--e-n-carousel-horizontal-transform-modifier)), var(--e-n-carousel-fraction-vertical-transform));
-            width: -moz-max-content;
-            width: max-content;
-            height: -moz-max-content;
-            height: max-content;
-            z-index: 3
-        }
-
-        .swiper-container:not(.swiper-container-initialized) > .swiper-wrapper, .swiper:not(.swiper-initialized) > .swiper-wrapper {
-            gap: var(--e-n-carousel-swiper-slides-gap);
-            overflow: hidden
-        }
-
-        .swiper-container:not(.swiper-container-initialized) > .swiper-wrapper > .swiper--slide, .swiper:not(.swiper-initialized) > .swiper-wrapper > .swiper--slide {
-            --e-n-carousel-number-of-gaps: max(calc(var(--e-n-carousel-swiper-slides-to-display) - 1), 0);
-            --e-n-carousel-gaps-width-total: calc(var(--e-n-carousel-number-of-gaps) * var(--e-n-carousel-swiper-slides-gap));
-            max-width: calc((100% - var(--e-n-carousel-gaps-width-total)) / var(--e-n-carousel-swiper-slides-to-display, 1))
-        }
-
-        [data-core-v316-plus=true] .elementor-widget-n-carousel .e-n-carousel .swiper-slide > .e-con {
-            --padding-top: initial;
-            --padding-right: initial;
-            --padding-bottom: initial;
-            --padding-left: initial
-        }
-
-        .elementor-widget-rating {
-            --e-rating-gap: 0px;
-            --e-rating-icon-font-size: 16px;
-            --e-rating-icon-color: #ccd6df;
-            --e-rating-icon-marked-color: #f0ad4e;
-            --e-rating-icon-marked-width: 100%;
-            --e-rating-justify-content: flex-start
-        }
-
-        .elementor-widget-rating .e-rating {
-            display: flex;
-            justify-content: var(--e-rating-justify-content)
-        }
-
-        .elementor-widget-rating .e-rating-wrapper {
-            display: flex;
-            justify-content: inherit;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: -moz-fit-content;
-            width: fit-content;
-            margin-block-end: calc(0px - var(--e-rating-gap));
-            margin-inline-end: calc(0px - var(--e-rating-gap))
-        }
-
-        .elementor-widget-rating .e-rating .e-icon {
-            position: relative;
-            margin-block-end: var(--e-rating-gap);
-            margin-inline-end: var(--e-rating-gap)
-        }
-
-        .elementor-widget-rating .e-rating .e-icon-wrapper.e-icon-marked {
-            --e-rating-icon-color: var(--e-rating-icon-marked-color);
-            width: var(--e-rating-icon-marked-width);
-            position: absolute;
-            z-index: 1;
-            height: 100%;
-            left: 0;
-            top: 0;
-            overflow: hidden
-        }
-
-        .elementor-widget-rating .e-rating .e-icon-wrapper :is(i,svg) {
-            display: flex;
-            flex-shrink: 0
-        }
-
-        .elementor-widget-rating .e-rating .e-icon-wrapper svg {
-            width: auto;
-            height: var(--e-rating-icon-font-size);
-            fill: var(--e-rating-icon-color)
+            margin-top: -10px;
+            margin-bottom: 20px;
+            font-weight: 700
         }
 
         .elementor-widget.elementor-icon-list--layout-inline .elementor-widget-container {
@@ -10075,6 +6712,45 @@
             .elementor-widget:not(.elementor-mobile_extra-align-left) .elementor-icon-list-item:after {
                 right: 0
             }
+        }
+
+        .elementor-widget-image-box .elementor-image-box-content {
+            width: 100%
+        }
+
+        @media (min-width: 768px) {
+            .elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper {
+                display: flex
+            }
+
+            .elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper {
+                text-align: start;
+                flex-direction: row
+            }
+
+            .elementor-widget-image-box.elementor-vertical-align-middle .elementor-image-box-wrapper {
+                align-items: center
+            }
+        }
+
+        @media (max-width: 767px) {
+            .elementor-widget-image-box .elementor-image-box-img {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                margin-bottom: 15px
+            }
+        }
+
+        .elementor-widget-image-box .elementor-image-box-img {
+            display: inline-block
+        }
+
+        .elementor-widget-image-box .elementor-image-box-title a {
+            color: inherit
+        }
+
+        .elementor-widget-image-box .elementor-image-box-wrapper {
+            text-align: center
         }
 
         body .iti, div.wpforms-container .wpforms-form .iti, div.wpforms-container-full .wpforms-form .iti {
@@ -10327,7 +7003,7 @@
         }
 
         body .iti__globe, div.wpforms-container .wpforms-form .iti__globe, div.wpforms-container-full .wpforms-form .iti__globe {
-            background-image: var(--wpr-bg-a8b18a25-425d-4f85-a2e6-8441f2b6d936);
+            background-image: var(--wpr-bg-3d19e6a4-0bda-472d-bcb9-e17f15804af5);
             background-size: contain;
             background-position: right;
             box-shadow: none;
@@ -10336,7 +7012,7 @@
 
         @media (min-resolution: 2x) {
             body .iti__globe, div.wpforms-container .wpforms-form .iti__globe, div.wpforms-container-full .wpforms-form .iti__globe {
-                background-image: var(--wpr-bg-2f0275ae-84f3-4315-b227-3bae0336485a)
+                background-image: var(--wpr-bg-e4bc57e9-e6a6-482f-8306-587409dbbaf0)
             }
         }
 
@@ -10356,7 +7032,7 @@
 
         @media (min-resolution: 2x) {
             body .iti__globe, div.wpforms-container .wpforms-form .iti__globe, div.wpforms-container-full .wpforms-form .iti__globe {
-                background-image: var(--wpr-bg-14bc0b73-6686-4805-83f7-bfd2deddc51d)
+                background-image: var(--wpr-bg-f911fa74-37e0-4620-9db2-7324a372841b)
             }
         }
 
@@ -11572,7 +8248,7 @@
 
         .wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear {
             position: absolute;
-            background-image: var(--wpr-bg-6b050f57-32a5-4046-81e0-b4a8d863d87d);
+            background-image: var(--wpr-bg-d09a45b9-8261-4900-9caa-6c6a1ab1c935);
             background-position: 50% 50%;
             background-repeat: no-repeat;
             background-color: rgba(0, 0, 0, .35);
@@ -12015,23 +8691,22 @@
             --wpforms-button-size-padding-h: 15px;
             --wpforms-button-size-margin-top: 10px
         }</style>
-    <link rel="preload" data-rocket-preload as="image" href="../wp-content/uploads/2024/05/Ellipse-71-1.svg"
+    <link rel="preload" data-rocket-preload as="image" href="../wp-content/uploads/2024/05/Header-Banner.png"
           fetchpriority="high">
     <link rel="canonical" href="index.html"/>
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:title" content="About Us - Metatrading.ai"/>
+    <meta property="og:title" content="Profit Calculator - Metatrading.ai"/>
     <meta property="og:description"
-          content="About us Welcome to the Future of Trading with {{ env('APP_NAME') }} Welcome to {{ env('APP_NAME') }}, where the future of trading unfolds. Our vision is to revolutionize trading by integrating the precision of artificial intelligence with the dynamics of the financial markets. At the heart of {{ env('APP_NAME') }} lies a commitment to innovation, empowerment, and excellence. We offer our [&hellip;]"/>
-    <meta property="og:url" content="https://metatrading.ai/about-us/"/>
+          content="Profit Calculator Profit Calculator Profit Calculator Initial Deposit ($) Monthly Deposit ($) Risk Setting: Recommended Settings Time (Years) Time (Months) Total Profit $0 Account Balance $0 Total Invested $0 Monthly Gain 0% Drawdown 0%"/>
+    <meta property="og:url" content="https://metatrading.ai/profit-calculator/"/>
     <meta property="og:site_name" content="Metatrading.ai"/>
-    <meta property="article:modified_time" content="2024-12-04T17:28:04+00:00"/>
-    <meta property="og:image" content="https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg"/>
+    <meta property="article:modified_time" content="2024-07-11T17:23:03+00:00"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:label1" content="Est. reading time"/>
-    <meta name="twitter:data1" content="18 minutes"/>
+    <meta name="twitter:data1" content="1 minute"/>
     <script type="application/ld+json" class="yoast-schema-graph">
-        {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://metatrading.ai/about-us/","url":"https://metatrading.ai/about-us/","name":"About Us - Metatrading.ai","isPartOf":{"@id":"https://metatrading.ai/#website"},"primaryImageOfPage":{"@id":"https://metatrading.ai/about-us/#primaryimage"},"image":{"@id":"https://metatrading.ai/about-us/#primaryimage"},"thumbnailUrl":"https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg","datePublished":"2024-06-16T18:00:14+00:00","dateModified":"2024-12-04T17:28:04+00:00","breadcrumb":{"@id":"https://metatrading.ai/about-us/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://metatrading.ai/about-us/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://metatrading.ai/about-us/#primaryimage","url":"https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg","contentUrl":"https://metatrading.ai/wp-content/uploads/2024/05/Group-18044.svg","width":809,"height":834},{"@type":"BreadcrumbList","@id":"https://metatrading.ai/about-us/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://metatrading.ai/"},{"@type":"ListItem","position":2,"name":"About Us"}]},{"@type":"WebSite","@id":"https://metatrading.ai/#website","url":"https://metatrading.ai/","name":"Metatrading.ai","description":"","publisher":{"@id":"https://metatrading.ai/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://metatrading.ai/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://metatrading.ai/#organization","name":"Metatrading.ai","url":"https://metatrading.ai/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://metatrading.ai/#/schema/logo/image/","url":"https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png","contentUrl":"https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png","width":512,"height":512,"caption":"Metatrading.ai"},"image":{"@id":"https://metatrading.ai/#/schema/logo/image/"}}]}
+        {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://metatrading.ai/profit-calculator/","url":"https://metatrading.ai/profit-calculator/","name":"Profit Calculator - Metatrading.ai","isPartOf":{"@id":"https://metatrading.ai/#website"},"datePublished":"2024-06-16T18:00:14+00:00","dateModified":"2024-07-11T17:23:03+00:00","breadcrumb":{"@id":"https://metatrading.ai/profit-calculator/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://metatrading.ai/profit-calculator/"]}]},{"@type":"BreadcrumbList","@id":"https://metatrading.ai/profit-calculator/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://metatrading.ai/"},{"@type":"ListItem","position":2,"name":"Profit Calculator"}]},{"@type":"WebSite","@id":"https://metatrading.ai/#website","url":"https://metatrading.ai/","name":"Metatrading.ai","description":"","publisher":{"@id":"https://metatrading.ai/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://metatrading.ai/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://metatrading.ai/#organization","name":"Metatrading.ai","url":"https://metatrading.ai/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://metatrading.ai/#/schema/logo/image/","url":"https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png","contentUrl":"https://metatrading.ai/wp-content/uploads/2024/05/cropped-65d7cbc0de43c93dasdc013b99e.png","width":512,"height":512,"caption":"Metatrading.ai"},"image":{"@id":"https://metatrading.ai/#/schema/logo/image/"}}]}
     </script>
     <!-- / Yoast SEO plugin. -->
 
@@ -12071,14 +8746,14 @@ gtag("config", "GT-NS9Z33SB");
 
     <!-- End Google tag (gtag.js) snippet added by Site Kit -->
     <link rel="https://api.w.org/" href="../wp-json/index.html"/>
-    <link rel="alternate" title="JSON" type="application/json" href="../wp-json/wp/v2/pages/609.json"/>
+    <link rel="alternate" title="JSON" type="application/json" href="../wp-json/wp/v2/pages/915.json"/>
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd"/>
     <meta name="generator" content="WordPress 6.7.2"/>
-    <link rel='shortlink' href='../index93f8.html?p=609'/>
+    <link rel='shortlink' href='../index07cd.html?p=915'/>
     <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
-          href="../wp-json/oembed/1.0/embed9be1.json?url=https%3A%2F%2Fmetatrading.ai%2Fabout-us%2F"/>
+          href="../wp-json/oembed/1.0/embed856c.json?url=https%3A%2F%2Fmetatrading.ai%2Fprofit-calculator%2F"/>
     <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
-          href="../wp-json/oembed/1.0/embed80cb?url=https%3A%2F%2Fmetatrading.ai%2Fabout-us%2F&amp;format=xml"/>
+          href="../wp-json/oembed/1.0/embedeab8?url=https%3A%2F%2Fmetatrading.ai%2Fprofit-calculator%2F&amp;format=xml"/>
     <meta name="generator" content="Site Kit by Google 1.128.1"/>
     <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
          (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window, document, "clarity", "script", "mx292zbvbj");
@@ -12148,1173 +8823,444 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <!-- TikTok Pixel Code End -->
     <style id="wpr-lazyload-bg-container"></style>
     <style
-        id="wpr-lazyload-bg-exclusion">.elementor-609 .elementor-element.elementor-element-7c8662c:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-7c8662c > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-            --wpr-bg-ca91e55f-5763-4a61-b123-b3b5cd6758ec: url('../wp-content/uploads/2024/05/Header-Banner-scaled.jpg');
+        id="wpr-lazyload-bg-exclusion">.elementor-915 .elementor-element.elementor-element-d1d2202:not(.elementor-motion-effects-element-type-background), .elementor-915 .elementor-element.elementor-element-d1d2202 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+            --wpr-bg-f60a2d13-8da8-46e8-8b99-fff077474c19: url('../wp-content/uploads/2024/05/Header-Banner.png');
         }</style>
     <noscript>
         <style
-            id="wpr-lazyload-bg-nostyle">.elementor-609 .elementor-element.elementor-element-7e1b586:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-7e1b586 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-                --wpr-bg-8b8dccc5-8ed2-49ee-841e-90a0202f1c07: url('../wp-content/uploads/2024/05/Background-Image-2.png');
+            id="wpr-lazyload-bg-nostyle">.elementor-593 .elementor-element.elementor-element-e6dd587:not(.elementor-motion-effects-element-type-background), .elementor-593 .elementor-element.elementor-element-e6dd587 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+                --wpr-bg-b55458fa-2e09-4e92-9bd2-246dde5515ff: url('../wp-content/uploads/2024/05/Rectangle-124.html');
             }
 
-            .elementor-609 .elementor-element.elementor-element-7459bcb:not(.elementor-motion-effects-element-type-background), .elementor-609 .elementor-element.elementor-element-7459bcb > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-                --wpr-bg-a4ea0272-3f00-42be-887b-580141ffb811: url('../wp-content/uploads/2024/05/Section-CTA-1.jpg');
-            }
-
-            .elementor-593 .elementor-element.elementor-element-e6dd587:not(.elementor-motion-effects-element-type-background), .elementor-593 .elementor-element.elementor-element-e6dd587 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-                --wpr-bg-f69b1e91-c971-43cc-96ad-4b5ae61fb46a: url('../wp-content/uploads/2024/05/Rectangle-124.html');
+            .results {
+                --wpr-bg-eced821e-bd38-4e1d-a6e0-d0798589bcf2: url('../wp-content/uploads/2024/05/Rectangle-124.html');
             }
 
             body .iti__flag, div.wpforms-container .wpforms-form .iti__flag, div.wpforms-container-full .wpforms-form .iti__flag {
-                --wpr-bg-2180bb14-583e-49a2-86cc-2da9068aab53: url('../wp-content/plugins/wpforms/assets/pro/css/fields/img/flagsc4ca.html?1');
+                --wpr-bg-8dc5584d-d276-4390-aabb-be9fc12b24cc: url('../wp-content/plugins/wpforms/assets/pro/css/fields/img/flagsc4ca.html?1');
             }
 
             body .iti__flag, div.wpforms-container .wpforms-form .iti__flag, div.wpforms-container-full .wpforms-form .iti__flag {
-                --wpr-bg-42348f87-4be0-4623-a51e-2d479eff932e: url('../wp-content/plugins/wpforms/assets/pro/css/fields/img/flags%402xc4ca.html?1');
+                --wpr-bg-c42ab386-b80c-40cf-911a-0a4b81cdd920: url('../wp-content/plugins/wpforms/assets/pro/css/fields/img/flags%402xc4ca.html?1');
             }
 
             body .iti__flag, div.wpforms-container .wpforms-form .iti__flag, div.wpforms-container-full .wpforms-form .iti__flag {
-                --wpr-bg-01c640ce-9875-47d1-86be-49b6ae9f50e7: url('../wp-content/plugins/wpforms/assets/pro/images/vendor/intl-tel-input-flagsc4ca.png?1');
+                --wpr-bg-6204f5bf-01ba-4b41-94fa-b38c753b80cb: url('../wp-content/plugins/wpforms/assets/pro/images/vendor/intl-tel-input-flagsc4ca.png?1');
             }
 
             body .iti__flag, div.wpforms-container .wpforms-form .iti__flag, div.wpforms-container-full .wpforms-form .iti__flag {
-                --wpr-bg-2a3c389e-ac74-44e6-8531-2f1e075f1f94: url('../wp-content/plugins/wpforms/assets/pro/images/vendor/intl-tel-input-flags%402xc4ca.png?1');
+                --wpr-bg-f51993fa-900e-48ad-ad99-3a534e713f91: url('../wp-content/plugins/wpforms/assets/pro/images/vendor/intl-tel-input-flags%402xc4ca.png?1');
             }
 
             body .iti__globe, div.wpforms-container .wpforms-form .iti__globe, div.wpforms-container-full .wpforms-form .iti__globe {
-                --wpr-bg-a8b18a25-425d-4f85-a2e6-8441f2b6d936: url('../wp-content/plugins/wpforms/assets/pro/css/fields/img/globe.html');
+                --wpr-bg-3d19e6a4-0bda-472d-bcb9-e17f15804af5: url('../wp-content/plugins/wpforms/assets/pro/css/fields/img/globe.html');
             }
 
             body .iti__globe, div.wpforms-container .wpforms-form .iti__globe, div.wpforms-container-full .wpforms-form .iti__globe {
-                --wpr-bg-2f0275ae-84f3-4315-b227-3bae0336485a: url('../wp-content/plugins/wpforms/assets/pro/css/fields/img/globe%402x.html');
+                --wpr-bg-e4bc57e9-e6a6-482f-8306-587409dbbaf0: url('../wp-content/plugins/wpforms/assets/pro/css/fields/img/globe%402x.html');
             }
 
             body .iti__globe, div.wpforms-container .wpforms-form .iti__globe, div.wpforms-container-full .wpforms-form .iti__globe {
-                --wpr-bg-a3933c34-243a-4f36-a2ef-5891bbdc2026: url('../wp-content/plugins/wpforms/assets/pro/images/vendor/intl-tel-input-globec4ca.png?1');
+                --wpr-bg-1c630efe-e150-4a33-b2c3-2e3b7f99940a: url('../wp-content/plugins/wpforms/assets/pro/images/vendor/intl-tel-input-globec4ca.png?1');
             }
 
             body .iti__globe, div.wpforms-container .wpforms-form .iti__globe, div.wpforms-container-full .wpforms-form .iti__globe {
-                --wpr-bg-14bc0b73-6686-4805-83f7-bfd2deddc51d: url('../wp-content/plugins/wpforms/assets/pro/images/vendor/intl-tel-input-globe%402xc4ca.png?1');
+                --wpr-bg-f911fa74-37e0-4620-9db2-7324a372841b: url('../wp-content/plugins/wpforms/assets/pro/images/vendor/intl-tel-input-globe%402xc4ca.png?1');
             }
 
             .wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear {
-                --wpr-bg-6b050f57-32a5-4046-81e0-b4a8d863d87d: url('../wp-content/plugins/wpforms/assets/pro/images/times-solid-white.svg');
+                --wpr-bg-d09a45b9-8261-4900-9caa-6c6a1ab1c935: url('../wp-content/plugins/wpforms/assets/pro/images/times-solid-white.svg');
             }</style>
     </noscript>
     <script type="application/javascript">const rocket_pairs = [{
-            "selector": ".elementor-609 .elementor-element.elementor-element-7e1b586:not(.elementor-motion-effects-element-type-background),.elementor-609 .elementor-element.elementor-element-7e1b586>.elementor-motion-effects-container>.elementor-motion-effects-layer",
-            "style": ".elementor-609 .elementor-element.elementor-element-7e1b586:not(.elementor-motion-effects-element-type-background),.elementor-609 .elementor-element.elementor-element-7e1b586>.elementor-motion-effects-container>.elementor-motion-effects-layer{--wpr-bg-8b8dccc5-8ed2-49ee-841e-90a0202f1c07: url('https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Background-Image-2.png');}",
-            "hash": "8b8dccc5-8ed2-49ee-841e-90a0202f1c07",
-            "url": "https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Background-Image-2.png"
-        }, {
-            "selector": ".elementor-609 .elementor-element.elementor-element-7459bcb:not(.elementor-motion-effects-element-type-background),.elementor-609 .elementor-element.elementor-element-7459bcb>.elementor-motion-effects-container>.elementor-motion-effects-layer",
-            "style": ".elementor-609 .elementor-element.elementor-element-7459bcb:not(.elementor-motion-effects-element-type-background),.elementor-609 .elementor-element.elementor-element-7459bcb>.elementor-motion-effects-container>.elementor-motion-effects-layer{--wpr-bg-a4ea0272-3f00-42be-887b-580141ffb811: url('https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Section-CTA-1.jpg');}",
-            "hash": "a4ea0272-3f00-42be-887b-580141ffb811",
-            "url": "https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Section-CTA-1.jpg"
-        }, {
             "selector": ".elementor-593 .elementor-element.elementor-element-e6dd587:not(.elementor-motion-effects-element-type-background),.elementor-593 .elementor-element.elementor-element-e6dd587>.elementor-motion-effects-container>.elementor-motion-effects-layer",
-            "style": ".elementor-593 .elementor-element.elementor-element-e6dd587:not(.elementor-motion-effects-element-type-background),.elementor-593 .elementor-element.elementor-element-e6dd587>.elementor-motion-effects-container>.elementor-motion-effects-layer{--wpr-bg-f69b1e91-c971-43cc-96ad-4b5ae61fb46a: url('https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Rectangle-124.jpg');}",
-            "hash": "f69b1e91-c971-43cc-96ad-4b5ae61fb46a",
+            "style": ".elementor-593 .elementor-element.elementor-element-e6dd587:not(.elementor-motion-effects-element-type-background),.elementor-593 .elementor-element.elementor-element-e6dd587>.elementor-motion-effects-container>.elementor-motion-effects-layer{--wpr-bg-b55458fa-2e09-4e92-9bd2-246dde5515ff: url('https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Rectangle-124.jpg');}",
+            "hash": "b55458fa-2e09-4e92-9bd2-246dde5515ff",
+            "url": "https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Rectangle-124.jpg"
+        }, {
+            "selector": ".results",
+            "style": ".results{--wpr-bg-eced821e-bd38-4e1d-a6e0-d0798589bcf2: url('https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Rectangle-124.jpg');}",
+            "hash": "eced821e-bd38-4e1d-a6e0-d0798589bcf2",
             "url": "https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Rectangle-124.jpg"
         }, {
             "selector": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag",
-            "style": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag{--wpr-bg-2180bb14-583e-49a2-86cc-2da9068aab53: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/flags.png?1');}",
-            "hash": "2180bb14-583e-49a2-86cc-2da9068aab53",
+            "style": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag{--wpr-bg-8dc5584d-d276-4390-aabb-be9fc12b24cc: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/flags.png?1');}",
+            "hash": "8dc5584d-d276-4390-aabb-be9fc12b24cc",
             "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/flags.png?1"
         }, {
             "selector": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag",
-            "style": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag{--wpr-bg-42348f87-4be0-4623-a51e-2d479eff932e: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/flags@2x.png?1');}",
-            "hash": "42348f87-4be0-4623-a51e-2d479eff932e",
+            "style": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag{--wpr-bg-c42ab386-b80c-40cf-911a-0a4b81cdd920: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/flags@2x.png?1');}",
+            "hash": "c42ab386-b80c-40cf-911a-0a4b81cdd920",
             "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/flags@2x.png?1"
         }, {
             "selector": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag",
-            "style": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag{--wpr-bg-01c640ce-9875-47d1-86be-49b6ae9f50e7: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-flags.png?1');}",
-            "hash": "01c640ce-9875-47d1-86be-49b6ae9f50e7",
+            "style": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag{--wpr-bg-6204f5bf-01ba-4b41-94fa-b38c753b80cb: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-flags.png?1');}",
+            "hash": "6204f5bf-01ba-4b41-94fa-b38c753b80cb",
             "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-flags.png?1"
         }, {
             "selector": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag",
-            "style": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag{--wpr-bg-2a3c389e-ac74-44e6-8531-2f1e075f1f94: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-flags@2x.png?1');}",
-            "hash": "2a3c389e-ac74-44e6-8531-2f1e075f1f94",
+            "style": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag{--wpr-bg-f51993fa-900e-48ad-ad99-3a534e713f91: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-flags@2x.png?1');}",
+            "hash": "f51993fa-900e-48ad-ad99-3a534e713f91",
             "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-flags@2x.png?1"
         }, {
             "selector": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe",
-            "style": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe{--wpr-bg-a8b18a25-425d-4f85-a2e6-8441f2b6d936: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/globe.png');}",
-            "hash": "a8b18a25-425d-4f85-a2e6-8441f2b6d936",
+            "style": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe{--wpr-bg-3d19e6a4-0bda-472d-bcb9-e17f15804af5: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/globe.png');}",
+            "hash": "3d19e6a4-0bda-472d-bcb9-e17f15804af5",
             "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/globe.png"
         }, {
             "selector": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe",
-            "style": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe{--wpr-bg-2f0275ae-84f3-4315-b227-3bae0336485a: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/globe@2x.png');}",
-            "hash": "2f0275ae-84f3-4315-b227-3bae0336485a",
+            "style": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe{--wpr-bg-e4bc57e9-e6a6-482f-8306-587409dbbaf0: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/globe@2x.png');}",
+            "hash": "e4bc57e9-e6a6-482f-8306-587409dbbaf0",
             "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/globe@2x.png"
         }, {
             "selector": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe",
-            "style": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe{--wpr-bg-a3933c34-243a-4f36-a2ef-5891bbdc2026: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-globe.png?1');}",
-            "hash": "a3933c34-243a-4f36-a2ef-5891bbdc2026",
+            "style": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe{--wpr-bg-1c630efe-e150-4a33-b2c3-2e3b7f99940a: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-globe.png?1');}",
+            "hash": "1c630efe-e150-4a33-b2c3-2e3b7f99940a",
             "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-globe.png?1"
         }, {
             "selector": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe",
-            "style": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe{--wpr-bg-14bc0b73-6686-4805-83f7-bfd2deddc51d: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-globe@2x.png?1');}",
-            "hash": "14bc0b73-6686-4805-83f7-bfd2deddc51d",
+            "style": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe{--wpr-bg-f911fa74-37e0-4620-9db2-7324a372841b: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-globe@2x.png?1');}",
+            "hash": "f911fa74-37e0-4620-9db2-7324a372841b",
             "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-globe@2x.png?1"
         }, {
             "selector": ".wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear",
-            "style": ".wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear{--wpr-bg-6b050f57-32a5-4046-81e0-b4a8d863d87d: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/times-solid-white.svg');}",
-            "hash": "6b050f57-32a5-4046-81e0-b4a8d863d87d",
+            "style": ".wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear{--wpr-bg-d09a45b9-8261-4900-9caa-6c6a1ab1c935: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/times-solid-white.svg');}",
+            "hash": "d09a45b9-8261-4900-9caa-6c6a1ab1c935",
             "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/times-solid-white.svg"
         }];
         const rocket_excluded_pairs = [{
-            "selector": ".elementor-609 .elementor-element.elementor-element-7c8662c:not(.elementor-motion-effects-element-type-background),.elementor-609 .elementor-element.elementor-element-7c8662c>.elementor-motion-effects-container>.elementor-motion-effects-layer",
-            "style": ".elementor-609 .elementor-element.elementor-element-7c8662c:not(.elementor-motion-effects-element-type-background),.elementor-609 .elementor-element.elementor-element-7c8662c>.elementor-motion-effects-container>.elementor-motion-effects-layer{--wpr-bg-ca91e55f-5763-4a61-b123-b3b5cd6758ec: url('https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Header-Banner-scaled.jpg');}",
-            "hash": "ca91e55f-5763-4a61-b123-b3b5cd6758ec",
-            "url": "https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Header-Banner-scaled.jpg"
+            "selector": ".elementor-915 .elementor-element.elementor-element-d1d2202:not(.elementor-motion-effects-element-type-background),.elementor-915 .elementor-element.elementor-element-d1d2202>.elementor-motion-effects-container>.elementor-motion-effects-layer",
+            "style": ".elementor-915 .elementor-element.elementor-element-d1d2202:not(.elementor-motion-effects-element-type-background),.elementor-915 .elementor-element.elementor-element-d1d2202>.elementor-motion-effects-container>.elementor-motion-effects-layer{--wpr-bg-f60a2d13-8da8-46e8-8b99-fff077474c19: url('https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Header-Banner.png');}",
+            "hash": "f60a2d13-8da8-46e8-8b99-fff077474c19",
+            "url": "https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Header-Banner.png"
         }];</script>
 </head>
 <body
-    class="page-template-default page page-id-609 wp-custom-logo elementor-default elementor-kit-6 elementor-page elementor-page-609">
+    class="page-template page-template-elementor_header_footer page page-id-915 wp-custom-logo elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-915">
 
 
 <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
 @include('pages.layout.header')
 
-<main id="content" class="site-main post-609 page type-page status-publish hentry">
-
-
-    <div class="page-content">
-        <div data-elementor-type="wp-page" data-elementor-id="609" class="elementor elementor-609"
-             data-elementor-post-type="page">
-            <div class="elementor-element elementor-element-7c8662c e-flex e-con-boxed e-con e-parent" data-id="7c8662c"
-                 data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-87064d3 elementor-widget elementor-widget-heading"
-                         data-id="87064d3" data-element_type="widget" data-widget_type="heading.default">
-                        <div class="elementor-widget-container">
-                            <style></style>
-                            <h1 class="elementor-heading-title elementor-size-default">About us</h1></div>
-                    </div>
-                    <div
-                        class="elementor-element elementor-element-08be443 elementor-align-center elementor-widget elementor-widget-breadcrumbs"
-                        data-id="08be443" data-element_type="widget" data-widget_type="breadcrumbs.default">
-                        <div class="elementor-widget-container">
-                            <p id="breadcrumbs"><span><span><a href="../index.html">Home</a></span> » <span
-                                        class="breadcrumb_last" aria-current="page">About Us</span></span></p></div>
-                    </div>
-                </div>
+<div data-elementor-type="wp-page" data-elementor-id="915" class="elementor elementor-915"
+     data-elementor-post-type="page">
+    <div class="elementor-element elementor-element-d1d2202 e-flex e-con-boxed e-con e-child" data-id="d1d2202"
+         data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="e-con-inner">
+            <div class="elementor-element elementor-element-162fba8 elementor-widget elementor-widget-heading"
+                 data-id="162fba8" data-element_type="widget" data-widget_type="heading.default">
+                <div class="elementor-widget-container">
+                    <style></style>
+                    <h1 class="elementor-heading-title elementor-size-default">Profit Calculator</h1></div>
             </div>
-            <div class="elementor-element elementor-element-42a63b7 e-con-full e-flex e-con e-parent" data-id="42a63b7"
-                 data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                <div class="elementor-element elementor-element-dcb26eb e-con-full e-flex e-con e-child"
-                     data-id="dcb26eb" data-element_type="container">
-                    <div
-                        class="elementor-element elementor-element-dec1a3b elementor-absolute elementor-widget elementor-widget-image"
-                        data-id="dec1a3b" data-element_type="widget"
-                        data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
-                        <div class="elementor-widget-container">
-                            <img fetchpriority="high" decoding="async" width="809" height="834"
-                                 src="../wp-content/uploads/2024/05/Group-18044.svg"
-                                 class="attachment-full size-full wp-image-435" alt=""/></div>
-                    </div>
-                    <div
-                        class="elementor-element elementor-element-9e8e85f elementor-absolute elementor-widget elementor-widget-image"
-                        data-id="9e8e85f" data-element_type="widget"
-                        data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
-                        <div class="elementor-widget-container">
-                            <img fetchpriority="high" decoding="async" width="916" height="1205"
-                                 src="../wp-content/uploads/2024/05/Ellipse-71-1.svg"
-                                 class="attachment-full size-full wp-image-436" alt=""/></div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-cfb7b65 e-flex e-con-boxed e-con e-child"
-                     data-id="cfb7b65" data-element_type="container"
-                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                    <div class="e-con-inner">
-                        <div class="elementor-element elementor-element-3ad9cd9 e-con-full e-flex e-con e-child"
-                             data-id="3ad9cd9" data-element_type="container">
-                            <div
-                                class="elementor-element elementor-element-6a9e06b elementor-widget elementor-widget-image"
-                                data-id="6a9e06b" data-element_type="widget" data-widget_type="image.default">
-                                <div class="elementor-widget-container">
-                                    <img decoding="async" width="554" height="477"
-                                         src="../wp-content/uploads/2024/05/Picture-1.jpg"
-                                         class="attachment-full size-full wp-image-454" alt="best ai trading bots"
-                                         srcset="https://metatrading.ai/wp-content/uploads/2024/05/Picture-1.jpg 554w, https://metatrading.ai/wp-content/uploads/2024/05/Picture-1-300x258.jpg 300w"
-                                         sizes="(max-width: 554px) 100vw, 554px"/></div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-23bbe8a e-con-full e-flex e-con e-child"
-                             data-id="23bbe8a" data-element_type="container">
-                            <div
-                                class="elementor-element elementor-element-dc25f46 elementor-widget elementor-widget-heading"
-                                data-id="dc25f46" data-element_type="widget" data-widget_type="heading.default">
-                                <div class="elementor-widget-container">
-                                    <h2 class="elementor-heading-title elementor-size-default">Welcome to the Future of
-                                        Trading with <span style="color:#0044FF">{{ env('APP_NAME') }}</span>
-                                    </h2></div>
-                            </div>
-                            <div
-                                class="elementor-element elementor-element-0b6711b elementor-widget elementor-widget-text-editor"
-                                data-id="0b6711b" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    <style></style>
-                                    <p>Welcome to {{ env('APP_NAME') }}, where the future of trading unfolds. Our vision is to
-                                        revolutionize trading by integrating the precision of artificial intelligence
-                                        with the dynamics of the financial markets. At the heart of {{ env('APP_NAME') }} lies
-                                        a commitment to innovation, empowerment, and excellence. We offer our users not
-                                        just a platform, but a new horizon of possibilities, where advanced AI-driven
-                                        strategies, real-time market analysis, and personalized trading solutions
-                                        converge to create unmatched opportunities for success. <br/><br/>Founded by
-                                        visionaries in technology and finance, {{ env('APP_NAME') }} is at the forefront of the
-                                        digital trading revolution. We believe in the power of AI to transform trading
-                                        from a game of chances to a science of strategy and success. Our platform is
-                                        built on the pillars of accessibility, reliability, and growth, ensuring that
-                                        every trader, regardless of their experience level, can navigate the markets
-                                        more effectively and achieve their financial goals. <br/><br/>Our team of
-                                        experts continuously explores the cutting edge of technology and market trends
-                                        to bring you the most innovative trading tools and insights. By fostering a
-                                        community of learning and success, we aim to demystify trading and make the
-                                        benefits of AI accessible to all. At {{ env('APP_NAME') }}, your potential is
-                                        limitless. Join us on this journey and let’s shape the future of trading
-                                        together.</p></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-72b6888 e-con-full e-flex e-con e-child"
-                     data-id="72b6888" data-element_type="container">
-                    <div
-                        class="elementor-element elementor-element-7166233 elementor-absolute elementor-widget elementor-widget-image"
-                        data-id="7166233" data-element_type="widget"
-                        data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
-                        <div class="elementor-widget-container">
-                            <img decoding="async" width="911" height="1369"
-                                 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20911%201369'%3E%3C/svg%3E"
-                                 class="attachment-full size-full wp-image-455" alt=""
-                                 data-lazy-src="https://metatrading.ai/wp-content/uploads/2024/05/Ellipse-72.svg"/>
-                            <noscript><img loading="lazy" decoding="async" width="911" height="1369"
-                                           src="../wp-content/uploads/2024/05/Ellipse-72.svg"
-                                           class="attachment-full size-full wp-image-455" alt=""/></noscript>
-                        </div>
-                    </div>
-                    <div
-                        class="elementor-element elementor-element-fae6aff elementor-absolute elementor-widget elementor-widget-image"
-                        data-id="fae6aff" data-element_type="widget"
-                        data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
-                        <div class="elementor-widget-container">
-                            <img decoding="async" width="660" height="1131"
-                                 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20660%201131'%3E%3C/svg%3E"
-                                 class="attachment-full size-full wp-image-456" alt=""
-                                 data-lazy-src="https://metatrading.ai/wp-content/uploads/2024/05/Ellipse-74.svg"/>
-                            <noscript><img loading="lazy" decoding="async" width="660" height="1131"
-                                           src="../wp-content/uploads/2024/05/Ellipse-74.svg"
-                                           class="attachment-full size-full wp-image-456" alt=""/></noscript>
-                        </div>
-                    </div>
-                </div>
-                <div class="elementor-element elementor-element-fe5046a e-con-full e-flex e-con e-child"
-                     data-id="fe5046a" data-element_type="container">
-                    <div class="elementor-element elementor-element-19c2028 elementor-widget elementor-widget-heading"
-                         data-id="19c2028" data-element_type="widget" data-widget_type="heading.default">
-                        <div class="elementor-widget-container">
-                            <h2 class="elementor-heading-title elementor-size-default">Our Mission, Vision, and Core
-                                Values:</h2></div>
-                    </div>
-                    <div class="elementor-element elementor-element-92d3bd3 elementor-widget elementor-widget-heading"
-                         data-id="92d3bd3" data-element_type="widget" data-widget_type="heading.default">
-                        <div class="elementor-widget-container">
-                            <h2 class="elementor-heading-title elementor-size-default"> Guiding Your Path to Trading
-                                Success</h2></div>
-                    </div>
-                    <div class="elementor-element elementor-element-0de229a e-flex e-con-boxed e-con e-child"
-                         data-id="0de229a" data-element_type="container"
-                         data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                        <div class="e-con-inner">
-                            <div class="elementor-element elementor-element-5ca7078 e-flex e-con-boxed e-con e-child"
-                                 data-id="5ca7078" data-element_type="container"
-                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="e-con-inner">
-                                    <div
-                                        class="elementor-element elementor-element-b88375d elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box"
-                                        data-id="b88375d" data-element_type="widget"
-                                        data-widget_type="icon-box.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-icon-box-wrapper">
-
-                                                <div class="elementor-icon-box-icon">
-				<span class="elementor-icon elementor-animation-">
-				<svg xmlns="http://www.w3.org/2000/svg" width="129" height="109" viewBox="0 0 129 109" fill="none"><path
-                        d="M94.3321 37.6272C99.0221 49.6772 99.2421 60.8072 95.0121 71.6172C90.4221 83.3472 82.3721 91.7772 71.0821 96.6872C51.1521 105.357 27.9221 98.5272 15.8521 80.4372C3.6221 62.1072 6.5721 37.7772 22.8621 22.5772C37.5421 8.88723 64.2621 4.77723 85.1921 23.8372L91.2321 19.7372C81.8521 9.65722 67.6221 3.15723 52.6621 3.15723C42.0121 3.15723 30.9921 6.45723 21.0921 14.1072C9.6021 22.9772 2.4221 35.7272 0.892103 49.9772C-0.657897 64.3472 3.6521 78.4172 13.0321 89.5772C31.2721 111.297 63.3121 114.407 85.9721 96.6672C107.172 80.0772 110.422 50.4872 100.272 33.6572L94.3321 37.6272Z"
-                        fill="#0044FF"></path><path
-                        d="M53.0624 23.2769C46.1924 23.2769 38.9924 25.4569 32.7524 30.4669C19.0924 41.4369 16.7524 61.5969 27.5324 75.4169C38.2324 89.1269 57.1924 92.0769 71.6424 82.2769C84.7424 73.3969 88.7924 54.9369 83.2824 45.2669L77.1924 49.3669C80.2324 64.1069 72.0024 74.6569 62.9224 78.2769C51.9224 82.6569 40.3824 79.6569 33.5124 70.6269C26.4624 61.3669 26.8424 48.6069 34.4524 39.5969C41.1424 31.6769 54.4224 27.1369 67.9724 35.6369L73.8924 31.4069C68.9024 26.3569 61.2224 23.2769 53.0624 23.2769Z"
-                        fill="#0044FF"></path><path
-                        d="M127.822 13.1468C127.252 12.8768 126.612 12.7068 125.922 12.5268C125.662 12.4568 125.392 12.3868 125.132 12.3168C123.892 11.9568 122.652 11.6168 121.472 11.2768L119.432 10.7068L119.402 9.97684C119.352 8.69684 119.582 7.44684 119.802 6.23684C120.262 3.73684 120.632 1.71684 118.572 0.00683594C117.412 0.806836 116.272 1.60684 115.152 2.39684C112.072 4.56684 109.172 6.61684 106.042 8.41684C103.292 10.0068 101.962 12.2268 101.992 15.1968C102.032 19.1968 99.7221 21.0868 97.3521 22.6768C84.1921 31.5168 71.1621 40.4468 57.8621 49.5768C56.8321 50.2868 55.8821 51.1568 54.9721 51.9968C54.7021 52.2468 54.4421 52.4868 54.1721 52.7268C54.7121 54.6668 55.5421 55.4868 57.1121 55.6768C57.3821 55.5168 57.6521 55.3568 57.9321 55.1868C58.7621 54.6968 59.6221 54.1868 60.4421 53.6268C63.8321 51.3368 67.2421 49.0668 70.6421 46.7968C79.3721 40.9768 88.4021 34.9568 97.0021 28.6668C102.052 24.9668 106.682 23.1668 112.692 26.3468L115.322 24.5868C117.672 23.0168 119.882 21.5368 122.082 20.0468C122.532 19.7368 122.992 19.4368 123.452 19.1268C125.022 18.0768 126.652 16.9868 128.142 15.8068C128.702 15.3668 128.982 14.8568 128.922 14.3868C128.872 13.9068 128.462 13.4468 127.802 13.1368L127.822 13.1468Z"
-                        fill="#0044FF"></path><path
-                        d="M54.7025 44.6572C53.9125 44.4572 53.1125 44.3672 52.3325 44.3672C49.3325 44.3672 46.4725 45.8072 44.1425 48.5972C41.0525 52.2872 40.9525 58.4272 43.9125 62.5872C46.5425 66.2872 52.2025 68.1072 56.5125 66.6572C60.9125 65.1672 63.4225 62.3972 63.8425 58.5672C63.2025 58.9972 62.5325 59.4172 61.8025 59.6872L61.3925 59.8472C59.6225 60.5272 57.7925 61.2172 55.8825 61.2272H55.8625C52.8325 61.2272 49.7125 58.6372 49.1825 55.6872C48.5825 52.3772 48.4925 48.9872 51.8425 46.6372C52.7425 46.0072 53.6525 45.3872 54.7025 44.6772V44.6572Z"
-                        fill="#0044FF"></path></svg>				</span>
-                                                </div>
-
-                                                <div class="elementor-icon-box-content">
-
-                                                    <h3 class="elementor-icon-box-title">
-						<span>
-							Mission						</span>
-                                                    </h3>
-
-                                                    <p class="elementor-icon-box-description">
-                                                        Our mission is to empower traders of all levels with advanced
-                                                        AI-driven tools and insights, making trading simpler and more
-                                                        effective.
-                                                    </p>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-27aa1ac e-flex e-con-boxed e-con e-child"
-                                 data-id="27aa1ac" data-element_type="container"
-                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="e-con-inner">
-                                    <div
-                                        class="elementor-element elementor-element-03751dc elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box"
-                                        data-id="03751dc" data-element_type="widget"
-                                        data-widget_type="icon-box.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-icon-box-wrapper">
-
-                                                <div class="elementor-icon-box-icon">
-				<span class="elementor-icon elementor-animation-">
-				<svg xmlns="http://www.w3.org/2000/svg" width="118" height="130" viewBox="0 0 118 130" fill="none"><path
-                        d="M113.184 62.6245C112.724 61.9545 112.264 61.2745 111.814 60.5945C110.374 58.4445 108.874 56.2145 107.144 54.3045C93.8643 39.6845 77.7243 32.8945 56.2043 32.9245H56.1643C55.7143 32.9045 55.2643 32.8945 54.8043 32.8945C46.0143 32.8945 35.5943 36.0945 25.9643 41.7945C18.1443 46.4245 11.5443 52.5245 6.37433 59.9545C3.29433 64.3745 3.27432 64.8845 6.08432 69.0145C12.1043 77.8445 20.0643 84.8345 29.7443 89.7945C38.8343 94.4545 48.6043 96.8145 58.7543 96.8145C58.8143 96.8145 58.8743 96.8145 58.9343 96.8145C69.1443 96.7845 78.6843 94.5945 87.2743 90.2945C98.0043 84.9345 106.634 77.2545 112.934 67.4745C114.164 65.5645 114.234 64.1545 113.174 62.6245H113.184ZM106.634 64.8745C97.1043 80.4645 79.5243 89.8945 59.6243 90.1045C59.4043 90.1045 59.1743 90.1045 58.9543 90.1045C39.2243 90.1045 21.4843 80.7645 11.3843 65.0345L11.0243 64.4745L11.4043 63.9245C21.6943 48.9745 36.1343 40.7345 54.3243 39.4445C76.1443 37.8845 93.7343 46.0745 106.594 63.7545L106.984 64.2945L106.634 64.8645V64.8745Z"
-                        fill="#0044FF"></path><path
-                        d="M11.0443 34.115C12.1543 35.285 13.2643 36.465 14.3643 37.635C14.6443 37.925 14.9743 38.265 15.3343 38.545C16.4743 39.435 17.4343 39.575 18.1743 38.965C18.8743 38.385 19.4443 37.575 20.0443 36.725C20.2143 36.485 20.3743 36.245 20.5543 36.015C20.4043 35.715 20.2743 35.425 20.1543 35.155C19.8143 34.395 19.5443 33.805 19.1643 33.405C14.0843 28.025 10.1443 23.975 6.41431 20.285C5.60431 19.485 4.82431 19.085 4.06431 19.085C3.4043 19.085 2.75431 19.385 2.10431 19.985C1.14431 20.875 0.104314 22.325 2.21431 24.645C5.11431 27.835 8.13432 31.035 11.0443 34.115Z"
-                        fill="#0044FF"></path><path
-                        d="M18.1848 90.9447C17.8948 90.8747 17.6048 90.8447 17.3248 90.8447C16.3248 90.8447 15.4348 91.2647 14.6148 92.1247C12.8548 93.9547 11.0848 95.7747 9.31478 97.6047C7.14478 99.8347 4.98479 102.065 2.83479 104.315C2.23479 104.945 1.69478 105.725 1.34478 106.495C0.604781 108.085 1.02479 109.325 2.63479 110.275C4.06479 111.125 4.99479 111.205 6.74479 109.435C11.1148 105.005 15.3748 100.375 19.3248 96.0247C19.7148 95.5947 19.9548 94.9047 20.1248 94.3947C20.1648 94.2647 20.2048 94.1447 20.2448 94.0447C20.1348 91.8247 19.3448 91.1847 18.1948 90.9347L18.1848 90.9447Z"
-                        fill="#0044FF"></path><path
-                        d="M103.645 92.415C102.625 91.395 101.485 90.835 100.445 90.835H100.425C99.6945 90.835 99.0245 91.125 98.5045 91.675C97.3045 92.915 97.5345 94.815 99.0945 96.525C102.354 100.095 105.914 103.905 110.314 108.505C111.104 109.325 111.954 109.985 112.774 110.405C113.594 110.825 114.524 110.775 115.344 110.285C116.314 109.695 116.924 108.585 117.004 107.265C116.914 107.095 116.805 106.915 116.705 106.715C116.285 105.945 115.764 104.975 115.064 104.225C111.664 100.555 107.934 96.695 103.654 92.425L103.645 92.415Z"
-                        fill="#0044FF"></path><path
-                        d="M62.1145 108.055C62.0445 105.845 60.8045 104.325 59.0445 104.285C59.0245 104.285 59.0045 104.285 58.9845 104.285C58.2745 104.285 57.5845 104.575 57.0345 105.105C56.3145 105.795 55.9145 106.785 55.8945 107.905C55.8045 113.525 55.8045 119.365 55.8845 125.755C55.9045 127.135 56.3445 128.295 57.1245 129.025C57.6845 129.545 58.3745 129.805 59.1245 129.755C60.8945 129.655 62.0445 128.165 62.1045 125.875C62.1645 123.815 62.1545 121.715 62.1345 119.685C62.1345 118.785 62.1245 117.875 62.1245 116.975C62.1245 116.075 62.1245 115.155 62.1345 114.245C62.1545 112.215 62.1645 110.125 62.0945 108.075L62.1145 108.055Z"
-                        fill="#0044FF"></path><path
-                        d="M114.024 19.085H113.994C113.194 19.085 112.324 19.545 111.404 20.455C108.074 23.755 104.764 27.205 101.574 30.535L98.9045 33.315C98.4345 33.805 98.1245 34.235 97.9645 34.625C97.5845 35.525 97.7145 36.635 98.3145 37.585C98.9145 38.535 99.8545 39.135 100.924 39.275C101.124 39.155 101.344 39.035 101.574 38.905C102.394 38.445 103.324 37.925 104.004 37.225C107.834 33.325 111.724 29.175 115.904 24.545C117.374 22.915 117.424 21.605 116.054 20.175C115.384 19.475 114.694 19.115 114.014 19.105L114.024 19.085Z"
-                        fill="#0044FF"></path><path
-                        d="M59.0243 25.4049C60.8443 25.3849 62.0244 23.9649 62.1144 21.6949C62.1944 19.6449 62.1743 17.5549 62.1543 15.5249C62.1543 14.9449 62.1444 14.3749 62.1444 13.7949H62.1344V12.7949C62.1344 11.8849 62.1343 10.9749 62.1543 10.0649C62.1743 8.03488 62.1944 5.93488 62.1144 3.89488C62.0244 1.64488 60.8344 0.254883 59.0144 0.254883H58.9943C57.1343 0.264883 55.9544 1.67488 55.9144 3.92488C55.8144 9.94488 55.8144 15.9549 55.9144 21.7749C55.9544 23.9949 57.1544 25.4249 59.0344 25.4049H59.0243Z"
-                        fill="#0044FF"></path><path
-                        d="M69.2045 48.5847C63.8945 44.9447 54.2545 44.9447 50.2745 48.2547C54.4845 49.9947 55.9745 52.1147 56.0445 56.1447C56.1045 59.7147 54.2145 62.8247 51.3245 63.8847C47.5845 65.2547 44.0645 64.1247 40.6145 60.4247C39.6445 62.6147 39.5345 65.5447 40.3345 68.7147C41.7345 74.2547 45.5545 79.2147 50.3045 81.6647C59.2245 86.2547 70.2245 83.0547 75.3645 74.3547C80.7045 65.3247 78.1645 54.7347 69.1945 48.5947L69.2045 48.5847Z"
-                        fill="#0044FF"></path></svg>				</span>
-                                                </div>
-
-                                                <div class="elementor-icon-box-content">
-
-                                                    <h3 class="elementor-icon-box-title">
-						<span>
-							Vision						</span>
-                                                    </h3>
-
-                                                    <p class="elementor-icon-box-description">
-                                                        Our vision is to revolutionize trading by merging AI precision
-                                                        with market dynamics, transforming it from chance to
-                                                        strategy. </p>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-5fb0d87 e-flex e-con-boxed e-con e-child"
-                                 data-id="5fb0d87" data-element_type="container"
-                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="e-con-inner">
-                                    <div
-                                        class="elementor-element elementor-element-9c52c49 elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box"
-                                        data-id="9c52c49" data-element_type="widget"
-                                        data-widget_type="icon-box.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-icon-box-wrapper">
-
-                                                <div class="elementor-icon-box-icon">
-				<span class="elementor-icon elementor-animation-">
-				<svg xmlns="http://www.w3.org/2000/svg" width="100" height="118" viewBox="0 0 100 118" fill="none"><path
-                        d="M97.2676 46.8035C97.0976 46.6848 96.9276 46.566 96.7676 46.4472C94.0676 44.4539 91.3476 42.4689 88.6276 40.4925C84.7376 37.6678 80.7177 34.7414 76.8176 31.8064C75.1376 30.5425 73.4776 30.0251 71.2176 30.0251C54.5676 30.1184 41.7976 30.1184 29.8076 30.0166C29.7676 30.0166 29.7177 30.0166 29.6777 30.0166C26.8977 30.0166 24.7376 30.7631 22.4676 32.4935C16.4676 37.0825 10.2477 41.6292 4.22765 46.0231L3.33764 46.6763C-0.0723631 49.1701 -0.142345 49.5094 2.13766 52.6819C3.71766 54.8874 5.29766 57.0928 6.88766 59.2898C9.52766 62.9627 12.1777 66.6441 14.7977 70.3255C18.7977 75.9495 22.7976 81.5818 26.7876 87.2058C33.2176 96.2651 39.6477 105.324 46.1077 114.367C47.6877 116.572 49.0276 117.7 50.0976 117.7C51.2076 117.7 52.5576 116.564 54.2176 114.214C59.1976 107.199 64.2076 100.193 69.2176 93.1859C72.3676 88.775 75.5277 84.3641 78.6777 79.9532C85.0277 71.055 91.3577 62.1484 97.6677 53.2417C98.2577 52.402 98.7977 51.5028 99.1877 50.8497C99.2977 50.6631 99.3977 50.5019 99.4877 50.3577C99.5977 48.4661 98.5177 47.6942 97.2577 46.8035H97.2676ZM62.6876 35.1909C63.5776 35.1909 64.4277 35.1909 65.2577 35.1825C67.3977 35.174 69.4277 35.157 71.4477 35.2334C72.5477 35.2673 73.6277 35.7847 74.2577 36.2513C77.1677 38.3804 80.0577 40.5519 83.1177 42.8591L87.8577 46.4218L85.7977 46.7187C83.3277 47.075 81.0177 47.1767 78.7977 47.1767C77.0977 47.1767 75.4477 47.1174 73.8277 47.0495C73.1777 47.0241 72.5277 46.9986 71.8877 46.9816C70.2377 46.9307 68.7377 45.353 68.1677 44.6744C66.6577 42.8761 65.2476 41.0015 63.7476 39.0166C63.1376 38.2022 62.5076 37.3709 61.8476 36.5057L60.8476 35.1994H62.6876V35.1909ZM46.8277 35.1655C47.3177 35.1655 47.7677 35.174 48.2077 35.1825C49.0577 35.1994 49.7877 35.2164 50.4877 35.1485C52.8077 34.9534 54.5877 35.7423 55.9177 37.566C57.2477 39.3728 58.6177 41.1626 60.0777 43.0542C60.7077 43.8686 61.3476 44.6998 62.0076 45.5651L63.0076 46.8714H37.3677L46.2876 35.1655H46.8277ZM13.8476 45.5481C14.2976 45.1664 14.6976 44.8101 15.0676 44.4878C15.8276 43.8177 16.4776 43.2493 17.1876 42.7065C17.7576 42.2738 18.3677 41.8836 18.9477 41.5019C19.9277 40.8657 20.8576 40.2635 21.5576 39.534C25.4476 35.5048 30.5377 34.2409 37.5477 35.5642L38.9676 35.8271L30.3176 46.9901H12.1576L13.8476 45.5481ZM8.85766 52.7413L10.2776 52.5122C12.7076 52.1221 14.9076 52.1645 17.0276 52.1984C17.8876 52.2154 18.7476 52.2323 19.5876 52.2154C21.6476 52.1814 23.6676 52.1899 25.8076 52.1984C26.7376 52.1984 27.6677 52.1984 28.6177 52.1984H29.4076L29.5876 52.8515C30.3976 55.8204 31.2277 58.7639 32.0477 61.6988C35.0477 72.3868 37.8777 82.4895 39.8977 93.0417L40.7176 97.3509L8.84765 52.7243L8.85766 52.7413ZM50.9076 100.871L49.7677 103.501L35.3376 52.385H63.8776L63.9177 53.1993C64.0677 56.499 52.9276 96.2396 50.9076 100.871ZM59.0177 98.2755L59.9877 93.7288C62.6877 81.0559 66.3376 68.3067 69.8776 55.9901L70.8977 52.4359H91.5677L59.0177 98.2755Z"
-                        fill="#0044FF"></path><path
-                        d="M86.5478 26.9968C86.7078 26.9168 86.8777 26.8368 87.0677 26.7468C87.7077 26.4468 88.4377 26.1068 88.8277 25.6268C92.1577 21.4868 95.3777 17.2468 98.4077 13.0368C98.9977 12.2068 99.2378 11.4368 99.1178 10.7568C98.9978 10.0768 98.5277 9.45678 97.7277 8.89678C97.0977 8.46678 96.5778 8.19678 96.0578 8.19678C95.3978 8.19678 94.7477 8.61678 93.9077 9.65678C90.5977 13.7368 87.2777 18.0968 84.0377 22.6368C83.5577 23.2968 83.5177 24.1768 83.9177 25.0368C84.3077 25.8668 85.1878 26.7868 86.5478 26.9968Z"
-                        fill="#0044FF"></path><path
-                        d="M5.4577 18.047C7.1477 20.457 8.8477 22.867 10.5477 25.277C10.7777 25.597 11.0577 25.907 11.3977 26.207C12.7277 27.387 13.7177 27.427 15.0277 26.377C16.3677 25.307 16.6277 24.147 15.7977 22.927C13.0177 18.817 9.88768 14.477 5.96768 9.26703C5.69768 8.90703 5.11768 8.62703 4.43768 8.29703C4.21768 8.18703 3.9977 8.07703 3.7677 7.95703C3.5677 8.10703 3.3777 8.25703 3.1777 8.39703C2.5077 8.89703 1.86767 9.35703 1.58767 9.87703C1.04767 10.877 1.2777 12.087 2.2677 13.487L5.46768 18.037L5.4577 18.047Z"
-                        fill="#0044FF"></path><path
-                        d="M47.2176 12.9368C47.1976 14.6168 47.1876 16.3468 47.2476 18.0368C47.3476 20.8168 48.2076 21.3368 49.8476 21.3668C51.5176 21.3968 52.5676 20.8768 52.6276 18.2468C52.7276 13.7168 52.7276 9.02681 52.6276 3.91681C52.5876 1.74681 51.2277 0.35681 49.9877 0.31681C48.7577 0.25681 47.3677 1.64681 47.2677 3.75681C47.1977 5.32681 47.2076 6.94681 47.2276 8.50681C47.2276 9.21681 47.2476 9.93681 47.2476 10.6468L47.2276 11.6468C47.2276 12.0768 47.2276 12.5068 47.2176 12.9368Z"
-                        fill="#0044FF"></path></svg>				</span>
-                                                </div>
-
-                                                <div class="elementor-icon-box-content">
-
-                                                    <h3 class="elementor-icon-box-title">
-						<span>
-							Values						</span>
-                                                    </h3>
-
-                                                    <p class="elementor-icon-box-description">
-                                                        We value innovation, empowerment, excellence, and accessibility,
-                                                        providing cutting-edge, reliable trading solutions. </p>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div
+                class="elementor-element elementor-element-a2927cc elementor-align-center elementor-widget elementor-widget-breadcrumbs"
+                data-id="a2927cc" data-element_type="widget" data-widget_type="breadcrumbs.default">
+                <div class="elementor-widget-container">
+                    <p id="breadcrumbs"><span><span><a href="../index.html">Home</a></span> » <span
+                                class="breadcrumb_last" aria-current="page">Profit Calculator</span></span></p></div>
             </div>
-            <div class="elementor-element elementor-element-c3e3eac e-flex e-con-boxed e-con e-parent" data-id="c3e3eac"
-                 data-element_type="container">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-869a96b elementor-widget elementor-widget-heading"
-                         data-id="869a96b" data-element_type="widget" data-widget_type="heading.default">
-                        <div class="elementor-widget-container">
-                            <h2 class="elementor-heading-title elementor-size-default">Our Mission, Vision, and Core
-                                Values:</h2></div>
-                    </div>
-                    <div class="elementor-element elementor-element-b467bb7 elementor-widget elementor-widget-heading"
-                         data-id="b467bb7" data-element_type="widget" data-widget_type="heading.default">
-                        <div class="elementor-widget-container">
-                            <h2 class="elementor-heading-title elementor-size-default"> Guiding Your Path to Trading
-                                Success</h2></div>
-                    </div>
-                    <div class="elementor-element elementor-element-caf37f8 e-flex e-con-boxed e-con e-child"
-                         data-id="caf37f8" data-element_type="container">
-                        <div class="e-con-inner">
-                            <div class="elementor-element elementor-element-713f85c e-flex e-con-boxed e-con e-child"
-                                 data-id="713f85c" data-element_type="container"
-                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="e-con-inner">
-                                    <div
-                                        class="elementor-element elementor-element-b79028c elementor-widget elementor-widget-image"
-                                        data-id="b79028c" data-element_type="widget" data-widget_type="image.default">
-                                        <div class="elementor-widget-container">
-                                            <img width="500" height="500" decoding="async"
-                                                 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
-                                                 title="arman" alt="arman"
-                                                 data-lazy-src="https://metatrading.ai/wp-content/uploads/elementor/thumbs/arman-1-qpxkb97lmkjbpwdg5f8rdifpyb2cbu0rr544ueo5mw.png"/>
-                                            <noscript><img width="500" height="500" decoding="async"
-                                                           src="../wp-content/uploads/elementor/thumbs/arman-1-qpxkb97lmkjbpwdg5f8rdifpyb2cbu0rr544ueo5mw.png"
-                                                           title="arman" alt="arman" loading="lazy"/></noscript>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-eaf34c5 elementor-widget elementor-widget-heading"
-                                        data-id="eaf34c5" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h3 class="elementor-heading-title elementor-size-default">Arman Khoshbin
-
-                                            </h3></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-20132af elementor-widget elementor-widget-heading"
-                                        data-id="20132af" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">Director of
-                                                Enrollment
-                                            </h2></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-a6fdf2d elementor-widget elementor-widget-text-editor"
-                                        data-id="a6fdf2d" data-element_type="widget"
-                                        data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <p><span class="TextRun Highlight SCXW23065507 BCX8" lang="EN-US"
-                                                     xml:lang="EN-US" data-contrast="none"><span
-                                                        class="NormalTextRun SCXW23065507 BCX8">Arman, our Director of Enrollment, plays a pivotal role in welcoming clients into our ecosystem and ensuring a perfect fit. His profound understanding of client needs and his ability to tailor experiences elevate our reputation for excellence and innovation, firmly </span><span
-                                                        class="NormalTextRun SCXW23065507 BCX8">establishing</span><span
-                                                        class="NormalTextRun SCXW23065507 BCX8"> us as leaders in the trading world.</span></span><span
-                                                    class="EOP SCXW23065507 BCX8"
-                                                    data-ccp-props="{&quot;201341983&quot;:0,&quot;335559740&quot;:276}"> </span>
-                                            </p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-03b73fe e-flex e-con-boxed e-con e-child"
-                                 data-id="03b73fe" data-element_type="container"
-                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="e-con-inner">
-                                    <div
-                                        class="elementor-element elementor-element-69b4434 elementor-widget elementor-widget-image"
-                                        data-id="69b4434" data-element_type="widget" data-widget_type="image.default">
-                                        <div class="elementor-widget-container">
-                                            <img width="500" height="500" decoding="async"
-                                                 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
-                                                 title="kai" alt="kai"
-                                                 data-lazy-src="https://metatrading.ai/wp-content/uploads/elementor/thumbs/kai-1-qpxkbyl8r3i2fdcl187oqu15zpl93ntiumq8svmiyw.png"/>
-                                            <noscript><img width="500" height="500" decoding="async"
-                                                           src="../wp-content/uploads/elementor/thumbs/kai-1-qpxkbyl8r3i2fdcl187oqu15zpl93ntiumq8svmiyw.png"
-                                                           title="kai" alt="kai" loading="lazy"/></noscript>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-5bc9486 elementor-widget elementor-widget-heading"
-                                        data-id="5bc9486" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h3 class="elementor-heading-title elementor-size-default">Kai Olivier
-
-                                            </h3></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-24181e2 elementor-widget elementor-widget-heading"
-                                        data-id="24181e2" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">Junior Account
-                                                Manager</h2></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-6852cc2 elementor-widget elementor-widget-text-editor"
-                                        data-id="6852cc2" data-element_type="widget"
-                                        data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <p>Kai, our Junior Account Manager, is dedicated to providing exceptional
-                                                service to our clients. With a keen eye for detail and a passion for
-                                                finance, he ensures that every client interaction is smooth and
-                                                beneficial, supporting our mission to deliver top-notch trading
-                                                solutions.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-d798c67 e-flex e-con-boxed e-con e-child"
-                                 data-id="d798c67" data-element_type="container"
-                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="e-con-inner">
-                                    <div
-                                        class="elementor-element elementor-element-6569fe8 elementor-widget elementor-widget-image"
-                                        data-id="6569fe8" data-element_type="widget" data-widget_type="image.default">
-                                        <div class="elementor-widget-container">
-                                            <img width="500" height="500" decoding="async"
-                                                 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
-                                                 title="aaron" alt="aaron"
-                                                 data-lazy-src="https://metatrading.ai/wp-content/uploads/elementor/thumbs/aaron-1-qpxkb3kkhkbls8ln2cszyjuydzu51nedqd77yqwio8.png"/>
-                                            <noscript><img width="500" height="500" decoding="async"
-                                                           src="../wp-content/uploads/elementor/thumbs/aaron-1-qpxkb3kkhkbls8ln2cszyjuydzu51nedqd77yqwio8.png"
-                                                           title="aaron" alt="aaron" loading="lazy"/></noscript>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-f1f8448 elementor-widget elementor-widget-heading"
-                                        data-id="f1f8448" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h3 class="elementor-heading-title elementor-size-default">Aaron Villegas
-                                            </h3></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-285de57 elementor-widget elementor-widget-heading"
-                                        data-id="285de57" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">Head of
-                                                Quantitative Strategies</h2></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-f99e084 elementor-widget elementor-widget-text-editor"
-                                        data-id="f99e084" data-element_type="widget"
-                                        data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <p>Aaron, our Head of Quantitative Strategies, blends a decade of trading
-                                                expertise with an engineering background. He leads our quant team
-                                                towards innovative risk management solutions and sophisticated
-                                                algorithms, committed to balancing sustainable performance and capital
-                                                safety.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-element elementor-element-3b80a6e e-flex e-con-boxed e-con e-child"
-                         data-id="3b80a6e" data-element_type="container">
-                        <div class="e-con-inner">
-                            <div class="elementor-element elementor-element-f120975 e-flex e-con-boxed e-con e-child"
-                                 data-id="f120975" data-element_type="container"
-                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="e-con-inner">
-                                    <div
-                                        class="elementor-element elementor-element-c33adc1 elementor-widget elementor-widget-image"
-                                        data-id="c33adc1" data-element_type="widget" data-widget_type="image.default">
-                                        <div class="elementor-widget-container">
-                                            <img width="500" height="500" decoding="async"
-                                                 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
-                                                 title="dave" alt="dave"
-                                                 data-lazy-src="https://metatrading.ai/wp-content/uploads/elementor/thumbs/dave-1-qpxkbp6uur5779q8k45f1wek1uvkyos7hc7e040gp4.png"/>
-                                            <noscript><img width="500" height="500" decoding="async"
-                                                           src="../wp-content/uploads/elementor/thumbs/dave-1-qpxkbp6uur5779q8k45f1wek1uvkyos7hc7e040gp4.png"
-                                                           title="dave" alt="dave" loading="lazy"/></noscript>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-ae29821 elementor-widget elementor-widget-heading"
-                                        data-id="ae29821" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h3 class="elementor-heading-title elementor-size-default">Dave
-                                                Giovacchini </h3></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-af8475f elementor-widget elementor-widget-heading"
-                                        data-id="af8475f" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">Content
-                                                Architect</h2></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-daf0f5b elementor-widget elementor-widget-text-editor"
-                                        data-id="daf0f5b" data-element_type="widget"
-                                        data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <p>Dave, our Content Architect, masterfully shapes our narrative, making
-                                                complex trading concepts accessible and engaging. His strategic content
-                                                delivery strengthens our brand and fosters community engagement,
-                                                highlighting his pivotal role in our mission to innovate trading and
-                                                educate the public.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-2f9a86b e-flex e-con-boxed e-con e-child"
-                                 data-id="2f9a86b" data-element_type="container"
-                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="e-con-inner">
-                                    <div
-                                        class="elementor-element elementor-element-9fd288d elementor-widget elementor-widget-image"
-                                        data-id="9fd288d" data-element_type="widget" data-widget_type="image.default">
-                                        <div class="elementor-widget-container">
-                                            <img width="500" height="500" decoding="async"
-                                                 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
-                                                 title="louis" alt="louis"
-                                                 data-lazy-src="https://metatrading.ai/wp-content/uploads/elementor/thumbs/louis-1-e1724953967829-qtc0ibxz624r5qx6d8r0qd1slv8h1kh0au9afbweiw.png"/>
-                                            <noscript><img width="500" height="500" decoding="async"
-                                                           src="../wp-content/uploads/elementor/thumbs/louis-1-e1724953967829-qtc0ibxz624r5qx6d8r0qd1slv8h1kh0au9afbweiw.png"
-                                                           title="louis" alt="louis" loading="lazy"/></noscript>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-ebd522b elementor-widget elementor-widget-heading"
-                                        data-id="ebd522b" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h3 class="elementor-heading-title elementor-size-default">Louis Callery
-
-                                            </h3></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-c240176 elementor-widget elementor-widget-heading"
-                                        data-id="c240176" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">Head Account
-                                                Manager
-                                            </h2></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-08f1d84 elementor-widget elementor-widget-text-editor"
-                                        data-id="08f1d84" data-element_type="widget"
-                                        data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <p>Louis, our Head Account Manager, excels in building and maintaining
-                                                client relationships. His deep understanding of our clients’ needs and
-                                                his proactive approach ensure that our clients receive personalized and
-                                                effective solutions, reinforcing our commitment to exceptional
-                                                service.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-cb7e720 e-flex e-con-boxed e-con e-child"
-                                 data-id="cb7e720" data-element_type="container"
-                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="e-con-inner">
-                                    <div
-                                        class="elementor-element elementor-element-3e26c9f elementor-widget elementor-widget-image"
-                                        data-id="3e26c9f" data-element_type="widget" data-widget_type="image.default">
-                                        <div class="elementor-widget-container">
-                                            <img decoding="async" width="500" height="500"
-                                                 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
-                                                 class="attachment-full size-full wp-image-1275" alt=""
-                                                 data-lazy-srcset="https://metatrading.ai/wp-content/uploads/2024/06/Justin-Sides-e1718890820862.jpg 500w, https://metatrading.ai/wp-content/uploads/2024/06/Justin-Sides-e1718890820862-300x300.jpg 300w, https://metatrading.ai/wp-content/uploads/2024/06/Justin-Sides-e1718890820862-150x150.jpg 150w"
-                                                 data-lazy-sizes="(max-width: 500px) 100vw, 500px"
-                                                 data-lazy-src="https://metatrading.ai/wp-content/uploads/2024/06/Justin-Sides-e1718890820862.jpg"/>
-                                            <noscript><img loading="lazy" decoding="async" width="500" height="500"
-                                                           src="../wp-content/uploads/2024/06/Justin-Sides-e1718890820862.jpg"
-                                                           class="attachment-full size-full wp-image-1275" alt=""
-                                                           srcset="https://metatrading.ai/wp-content/uploads/2024/06/Justin-Sides-e1718890820862.jpg 500w, https://metatrading.ai/wp-content/uploads/2024/06/Justin-Sides-e1718890820862-300x300.jpg 300w, https://metatrading.ai/wp-content/uploads/2024/06/Justin-Sides-e1718890820862-150x150.jpg 150w"
-                                                           sizes="(max-width: 500px) 100vw, 500px"/></noscript>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-bfedd49 elementor-widget elementor-widget-heading"
-                                        data-id="bfedd49" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h3 class="elementor-heading-title elementor-size-default">Justin Sides
-
-                                            </h3></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-57a259a elementor-widget elementor-widget-heading"
-                                        data-id="57a259a" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">Head of Client
-                                                Success</h2></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-61aa611 elementor-widget elementor-widget-text-editor"
-                                        data-id="61aa611" data-element_type="widget"
-                                        data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <p>Justin, our Head of Client Success, is dedicated to ensuring our clients
-                                                achieve their trading goals. His comprehensive support system and
-                                                commitment to client satisfaction drive our success, making sure every
-                                                client feels valued and empowered.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="elementor-element elementor-element-92a7db4 e-flex e-con-boxed e-con e-child"
-                                 data-id="92a7db4" data-element_type="container"
-                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                <div class="e-con-inner">
-                                    <div
-                                        class="elementor-element elementor-element-d942665 elementor-widget elementor-widget-image"
-                                        data-id="d942665" data-element_type="widget" data-widget_type="image.default">
-                                        <div class="elementor-widget-container">
-                                            <img width="500" height="500" decoding="async"
-                                                 src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
-                                                 title="chad" alt="chad"
-                                                 data-lazy-src="https://metatrading.ai/wp-content/uploads/elementor/thumbs/chad-1-qpxkbfsgyesbz63w3035cyry405wtpqw41oj7ceefc.png"/>
-                                            <noscript><img width="500" height="500" decoding="async"
-                                                           src="../wp-content/uploads/elementor/thumbs/chad-1-qpxkbfsgyesbz63w3035cyry405wtpqw41oj7ceefc.png"
-                                                           title="chad" alt="chad" loading="lazy"/></noscript>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-cab4bf0 elementor-widget elementor-widget-heading"
-                                        data-id="cab4bf0" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h3 class="elementor-heading-title elementor-size-default">Chad
-                                                Boustani </h3></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-68f2a2f elementor-widget elementor-widget-heading"
-                                        data-id="68f2a2f" data-element_type="widget" data-widget_type="heading.default">
-                                        <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">Head of Software
-                                                Development</h2></div>
-                                    </div>
-                                    <div
-                                        class="elementor-element elementor-element-84f53e4 elementor-widget elementor-widget-text-editor"
-                                        data-id="84f53e4" data-element_type="widget"
-                                        data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <p>Chad, our Head of Software Development, leads our tech team with a focus
-                                                on innovation and reliability. His expertise in creating cutting-edge
-                                                software solutions ensures our trading platforms are robust,
-                                                user-friendly, and ahead of the curve in the fintech industry.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="elementor-element elementor-element-2071190 e-con-full e-flex e-con e-child" data-id="2071190"
-                 data-element_type="container">
-                <div
-                    class="elementor-element elementor-element-a5707ea elementor-absolute elementor-widget elementor-widget-image"
-                    data-id="a5707ea" data-element_type="widget"
-                    data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
-                    <div class="elementor-widget-container">
-                        <img decoding="async" width="1004" height="1448"
-                             src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201004%201448'%3E%3C/svg%3E"
-                             class="attachment-full size-full wp-image-555" alt=""
-                             data-lazy-src="https://metatrading.ai/wp-content/uploads/2024/05/Ellipse-76.svg"/>
-                        <noscript><img loading="lazy" decoding="async" width="1004" height="1448"
-                                       src="../wp-content/uploads/2024/05/Ellipse-76.svg"
-                                       class="attachment-full size-full wp-image-555" alt=""/></noscript>
-                    </div>
-                </div>
-                <div
-                    class="elementor-element elementor-element-2678074 elementor-absolute elementor-widget elementor-widget-image"
-                    data-id="2678074" data-element_type="widget"
-                    data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
-                    <div class="elementor-widget-container">
-                        <img decoding="async" width="832" height="1205"
-                             src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20832%201205'%3E%3C/svg%3E"
-                             class="attachment-full size-full wp-image-556" alt=""
-                             data-lazy-src="https://metatrading.ai/wp-content/uploads/2024/05/Ellipse-77.svg"/>
-                        <noscript><img loading="lazy" decoding="async" width="832" height="1205"
-                                       src="../wp-content/uploads/2024/05/Ellipse-77.svg"
-                                       class="attachment-full size-full wp-image-556" alt=""/></noscript>
-                    </div>
-                </div>
-            </div>
-
-             @include('pages.layout.widget')
-        </div>
-        <div class="post-tags">
         </div>
     </div>
+    <div class="elementor-element elementor-element-2bbdf4d e-flex e-con-boxed e-con e-parent" data-id="2bbdf4d"
+         data-element_type="container">
+        <div class="e-con-inner">
+            <div class="elementor-element elementor-element-b04225b elementor-widget elementor-widget-html"
+                 data-id="b04225b" data-element_type="widget" data-widget_type="html.default">
+                <div class="elementor-widget-container">
+                    <style></style>
+                </div>
+            </div>
+            <div class="elementor-element elementor-element-b6ea009 elementor-widget elementor-widget-html"
+                 data-id="b6ea009" data-element_type="widget" data-widget_type="html.default">
+                <div class="elementor-widget-container">
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
 
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Profit Calculator</title>
 
-</main>
+                        <style></style>
+                        <style id="wpr-lazyload-bg-container"></style>
+                        <style
+                            id="wpr-lazyload-bg-exclusion">.elementor-915 .elementor-element.elementor-element-d1d2202:not(.elementor-motion-effects-element-type-background), .elementor-915 .elementor-element.elementor-element-d1d2202 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+                                --wpr-bg-f60a2d13-8da8-46e8-8b99-fff077474c19: url('../wp-content/uploads/2024/05/Header-Banner.png');
+                            }</style>
+                        <noscript>
+                            <style
+                                id="wpr-lazyload-bg-nostyle">.elementor-593 .elementor-element.elementor-element-e6dd587:not(.elementor-motion-effects-element-type-background), .elementor-593 .elementor-element.elementor-element-e6dd587 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+                                    --wpr-bg-b55458fa-2e09-4e92-9bd2-246dde5515ff: url('../wp-content/uploads/2024/05/Rectangle-124.html');
+                                }
+
+                                .results {
+                                    --wpr-bg-eced821e-bd38-4e1d-a6e0-d0798589bcf2: url('../wp-content/uploads/2024/05/Rectangle-124.html');
+                                }
+
+                                body .iti__flag, div.wpforms-container .wpforms-form .iti__flag, div.wpforms-container-full .wpforms-form .iti__flag {
+                                    --wpr-bg-8dc5584d-d276-4390-aabb-be9fc12b24cc: url('../wp-content/plugins/wpforms/assets/pro/css/fields/img/flagsc4ca.html?1');
+                                }
+
+                                body .iti__flag, div.wpforms-container .wpforms-form .iti__flag, div.wpforms-container-full .wpforms-form .iti__flag {
+                                    --wpr-bg-c42ab386-b80c-40cf-911a-0a4b81cdd920: url('../wp-content/plugins/wpforms/assets/pro/css/fields/img/flags%402xc4ca.html?1');
+                                }
+
+                                body .iti__flag, div.wpforms-container .wpforms-form .iti__flag, div.wpforms-container-full .wpforms-form .iti__flag {
+                                    --wpr-bg-6204f5bf-01ba-4b41-94fa-b38c753b80cb: url('../wp-content/plugins/wpforms/assets/pro/images/vendor/intl-tel-input-flagsc4ca.png?1');
+                                }
+
+                                body .iti__flag, div.wpforms-container .wpforms-form .iti__flag, div.wpforms-container-full .wpforms-form .iti__flag {
+                                    --wpr-bg-f51993fa-900e-48ad-ad99-3a534e713f91: url('../wp-content/plugins/wpforms/assets/pro/images/vendor/intl-tel-input-flags%402xc4ca.png?1');
+                                }
+
+                                body .iti__globe, div.wpforms-container .wpforms-form .iti__globe, div.wpforms-container-full .wpforms-form .iti__globe {
+                                    --wpr-bg-3d19e6a4-0bda-472d-bcb9-e17f15804af5: url('../wp-content/plugins/wpforms/assets/pro/css/fields/img/globe.html');
+                                }
+
+                                body .iti__globe, div.wpforms-container .wpforms-form .iti__globe, div.wpforms-container-full .wpforms-form .iti__globe {
+                                    --wpr-bg-e4bc57e9-e6a6-482f-8306-587409dbbaf0: url('../wp-content/plugins/wpforms/assets/pro/css/fields/img/globe%402x.html');
+                                }
+
+                                body .iti__globe, div.wpforms-container .wpforms-form .iti__globe, div.wpforms-container-full .wpforms-form .iti__globe {
+                                    --wpr-bg-1c630efe-e150-4a33-b2c3-2e3b7f99940a: url('../wp-content/plugins/wpforms/assets/pro/images/vendor/intl-tel-input-globec4ca.png?1');
+                                }
+
+                                body .iti__globe, div.wpforms-container .wpforms-form .iti__globe, div.wpforms-container-full .wpforms-form .iti__globe {
+                                    --wpr-bg-f911fa74-37e0-4620-9db2-7324a372841b: url('../wp-content/plugins/wpforms/assets/pro/images/vendor/intl-tel-input-globe%402xc4ca.png?1');
+                                }
+
+                                .wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear {
+                                    --wpr-bg-d09a45b9-8261-4900-9caa-6c6a1ab1c935: url('../wp-content/plugins/wpforms/assets/pro/images/times-solid-white.svg');
+                                }</style>
+                        </noscript>
+                        <script type="application/javascript">const rocket_pairs = [{
+                                "selector": ".elementor-593 .elementor-element.elementor-element-e6dd587:not(.elementor-motion-effects-element-type-background),.elementor-593 .elementor-element.elementor-element-e6dd587>.elementor-motion-effects-container>.elementor-motion-effects-layer",
+                                "style": ".elementor-593 .elementor-element.elementor-element-e6dd587:not(.elementor-motion-effects-element-type-background),.elementor-593 .elementor-element.elementor-element-e6dd587>.elementor-motion-effects-container>.elementor-motion-effects-layer{--wpr-bg-b55458fa-2e09-4e92-9bd2-246dde5515ff: url('https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Rectangle-124.jpg');}",
+                                "hash": "b55458fa-2e09-4e92-9bd2-246dde5515ff",
+                                "url": "https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Rectangle-124.jpg"
+                            }, {
+                                "selector": ".results",
+                                "style": ".results{--wpr-bg-eced821e-bd38-4e1d-a6e0-d0798589bcf2: url('https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Rectangle-124.jpg');}",
+                                "hash": "eced821e-bd38-4e1d-a6e0-d0798589bcf2",
+                                "url": "https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Rectangle-124.jpg"
+                            }, {
+                                "selector": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag",
+                                "style": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag{--wpr-bg-8dc5584d-d276-4390-aabb-be9fc12b24cc: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/flags.png?1');}",
+                                "hash": "8dc5584d-d276-4390-aabb-be9fc12b24cc",
+                                "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/flags.png?1"
+                            }, {
+                                "selector": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag",
+                                "style": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag{--wpr-bg-c42ab386-b80c-40cf-911a-0a4b81cdd920: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/flags@2x.png?1');}",
+                                "hash": "c42ab386-b80c-40cf-911a-0a4b81cdd920",
+                                "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/flags@2x.png?1"
+                            }, {
+                                "selector": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag",
+                                "style": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag{--wpr-bg-6204f5bf-01ba-4b41-94fa-b38c753b80cb: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-flags.png?1');}",
+                                "hash": "6204f5bf-01ba-4b41-94fa-b38c753b80cb",
+                                "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-flags.png?1"
+                            }, {
+                                "selector": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag",
+                                "style": "body .iti__flag,div.wpforms-container .wpforms-form .iti__flag,div.wpforms-container-full .wpforms-form .iti__flag{--wpr-bg-f51993fa-900e-48ad-ad99-3a534e713f91: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-flags@2x.png?1');}",
+                                "hash": "f51993fa-900e-48ad-ad99-3a534e713f91",
+                                "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-flags@2x.png?1"
+                            }, {
+                                "selector": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe",
+                                "style": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe{--wpr-bg-3d19e6a4-0bda-472d-bcb9-e17f15804af5: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/globe.png');}",
+                                "hash": "3d19e6a4-0bda-472d-bcb9-e17f15804af5",
+                                "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/globe.png"
+                            }, {
+                                "selector": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe",
+                                "style": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe{--wpr-bg-e4bc57e9-e6a6-482f-8306-587409dbbaf0: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/globe@2x.png');}",
+                                "hash": "e4bc57e9-e6a6-482f-8306-587409dbbaf0",
+                                "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/img\/globe@2x.png"
+                            }, {
+                                "selector": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe",
+                                "style": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe{--wpr-bg-1c630efe-e150-4a33-b2c3-2e3b7f99940a: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-globe.png?1');}",
+                                "hash": "1c630efe-e150-4a33-b2c3-2e3b7f99940a",
+                                "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-globe.png?1"
+                            }, {
+                                "selector": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe",
+                                "style": "body .iti__globe,div.wpforms-container .wpforms-form .iti__globe,div.wpforms-container-full .wpforms-form .iti__globe{--wpr-bg-f911fa74-37e0-4620-9db2-7324a372841b: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-globe@2x.png?1');}",
+                                "hash": "f911fa74-37e0-4620-9db2-7324a372841b",
+                                "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/vendor\/intl-tel-input-globe@2x.png?1"
+                            }, {
+                                "selector": ".wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear",
+                                "style": ".wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear{--wpr-bg-d09a45b9-8261-4900-9caa-6c6a1ab1c935: url('https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/times-solid-white.svg');}",
+                                "hash": "d09a45b9-8261-4900-9caa-6c6a1ab1c935",
+                                "url": "https:\/\/metatrading.ai\/wp-content\/plugins\/wpforms\/assets\/pro\/images\/times-solid-white.svg"
+                            }];
+                            const rocket_excluded_pairs = [{
+                                "selector": ".elementor-915 .elementor-element.elementor-element-d1d2202:not(.elementor-motion-effects-element-type-background),.elementor-915 .elementor-element.elementor-element-d1d2202>.elementor-motion-effects-container>.elementor-motion-effects-layer",
+                                "style": ".elementor-915 .elementor-element.elementor-element-d1d2202:not(.elementor-motion-effects-element-type-background),.elementor-915 .elementor-element.elementor-element-d1d2202>.elementor-motion-effects-container>.elementor-motion-effects-layer{--wpr-bg-f60a2d13-8da8-46e8-8b99-fff077474c19: url('https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Header-Banner.png');}",
+                                "hash": "f60a2d13-8da8-46e8-8b99-fff077474c19",
+                                "url": "https:\/\/metatrading.ai\/wp-content\/uploads\/2024\/05\/Header-Banner.png"
+                            }];</script>
+                    </head>
+                    <body>
+                    <div class="calculator">
+                        <h2>Profit Calculator</h2>
+
+                        <label for="initialDeposit">Initial Deposit ($)</label>
+                        <input type="number" id="initialDeposit" min="0" placeholder="Enter initial deposit">
+
+                        <label for="monthlyDeposit">Monthly Deposit ($)</label>
+                        <input type="number" id="monthlyDeposit" min="0" placeholder="Enter monthly deposit">
+
+                        <label for="risk">Risk Setting:</label>
+                        <input type="range" id="risk" min="1" max="5" value="3">
+                        <span id="riskOutput">Recommended Settings</span>
+
+                        <label for="timeYears">Time (Years)</label>
+                        <input type="number" id="timeYears" min="0" placeholder="Enter time in years">
+
+                        <label for="timeMonths">Time (Months)</label>
+                        <input type="number" id="timeMonths" min="0" max="11" placeholder="Enter additional months">
+
+                        <div class="results">
+                            <div class="result-item">
+                                <div class="result-label">Total Profit</div>
+                                <div id="totalProfit" class="result-value">$0</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-label">Account Balance</div>
+                                <div id="accountBalance" class="result-value">$0</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-label">Total Invested</div>
+                                <div id="totalInvested" class="result-value">$0</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-label">Monthly Gain</div>
+                                <div id="monthlyGain" class="result-value">0%</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-label">Drawdown</div>
+                                <div id="drawdown" class="result-value">0%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script type="rocketlazyloadscript">
+                        const riskSettings = [
+            { label: "Very Low", gain: 5.11, drawdown: 5.23, color: "--risk-very-low" },
+            { label: "Low", gain: 8.24, drawdown: 8.44, color: "--risk-low" },
+            { label: "Recommended Settings", gain: 9.70, drawdown: 10.40, color: "--risk-medium" },
+            { label: "High", gain: 16.32, drawdown: 16.78, color: "--risk-high" },
+            { label: "Very High", gain: 22.64, drawdown: 24.8, color: "--risk-very-high" }
+        ];
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach(input => input.addEventListener('input', updateCalculation));
+            updateCalculation(); // Initial update
+        });
+
+        function updateCalculation() {
+            const initialDeposit = parseFloat(document.getElementById('initialDeposit').value) || 0;
+            const monthlyDeposit = parseFloat(document.getElementById('monthlyDeposit').value) || 0;
+            const riskIndex = parseInt(document.getElementById('risk').value) - 1;
+            const timeYears = parseInt(document.getElementById('timeYears').value) || 0;
+            const timeMonths = parseInt(document.getElementById('timeMonths').value) || 0;
+            const totalMonths = timeYears * 12 + timeMonths;
+            const monthlyGain = riskSettings[riskIndex].gain;
+            const drawdown = riskSettings[riskIndex].drawdown;
+
+            let balance = initialDeposit;
+            for (let i = 0; i < totalMonths; i++) {
+                balance += monthlyDeposit;
+                balance *= (1 + monthlyGain / 100);
+            }
+
+            const profit = balance - initialDeposit - (monthlyDeposit * totalMonths);
+            const totalInvested = initialDeposit + (monthlyDeposit * totalMonths);
+
+            document.getElementById('totalProfit').textContent = formatCurrency(profit);
+            document.getElementById('accountBalance').textContent = formatCurrency(balance);
+            document.getElementById('totalInvested').textContent = formatCurrency(totalInvested);
+            document.getElementById('monthlyGain').textContent = `${monthlyGain.toFixed(2)}%`;
+            document.getElementById('drawdown').textContent = `${drawdown.toFixed(2)}%`;
+            document.getElementById('riskOutput').textContent = riskSettings[riskIndex].label;
+            document.getElementById('riskOutput').style.color = getComputedStyle(document.documentElement).getPropertyValue(riskSettings[riskIndex].color);
+        }
+
+        function formatCurrency(number) {
+            return `$${number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`;
+        }
+                    </script>
+                    <script>class RocketElementorAnimation {
+                            constructor() {
+                                this.deviceMode = document.createElement("span"), this.deviceMode.id = "elementor-device-mode-wpr", this.deviceMode.setAttribute("class", "elementor-screen-only"), document.body.appendChild(this.deviceMode)
+                            }
+
+                            _detectAnimations() {
+                                let t = getComputedStyle(this.deviceMode, ":after").content.replace(/"/g, "");
+                                this.animationSettingKeys = this._listAnimationSettingsKeys(t), document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t => {
+                                    const e = t.getBoundingClientRect();
+                                    if (e.bottom >= 0 && e.top <= window.innerHeight) try {
+                                        this._animateElement(t)
+                                    } catch (t) {
+                                    }
+                                })
+                            }
+
+                            _animateElement(t) {
+                                const e = JSON.parse(t.dataset.settings),
+                                    i = e._animation_delay || e.animation_delay || 0,
+                                    n = e[this.animationSettingKeys.find(t => e[t])];
+                                if ("none" === n) return void t.classList.remove("elementor-invisible");
+                                t.classList.remove(n), this.currentAnimation && t.classList.remove(this.currentAnimation), this.currentAnimation = n;
+                                let s = setTimeout(() => {
+                                    t.classList.remove("elementor-invisible"), t.classList.add("animated", n), this._removeAnimationSettings(t, e)
+                                }, i);
+                                window.addEventListener("rocket-startLoading", function () {
+                                    clearTimeout(s)
+                                })
+                            }
+
+                            _listAnimationSettingsKeys(t = "mobile") {
+                                const e = [""];
+                                switch (t) {
+                                    case"mobile":
+                                        e.unshift("_mobile");
+                                    case"tablet":
+                                        e.unshift("_tablet");
+                                    case"desktop":
+                                        e.unshift("_desktop")
+                                }
+                                const i = [];
+                                return ["animation", "_animation"].forEach(t => {
+                                    e.forEach(e => {
+                                        i.push(t + e)
+                                    })
+                                }), i
+                            }
+
+                            _removeAnimationSettings(t, e) {
+                                this._listAnimationSettingsKeys().forEach(t => delete e[t]), t.dataset.settings = JSON.stringify(e)
+                            }
+
+                            static run() {
+                                const t = new RocketElementorAnimation;
+                                requestAnimationFrame(t._detectAnimations.bind(t))
+                            }
+                        }
+
+                        document.addEventListener("DOMContentLoaded", RocketElementorAnimation.run);</script>
+                    </body>
+
+                    <!-- Mirrored from metatrading.ai/profit-calculator/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 09:02:12 GMT -->
+                    </html>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @include('pages.layout.footer')
 
-<div data-elementor-type="popup" data-elementor-id="210" class="elementor elementor-210 elementor-location-popup"
-     data-elementor-settings="{&quot;prevent_close_on_background_click&quot;:&quot;yes&quot;,&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}"
-     data-elementor-post-type="elementor_library">
-    <div class="elementor-element elementor-element-9feaccc e-flex e-con-boxed e-con e-parent" data-id="9feaccc"
-         data-element_type="container">
-        <div class="e-con-inner">
-            <div
-                class="elementor-element elementor-element-1dafeda elementor-widget elementor-widget-premium-addon-progressbar"
-                data-id="1dafeda" data-element_type="widget" data-widget_type="premium-addon-progressbar.default">
-                <div class="elementor-widget-container">
-
-                    <div class="premium-progressbar-container premium-progressbar-striped premium-progressbar-active"
-                         data-settings="{&quot;progress_length&quot;:&quot;76&quot;,&quot;speed&quot;:1000,&quot;type&quot;:&quot;line&quot;,&quot;mScroll&quot;:&quot;&quot;}">
-
-                        <p class="premium-progressbar-left-label">
-                            76% Complete... </p>
-                        <p class="premium-progressbar-right-label">
-                        </p>
 
 
-                        <div class="clearfix"></div>
-
-                        <div class="premium-progressbar-bar-wrap">
-                            <div class="premium-progressbar-bar" role="progressbar" aria-valuemin="0"
-                                 aria-valuemax="100"></div>
-                        </div>
-
-
-                    </div>
-
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-2c9ac6f elementor-widget elementor-widget-heading"
-                 data-id="2c9ac6f" data-element_type="widget" data-widget_type="heading.default">
-                <div class="elementor-widget-container">
-                    <h2 class="elementor-heading-title elementor-size-default">Type In Your Info Below To Get Started
-                        Now</h2></div>
-            </div>
-            <div class="elementor-element elementor-element-4cc3451 e-flex e-con-boxed e-con e-child" data-id="4cc3451"
-                 data-element_type="container">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-28ee838 elementor-widget elementor-widget-wpforms"
-                         data-id="28ee838" data-element_type="widget" data-widget_type="wpforms.default">
-                        <div class="elementor-widget-container">
-                            <style id="wpforms-css-vars-root"></style>
-                            <style id="wpforms-css-vars-elementor-widget-28ee838"></style>
-                            <div class="wpforms-container wpforms-container-full wpforms-render-modern"
-                                 id="wpforms-359">
-                                <form id="wpforms-form-359" class="wpforms-validate wpforms-form wpforms-ajax-form"
-                                      data-formid="359" method="post" enctype="multipart/form-data"
-                                      action="https://metatrading.ai/about-us/"
-                                      data-token="f1aa4d77fab43490bac16e532cac831d" data-token-time="1741668930">
-                                    <noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to
-                                        complete this form.
-                                    </noscript>
-                                    <div class="wpforms-hidden" id="wpforms-error-noscript">Please enable JavaScript in
-                                        your browser to complete this form.
-                                    </div>
-                                    <div class="wpforms-field-container">
-                                        <div id="wpforms-359-field_3-container" class="wpforms-field wpforms-field-name"
-                                             data-field-id="3"><label class="wpforms-field-label"
-                                                                      for="wpforms-359-field_3">Name <span
-                                                    class="wpforms-required-label"
-                                                    aria-hidden="true">*</span></label><input type="text"
-                                                                                              id="wpforms-359-field_3"
-                                                                                              class="wpforms-field-large wpforms-field-required"
-                                                                                              name="wpforms[fields][3]"
-                                                                                              placeholder="Full Name"
-                                                                                              aria-errormessage="wpforms-359-field_3-error"
-                                                                                              required></div>
-                                        <div id="wpforms-359-field_1-container"
-                                             class="wpforms-field wpforms-field-phone" data-field-id="1"><label
-                                                class="wpforms-field-label" for="wpforms-359-field_1">Phone <span
-                                                    class="wpforms-required-label"
-                                                    aria-hidden="true">*</span></label><input type="tel"
-                                                                                              id="wpforms-359-field_1"
-                                                                                              class="wpforms-field-large wpforms-field-required wpforms-smart-phone-field"
-                                                                                              data-rule-smart-phone-field="true"
-                                                                                              name="wpforms[fields][1]"
-                                                                                              aria-errormessage="wpforms-359-field_1-error"
-                                                                                              required></div>
-                                        <div id="wpforms-359-field_4-container"
-                                             class="wpforms-field wpforms-field-email" data-field-id="4"><label
-                                                class="wpforms-field-label" for="wpforms-359-field_4">Email <span
-                                                    class="wpforms-required-label"
-                                                    aria-hidden="true">*</span></label><input type="email"
-                                                                                              id="wpforms-359-field_4"
-                                                                                              class="wpforms-field-large wpforms-field-required"
-                                                                                              name="wpforms[fields][4]"
-                                                                                              placeholder="Email"
-                                                                                              spellcheck="false"
-                                                                                              aria-errormessage="wpforms-359-field_4-error"
-                                                                                              required></div>
-                                    </div><!-- .wpforms-field-container -->
-                                    <div class="wpforms-submit-container"><input type="hidden" name="wpforms[id]"
-                                                                                 value="359"><input type="hidden"
-                                                                                                    name="page_title"
-                                                                                                    value="About Us"><input
-                                            type="hidden" name="page_url"
-                                            value="https://metatrading.ai/about-us/"><input type="hidden" name="page_id"
-                                                                                            value="609"><input
-                                            type="hidden" name="wpforms[post_id]" value="609">
-                                        <button type="submit" name="wpforms[submit]" id="wpforms-submit-359"
-                                                class="wpforms-submit SubmitButton" data-alt-text="Sending..."
-                                                data-submit-text="GET ACCESS NOW" aria-live="assertive"
-                                                value="wpforms-submit">GET ACCESS NOW
-                                        </button>
-                                        <img
-                                            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2026%2026'%3E%3C/svg%3E"
-                                            class="wpforms-submit-spinner" style="display: none;" width="26" height="26"
-                                            alt="Loading"
-                                            data-lazy-src="../wp-content/plugins/wpforms/assets/images/submit-spin.svg">
-                                        <noscript><img src="../wp-content/plugins/wpforms/assets/images/submit-spin.svg"
-                                                       class="wpforms-submit-spinner" style="display: none;" width="26"
-                                                       height="26" alt="Loading"></noscript>
-                                    </div>
-                                </form>
-                            </div>  <!-- .wpforms-container -->        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-3bd8e01 elementor-widget elementor-widget-image"
-                 data-id="3bd8e01" data-element_type="widget" data-widget_type="image.default">
-                <div class="elementor-widget-container">
-                    <img width="300" height="174"
-                         src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20174'%3E%3C/svg%3E"
-                         class="attachment-medium size-medium wp-image-23" alt=""
-                         data-lazy-srcset="https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-300x174.webp 300w, https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-1024x593.webp 1024w, https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-768x445.webp 768w, https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80.webp 1056w"
-                         data-lazy-sizes="(max-width: 300px) 100vw, 300px"
-                         data-lazy-src="../wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-300x174.webp"/>
-                    <noscript><img width="300" height="174"
-                                   src="../wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-300x174.webp"
-                                   class="attachment-medium size-medium wp-image-23" alt=""
-                                   srcset="https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-300x174.webp 300w, https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-1024x593.webp 1024w, https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-768x445.webp 768w, https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80.webp 1056w"
-                                   sizes="(max-width: 300px) 100vw, 300px"/></noscript>
-                </div>
-            </div>
-            <div
-                class="elementor-element elementor-element-a2e3395 elementor-widget__width-inherit elementor-widget elementor-widget-html"
-                data-id="a2e3395" data-element_type="widget" data-widget_type="html.default">
-                <div class="elementor-widget-container">
-                    <script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript"
-                            data-rocket-src="https://metatrading.ai/wp-content/cache/min/1/bootstrap/v5/tp.widget.bootstrap.min.js?ver=1740586870"
-                            async></script>
-                    <!-- TrustBox widget - Horizontal -->
-                    <div class="trustpilot-widget" data-locale="en-US" data-template-id="5406e65db0d04a09e042d5fc"
-                         data-businessunit-id="65d7cab36592e3978b477795" data-style-height="28px"
-                         data-style-width="100%" data-theme="light">
-                        <a href="https://www.trustpilot.com/review/metatrading.ai" target="_blank" rel="noopener">Trustpilot</a>
-                    </div>
-                    <!-- End TrustBox widget -->        </div>
-            </div>
-            <div class="elementor-element elementor-element-8c697f2 elementor-widget elementor-widget-text-editor"
-                 data-id="8c697f2" data-element_type="widget" data-widget_type="text-editor.default">
-                <div class="elementor-widget-container">
-                    <p>By submitting you agree to receive communication with {{ env('APP_NAME') }} about how to leverage
-                        trading algorithms. As well as Terms &amp; Services. </p>
-                    <p>Your privacy is important to us and we will not spam you. Your contact info is confidential and
-                        will NEVER be shared or sold. You are always free to unsubscribe at any time</p></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div data-elementor-type="popup" data-elementor-id="670" class="elementor elementor-670 elementor-location-popup"
-     data-elementor-settings="{&quot;prevent_close_on_background_click&quot;:&quot;yes&quot;,&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}"
-     data-elementor-post-type="elementor_library">
-    <div class="elementor-element elementor-element-9feaccc e-flex e-con-boxed e-con e-parent" data-id="9feaccc"
-         data-element_type="container">
-        <div class="e-con-inner">
-            <div
-                class="elementor-element elementor-element-1dafeda elementor-widget elementor-widget-premium-addon-progressbar"
-                data-id="1dafeda" data-element_type="widget" data-widget_type="premium-addon-progressbar.default">
-                <div class="elementor-widget-container">
-
-                    <div class="premium-progressbar-container premium-progressbar-striped premium-progressbar-active"
-                         data-settings="{&quot;progress_length&quot;:&quot;76&quot;,&quot;speed&quot;:1000,&quot;type&quot;:&quot;line&quot;,&quot;mScroll&quot;:&quot;&quot;}">
-
-                        <p class="premium-progressbar-left-label">
-                            76% Complete... </p>
-                        <p class="premium-progressbar-right-label">
-                        </p>
-
-
-                        <div class="clearfix"></div>
-
-                        <div class="premium-progressbar-bar-wrap">
-                            <div class="premium-progressbar-bar" role="progressbar" aria-valuemin="0"
-                                 aria-valuemax="100"></div>
-                        </div>
-
-
-                    </div>
-
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-2c9ac6f elementor-widget elementor-widget-heading"
-                 data-id="2c9ac6f" data-element_type="widget" data-widget_type="heading.default">
-                <div class="elementor-widget-container">
-                    <h2 class="elementor-heading-title elementor-size-default">Type In Your Info Below To Get Started
-                        Now</h2></div>
-            </div>
-            <div class="elementor-element elementor-element-4cc3451 e-flex e-con-boxed e-con e-child" data-id="4cc3451"
-                 data-element_type="container">
-                <div class="e-con-inner">
-                    <div class="elementor-element elementor-element-28ee838 elementor-widget elementor-widget-wpforms"
-                         data-id="28ee838" data-element_type="widget" data-widget_type="wpforms.default">
-                        <div class="elementor-widget-container">
-                            <style id="wpforms-css-vars-elementor-widget-28ee838"></style>
-                            <div class="wpforms-container wpforms-container-full wpforms-render-modern"
-                                 id="wpforms-359">
-                                <form id="wpforms-form-359" class="wpforms-validate wpforms-form wpforms-ajax-form"
-                                      data-formid="359" method="post" enctype="multipart/form-data"
-                                      action="https://metatrading.ai/about-us/"
-                                      data-token="f1aa4d77fab43490bac16e532cac831d" data-token-time="1741668930">
-                                    <noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to
-                                        complete this form.
-                                    </noscript>
-                                    <div class="wpforms-hidden" id="wpforms-error-noscript">Please enable JavaScript in
-                                        your browser to complete this form.
-                                    </div>
-                                    <div class="wpforms-field-container">
-                                        <div id="wpforms-359-field_3-container" class="wpforms-field wpforms-field-name"
-                                             data-field-id="3"><label class="wpforms-field-label"
-                                                                      for="wpforms-359-field_3">Name <span
-                                                    class="wpforms-required-label"
-                                                    aria-hidden="true">*</span></label><input type="text"
-                                                                                              id="wpforms-359-field_3"
-                                                                                              class="wpforms-field-large wpforms-field-required"
-                                                                                              name="wpforms[fields][3]"
-                                                                                              placeholder="Full Name"
-                                                                                              aria-errormessage="wpforms-359-field_3-error"
-                                                                                              required></div>
-                                        <div id="wpforms-359-field_1-container"
-                                             class="wpforms-field wpforms-field-phone" data-field-id="1"><label
-                                                class="wpforms-field-label" for="wpforms-359-field_1">Phone <span
-                                                    class="wpforms-required-label"
-                                                    aria-hidden="true">*</span></label><input type="tel"
-                                                                                              id="wpforms-359-field_1"
-                                                                                              class="wpforms-field-large wpforms-field-required wpforms-smart-phone-field"
-                                                                                              data-rule-smart-phone-field="true"
-                                                                                              name="wpforms[fields][1]"
-                                                                                              aria-errormessage="wpforms-359-field_1-error"
-                                                                                              required></div>
-                                        <div id="wpforms-359-field_4-container"
-                                             class="wpforms-field wpforms-field-email" data-field-id="4"><label
-                                                class="wpforms-field-label" for="wpforms-359-field_4">Email <span
-                                                    class="wpforms-required-label"
-                                                    aria-hidden="true">*</span></label><input type="email"
-                                                                                              id="wpforms-359-field_4"
-                                                                                              class="wpforms-field-large wpforms-field-required"
-                                                                                              name="wpforms[fields][4]"
-                                                                                              placeholder="Email"
-                                                                                              spellcheck="false"
-                                                                                              aria-errormessage="wpforms-359-field_4-error"
-                                                                                              required></div>
-                                    </div><!-- .wpforms-field-container -->
-                                    <div class="wpforms-submit-container"><input type="hidden" name="wpforms[id]"
-                                                                                 value="359"><input type="hidden"
-                                                                                                    name="page_title"
-                                                                                                    value="About Us"><input
-                                            type="hidden" name="page_url"
-                                            value="https://metatrading.ai/about-us/"><input type="hidden" name="page_id"
-                                                                                            value="609"><input
-                                            type="hidden" name="wpforms[post_id]" value="609">
-                                        <button type="submit" name="wpforms[submit]" id="wpforms-submit-359"
-                                                class="wpforms-submit SubmitButton" data-alt-text="Sending..."
-                                                data-submit-text="GET ACCESS NOW" aria-live="assertive"
-                                                value="wpforms-submit">GET ACCESS NOW
-                                        </button>
-                                        <img
-                                            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2026%2026'%3E%3C/svg%3E"
-                                            class="wpforms-submit-spinner" style="display: none;" width="26" height="26"
-                                            alt="Loading"
-                                            data-lazy-src="../wp-content/plugins/wpforms/assets/images/submit-spin.svg">
-                                        <noscript><img src="../wp-content/plugins/wpforms/assets/images/submit-spin.svg"
-                                                       class="wpforms-submit-spinner" style="display: none;" width="26"
-                                                       height="26" alt="Loading"></noscript>
-                                    </div>
-                                </form>
-                            </div>  <!-- .wpforms-container -->        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-3bd8e01 elementor-widget elementor-widget-image"
-                 data-id="3bd8e01" data-element_type="widget" data-widget_type="image.default">
-                <div class="elementor-widget-container">
-                    <img width="300" height="174"
-                         src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20174'%3E%3C/svg%3E"
-                         class="attachment-medium size-medium wp-image-23" alt=""
-                         data-lazy-srcset="https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-300x174.webp 300w, https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-1024x593.webp 1024w, https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-768x445.webp 768w, https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80.webp 1056w"
-                         data-lazy-sizes="(max-width: 300px) 100vw, 300px"
-                         data-lazy-src="../wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-300x174.webp"/>
-                    <noscript><img width="300" height="174"
-                                   src="../wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-300x174.webp"
-                                   class="attachment-medium size-medium wp-image-23" alt=""
-                                   srcset="https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-300x174.webp 300w, https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-1024x593.webp 1024w, https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80-768x445.webp 768w, https://metatrading.ai/wp-content/uploads/2024/05/7bd0a9cbea09d0a27bb3fbce948a1bb4_1200_80.webp 1056w"
-                                   sizes="(max-width: 300px) 100vw, 300px"/></noscript>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-8b21e1a elementor-widget elementor-widget-image"
-                 data-id="8b21e1a" data-element_type="widget" data-widget_type="image.default">
-                <div class="elementor-widget-container">
-                    <img width="475" height="66"
-                         src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20475%2066'%3E%3C/svg%3E"
-                         class="attachment-full size-full wp-image-1425" alt=""
-                         data-lazy-srcset="https://metatrading.ai/wp-content/uploads/2024/06/badgetp2.png 475w, https://metatrading.ai/wp-content/uploads/2024/06/badgetp2-300x42.png 300w"
-                         data-lazy-sizes="(max-width: 475px) 100vw, 475px"
-                         data-lazy-src="../wp-content/uploads/2024/06/badgetp2.png"/>
-                    <noscript><img width="475" height="66" src="../wp-content/uploads/2024/06/badgetp2.png"
-                                   class="attachment-full size-full wp-image-1425" alt=""
-                                   srcset="https://metatrading.ai/wp-content/uploads/2024/06/badgetp2.png 475w, https://metatrading.ai/wp-content/uploads/2024/06/badgetp2-300x42.png 300w"
-                                   sizes="(max-width: 475px) 100vw, 475px"/></noscript>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-8c697f2 elementor-widget elementor-widget-text-editor"
-                 data-id="8c697f2" data-element_type="widget" data-widget_type="text-editor.default">
-                <div class="elementor-widget-container">
-                    <p>By submitting you agree to receive communication with {{ env('APP_NAME') }} about how to leverage
-                        trading algorithms. As well as Terms &amp; Services. </p>
-                    <p>Your privacy is important to us and we will not spam you. Your contact info is confidential and
-                        will NEVER be shared or sold. You are always free to unsubscribe at any time</p></div>
-            </div>
-        </div>
-    </div>
-</div>
-<script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
-    const lazyloadRunObserver = () => {
-					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
-					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
-						entries.forEach( ( entry ) => {
-							if ( entry.isIntersecting ) {
-								let lazyloadBackground = entry.target;
-								if( lazyloadBackground ) {
-									lazyloadBackground.classList.add( 'e-lazyloaded' );
-								}
-								lazyloadBackgroundObserver.unobserve( entry.target );
-							}
-						});
-					}, { rootMargin: '200px 0px 200px 0px' } );
-					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
-						lazyloadBackgroundObserver.observe( lazyloadBackground );
-					} );
-				};
-				const events = [
-					'DOMContentLoaded',
-					'elementor/lazyload/observe',
-				];
-				events.forEach( ( event ) => {
-					document.addEventListener( event, lazyloadRunObserver );
-				} );
-</script>
-
-
-<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after">
-    "use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
-</script>
 <script id="rocket-preload-links-js-extra">
     var RocketPreloadLinksConfig = {
         "excludeUris": "\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/",
@@ -13455,7 +9401,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         data-rocket-src="https://metatrading.ai/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"
         data-rocket-defer defer></script>
 <script type="rocketlazyloadscript" id="elementor-frontend-js-before">
-    var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.21.6","is_static":false,"experimentalFeatures":{"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_swiper_latest":true,"container_grid":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"home_screen":true,"editor_v2":true,"nested-elements":true,"e_lazyload":true,"display-conditions":true},"urls":{"assets":"https:\/\/metatrading.ai\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal"},"post":{"id":609,"title":"About%20Us%20-%20Metatrading.ai","excerpt":"","featuredImage":false}};
+    var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.21.6","is_static":false,"experimentalFeatures":{"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_swiper_latest":true,"container_grid":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"home_screen":true,"editor_v2":true,"nested-elements":true,"e_lazyload":true,"display-conditions":true},"urls":{"assets":"https:\/\/metatrading.ai\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal"},"post":{"id":915,"title":"Profit%20Calculator%20-%20Metatrading.ai","excerpt":"","featuredImage":false}};
 </script>
 <script type="rocketlazyloadscript"
         data-rocket-src="https://metatrading.ai/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.21.6"
@@ -13628,67 +9574,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     }, !1)</script>
 <script data-no-minify="1" async
         src="../wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script>
-<script>class RocketElementorAnimation {
-        constructor() {
-            this.deviceMode = document.createElement("span"), this.deviceMode.id = "elementor-device-mode-wpr", this.deviceMode.setAttribute("class", "elementor-screen-only"), document.body.appendChild(this.deviceMode)
-        }
-
-        _detectAnimations() {
-            let t = getComputedStyle(this.deviceMode, ":after").content.replace(/"/g, "");
-            this.animationSettingKeys = this._listAnimationSettingsKeys(t), document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t => {
-                const e = t.getBoundingClientRect();
-                if (e.bottom >= 0 && e.top <= window.innerHeight) try {
-                    this._animateElement(t)
-                } catch (t) {
-                }
-            })
-        }
-
-        _animateElement(t) {
-            const e = JSON.parse(t.dataset.settings), i = e._animation_delay || e.animation_delay || 0,
-                n = e[this.animationSettingKeys.find(t => e[t])];
-            if ("none" === n) return void t.classList.remove("elementor-invisible");
-            t.classList.remove(n), this.currentAnimation && t.classList.remove(this.currentAnimation), this.currentAnimation = n;
-            let s = setTimeout(() => {
-                t.classList.remove("elementor-invisible"), t.classList.add("animated", n), this._removeAnimationSettings(t, e)
-            }, i);
-            window.addEventListener("rocket-startLoading", function () {
-                clearTimeout(s)
-            })
-        }
-
-        _listAnimationSettingsKeys(t = "mobile") {
-            const e = [""];
-            switch (t) {
-                case"mobile":
-                    e.unshift("_mobile");
-                case"tablet":
-                    e.unshift("_tablet");
-                case"desktop":
-                    e.unshift("_desktop")
-            }
-            const i = [];
-            return ["animation", "_animation"].forEach(t => {
-                e.forEach(e => {
-                    i.push(t + e)
-                })
-            }), i
-        }
-
-        _removeAnimationSettings(t, e) {
-            this._listAnimationSettingsKeys().forEach(t => delete e[t]), t.dataset.settings = JSON.stringify(e)
-        }
-
-        static run() {
-            const t = new RocketElementorAnimation;
-            requestAnimationFrame(t._detectAnimations.bind(t))
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", RocketElementorAnimation.run);</script>
 </body>
-
-<!-- Mirrored from metatrading.ai/about-us/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Mar 2025 09:01:53 GMT -->
 </html>
 
-<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1741668930 -->
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1741668874 -->

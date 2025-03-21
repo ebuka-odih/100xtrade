@@ -31,7 +31,7 @@
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1396"><a
                                         href="{{ route('our-solutions') }}" class="elementor-item">Our Solutions</a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
-                                        href="profit-calculator/index.html" class="elementor-item">Profit Calculator</a>
+                                        href="{{ route('calculator') }}" class="elementor-item">Profit Calculator</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
                                         href="{{ route('contact') }}" class="elementor-item">Contact Us</a></li>
@@ -61,7 +61,7 @@
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1396"><a
                                         href="{{ route('our-solutions') }}" class="elementor-item">Our Solutions</a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
-                                        href="profit-calculator/index.html" class="elementor-item">Profit Calculator</a>
+                                        href="{{ route('calculator') }}" class="elementor-item">Profit Calculator</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
                                         href="{{ route('contact') }}" class="elementor-item">Contact Us</a></li>
@@ -88,7 +88,7 @@
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1396"><a
                                         href="{{ route('our-solutions') }}" class="elementor-item">Our Solutions</a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
-                                        href="profit-calculator/index.html" class="elementor-item">Profit Calculator</a>
+                                        href="{{ route('calculator') }}" class="elementor-item">Profit Calculator</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
                                         href="{{ route('contact') }}" class="elementor-item">Contact Us</a></li>
@@ -111,19 +111,19 @@
                         <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
                             <ul id="menu-2-25d9422" class="elementor-nav-menu">
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-416 current_page_item menu-item-1397">
-                                    <a href="index.html" aria-current="page"
+                                    <a href="{{ route('index') }}" aria-current="page"
                                        class="elementor-item elementor-item-active" tabindex="-1">Home</a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1272"><a
-                                        href="about-us/index.html" class="elementor-item" tabindex="-1">About Us</a>
+                                        href="{{ route('about') }}" class="elementor-item" tabindex="-1">About Us</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1396"><a
-                                        href="our-solutions/index.html" class="elementor-item" tabindex="-1">Our
+                                        href="{{ route('our-solutions') }}" class="elementor-item" tabindex="-1">Our
                                     Solutions</a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
-                                        href="profit-calculator/index.html" class="elementor-item" tabindex="-1">Profit
+                                        href="{{ route('calculator') }}" class="elementor-item" tabindex="-1">Profit
                                     Calculator</a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
-                                        href="contact-us/index.html" class="elementor-item" tabindex="-1">Contact Us</a>
+                                        href="{{ route('contact') }}" class="elementor-item" tabindex="-1">Contact Us</a>
                                 </li>
                             </ul>
                         </nav>
@@ -134,7 +134,7 @@
                     <div class="elementor-widget-container">
                         <div class="elementor-button-wrapper">
                             <a class="elementor-button elementor-button-link elementor-size-sm"
-                               href="http://portal.metatrading.ai/" target="_blank">
+                               href="{{ route('login') }}" target="_blank">
 						<span class="elementor-button-content-wrapper">
 									<span class="elementor-button-text">Client Portal</span>
 					</span>
@@ -147,7 +147,7 @@
                     <div class="elementor-widget-container">
                         <div class="elementor-button-wrapper">
                             <a class="elementor-button elementor-button-link elementor-size-sm"
-                               href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjIxMCIsInRvZ2dsZSI6ZmFsc2V9">
+                               href="{{ route('register') }}">
 						<span class="elementor-button-content-wrapper">
 									<span class="elementor-button-text">Get Started</span>
 					</span>
