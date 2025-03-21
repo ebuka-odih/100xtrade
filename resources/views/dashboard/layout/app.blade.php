@@ -127,7 +127,13 @@
                         <span class="fw-semibold">Sell History</span>
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link d-flex gap-2 align-items-center {{ Route::is('user.copy.trade.index') ? 'active' : '' }}"
+                       href="{{ route('user.copy.trade.index') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M11.5 4a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7M6 7.5a5.5 5.5 0 1 1 11 0a5.5 5.5 0 0 1-11 0m8.382 6h7.236l2.081 4.162L18 23.995l-5.7-6.333zm1.236 2l-.919 1.838L18 21.005l3.3-3.667l-.918-1.838zM8 16a4 4 0 0 0-4 4h7.05v2H2v-2a6 6 0 0 1 6-6h3v2z"/></svg>
+                        <span class="fw-semibold">Copy Trade</span>
+                    </a>
+                </li>
 
 
             </ul>
@@ -170,8 +176,12 @@
                                 Profile</a>
                         </li>
                         <li>
-                            <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('user.referrals.index') }}">
-                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 14.252v2.09A6 6 0 0 0 6 22H4a8 8 0 0 1 10-7.749M12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6s6 2.685 6 6s-2.685 6-6 6m0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m6 6v-3h2v3h3v2h-3v3h-2v-3h-3v-2z"/></svg>
+                            <a class="dropdown-item d-flex align-items-center gap-2"
+                               href="{{ route('user.referrals.index') }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                          d="M14 14.252v2.09A6 6 0 0 0 6 22H4a8 8 0 0 1 10-7.749M12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6s6 2.685 6 6s-2.685 6-6 6m0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m6 6v-3h2v3h3v2h-3v3h-2v-3h-3v-2z"/>
+                                </svg>
                                 Referral</a>
                         </li>
                         <li>

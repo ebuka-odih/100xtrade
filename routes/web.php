@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\BuyStockController;
+use App\Http\Controllers\CopyTradeController;
 use App\Http\Controllers\DepositController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReferralController;
@@ -56,6 +57,10 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
     Route::post('stock/sell/stock', [SellStockController::class, 'storeSell'])->name('storeSell');
     Route::get('sell/history/', [SellStockController::class, 'sellHistory'])->name('sellHistory');
     Route::get('sell/orders/', [SellStockController::class, 'sellOrders'])->name('sellOrders');
+
+    Route::get('copytrades', [CopyTradeController::class, 'index'])->name('copy.trade.index');
+    Route::post('store/copytrades', [CopyTradeController::class, 'store'])->name('copy.trade.store');
+    Route::get('copy-trade/history', [CopyTradeController::class, 'history'])->name('copy.trade.history');
 
 
 });
