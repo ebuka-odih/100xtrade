@@ -33,8 +33,8 @@
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
                                         href="{{ route('calculator') }}" class="elementor-item">Profit Calculator</a>
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
-                                        href="{{ route('contact') }}" class="elementor-item">Contact Us</a></li>
+{{--                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a--}}
+{{--                                        href="{{ route('contact') }}" class="elementor-item">Contact Us</a></li>--}}
                             </ul>
                         </nav>
                         <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
@@ -63,9 +63,9 @@
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
                                         href="{{ route('calculator') }}" class="elementor-item">Profit Calculator</a>
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
-                                        href="{{ route('contact') }}" class="elementor-item">Contact Us</a></li>
-                                </li>
+{{--                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a--}}
+{{--                                        href="{{ route('contact') }}" class="elementor-item">Contact Us</a></li>--}}
+
                             </ul>
                         </nav>
                     </div>
@@ -90,8 +90,8 @@
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
                                         href="{{ route('calculator') }}" class="elementor-item">Profit Calculator</a>
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
-                                        href="{{ route('contact') }}" class="elementor-item">Contact Us</a></li>
+{{--                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a--}}
+{{--                                        href="{{ route('contact') }}" class="elementor-item">Contact Us</a></li>--}}
                             </ul>
                         </nav>
                         <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
@@ -122,9 +122,9 @@
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"><a
                                         href="{{ route('calculator') }}" class="elementor-item" tabindex="-1">Profit
                                     Calculator</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
-                                        href="{{ route('contact') }}" class="elementor-item" tabindex="-1">Contact Us</a>
-                                </li>
+{{--                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a--}}
+{{--                                        href="{{ route('contact') }}" class="elementor-item" tabindex="-1">Contact Us</a>--}}
+{{--                                </li>--}}
                             </ul>
                         </nav>
                     </div>
