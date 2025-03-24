@@ -13,8 +13,8 @@
                                 <i class="fas fa-envelope fa-sm"></i>
                             </div>
                             <div>
-                                <p class="uk-margin-remove"><a href="mailto:admin@stockgainpulse.com">admin@stockgainpulse.com</a>
-                                    <a href="mailto:support@stockgainpulse.com">support@stockgainpulse.com</a>
+                                <p class="uk-margin-remove"><a href="mailto:admin@bitrader.net">admin@bitrader.net</a>
+                                    <a href="mailto:support@bitrader.net">support@bitrader.net</a>
                                 </p>
                             </div>
                         </div>

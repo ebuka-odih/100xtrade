@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\CopyTraderController;
+use App\Http\Controllers\Admin\HistoryController;
 use App\Http\Controllers\Admin\PaymentMethodController;
 use App\Http\Controllers\Admin\StockController;
 use App\Http\Controllers\Admin\TransactionController;
@@ -37,4 +39,14 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
      Route::get('trade/history', [StockController::class, 'tradeHistory'])->name('tradeHistory');
      Route::post('trade/profit/{id}', [StockController::class, 'addStockProfit'])->name('addStockProfit');
      Route::delete('delete/trade/{id}', [StockController::class, 'deleteTrade'])->name('deleteTrade');
+
+     Route::get('create/copy-trader', [CopyTraderController::class, 'index'])->name('copyTrader.index');
+    Route::post('store/copy-trader', [CopyTraderController::class, 'store'])->name('copyTrader.store');
+    Route::patch('update/copy-trader/{id}', [CopyTraderController::class, 'update'])->name('copyTrader.update');
+    Route::delete('delete/copy-trader/{id}', [CopyTraderController::class, 'destroy'])->name('copyTrader.destroy');
+
+    Route::get('copied-trades/history', [HistoryController::class, 'copiedTrades'])->name('copiedTrades');
+    Route::post('fund/copied-trades/{id}', [HistoryController::class, 'fundCopiedTrade'])->name('fundCopiedTrade');
+    Route::get('close/copied-trades/{id}', [HistoryController::class, 'closeCopiedTrade'])->name('closeCopiedTrade');
+
 });
