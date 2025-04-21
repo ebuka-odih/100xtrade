@@ -28,6 +28,9 @@ class Deposit extends Model
         if ($this->status == 1)
         {
             return '<span class="badge bg-success">Successful</span>';
+        }elseif ($this->status == 2)
+        {
+            return '<span class="badge bg-danger">Declined</span>';
         }
         return '<span class="badge bg-warning">Pending</span>';
     }

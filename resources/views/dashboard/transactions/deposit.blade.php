@@ -122,11 +122,7 @@
                                             <td class="text-white">${{ number_format($item->amount, 2) ?? '' }}</td>
                                             <td class="text-white">{{ optional($item->payment_method)->name ?? 'Bank' }}</td>
                                             <td>
-                                                @if($item->status == 0)
-                                                    <span class="badge bg-warning">Pending</span>
-                                                @else
-                                                    <span class="badge bg-success">Successful</span>
-                                                @endif
+                                                {!! $item->status() !!}
                                             </td>
                                         </tr>
                                     @endforeach

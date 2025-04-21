@@ -31,6 +31,13 @@ class TransactionController extends Controller
         Mail::to($user->email)->send(new ApproveDeposit($data));
         return redirect()->back()->with('success', 'Deposit Approved Successfully');
     }
+    public function declineDeposit($id)
+    {
+        $data = Deposit::findOrFail($id);
+        $data->status = 2;
+        $data->save();
+        return redirect()->back()->with('success', 'Deposit Approved Successfully');
+    }
 
     public function withdraws()
     {

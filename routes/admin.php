@@ -31,6 +31,7 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
 
      Route::get('deposit/history', [TransactionController::class, 'deposits'])->name('transactions.deposits');
      Route::get('approve/deposit/{id}', [TransactionController::class, 'approveDeposit'])->name('approveDeposit');
+     Route::get('decline/deposit/{id}', [TransactionController::class, 'declineDeposit'])->name('declineDeposit');
      Route::get('transactions/withdrawal', [TransactionController::class, 'withdraws'])->name('transactions.withdraws');
      Route::get('approve/withdrawal/{id}', [TransactionController::class, 'approveWithdraw'])->name('approveWithdraw');
 
