@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\SubPackage;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class SubPackageController extends Controller
@@ -35,6 +36,9 @@ class SubPackageController extends Controller
         $data = SubPackage::find($id);
         $data->profit += $request->profit;
         $data->save();
+        $user = User::find($data->user_id);
+        $user->profit += $request['profit'];
+        $user->save();
         return redirect()->back()->with('success', 'Subscription funding');
     }
 }
