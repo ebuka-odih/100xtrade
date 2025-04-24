@@ -10,6 +10,7 @@ use App\Http\Controllers\ReferralController;
 use App\Http\Controllers\SellStockController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\StockOrderController;
+use App\Http\Controllers\SubPackageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WithdrawalController;
 use Illuminate\Support\Facades\Route;
@@ -63,6 +64,9 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
     Route::get('copy-trade/history', [CopyTradeController::class, 'history'])->name('copy.trade.history');
 
 
+    Route::get('subscription', [SubPackageController::class, 'index'])->name('subscription.index');
+    Route::post('subscription/store', [SubPackageController::class, 'store'])->name('subscription.store');
+    Route::get('subscription/history', [SubPackageController::class, 'history'])->name('subscription.history');
 });
 
 Route::middleware('auth')->group(function () {

@@ -23,6 +23,9 @@ class Withdrawal extends Model
         if ($this->status == 1)
         {
             return '<span class="badge bg-success">Successful</span>';
+        }elseif ($this->status == 2)
+        {
+            return '<span class="badge bg-danger">cancelled</span>';
         }
         return '<span class="badge bg-warning">Pending</span>';
     }

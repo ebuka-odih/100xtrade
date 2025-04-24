@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sub_packages', function (Blueprint $table) {
+        Schema::create('packages', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('package_id');
-            $table->uuid('user_id');
-            $table->decimal('amount', 18, 8)->default(0);
-            $table->decimal('profit', 18, 8)->nullable();
-             $table->integer('status')->nullable();
+            $table->string('name');
+            $table->decimal('min_amount', 15, 6);
+            $table->decimal('term')->nullable();
+            $table->decimal('pnl')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sub_packages');
+        Schema::dropIfExists('packages');
     }
 };

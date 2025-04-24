@@ -3,11 +3,13 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CopyTraderController;
 use App\Http\Controllers\Admin\HistoryController;
+use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\Admin\PaymentMethodController;
 use App\Http\Controllers\Admin\StockController;
 use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\SubPackageController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -34,6 +36,7 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
      Route::get('decline/deposit/{id}', [TransactionController::class, 'declineDeposit'])->name('declineDeposit');
      Route::get('transactions/withdrawal', [TransactionController::class, 'withdraws'])->name('transactions.withdraws');
      Route::get('approve/withdrawal/{id}', [TransactionController::class, 'approveWithdraw'])->name('approveWithdraw');
+     Route::get('decline/withdrawal/{id}', [TransactionController::class, 'declineWithdraw'])->name('declineWithdraw');
 
      Route::get('all/stocks', [StockController::class, 'index'])->name('stocks.index');
      Route::delete('delete/stock/{id}', [StockController::class, 'deleteStock'])->name('deleteStock');
@@ -49,5 +52,12 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::get('copied-trades/history', [HistoryController::class, 'copiedTrades'])->name('copiedTrades');
     Route::post('fund/copied-trades/{id}', [HistoryController::class, 'fundCopiedTrade'])->name('fundCopiedTrade');
     Route::get('close/copied-trades/{id}', [HistoryController::class, 'closeCopiedTrade'])->name('closeCopiedTrade');
+
+    Route::resource('package', PackageController::class);
+
+    Route::get('subscriptions', [SubPackageController::class, 'index'])->name('subscriptions.index');
+    Route::get('approve/subscription/{id}', [SubPackageController::class, 'approveSubscription'])->name('approveSubscription');
+    Route::get('decline/subscription/{id}', [SubPackageController::class, 'declineSubscription'])->name('declineSubscription');
+    Route::post('fund/subscription/{id}', [SubPackageController::class, 'fundSubscription'])->name('fundSubscription');
 
 });
