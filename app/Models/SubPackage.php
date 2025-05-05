@@ -16,7 +16,7 @@ class SubPackage extends Model
         } elseif ($this->status == 2) {
             return '<span class="badge bg-success">Active</span>';
         }
-        return '<span class="badge bg-warning">Declined</span>';
+        return '<span class="badge bg-danger">Declined</span>';
     }
 
 

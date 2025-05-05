@@ -20,6 +20,10 @@ class SubPackageController extends Controller
         $data = SubPackage::find($id);
         $data->status = 2;
         $data->save();
+        $user = User::find($data->user_id);
+        $user->balance -= $data->amount;
+        $user->invested += $data->amount;
+        $user->save();
         return redirect()->back()->with('success', 'Subscription Approved');
     }
 
@@ -38,6 +42,7 @@ class SubPackageController extends Controller
         $data->save();
         $user = User::find($data->user_id);
         $user->profit += $request['profit'];
+        $user->balance += $request['profit'];
         $user->save();
         return redirect()->back()->with('success', 'Subscription funding');
     }

@@ -60,10 +60,15 @@
                                     <div class="elementor-button-wrapper">
                                         <a class="elementor-button elementor-button-link elementor-size-sm"
                                            href="{{ route('register') }}">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">get started</span>
-					</span>
+                                            <span class="elementor-button-content-wrapper">
+                                                        <span class="elementor-button-text">get started</span>
+                                        </span>
                                         </a>
+                                        <a class="elementor-button elementor-button-link elementor-size-sm" href="{{ route('login') }}" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Login</span>
+					</span>
+                            </a>
                                     </div>
                                 </div>
                             </div>

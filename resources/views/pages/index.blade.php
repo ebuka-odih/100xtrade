@@ -20,7 +20,7 @@
               <h1 class="banner__content-heading">Invest your money
                 with <span>higher return</span></h1>
               <p class="banner__content-moto">Anyone can invest money to different currency to increase their earnings
-                by the help of Bitrader through online.
+                by the help of {{ env('APP_NAME') }} through online.
               </p>
               <div class="banner__btn-group btn-group">
                 <a href="signin.html" class="trk-btn trk-btn--primary trk-btn--arrow">Get Started

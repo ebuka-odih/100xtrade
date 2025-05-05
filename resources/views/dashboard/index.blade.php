@@ -3,7 +3,7 @@
 
 <div class="container-fluid main-content px-2 px-lg-4">
         <div class="row my-2 g-3 g-lg-4">
-          <div class="col-md-6 col-xl-4 col-xxl-3">
+          <div class="col-md-6 col-xl-6 col-xxl-6">
             <div class="price-box">
               <div class="d-flex align-items-center justify-content-between">
                 <div>
@@ -17,12 +17,12 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-xl-4 col-xxl-3">
+          <div class="col-md-6 col-xl-6 col-xxl-6">
             <div class="price-box">
               <div class="d-flex align-items-center justify-content-between">
                 <div>
                   <p class="text-white mb-0">Invested</p>
-                  <h4 class="fw-semibold text-white my-2">${{ number_format($invested, 2) ?? '' }}</h4>
+                  <h4 class="fw-semibold text-white my-2">${{ number_format(auth()->user()->invested, 2) ?? '' }}</h4>
                 </div>
                   <div>
                  <p class="text-white mb-0">Profit</p>
@@ -35,7 +35,7 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-xl-4 col-xxl-3">
+          <div class="col-md-6 col-xl-6 col-xxl-6">
             <div class="price-box">
               <div class="d-flex align-items-center justify-content-between">
                 <div>
@@ -50,7 +50,7 @@
             </div>
           </div>
 
-            <div class="col-md-6 col-xl-4 col-xxl-3">
+            <div class="col-md-6 col-xl-6 col-xxl-6">
             <div class="price-box">
               <div class="d-flex align-items-center justify-content-between">
                 <div>
