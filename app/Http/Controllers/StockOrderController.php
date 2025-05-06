@@ -97,6 +97,7 @@ class StockOrderController extends Controller
 
                 // Deduct from user balance
                 $user->balance -= $amount;
+                $user->invested += $amount;
                 $user->save();
 
                 // Update filled_at

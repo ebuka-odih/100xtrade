@@ -33,6 +33,7 @@
                                            <table class="table" id="stockTable">
                                         <thead >
                                         <tr>
+                                            <th>User</th>
                                             <th>Package</th>
                                             <th>Amount</th>
                                             <th>Status</th>
@@ -43,6 +44,7 @@
                                         <tbody >
                                         @foreach($data as $item)
                                             <tr>
+                                                <td>{{ $item->user->name ?? '' }}</td>
                                                 <td>{{ $item->package->name ?? '' }}</td>
                                                 <td>${{ number_format($item->amount, 2) }}</td>
                                                 <td>{!! $item->status() !!}</td>
