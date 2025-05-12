@@ -39,6 +39,9 @@
                                     {{ session()->get('success') }}
                                 </div>
                             @endif
+                           <a href="{{ route('admin.verifyUser', $user->id) }}" class="btn btn-primary btn-sm">Verify User</a>
+                           <a href="{{ route('admin.verifyUserDate', $user->id) }}" class="btn btn-secondary btn-sm">Verify User Date</a>
+
                             @if($user->status == 0)
                                <div class="alert alert-warning">
                                 <div class="alert-cta flex-wrap flex-md-nowrap">

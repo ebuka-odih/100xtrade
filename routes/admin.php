@@ -24,6 +24,7 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::get('users', [UserController::class, 'index'])->name('users.index');
     Route::get('user/show/{id}', [UserController::class, 'show'])->name('user.show');
     Route::get('verify/user/{id}', [UserController::class, 'verifyUser'])->name('verifyUser');
+    Route::get('verify/user/date/{id}', [UserController::class, 'verifyUserDate'])->name('verifyUserDate');
     Route::post('fund/user/{id}', [UserController::class, 'fundUser'])->name('fundUser');
     Route::delete('delete/user/{id}', [UserController::class, 'deleteUser'])->name('deleteUser');
 

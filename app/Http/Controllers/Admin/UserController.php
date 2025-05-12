@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Mail\FundingMail;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -26,6 +27,13 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
         $user->status = 1;
+        $user->save();
+        return redirect()->back()->with('success', 'User Verified Successfully');
+    }
+    public function verifyUserDate($id)
+    {
+        $user = User::findOrFail($id);
+        $user->email_verified_at = Carbon::now();
         $user->save();
         return redirect()->back()->with('success', 'User Verified Successfully');
     }
