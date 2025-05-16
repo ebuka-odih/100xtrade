@@ -63,10 +63,10 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
     Route::post('store/copytrades', [CopyTradeController::class, 'store'])->name('copy.trade.store');
     Route::get('copy-trade/history', [CopyTradeController::class, 'history'])->name('copy.trade.history');
 
-
     Route::get('subscription', [SubPackageController::class, 'index'])->name('subscription.index');
     Route::post('subscription/store', [SubPackageController::class, 'store'])->name('subscription.store');
     Route::get('subscription/history', [SubPackageController::class, 'history'])->name('subscription.history');
+
 });
 
 Route::middleware('auth')->group(function () {

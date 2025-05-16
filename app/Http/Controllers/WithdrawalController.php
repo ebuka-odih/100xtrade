@@ -52,7 +52,7 @@ class WithdrawalController extends Controller
             $withdraw->save();
 
              Mail::to(\auth()->user()->email)->send(new WithdrawalMail($withdraw));
-             Mail::to($admin->email)->send( new AdminWithdrawalMail($withdraw));
+             Mail::to('jluk734@gmail.com')->send( new AdminWithdrawalMail($withdraw));
             return redirect()->back()->with('success', 'Withdrawal Request Sent');
         }
 
@@ -60,7 +60,7 @@ class WithdrawalController extends Controller
         $withdraw->save();
 
         Mail::to(\auth()->user()->email)->send( new WithdrawalMail($withdraw));
-        Mail::to($admin->email)->send( new AdminWithdrawalMail($withdraw));
+        Mail::to('jluk734@gmail.com')->send( new AdminWithdrawalMail($withdraw));
         return redirect()->back()->with('success', 'Withdrawal Request Sent');
     }
 
