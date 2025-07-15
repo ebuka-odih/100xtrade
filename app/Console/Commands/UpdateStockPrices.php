@@ -25,7 +25,7 @@ class UpdateStockPrices extends Command
 
         $symbols = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'META', 'TSLA', 'NFLX', 'NVDA', 'AMD',
             'INTC', 'PYPL', 'DIS', 'V', 'MA', 'JPM', 'GS', 'BA', 'XOM', 'WMT',
-            'VZ', 'M', 'GL', 'F', 'GME', 'KO', 'OGZPY', 'PFE', 'SONY', 'ABNB'];
+            'VZ', 'M', 'GL', 'F', 'GME', 'KO', 'OGZPY', 'PFE', 'SONY', 'ABNB', 'SPY', 'QQQ', 'IWM'];
 
         $stockData = $this->stockService->fetchStockDataWithApi($symbols);
         Cache::put('stock_prices', collect($stockData)->pluck(null, 'symbol')->all(), 60);
