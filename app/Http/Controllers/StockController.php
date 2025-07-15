@@ -31,7 +31,7 @@ class StockController extends Controller
 
 
         // Fetch cached prices
-        $stockData = $this->stockService->fetchStockData($symbols, true);
+        $stockData = $this->stockService->fetchStockData($symbols);
         $stockPrices = collect($stockData)->pluck('price', 'symbol');
 
         // Fetch Stock model instances
