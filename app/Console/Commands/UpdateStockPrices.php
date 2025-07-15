@@ -23,9 +23,32 @@ class UpdateStockPrices extends Command
     public function handle()
     {
 
-        $symbols = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'META', 'TSLA', 'NFLX', 'NVDA', 'AMD',
-            'INTC', 'PYPL', 'DIS', 'V', 'MA', 'JPM', 'GS', 'BA', 'XOM', 'WMT',
-            'VZ', 'M', 'GL', 'F', 'GME', 'KO', 'OGZPY', 'PFE', 'SONY', 'ABNB', 'SPY', 'QQQ', 'IWM'];
+        $symbols = [
+            // Technology
+            'AAPL', 'MSFT', 'GOOGL', 'GOOG', 'AMZN', 'META', 'NVDA', 'TSLA', 'NFLX', 'AMD', 'INTC', 'ADBE', 'CRM', 'CSCO', 'ORCL', 'QCOM', 'TXN', 'INTU', 'NOW', 'PLTR', 'ISRG',
+            // Financial Services
+            'JPM', 'BAC', 'WFC', 'GS', 'MS', 'BLK', 'AXP', 'MA', 'V', 'USB', 'BK', 'SCHW', 'COF', 'MET', 'SPG',
+            // Healthcare
+            'JNJ', 'PFE', 'ABBV', 'ABT', 'UNH', 'LLY', 'BMY', 'AMGN', 'GILD', 'MDT', 'TMO', 'DHR',
+            // Consumer Discretionary
+            'HD', 'LOW', 'DIS', 'MCD', 'SBUX', 'NKE', 'TGT', 'BKNG', 'ABNB',
+            // Consumer Staples
+            'PG', 'KO', 'PEP', 'COST', 'WMT', 'MDLZ', 'PM', 'CL', 'MO',
+            // Energy
+            'XOM', 'CVX', 'COP',
+            // Industrials
+            'BA', 'CAT', 'GE', 'HON', 'MMM', 'RTX', 'LMT', 'GD', 'EMR', 'DE', 'UPS', 'FDX', 'UNP',
+            // Communication Services
+            'VZ', 'T', 'TMUS', 'CMCSA', 'CHTR',
+            // Materials
+            'LIN',
+            // Utilities
+            'DUK', 'NEE', 'SO',
+            // Real Estate
+            'AMT',
+            // ETFs (keeping existing ones)
+            'SPY', 'QQQ', 'IWM'
+        ];
 
         $stockData = $this->stockService->fetchStockDataWithApi($symbols);
         Cache::put('stock_prices', collect($stockData)->pluck(null, 'symbol')->all(), 60);
