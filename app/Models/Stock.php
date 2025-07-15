@@ -55,7 +55,7 @@ class Stock extends Model
             "IWM" => 'img/stock/IWM.webp',
         ];
 
-        return asset($avatars[$this->symbol] ?? 'img/trader.jpg');
+        return asset($avatars[$this->symbol] ?? 'img/stock/stock.jpeg');
     }
 
     public function buystock()
