@@ -22,8 +22,6 @@ class UpdateStockPrices extends Command
 
     public function handle()
     {
-//        $symbols = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'META', 'TSLA', 'NFLX', 'NVDA', 'AMD',
-//                    'INTC', 'PYPL', 'DIS', 'V', 'MA', 'JPM', 'GS', 'BA', 'XOM', 'WMT'];
 
         $symbols = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'META', 'TSLA', 'NFLX', 'NVDA', 'AMD',
             'INTC', 'PYPL', 'DIS', 'V', 'MA', 'JPM', 'GS', 'BA', 'XOM', 'WMT',
