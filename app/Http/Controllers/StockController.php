@@ -22,8 +22,13 @@ class StockController extends Controller
     public function index()
     {
         // Define the stock list
-        $symbols = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'META', 'TSLA','NFLX', 'NVDA', 'AMD',
-            'INTC', 'PYPL', 'DIS', 'V', 'MA', 'JPM', 'GS', 'BA', 'XOM', 'WMT'];
+//        $symbols = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'META', 'TSLA','NFLX', 'NVDA', 'AMD',
+//            'INTC', 'PYPL', 'DIS', 'V', 'MA', 'JPM', 'GS', 'BA', 'XOM', 'WMT'];
+
+        $symbols = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'META', 'TSLA', 'NFLX', 'NVDA', 'AMD',
+            'INTC', 'PYPL', 'DIS', 'V', 'MA', 'JPM', 'GS', 'BA', 'XOM', 'WMT',
+            'VZ', 'M', 'GL', 'F', 'GME', 'KO', 'OGZPY', 'PFE', 'SONY', 'ABNB'];
+
 
         // Fetch cached prices
         $stockData = $this->stockService->fetchStockData($symbols);

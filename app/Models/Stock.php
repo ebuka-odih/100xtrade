@@ -41,6 +41,15 @@ class Stock extends Model
             "BA" => 'img/stock/BA.png',
             "XOM" => 'img/stock/XOM.png',
             "WMT" => 'img/stock/WMT.webp',
+            "VZ" => 'img/stock/VZ.jpg',
+            "M" => 'img/stock/m.gif',
+            "GL" => 'img/stock/GL.png',
+            "F" => 'img/stock/F.png',
+            "GME" => 'img/stock/GME.png',
+            "KO" => 'img/stock/KO.jpg',
+            "PFE" => 'img/stock/PFE.jpg',
+            "SONY" => 'img/stock/SONY.jpg',
+            "ABNB" => 'img/stock/ABNB.webp',
         ];
 
         return asset($avatars[$this->symbol] ?? 'img/trader.jpg');
