@@ -171,6 +171,28 @@
                                         </div>
                                     @endif
 
+                                    @if($trade->interval)
+                                        <div class="row mb-3">
+                                            <div class="col-6">
+                                                <strong>Execution Interval:</strong>
+                                            </div>
+                                            <div class="col-6">
+                                                <span class="badge bg-info">{{ $trade->interval_display }}</span>
+                                            </div>
+                                        </div>
+                                    @endif
+
+                                    @if($trade->scheduled_at)
+                                        <div class="row mb-3">
+                                            <div class="col-6">
+                                                <strong>Scheduled For:</strong>
+                                            </div>
+                                            <div class="col-6">
+                                                {{ $trade->scheduled_at->format('M d, Y H:i') }}
+                                            </div>
+                                        </div>
+                                    @endif
+
                                     <div class="row mb-3">
                                         <div class="col-6">
                                             <strong>Status:</strong>

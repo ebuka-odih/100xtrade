@@ -132,20 +132,6 @@ body {
                                     <h6 class="mb-0">Place Trade</h6>
                                 </div>
                                 <div class="card-body">
-                                    <!-- Current Price Info -->
-                                    <div class="mb-4">
-                                        <div class="d-flex justify-content-between align-items-center mb-2">
-                                            <span class="text-muted">Current Price:</span>
-                                            <span class="h5 mb-0">{{ $tradePair->formatted_price }}</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="text-muted">24h Change:</span>
-                                            <span class="{{ $tradePair->price_change_class }}">
-                                                {{ $tradePair->formatted_change }}
-                                            </span>
-                                        </div>
-                                    </div>
-
                                     <!-- Available Balance -->
                                     <div class="alert alert-info">
                                         <div class="d-flex justify-content-between align-items-center">
@@ -254,6 +240,36 @@ body {
                                                    placeholder="Optional">
                                         </div>
 
+                                        <!-- Execution Interval -->
+                                        <div class="mb-3">
+                                            <label for="interval" class="form-label">Execution Interval</label>
+                                            <select class="form-control" id="interval" name="interval">
+                                                <option value="">Execute Immediately</option>
+                                                <option value="5min">5 Minutes</option>
+                                                <option value="10min">10 Minutes</option>
+                                                <option value="15min">15 Minutes</option>
+                                                <option value="30min">30 Minutes</option>
+                                                <option value="1hour">1 Hour</option>
+                                                <option value="2hour">2 Hours</option>
+                                                <option value="4hour">4 Hours</option>
+                                                <option value="6hour">6 Hours</option>
+                                                <option value="8hour">8 Hours</option>
+                                                <option value="12hour">12 Hours</option>
+                                                <option value="1day">1 Day</option>
+                                                <option value="2day">2 Days</option>
+                                                <option value="3day">3 Days</option>
+                                                <option value="1week">1 Week</option>
+                                                <option value="2week">2 Weeks</option>
+                                                <option value="1month">1 Month</option>
+                                                <option value="3month">3 Months</option>
+                                                <option value="6month">6 Months</option>
+                                                <option value="1year">1 Year</option>
+                                            </select>
+                                            <div class="form-text">
+                                                Choose when to execute this trade. Leave empty for immediate execution.
+                                            </div>
+                                        </div>
+
                                         <!-- Submit Buttons -->
                                         <div class="d-grid gap-2">
                                             <button type="submit" class="btn btn-success btn-lg">
@@ -264,24 +280,7 @@ body {
                                 </div>
                             </div>
 
-                            <!-- Market Info -->
-                            <div class="card mt-3">
-                                <div class="card-header">
-                                    <h6 class="mb-0">Market Information</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <small class="text-muted">24h Volume</small>
-                                            <div class="fw-bold">${{ number_format($tradePair->volume_24h) }}</div>
-                                        </div>
-                                        <div class="col-6">
-                                            <small class="text-muted">Market</small>
-                                            <div class="fw-bold">{{ ucfirst($tradePair->market) }}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>

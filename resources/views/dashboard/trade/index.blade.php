@@ -2,9 +2,7 @@
 @section('content')
 
 <style>
-body {
-    background-color: #080909 !important;
-}
+
 .container-fluid {
     margin-top: 100px;
 }
@@ -63,7 +61,7 @@ body {
 }
 </style>
 
-<div class="container-fluid">
+<div style="margin-top: 100px;" class="container-fluid">
     <div class="row">
         <div class="col-12">
             <div class="card">

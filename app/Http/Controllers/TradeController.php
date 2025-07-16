@@ -52,6 +52,7 @@ class TradeController extends Controller
             'take_profit' => 'nullable|numeric|min:0',
             'order_type' => 'required|in:market,limit,stop',
             'limit_price' => 'nullable|required_if:order_type,limit|numeric|min:0',
+            'interval' => 'nullable|string|in:' . implode(',', array_keys(Trade::getAvailableIntervals())),
         ]);
 
         $user = auth()->user();
@@ -77,7 +78,14 @@ class TradeController extends Controller
                     'status' => 1, // Pending
                     'order_type' => $request->order_type,
                     'limit_price' => $request->limit_price,
+                    'interval' => $request->interval,
                 ]);
+
+                // Calculate scheduled time if interval is provided
+                if ($request->interval) {
+                    $trade->calculateScheduledTime();
+                    $trade->save();
+                }
 
                 // If it's a market order, execute immediately
                 if ($request->order_type === 'market') {

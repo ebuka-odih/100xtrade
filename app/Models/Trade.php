@@ -26,6 +26,8 @@ class Trade extends Model
         'quantity',
         'order_type', // market, limit, stop
         'limit_price',
+        'interval', // execution interval
+        'scheduled_at', // scheduled execution time
         'filled_at',
         'closed_at'
     ];
@@ -41,6 +43,7 @@ class Trade extends Model
         'quantity' => 'decimal:4',
         'limit_price' => 'decimal:2',
         'status' => 'integer',
+        'scheduled_at' => 'datetime',
         'filled_at' => 'datetime',
         'closed_at' => 'datetime',
     ];
@@ -168,5 +171,95 @@ class Trade extends Model
     public function isCancelled(): bool
     {
         return (int) $this->status === 4;
+    }
+
+    /**
+     * Get available intervals for trade execution
+     */
+    public static function getAvailableIntervals(): array
+    {
+        return [
+            '5min' => '5 Minutes',
+            '10min' => '10 Minutes',
+            '15min' => '15 Minutes',
+            '30min' => '30 Minutes',
+            '1hour' => '1 Hour',
+            '2hour' => '2 Hours',
+            '4hour' => '4 Hours',
+            '6hour' => '6 Hours',
+            '8hour' => '8 Hours',
+            '12hour' => '12 Hours',
+            '1day' => '1 Day',
+            '2day' => '2 Days',
+            '3day' => '3 Days',
+            '1week' => '1 Week',
+            '2week' => '2 Weeks',
+            '1month' => '1 Month',
+            '3month' => '3 Months',
+            '6month' => '6 Months',
+            '1year' => '1 Year',
+        ];
+    }
+
+    /**
+     * Calculate scheduled time based on interval
+     */
+    public function calculateScheduledTime(): void
+    {
+        if (!$this->interval) {
+            return;
+        }
+
+        $now = now();
+        
+        $scheduledTime = match($this->interval) {
+            '5min' => $now->addMinutes(5),
+            '10min' => $now->addMinutes(10),
+            '15min' => $now->addMinutes(15),
+            '30min' => $now->addMinutes(30),
+            '1hour' => $now->addHour(),
+            '2hour' => $now->addHours(2),
+            '4hour' => $now->addHours(4),
+            '6hour' => $now->addHours(6),
+            '8hour' => $now->addHours(8),
+            '12hour' => $now->addHours(12),
+            '1day' => $now->addDay(),
+            '2day' => $now->addDays(2),
+            '3day' => $now->addDays(3),
+            '1week' => $now->addWeek(),
+            '2week' => $now->addWeeks(2),
+            '1month' => $now->addMonth(),
+            '3month' => $now->addMonths(3),
+            '6month' => $now->addMonths(6),
+            '1year' => $now->addYear(),
+            default => $now
+        };
+
+        $this->scheduled_at = $scheduledTime;
+    }
+
+    /**
+     * Check if trade is ready to be executed based on scheduled time
+     */
+    public function isReadyForExecution(): bool
+    {
+        if (!$this->scheduled_at || $this->status !== 1) {
+            return false;
+        }
+
+        return now()->gte($this->scheduled_at);
+    }
+
+    /**
+     * Get formatted interval display
+     */
+    public function getIntervalDisplayAttribute(): string
+    {
+        if (!$this->interval) {
+            return 'Immediate';
+        }
+
+        $intervals = self::getAvailableIntervals();
+        return $intervals[$this->interval] ?? $this->interval;
     }
 } 

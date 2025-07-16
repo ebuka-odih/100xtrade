@@ -3,7 +3,7 @@
 @section('title', 'Trade History')
 
 @section('content')
-<div class="container-fluid">
+<div style="margin-top: 100px;" class="container-fluid">
     <div class="row">
         <div class="col-12">
             <div class="card">

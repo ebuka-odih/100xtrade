@@ -56,6 +56,7 @@
                                             <th>Symbol</th>
                                             <th>Type</th>
                                             <th>Amount</th>
+                                            <th>Interval</th>
                                             <th>Status</th>
                                             <th>P&L</th>
                                             <th>Created</th>
@@ -75,6 +76,13 @@
                                                 <td><strong>{{ $trade->symbol }}</strong></td>
                                                 <td>{!! $trade->type_badge !!}</td>
                                                 <td>${{ number_format($trade->amount, 2) }}</td>
+                                                <td>
+                                                    @if($trade->interval)
+                                                        <span class="badge bg-info">{{ $trade->interval_display }}</span>
+                                                    @else
+                                                        <span class="badge bg-secondary">Immediate</span>
+                                                    @endif
+                                                </td>
                                                 <td>{!! $trade->status_badge !!}</td>
                                                 <td>
                                                     @if($trade->status == 3) {{-- Closed --}}
@@ -166,6 +174,7 @@
                                             <th>Symbol</th>
                                             <th>Type</th>
                                             <th>Amount</th>
+                                            <th>Interval</th>
                                             <th>Entry Price</th>
                                             <th>Current P&L</th>
                                             <th>Created</th>
@@ -181,6 +190,13 @@
                                                 <td><strong>{{ $trade->symbol }}</strong></td>
                                                 <td>{!! $trade->type_badge !!}</td>
                                                 <td>${{ number_format($trade->amount, 2) }}</td>
+                                                <td>
+                                                    @if($trade->interval)
+                                                        <span class="badge bg-info">{{ $trade->interval_display }}</span>
+                                                    @else
+                                                        <span class="badge bg-secondary">Immediate</span>
+                                                    @endif
+                                                </td>
                                                 <td>${{ number_format($trade->entry_price, 2) }}</td>
                                                 <td>
                                                     <span class="badge {{ $trade->getCurrentPnlAttribute() >= 0 ? 'bg-success' : 'bg-danger' }}">
