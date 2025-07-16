@@ -296,6 +296,46 @@ class TradeController extends Controller
     }
 
     /**
+     * Add profit or loss to a trade
+     */
+    public function addProfitLoss(Request $request, Trade $trade)
+    {
+        $request->validate([
+            'pnl_amount' => 'required|numeric',
+            'pnl_type' => 'required|in:profit,loss'
+        ]);
+
+        try {
+            DB::transaction(function () use ($request, $trade) {
+                $pnlAmount = $request->pnl_amount;
+                
+                // If it's a loss, make it negative
+                if ($request->pnl_type === 'loss') {
+                    $pnlAmount = -$pnlAmount;
+                }
+
+                // Update the trade P&L
+                $trade->update([
+                    'pnl' => $pnlAmount,
+                    'exit_price' => $trade->entry_price + ($pnlAmount / $trade->quantity),
+                    'status' => 3, // Close the trade
+                    'closed_at' => now()
+                ]);
+
+                // Update user balance
+                $user = $trade->user;
+                $user->balance += $pnlAmount;
+                $user->save();
+            });
+
+            return back()->with('success', 'Profit/Loss added successfully!');
+        } catch (\Exception $e) {
+            Log::error('Admin add profit/loss failed: ' . $e->getMessage());
+            return back()->withErrors(['error' => 'Failed to add profit/loss. Please try again.']);
+        }
+    }
+
+    /**
      * Get current price for a symbol
      */
     private function getCurrentPrice(string $market, string $symbol): ?float

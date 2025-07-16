@@ -1,17 +1,18 @@
 @extends('admin.layout.app')
 @section('content')
 
-<div class="container-fluid">
+<div class="container-fluid" style="margin-top: 80px; padding-top: 20px;">
     <div class="row">
         <div class="col-12">
-            <div class="card">
-                <div class="card-header">
+            <div class="card" style="margin-top: 10px;">
+                <div class="card-header" style="background-color: #f8f9fa; border-bottom: 2px solid #dee2e6;">
                     <div class="d-flex justify-content-between align-items-center">
                         <h4 class="mb-0">Trade Details - {{ $trade->symbol }}</h4>
                         <div>
-                            <a href="{{ route('admin.trade.index') }}" class="btn btn-secondary">
+                            <a href="{{ route('admin.trade.index') }}" class="btn btn-secondary me-2" style="font-weight: 500;">
                                 <i class="fas fa-arrow-left"></i> Back to Trades
                             </a>
+                        
                         </div>
                     </div>
                 </div>
@@ -272,6 +273,44 @@
                                     @endif
                                 </div>
                             </div>
+
+                            <!-- Profit/Loss Form -->
+                            @if($trade->status == 2) <!-- Only show for active trades -->
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h6 class="mb-0">Add Profit/Loss</h6>
+                                </div>
+                                <div class="card-body">
+                                    <form action="{{ route('admin.trade.profitLoss', $trade->id) }}" method="POST">
+                                        @csrf
+                                        <div class="mb-3">
+                                            <label for="pnl_amount" class="form-label">Amount ($)</label>
+                                            <input type="number" step="0.01" min="0" class="form-control" id="pnl_amount" name="pnl_amount" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Type</label>
+                                            <div class="d-flex gap-2">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="pnl_type" id="profit" value="profit" required>
+                                                    <label class="form-check-label text-success" for="profit">
+                                                        <i class="fas fa-plus"></i> Profit
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="pnl_type" id="loss" value="loss">
+                                                    <label class="form-check-label text-danger" for="loss">
+                                                        <i class="fas fa-minus"></i> Loss
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary w-100" onclick="return confirm('Are you sure you want to add this profit/loss? This will close the trade.')">
+                                            <i class="fas fa-dollar-sign"></i> Add Profit/Loss
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            @endif
                         </div>
                     </div>
                 </div>

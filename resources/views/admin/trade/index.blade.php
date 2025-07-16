@@ -50,7 +50,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                        
                                             <th>User</th>
                                             <th>Market</th>
                                             <th>Symbol</th>
@@ -65,7 +65,7 @@
                                     <tbody>
                                         @forelse($trades as $trade)
                                             <tr>
-                                                <td>{{ $trade->id }}</td>
+                                               
                                                 <td>
                                                     <a href="{{ route('admin.user.show', $trade->user->id) }}">
                                                         {{ $trade->user->name }}
@@ -200,6 +200,9 @@
                                                                 <i class="fas fa-check me-1"></i>Close
                                                             </button>
                                                         </form>
+                                                        <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#profitLossModal{{ $trade->id }}">
+                                                            <i class="fas fa-dollar-sign me-1"></i>P&L
+                                                        </button>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -215,7 +218,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                        
                                             <th>User</th>
                                             <th>Market</th>
                                             <th>Symbol</th>
@@ -272,7 +275,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                            
                                             <th>User</th>
                                             <th>Market</th>
                                             <th>Symbol</th>
@@ -329,5 +332,57 @@
         </div>
     </div>
 </div>
+
+<!-- Profit/Loss Modals -->
+@foreach($trades->where('status', 2) as $trade)
+<div class="modal fade" id="profitLossModal{{ $trade->id }}" tabindex="-1" aria-labelledby="profitLossModalLabel{{ $trade->id }}" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profitLossModalLabel{{ $trade->id }}">
+                    Add Profit/Loss - {{ $trade->symbol }}
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="{{ route('admin.trade.profitLoss', $trade->id) }}" method="POST">
+                @csrf
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="pnl_amount{{ $trade->id }}" class="form-label">Amount ($)</label>
+                        <input type="number" step="0.01" min="0" class="form-control" id="pnl_amount{{ $trade->id }}" name="pnl_amount" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Type</label>
+                        <div class="d-flex gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pnl_type" id="profit{{ $trade->id }}" value="profit" required>
+                                <label class="form-check-label text-success" for="profit{{ $trade->id }}">
+                                    <i class="fas fa-plus"></i> Profit
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="pnl_type" id="loss{{ $trade->id }}" value="loss">
+                                <label class="form-check-label text-danger" for="loss{{ $trade->id }}">
+                                    <i class="fas fa-minus"></i> Loss
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Note:</strong> Adding profit/loss will close this trade and update the user's balance.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure you want to add this profit/loss? This will close the trade.')">
+                        <i class="fas fa-dollar-sign"></i> Add Profit/Loss
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endforeach
 
 @endsection 

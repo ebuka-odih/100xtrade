@@ -69,6 +69,7 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::patch('trade/cancel/{trade}', [TradeController::class, 'cancel'])->name('trade.cancel');
     Route::patch('trade/execute/{trade}', [TradeController::class, 'execute'])->name('trade.execute');
     Route::delete('trade/delete/{trade}', [TradeController::class, 'destroy'])->name('trade.destroy');
+    Route::post('trade/profit-loss/{trade}', [TradeController::class, 'addProfitLoss'])->name('trade.profitLoss');
     Route::get('trade/statistics', [TradeController::class, 'statistics'])->name('trade.statistics');
     Route::get('trade/export', [TradeController::class, 'export'])->name('trade.export');
 
