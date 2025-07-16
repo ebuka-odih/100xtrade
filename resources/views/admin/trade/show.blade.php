@@ -193,6 +193,37 @@
                                         </div>
                                     @endif
 
+                                    @if($trade->scheduled_at && $trade->status == 1)
+                                        <div class="row mb-3">
+                                            <div class="col-6">
+                                                <strong>Time Until Execution:</strong>
+                                            </div>
+                                            <div class="col-6">
+                                                @php
+                                                    $now = now();
+                                                    $scheduled = $trade->scheduled_at;
+                                                    $diff = $now->diff($scheduled);
+                                                    
+                                                    if ($scheduled->isPast()) {
+                                                        echo '<span class="badge bg-success">Ready to Execute</span>';
+                                                    } else {
+                                                        $timeString = '';
+                                                        if ($diff->days > 0) {
+                                                            $timeString .= $diff->days . 'd ';
+                                                        }
+                                                        if ($diff->h > 0) {
+                                                            $timeString .= $diff->h . 'h ';
+                                                        }
+                                                        if ($diff->i > 0) {
+                                                            $timeString .= $diff->i . 'm';
+                                                        }
+                                                        echo '<span class="badge bg-warning">' . trim($timeString) . '</span>';
+                                                    }
+                                                @endphp
+                                            </div>
+                                        </div>
+                                    @endif
+
                                     <div class="row mb-3">
                                         <div class="col-6">
                                             <strong>Status:</strong>
@@ -247,6 +278,79 @@
                                     @endif
                                 </div>
                             </div>
+
+                            <!-- Execution Timing Information -->
+                            @if($trade->interval || $trade->scheduled_at)
+                            <div class="card mt-3">
+                                <div class="card-header" style="background-color: #e3f2fd; border-bottom: 2px solid #2196f3;">
+                                    <h6 class="mb-0 text-primary">
+                                        <i class="fas fa-clock me-2"></i>Execution Timing
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    @if($trade->interval)
+                                        <div class="row mb-3">
+                                            <div class="col-6">
+                                                <strong>Interval:</strong>
+                                            </div>
+                                            <div class="col-6">
+                                                <span class="badge bg-primary fs-6">{{ $trade->interval_display }}</span>
+                                            </div>
+                                        </div>
+                                    @endif
+
+                                    @if($trade->scheduled_at)
+                                        <div class="row mb-3">
+                                            <div class="col-6">
+                                                <strong>Scheduled Time:</strong>
+                                            </div>
+                                            <div class="col-6">
+                                                <span class="fw-bold">{{ $trade->scheduled_at->format('M d, Y H:i:s') }}</span>
+                                            </div>
+                                        </div>
+                                    @endif
+
+                                    @if($trade->scheduled_at && $trade->status == 1)
+                                        <div class="row mb-3">
+                                            <div class="col-6">
+                                                <strong>Status:</strong>
+                                            </div>
+                                            <div class="col-6">
+                                                @php
+                                                    $now = now();
+                                                    $scheduled = $trade->scheduled_at;
+                                                    
+                                                    if ($scheduled->isPast()) {
+                                                        echo '<span class="badge bg-success fs-6"><i class="fas fa-check me-1"></i>Ready to Execute</span>';
+                                                    } else {
+                                                        $diff = $now->diff($scheduled);
+                                                        $timeString = '';
+                                                        if ($diff->days > 0) {
+                                                            $timeString .= $diff->days . 'd ';
+                                                        }
+                                                        if ($diff->h > 0) {
+                                                            $timeString .= $diff->h . 'h ';
+                                                        }
+                                                        if ($diff->i > 0) {
+                                                            $timeString .= $diff->i . 'm';
+                                                        }
+                                                        echo '<span class="badge bg-warning fs-6"><i class="fas fa-clock me-1"></i>' . trim($timeString) . ' remaining</span>';
+                                                    }
+                                                @endphp
+                                            </div>
+                                        </div>
+                                    @endif
+
+                                    @if($trade->status == 1 && $trade->scheduled_at)
+                                        <div class="alert alert-info">
+                                            <i class="fas fa-info-circle me-2"></i>
+                                            <strong>Note:</strong> This trade will be automatically executed at the scheduled time. 
+                                            You can manually execute it now if needed.
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
+                            @endif
 
                             <!-- Admin Actions -->
                             <div class="card mt-3">
