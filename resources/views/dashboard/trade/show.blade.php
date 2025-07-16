@@ -81,7 +81,7 @@ body {
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <h4 class="mb-0">{{ $tradePair->name }} ({{ $tradePair->symbol }})</h4>
-                            <p class="mb-0 text-muted">{{ $tradePair->market_badge }}</p>
+                            <!-- <p class="mb-0 text-muted">{{ $tradePair->market_badge }}</p> -->
                         </div>
                         <div>
                             <a href="{{ route('user.trade.index') }}" class="btn btn-secondary">
