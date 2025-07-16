@@ -160,7 +160,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                        
                                             <th>User</th>
                                             <th>Market</th>
                                             <th>Symbol</th>
@@ -175,7 +175,7 @@
                                     <tbody>
                                         @foreach($trades->where('status', 2) as $trade)
                                             <tr>
-                                                <td>{{ $trade->id }}</td>
+                                        
                                                 <td>{{ $trade->user->name }}</td>
                                                 <td>{!! $trade->market_badge !!}</td>
                                                 <td><strong>{{ $trade->symbol }}</strong></td>

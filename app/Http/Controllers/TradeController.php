@@ -101,30 +101,25 @@ class TradeController extends Controller
     /**
      * Display user's trade history
      */
-    public function history(Request $request)
+    public function history()
     {
-        $query = auth()->user()->trades()->with('tradePair');
-
-        // Apply filters
-        if ($request->filled('market')) {
-            $query->where('market', $request->market);
-        }
-
-        if ($request->filled('status')) {
-            $query->where('status', $request->status);
-        }
-
-        if ($request->filled('type')) {
-            $query->where('type', $request->type);
-        }
-
-        if ($request->filled('date')) {
-            $query->whereDate('created_at', $request->date);
-        }
-
-        $trades = $query->latest()->paginate(20);
+        $user = auth()->user();
         
-        return view('dashboard.trade.history', compact('trades'));
+        // Get open trades (status = 2 for active trades)
+        $openTrades = $user->trades()
+            ->with('tradePair')
+            ->where('status', 2) // Active trades
+            ->latest()
+            ->get();
+        
+        // Get closed trades (status = 3 for closed trades)
+        $closedTrades = $user->trades()
+            ->with('tradePair')
+            ->where('status', 3) // Closed trades
+            ->latest()
+            ->get();
+        
+        return view('dashboard.trade.history', compact('openTrades', 'closedTrades'));
     }
 
     /**
