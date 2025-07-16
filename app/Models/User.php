@@ -85,5 +85,9 @@ class User extends Authenticatable implements MustVerifyEmail
         );
     }
 
+    public function trades()
+    {
+        return $this->hasMany(Trade::class);
+    }
 
 }

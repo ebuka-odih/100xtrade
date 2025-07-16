@@ -11,6 +11,7 @@ use App\Http\Controllers\SellStockController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\StockOrderController;
 use App\Http\Controllers\SubPackageController;
+use App\Http\Controllers\TradeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WithdrawalController;
 use Illuminate\Support\Facades\Route;
@@ -66,6 +67,16 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
     Route::get('subscription', [SubPackageController::class, 'index'])->name('subscription.index');
     Route::post('subscription/store', [SubPackageController::class, 'store'])->name('subscription.store');
     Route::get('subscription/history', [SubPackageController::class, 'history'])->name('subscription.history');
+
+    // Trade Routes
+    Route::get('trade', [TradeController::class, 'index'])->name('trade.index');
+    Route::get('trade/create', [TradeController::class, 'create'])->name('trade.create');
+    Route::post('trade/store', [TradeController::class, 'store'])->name('trade.store');
+    Route::get('trade/{trade}', [TradeController::class, 'show'])->name('trade.show');
+    Route::patch('trade/{trade}/close', [TradeController::class, 'close'])->name('trade.close');
+    Route::delete('trade/{trade}/cancel', [TradeController::class, 'cancel'])->name('trade.cancel');
+    Route::get('trade/get-symbols', [TradeController::class, 'getSymbols'])->name('trade.getSymbols');
+    Route::get('trade/get-price', [TradeController::class, 'getPrice'])->name('trade.getPrice');
 
 });
 

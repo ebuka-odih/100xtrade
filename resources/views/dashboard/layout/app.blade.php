@@ -94,6 +94,15 @@
                                   d="M12.25 1.81V.5M11 5.31c0 .66.53.88 1.25.88s1.25 0 1.25-.88C13.5 4 11 4 11 2.69c0-.88.53-.88 1.25-.88s1.25.33 1.25.88m-1.25 3.5V7.5m-9.75-4h-1a1 1 0 0 0-1 1V9a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V4.5a1 1 0 0 0-1-1M2 10v1.5m0-8v-3m6 7H7a1 1 0 0 0-1 1V10a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V8.5a1 1 0 0 0-1-1M7.5 11v2.5m0-6V4"
                                   stroke-width="1"/>
                         </svg>
+                        <span class="fw-semibold">Buy Stock</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex gap-2 align-items-center {{ Route::is('user.trade.*') ? 'active' : '' }}"
+                       href="{{ route('user.trade.index') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/>
+                        </svg>
                         <span class="fw-semibold">Trade</span>
                     </a>
                 </li>
