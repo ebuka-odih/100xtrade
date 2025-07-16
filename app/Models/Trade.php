@@ -50,6 +50,11 @@ class Trade extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function tradePair(): BelongsTo
+    {
+        return $this->belongsTo(TradePair::class, 'symbol', 'symbol');
+    }
+
     public function getStatusBadgeAttribute(): string
     {
         $status = (int) $this->status;

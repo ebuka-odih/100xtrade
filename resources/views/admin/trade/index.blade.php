@@ -19,63 +19,6 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <!-- Filters -->
-                    <div class="row mb-4">
-                        <div class="col-md-12">
-                            <form method="GET" action="{{ route('admin.trade.index') }}" class="row g-3">
-                                <div class="col-md-2">
-                                    <label class="form-label">Status</label>
-                                    <select name="status" class="form-control">
-                                        <option value="">All Status</option>
-                                        @foreach($statuses as $key => $status)
-                                            <option value="{{ $key }}" {{ request('status') == $key ? 'selected' : '' }}>
-                                                {{ $status }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="col-md-2">
-                                    <label class="form-label">Market</label>
-                                    <select name="market" class="form-control">
-                                        <option value="">All Markets</option>
-                                        @foreach($markets as $market)
-                                            <option value="{{ $market }}" {{ request('market') == $market ? 'selected' : '' }}>
-                                                {{ ucfirst($market) }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="col-md-2">
-                                    <label class="form-label">User</label>
-                                    <select name="user_id" class="form-control">
-                                        <option value="">All Users</option>
-                                        @foreach($users as $user)
-                                            <option value="{{ $user->id }}" {{ request('user_id') == $user->id ? 'selected' : '' }}>
-                                                {{ $user->name }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="col-md-2">
-                                    <label class="form-label">Symbol</label>
-                                    <input type="text" name="symbol" class="form-control" value="{{ request('symbol') }}" placeholder="Search symbol">
-                                </div>
-                                <div class="col-md-2">
-                                    <label class="form-label">Date From</label>
-                                    <input type="date" name="date_from" class="form-control" value="{{ request('date_from') }}">
-                                </div>
-                                <div class="col-md-2">
-                                    <label class="form-label">Date To</label>
-                                    <input type="date" name="date_to" class="form-control" value="{{ request('date_to') }}">
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary">Filter</button>
-                                    <a href="{{ route('admin.trade.index') }}" class="btn btn-secondary">Clear</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
                     <!-- Tabs -->
                     <ul class="nav nav-tabs" id="tradeTabs" role="tablist">
                         <li class="nav-item" role="presentation">
@@ -149,16 +92,16 @@
                                                 <td>{{ $trade->created_at->format('M d, Y H:i') }}</td>
                                                 <td>
                                                     <div class="btn-group" role="group">
-                                                        <a href="{{ route('admin.trade.show', $trade->id) }}" class="btn btn-sm btn-info">
-                                                            <i class="fas fa-eye"></i>
+                                                        <a href="{{ route('admin.trade.show', $trade->id) }}" class="btn btn-sm btn-outline-primary">
+                                                            <i class="fas fa-eye me-1"></i>View
                                                         </a>
                                                         
                                                         @if($trade->canBeCancelled())
                                                             <form action="{{ route('admin.trade.cancel', $trade->id) }}" method="POST" class="d-inline">
                                                                 @csrf
                                                                 @method('PATCH')
-                                                                <button type="submit" class="btn btn-sm btn-warning" onclick="return confirm('Cancel this trade?')">
-                                                                    <i class="fas fa-times"></i>
+                                                                <button type="submit" class="btn btn-sm btn-outline-warning" onclick="return confirm('Cancel this trade?')">
+                                                                    <i class="fas fa-times me-1"></i>Cancel
                                                                 </button>
                                                             </form>
                                                         @endif
@@ -167,8 +110,8 @@
                                                             <form action="{{ route('admin.trade.execute', $trade->id) }}" method="POST" class="d-inline">
                                                                 @csrf
                                                                 @method('PATCH')
-                                                                <button type="submit" class="btn btn-sm btn-success" onclick="return confirm('Execute this trade?')">
-                                                                    <i class="fas fa-play"></i>
+                                                                <button type="submit" class="btn btn-sm btn-outline-success" onclick="return confirm('Execute this trade?')">
+                                                                    <i class="fas fa-play me-1"></i>Execute
                                                                 </button>
                                                             </form>
                                                         @endif
@@ -177,8 +120,8 @@
                                                             <form action="{{ route('admin.trade.close', $trade->id) }}" method="POST" class="d-inline">
                                                                 @csrf
                                                                 @method('PATCH')
-                                                                <button type="submit" class="btn btn-sm btn-success" onclick="return confirm('Close this trade?')">
-                                                                    <i class="fas fa-check"></i>
+                                                                <button type="submit" class="btn btn-sm btn-outline-success" onclick="return confirm('Close this trade?')">
+                                                                    <i class="fas fa-check me-1"></i>Close
                                                                 </button>
                                                             </form>
                                                         @endif
@@ -187,8 +130,8 @@
                                                             <form action="{{ route('admin.trade.destroy', $trade->id) }}" method="POST" class="d-inline">
                                                                 @csrf
                                                                 @method('DELETE')
-                                                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Delete this trade?')">
-                                                                    <i class="fas fa-trash"></i>
+                                                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Delete this trade?')">
+                                                                    <i class="fas fa-trash me-1"></i>Delete
                                                                 </button>
                                                             </form>
                                                         @endif
@@ -247,14 +190,14 @@
                                                 <td>{{ $trade->created_at->format('M d, Y H:i') }}</td>
                                                 <td>
                                                     <div class="btn-group" role="group">
-                                                        <a href="{{ route('admin.trade.show', $trade->id) }}" class="btn btn-sm btn-info">
-                                                            <i class="fas fa-eye"></i>
+                                                        <a href="{{ route('admin.trade.show', $trade->id) }}" class="btn btn-sm btn-outline-primary">
+                                                            <i class="fas fa-eye me-1"></i>View
                                                         </a>
                                                         <form action="{{ route('admin.trade.close', $trade->id) }}" method="POST" class="d-inline">
                                                             @csrf
                                                             @method('PATCH')
-                                                            <button type="submit" class="btn btn-sm btn-success" onclick="return confirm('Close this trade?')">
-                                                                <i class="fas fa-check"></i>
+                                                            <button type="submit" class="btn btn-sm btn-outline-success" onclick="return confirm('Close this trade?')">
+                                                                <i class="fas fa-check me-1"></i>Close
                                                             </button>
                                                         </form>
                                                     </div>
@@ -304,14 +247,14 @@
                                                 <td>{{ $trade->closed_at->format('M d, Y H:i') }}</td>
                                                 <td>
                                                     <div class="btn-group" role="group">
-                                                        <a href="{{ route('admin.trade.show', $trade->id) }}" class="btn btn-sm btn-info">
-                                                            <i class="fas fa-eye"></i>
+                                                        <a href="{{ route('admin.trade.show', $trade->id) }}" class="btn btn-sm btn-outline-primary">
+                                                            <i class="fas fa-eye me-1"></i>View
                                                         </a>
                                                         <form action="{{ route('admin.trade.destroy', $trade->id) }}" method="POST" class="d-inline">
                                                             @csrf
                                                             @method('DELETE')
-                                                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Delete this trade?')">
-                                                                <i class="fas fa-trash"></i>
+                                                            <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Delete this trade?')">
+                                                                <i class="fas fa-trash me-1"></i>Delete
                                                             </button>
                                                         </form>
                                                     </div>
@@ -355,21 +298,21 @@
                                                 <td>{{ $trade->created_at->format('M d, Y H:i') }}</td>
                                                 <td>
                                                     <div class="btn-group" role="group">
-                                                        <a href="{{ route('admin.trade.show', $trade->id) }}" class="btn btn-sm btn-info">
-                                                            <i class="fas fa-eye"></i>
+                                                        <a href="{{ route('admin.trade.show', $trade->id) }}" class="btn btn-sm btn-outline-primary">
+                                                            <i class="fas fa-eye me-1"></i>View
                                                         </a>
                                                         <form action="{{ route('admin.trade.execute', $trade->id) }}" method="POST" class="d-inline">
                                                             @csrf
                                                             @method('PATCH')
-                                                            <button type="submit" class="btn btn-sm btn-success" onclick="return confirm('Execute this trade?')">
-                                                                <i class="fas fa-play"></i>
+                                                            <button type="submit" class="btn btn-sm btn-outline-success" onclick="return confirm('Execute this trade?')">
+                                                                <i class="fas fa-play me-1"></i>Execute
                                                             </button>
                                                         </form>
                                                         <form action="{{ route('admin.trade.cancel', $trade->id) }}" method="POST" class="d-inline">
                                                             @csrf
                                                             @method('PATCH')
-                                                            <button type="submit" class="btn btn-sm btn-warning" onclick="return confirm('Cancel this trade?')">
-                                                                <i class="fas fa-times"></i>
+                                                            <button type="submit" class="btn btn-sm btn-outline-warning" onclick="return confirm('Cancel this trade?')">
+                                                                <i class="fas fa-times me-1"></i>Cancel
                                                             </button>
                                                         </form>
                                                     </div>

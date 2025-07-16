@@ -1,153 +1,209 @@
 @extends('dashboard.layout.app')
 @section('content')
 
-    <div class="container-fluid main-content px-2 px-lg-4">
-        <div class="row my-2 g-3 gx-lg-4 pb-3">
-            <div class="col-12">
-                <div class="mainchart px-3 px-md-4 py-3 py-lg-4">
-                    <div class="activity">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <h5 class="mb-0">My Trades</h5>
-                            </div>
-                            <div class="col-md-6 text-end">
-                                <a href="{{ route('user.trade.create') }}" class="btn btn-primary">
-                                    <i class="fas fa-plus"></i> New Trade
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+<style>
+body {
+    background-color: #080909 !important;
+}
+.container-fluid {
+    margin-top: 100px;
+}
+.card {
+    background-color: #1e2634;
+    border: 1px solid #2d3748;
+}
+.card-header {
+    background-color: #2d3748;
+    border-bottom: 1px solid #4a5568;
+    color: #e2e8f0;
+}
+.card-body {
+    background-color: #1e2634;
+    color: #e2e8f0;
+}
+.table {
+    color: #e2e8f0;
+}
+.table thead th {
+    background-color: #2d3748;
+    border-bottom: 1px solid #4a5568;
+    color: #e2e8f0;
+}
+.table tbody tr {
+    border-bottom: 1px solid #4a5568;
+}
+.table tbody tr:hover {
+    background-color: #2d3748;
+}
+.nav-tabs {
+    border-bottom: 1px solid #4a5568;
+}
+.nav-tabs .nav-link {
+    color: #a0aec0;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+.nav-tabs .nav-link:hover {
+    color: #e2e8f0;
+    border-color: #4a5568;
+}
+.nav-tabs .nav-link.active {
+    color: #e2e8f0;
+    background-color: #2d3748;
+    border-color: #4a5568;
+}
+.btn-outline-primary {
+    color: #63b3ed;
+    border-color: #63b3ed;
+}
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #63b3ed;
+    border-color: #63b3ed;
+}
+</style>
 
-                    @if(session()->has('success'))
-                        <div class="alert alert-success">
-                            {{ session()->get('success') }}
-                        </div>
-                    @endif
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">Trade Markets</h4>
+                </div>
+                <div class="card-body">
+                    <!-- Market Tabs -->
+                    <ul class="nav nav-tabs" id="marketTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="stocks-tab" data-bs-toggle="tab" data-bs-target="#stocks" type="button" role="tab">
+                                <i class="fas fa-chart-line me-2"></i>Stocks ({{ $stocks->count() }})
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="crypto-tab" data-bs-toggle="tab" data-bs-target="#crypto" type="button" role="tab">
+                                <i class="fas fa-bitcoin me-2"></i>Crypto ({{ $cryptos->count() }})
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="forex-tab" data-bs-toggle="tab" data-bs-target="#forex" type="button" role="tab">
+                                <i class="fas fa-dollar-sign me-2"></i>Forex ({{ $forexes->count() }})
+                            </button>
+                        </li>
+                    </ul>
 
-                    @if(session()->has('error'))
-                        <div class="alert alert-danger">
-                            {{ session()->get('error') }}
-                        </div>
-                    @endif
-
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <div class="table-responsive">
+                    <div class="tab-content" id="marketTabsContent">
+                        <!-- Stocks Tab -->
+                        <div class="tab-pane fade show active" id="stocks" role="tabpanel">
+                            <div class="table-responsive mt-3">
                                 <table class="table table-hover">
-                                    <thead class="text-white">
+                                    <thead>
                                         <tr>
-                                            <th>Market</th>
                                             <th>Symbol</th>
-                                            <th>Type</th>
-                                            <th>Amount</th>
-                                            <th>Entry Price</th>
-                                            <th>Current Price</th>
-                                            <th>P&L</th>
-                                            <th>Status</th>
-                                            <th>Date</th>
-                                            <th>Actions</th>
+                                            <th>Name</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="text-white">
-                                        @forelse($trades as $trade)
+                                    <tbody>
+                                        @foreach($stocks as $stock)
                                             <tr>
                                                 <td>
-                                                    {!! $trade->market_badge !!}
-                                                </td>
-                                                <td>
-                                                    <strong>{{ $trade->symbol }}</strong>
-                                                </td>
-                                                <td>
-                                                    {!! $trade->type_badge !!}
-                                                </td>
-                                                <td>${{ number_format($trade->amount, 2) }}</td>
-                                                <td>
-                                                    @if($trade->entry_price)
-                                                        ${{ number_format($trade->entry_price, 2) }}
-                                                    @else
-                                                        -
-                                                    @endif
-                                                </td>
-                                                <td>
-                                                    @if($trade->price)
-                                                        ${{ number_format($trade->price, 2) }}
-                                                    @else
-                                                        -
-                                                    @endif
-                                                </td>
-                                                <td>
-                                                    @if($trade->status == 3) {{-- Closed --}}
-                                                        <span class="badge {{ $trade->pnl >= 0 ? 'bg-success' : 'bg-danger' }}">
-                                                            ${{ number_format($trade->pnl, 2) }}
-                                                        </span>
-                                                    @elseif($trade->status == 2) {{-- Active --}}
-                                                        <span class="badge {{ $trade->getCurrentPnlAttribute() >= 0 ? 'bg-success' : 'bg-danger' }}">
-                                                            {{ number_format($trade->getCurrentPnlAttribute(), 2) }}%
-                                                        </span>
-                                                    @else
-                                                        -
-                                                    @endif
-                                                </td>
-                                                <td>
-                                                    {!! $trade->status_badge !!}
-                                                </td>
-                                                <td>
-                                                    {{ $trade->created_at->format('M d, Y H:i') }}
-                                                </td>
-                                                                                    <td>
-                                        <div class="btn-group" role="group">
-                                            @if($trade->canBeCancelled()) {{-- Pending --}}
-                                                <form action="{{ route('user.trade.cancel', $trade->id) }}" method="POST" class="d-inline">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to cancel this trade?')">
-                                                        Cancel
-                                                    </button>
-                                                </form>
-                                            @elseif($trade->canBeClosed()) {{-- Active --}}
-                                                <form action="{{ route('user.trade.close', $trade->id) }}" method="POST" class="d-inline">
-                                                    @csrf
-                                                    @method('PATCH')
-                                                    <button type="submit" class="btn btn-sm btn-success" onclick="return confirm('Are you sure you want to close this trade?')">
-                                                        Close
-                                                    </button>
-                                                </form>
-                                            @endif
-                                            
-                                            <a href="{{ route('user.trade.show', $trade->id) }}" class="btn btn-sm btn-info">
-                                                View
-                                            </a>
-                                        </div>
-                                    </td>
-                                            </tr>
-                                        @empty
-                                            <tr>
-                                                <td colspan="10" class="text-center">
-                                                    <div class="py-4">
-                                                        <i class="fas fa-chart-line fa-3x text-muted mb-3"></i>
-                                                        <h6 class="text-muted">No trades found</h6>
-                                                        <p class="text-muted">Start trading by placing your first order.</p>
-                                                        <a href="{{ route('user.trade.create') }}" class="btn btn-primary">
-                                                            Place Your First Trade
-                                                        </a>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="{{ asset('img/stock/' . strtolower($stock->symbol) . '.png') }}" 
+                                                             alt="{{ $stock->symbol }}" 
+                                                             class="me-2" 
+                                                             style="width: 30px; height: 30px; border-radius: 50%;"
+                                                             onerror="this.src='{{ asset('img/stock/default.png') }}'">
+                                                        <strong>{{ $stock->symbol }}</strong>
                                                     </div>
                                                 </td>
+                                                <td>{{ $stock->name }}</td>
+                                                <td>
+                                                    <a href="{{ route('user.trade.show', $stock) }}" class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-chart-line me-1"></i>Trade
+                                                    </a>
+                                                </td>
                                             </tr>
-                                        @endforelse
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
+                        </div>
 
-                            @if($trades->hasPages())
-                                <div class="d-flex justify-content-center mt-4">
-                                    {{ $trades->links() }}
-                                </div>
-                            @endif
+                        <!-- Crypto Tab -->
+                        <div class="tab-pane fade" id="crypto" role="tabpanel">
+                            <div class="table-responsive mt-3">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Symbol</th>
+                                            <th>Name</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($cryptos as $crypto)
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-2" 
+                                                             style="width: 30px; height: 30px;">
+                                                            <i class="fas fa-coins"></i>
+                                                        </div>
+                                                        <strong>{{ $crypto->symbol }}</strong>
+                                                    </div>
+                                                </td>
+                                                <td>{{ $crypto->name }}</td>
+                                                <td>
+                                                    <a href="{{ route('user.trade.show', $crypto) }}" class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-chart-line me-1"></i>Trade
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Forex Tab -->
+                        <div class="tab-pane fade" id="forex" role="tabpanel">
+                            <div class="table-responsive mt-3">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Symbol</th>
+                                            <th>Name</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($forexes as $forex)
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" 
+                                                             style="width: 30px; height: 30px;">
+                                                            <i class="fas fa-dollar-sign"></i>
+                                                        </div>
+                                                        <strong>{{ $forex->symbol }}</strong>
+                                                    </div>
+                                                </td>
+                                                <td>{{ $forex->name }}</td>
+                                                <td>
+                                                    <a href="{{ route('user.trade.show', $forex) }}" class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-chart-line me-1"></i>Trade
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 @endsection 

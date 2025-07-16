@@ -29,7 +29,7 @@
                                     {
                                         "width": "100%",
                                         "height": "500",
-                                        "symbol": "{{ $trade->market === 'stock' ? 'NASDAQ:' : ($trade->market === 'crypto' ? 'BINANCE:' : 'FX:') }}{{ $trade->symbol }}",
+                                        "symbol": "{{ $trade->market === 'stock' ? 'NASDAQ:' . $trade->symbol : ($trade->market === 'crypto' ? 'BINANCE:' . $trade->symbol . 'USD' : 'FX:' . $trade->symbol) }}",
                                         "interval": "D",
                                         "timezone": "Etc/UTC",
                                         "theme": "dark",

@@ -3,13 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Trade;
-use App\Models\Stock;
+use App\Models\TradePair;
 use App\Services\StockService;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
 
 class TradeController extends Controller
 {
@@ -20,208 +18,144 @@ class TradeController extends Controller
         $this->stockService = $stockService;
     }
 
+    /**
+     * Display the trade pairs page with tabs for different markets
+     */
     public function index()
     {
-        $user = Auth::user();
-        $trades = Trade::where('user_id', $user->id)
-            ->orderBy('created_at', 'desc')
-            ->paginate(20);
+        $stocks = TradePair::active()->byMarket('stock')->get();
+        $cryptos = TradePair::active()->byMarket('crypto')->get();
+        $forexes = TradePair::active()->byMarket('forex')->get();
 
-        return view('dashboard.trade.index', compact('trades'));
+        return view('dashboard.trade.index', compact('stocks', 'cryptos', 'forexes'));
     }
 
-    public function create()
+    /**
+     * Display the trading page for a specific pair
+     */
+    public function show(TradePair $tradePair)
     {
-        $markets = [
-            'stock' => 'Stocks',
-            'crypto' => 'Cryptocurrency',
-            'forex' => 'Forex'
-        ];
-
-        $symbols = [
-            'stock' => Stock::pluck('symbol', 'symbol')->toArray(),
-            'crypto' => [
-                'BTC' => 'Bitcoin',
-                'ETH' => 'Ethereum',
-                'BNB' => 'Binance Coin',
-                'ADA' => 'Cardano',
-                'SOL' => 'Solana',
-                'DOT' => 'Polkadot',
-                'DOGE' => 'Dogecoin',
-                'AVAX' => 'Avalanche',
-                'MATIC' => 'Polygon',
-                'LINK' => 'Chainlink'
-            ],
-            'forex' => [
-                'EURUSD' => 'EUR/USD',
-                'GBPUSD' => 'GBP/USD',
-                'USDJPY' => 'USD/JPY',
-                'USDCHF' => 'USD/CHF',
-                'AUDUSD' => 'AUD/USD',
-                'USDCAD' => 'USD/CAD',
-                'NZDUSD' => 'NZD/USD',
-                'EURGBP' => 'EUR/GBP',
-                'EURJPY' => 'EUR/JPY',
-                'GBPJPY' => 'GBP/JPY'
-            ]
-        ];
-
-        return view('dashboard.trade.create', compact('markets', 'symbols'));
+        $user = auth()->user();
+        
+        return view('dashboard.trade.show', compact('tradePair', 'user'));
     }
 
-    public function store(Request $request)
+    /**
+     * Execute a trade
+     */
+    public function store(Request $request, TradePair $tradePair)
     {
         $request->validate([
-            'market' => 'required|in:stock,crypto,forex',
-            'symbol' => 'required|string|max:10',
             'type' => 'required|in:buy,sell',
-            'amount' => 'required|numeric|min:1',
-            'order_type' => 'required|in:market,limit,stop',
-            'limit_price' => 'nullable|numeric|min:0',
+            'amount' => 'required|numeric|min:' . $tradePair->min_amount . '|max:' . $tradePair->max_amount,
             'stop_loss' => 'nullable|numeric|min:0',
-            'take_profit' => 'nullable|numeric|min:0'
+            'take_profit' => 'nullable|numeric|min:0',
+            'order_type' => 'required|in:market,limit,stop',
+            'limit_price' => 'nullable|required_if:order_type,limit|numeric|min:0',
         ]);
 
-        $user = Auth::user();
+        $user = auth()->user();
 
-        // Check if user has sufficient balance for buy orders
+        // Check if user has sufficient balance
         if ($request->type === 'buy' && $user->balance < $request->amount) {
-            return back()->withErrors(['amount' => 'Insufficient balance. Your balance is $' . number_format($user->balance, 2)]);
+            return back()->withErrors(['amount' => 'Insufficient balance. Available: $' . number_format($user->balance, 2)]);
         }
 
         try {
-            DB::transaction(function () use ($request, $user) {
+            DB::transaction(function () use ($request, $tradePair, $user) {
+                $currentPrice = $this->getCurrentPrice($tradePair);
+                
                 $trade = Trade::create([
                     'user_id' => $user->id,
-                    'market' => $request->market,
-                    'symbol' => $request->symbol,
+                    'market' => $tradePair->market,
+                    'symbol' => $tradePair->symbol,
                     'type' => $request->type,
                     'amount' => $request->amount,
-                    'order_type' => $request->order_type,
-                    'limit_price' => $request->limit_price,
+                    'price' => $currentPrice,
                     'stop_loss' => $request->stop_loss,
                     'take_profit' => $request->take_profit,
-                    'status' => 1 // Pending
+                    'status' => 1, // Pending
+                    'order_type' => $request->order_type,
+                    'limit_price' => $request->limit_price,
                 ]);
 
                 // If it's a market order, execute immediately
                 if ($request->order_type === 'market') {
-                    $this->executeMarketOrder($trade);
-                } else {
-                    // For limit/stop orders, keep status as pending
-                    $trade->update(['status' => 1]); // Pending
+                    $this->executeTrade($trade, $currentPrice);
                 }
 
                 // Deduct balance for buy orders
-                if ($request->type === 'buy') {
+                if ($request->type === 'buy' && $request->order_type === 'market') {
                     $user->balance -= $request->amount;
                     $user->save();
                 }
             });
 
-            return redirect()->route('user.trade.index')->with('success', 'Trade placed successfully!');
+            return redirect()->route('trade.history')->with('success', 'Trade placed successfully!');
         } catch (\Exception $e) {
             Log::error('Trade execution failed: ' . $e->getMessage());
             return back()->withErrors(['error' => 'Failed to place trade. Please try again.']);
         }
     }
 
-    private function executeMarketOrder(Trade $trade)
+    /**
+     * Display user's trade history
+     */
+    public function history()
     {
-        try {
-            // Get current price for the symbol
-            $currentPrice = $this->getCurrentPrice($trade->market, $trade->symbol);
-            
-            if (!$currentPrice) {
-                throw new \Exception('Unable to get current price for ' . $trade->symbol);
-            }
-
-            $trade->update([
-                'price' => $currentPrice,
-                'entry_price' => $currentPrice,
-                'quantity' => $trade->amount / $currentPrice,
-                'status' => 2, // Active - Trade is now live
-                'filled_at' => now()
-            ]);
-
-        } catch (\Exception $e) {
-            Log::error('Market order execution failed: ' . $e->getMessage());
-            throw $e;
-        }
-    }
-
-    private function getCurrentPrice(string $market, string $symbol): ?float
-    {
-        // This would integrate with your existing price fetching logic
-        // For now, return a mock price - you should integrate with your StockService
+        $trades = auth()->user()->trades()->with('tradePair')->latest()->paginate(20);
         
-        if ($market === 'stock') {
-            $stock = Stock::where('symbol', $symbol)->first();
-            return $stock ? $stock->price : null;
-        }
-
-        // Mock prices for crypto and forex
-        $mockPrices = [
-            'crypto' => [
-                'BTC' => 45000.00,
-                'ETH' => 3000.00,
-                'BNB' => 350.00,
-                'ADA' => 0.50,
-                'SOL' => 100.00,
-                'DOT' => 7.50,
-                'DOGE' => 0.08,
-                'AVAX' => 25.00,
-                'MATIC' => 0.80,
-                'LINK' => 15.00
-            ],
-            'forex' => [
-                'EURUSD' => 1.0850,
-                'GBPUSD' => 1.2650,
-                'USDJPY' => 150.50,
-                'USDCHF' => 0.8750,
-                'AUDUSD' => 0.6650,
-                'USDCAD' => 1.3550,
-                'NZDUSD' => 0.6150,
-                'EURGBP' => 0.8575,
-                'EURJPY' => 163.25,
-                'GBPJPY' => 190.50
-            ]
-        ];
-
-        return $mockPrices[$market][$symbol] ?? null;
+        return view('dashboard.trade.history', compact('trades'));
     }
 
-    public function show(Trade $trade)
+    /**
+     * Cancel a pending trade
+     */
+    public function cancel(Trade $trade)
     {
-        // Ensure user can only view their own trades
-        if ($trade->user_id !== Auth::id()) {
+        if ($trade->user_id !== auth()->id()) {
             abort(403);
         }
 
-        return view('dashboard.trade.show', compact('trade'));
+        if (!$trade->canBeCancelled()) {
+            return back()->withErrors(['error' => 'This trade cannot be cancelled.']);
+        }
+
+        try {
+            DB::transaction(function () use ($trade) {
+                $trade->update(['status' => 4]); // Cancelled
+
+                // Refund balance for buy orders
+                if ($trade->type === 'buy') {
+                    $user = $trade->user;
+                    $user->balance += $trade->amount;
+                    $user->save();
+                }
+            });
+
+            return back()->with('success', 'Trade cancelled successfully!');
+        } catch (\Exception $e) {
+            Log::error('Trade cancellation failed: ' . $e->getMessage());
+            return back()->withErrors(['error' => 'Failed to cancel trade. Please try again.']);
+        }
     }
 
+    /**
+     * Close an active trade
+     */
     public function close(Trade $trade)
     {
-        if ($trade->user_id !== Auth::id()) {
+        if ($trade->user_id !== auth()->id()) {
             abort(403);
         }
 
         if (!$trade->canBeClosed()) {
-            return back()->withErrors(['error' => 'Only active trades can be closed.']);
+            return back()->withErrors(['error' => 'This trade cannot be closed.']);
         }
 
-        return $this->closeTrade($trade);
-    }
-
-    /**
-     * Close a trade and calculate P&L
-     */
-    private function closeTrade(Trade $trade)
-    {
         try {
             DB::transaction(function () use ($trade) {
-                $currentPrice = $this->getCurrentPrice($trade->market, $trade->symbol);
+                $currentPrice = $this->getCurrentPriceBySymbol($trade->market, $trade->symbol);
                 
                 if (!$currentPrice) {
                     throw new \Exception('Unable to get current price');
@@ -256,80 +190,36 @@ class TradeController extends Controller
         }
     }
 
-    public function cancel(Trade $trade)
+    /**
+     * Get current price for a trade pair
+     */
+    private function getCurrentPrice(TradePair $tradePair): float
     {
-        if ($trade->user_id !== Auth::id()) {
-            abort(403);
-        }
-
-        if (!$trade->canBeCancelled()) {
-            return back()->withErrors(['error' => 'Only pending trades can be cancelled.']);
-        }
-
-        try {
-            DB::transaction(function () use ($trade) {
-                $trade->update([
-                    'status' => 4 // Cancelled
-                ]);
-
-                // Refund balance for buy orders
-                if ($trade->type === 'buy') {
-                    $user = $trade->user;
-                    $user->balance += $trade->amount;
-                    $user->save();
-                }
-            });
-
-            return back()->with('success', 'Trade cancelled successfully!');
-        } catch (\Exception $e) {
-            Log::error('Trade cancellation failed: ' . $e->getMessage());
-            return back()->withErrors(['error' => 'Failed to cancel trade. Please try again.']);
-        }
+        // For now, return the stored price
+        // In production, you would fetch real-time prices
+        return $tradePair->current_price;
     }
 
-    public function getSymbols(Request $request)
+    /**
+     * Get current price by symbol
+     */
+    private function getCurrentPriceBySymbol(string $market, string $symbol): ?float
     {
-        $market = $request->get('market');
-        
-        $symbols = match($market) {
-            'stock' => Stock::pluck('symbol', 'symbol')->toArray(),
-            'crypto' => [
-                'BTC' => 'Bitcoin',
-                'ETH' => 'Ethereum',
-                'BNB' => 'Binance Coin',
-                'ADA' => 'Cardano',
-                'SOL' => 'Solana',
-                'DOT' => 'Polkadot',
-                'DOGE' => 'Dogecoin',
-                'AVAX' => 'Avalanche',
-                'MATIC' => 'Polygon',
-                'LINK' => 'Chainlink'
-            ],
-            'forex' => [
-                'EURUSD' => 'EUR/USD',
-                'GBPUSD' => 'GBP/USD',
-                'USDJPY' => 'USD/JPY',
-                'USDCHF' => 'USD/CHF',
-                'AUDUSD' => 'AUD/USD',
-                'USDCAD' => 'USD/CAD',
-                'NZDUSD' => 'NZD/USD',
-                'EURGBP' => 'EUR/GBP',
-                'EURJPY' => 'EUR/JPY',
-                'GBPJPY' => 'GBP/JPY'
-            ],
-            default => []
-        };
-
-        return response()->json($symbols);
+        $tradePair = TradePair::where('symbol', $symbol)->first();
+        return $tradePair ? $tradePair->current_price : null;
     }
 
-    public function getPrice(Request $request)
+    /**
+     * Execute a trade
+     */
+    private function executeTrade(Trade $trade, float $currentPrice): void
     {
-        $market = $request->get('market');
-        $symbol = $request->get('symbol');
-        
-        $price = $this->getCurrentPrice($market, $symbol);
-        
-        return response()->json(['price' => $price]);
+        $trade->update([
+            'price' => $currentPrice,
+            'entry_price' => $currentPrice,
+            'quantity' => $trade->amount / $currentPrice,
+            'status' => 2, // Active
+            'filled_at' => now()
+        ]);
     }
 } 

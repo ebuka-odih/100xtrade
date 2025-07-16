@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\SubPackageController;
+use App\Http\Controllers\Admin\TradeController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -60,5 +61,15 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::get('approve/subscription/{id}', [SubPackageController::class, 'approveSubscription'])->name('approveSubscription');
     Route::get('decline/subscription/{id}', [SubPackageController::class, 'declineSubscription'])->name('declineSubscription');
     Route::post('fund/subscription/{id}', [SubPackageController::class, 'fundSubscription'])->name('fundSubscription');
+
+    // Trade Management Routes
+    Route::get('trades', [TradeController::class, 'index'])->name('trade.index');
+    Route::get('trade/show/{trade}', [TradeController::class, 'show'])->name('trade.show');
+    Route::patch('trade/close/{trade}', [TradeController::class, 'close'])->name('trade.close');
+    Route::patch('trade/cancel/{trade}', [TradeController::class, 'cancel'])->name('trade.cancel');
+    Route::patch('trade/execute/{trade}', [TradeController::class, 'execute'])->name('trade.execute');
+    Route::delete('trade/delete/{trade}', [TradeController::class, 'destroy'])->name('trade.destroy');
+    Route::get('trade/statistics', [TradeController::class, 'statistics'])->name('trade.statistics');
+    Route::get('trade/export', [TradeController::class, 'export'])->name('trade.export');
 
 });
