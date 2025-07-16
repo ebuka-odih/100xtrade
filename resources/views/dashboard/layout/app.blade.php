@@ -105,6 +105,26 @@
                         </svg>
                         <span class="fw-semibold">Trade</span>
                     </a>
+                    <ul class="nav flex-column ms-3">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex gap-2 align-items-center {{ Route::is('user.trade.index') ? 'active' : '' }}"
+                               href="{{ route('user.trade.index') }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11c5.16-1.26 9-5.45 9-11V7z"/>
+                                </svg>
+                                <span class="fw-semibold">Trade Pairs</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex gap-2 align-items-center {{ Route::is('user.trade.history') ? 'active' : '' }}"
+                               href="{{ route('user.trade.history') }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M13 9h-2v2H9v2h2v2h2v-2h2v-2h-2V9zm-1 8a8 8 0 1 1 0-16a8 8 0 0 1 0 16z"/>
+                                </svg>
+                                <span class="fw-semibold">Trade History</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link d-flex gap-2 align-items-center {{ Route::is('user.stockHoldings') ? 'active' : '' }}"

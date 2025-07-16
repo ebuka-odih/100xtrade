@@ -91,7 +91,7 @@ class TradeController extends Controller
                 }
             });
 
-            return redirect()->route('trade.history')->with('success', 'Trade placed successfully!');
+            return redirect()->back()->with('success', 'Trade placed successfully!');
         } catch (\Exception $e) {
             Log::error('Trade execution failed: ' . $e->getMessage());
             return back()->withErrors(['error' => 'Failed to place trade. Please try again.']);
@@ -101,9 +101,28 @@ class TradeController extends Controller
     /**
      * Display user's trade history
      */
-    public function history()
+    public function history(Request $request)
     {
-        $trades = auth()->user()->trades()->with('tradePair')->latest()->paginate(20);
+        $query = auth()->user()->trades()->with('tradePair');
+
+        // Apply filters
+        if ($request->filled('market')) {
+            $query->where('market', $request->market);
+        }
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        if ($request->filled('type')) {
+            $query->where('type', $request->type);
+        }
+
+        if ($request->filled('date')) {
+            $query->whereDate('created_at', $request->date);
+        }
+
+        $trades = $query->latest()->paginate(20);
         
         return view('dashboard.trade.history', compact('trades'));
     }

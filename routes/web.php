@@ -70,9 +70,9 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
 
     // Trade Routes
     Route::get('trade', [TradeController::class, 'index'])->name('trade.index');
+    Route::get('trade/history', [TradeController::class, 'history'])->name('trade.history');
     Route::get('trade/{tradePair}', [TradeController::class, 'show'])->name('trade.show');
     Route::post('trade/{tradePair}/store', [TradeController::class, 'store'])->name('trade.store');
-    Route::get('trade/history', [TradeController::class, 'history'])->name('trade.history');
     Route::patch('trade/{trade}/close', [TradeController::class, 'close'])->name('trade.close');
     Route::delete('trade/{trade}/cancel', [TradeController::class, 'cancel'])->name('trade.cancel');
 
