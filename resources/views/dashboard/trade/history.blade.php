@@ -2,6 +2,137 @@
 
 @section('title', 'Trade History')
 
+<style>
+body {
+    background-color: #080909 !important;
+}
+.container-fluid {
+    margin-top: 100px;
+}
+.card {
+    background-color: #1e2634;
+    border: 1px solid #2d3748;
+}
+.card-header {
+    background-color: #2d3748;
+    border-bottom: 1px solid #4a5568;
+    color: #e2e8f0;
+}
+.card-body {
+    background-color: #1e2634;
+    color: #e2e8f0;
+}
+.table {
+    background-color: #1e2634;
+    color: #e2e8f0;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #2d3748;
+}
+.table-hover > tbody > tr:hover {
+    background-color: #374151;
+    color: #e2e8f0;
+}
+.table-dark {
+    background-color: #1f2937;
+    color: #e2e8f0;
+}
+.table-dark th {
+    background-color: #1f2937;
+    border-color: #4a5568;
+    color: #e2e8f0;
+}
+.nav-tabs {
+    border-bottom: 1px solid #4a5568;
+}
+.nav-tabs .nav-link {
+    background-color: #2d3748;
+    border: 1px solid #4a5568;
+    color: #a0aec0;
+}
+.nav-tabs .nav-link:hover {
+    background-color: #374151;
+    border-color: #4a5568;
+    color: #e2e8f0;
+}
+.nav-tabs .nav-link.active {
+    background-color: #1e2634;
+    border-color: #4a5568 #4a5568 #1e2634;
+    color: #e2e8f0;
+}
+.btn {
+    border: 1px solid #4a5568;
+}
+.btn-primary {
+    background-color: #3182ce;
+    border-color: #3182ce;
+    color: #ffffff;
+}
+.btn-primary:hover {
+    background-color: #2c5aa0;
+    border-color: #2c5aa0;
+    color: #ffffff;
+}
+.btn-success {
+    background-color: #38a169;
+    border-color: #38a169;
+    color: #ffffff;
+}
+.btn-success:hover {
+    background-color: #2f855a;
+    border-color: #2f855a;
+    color: #ffffff;
+}
+.btn-info {
+    background-color: #319795;
+    border-color: #319795;
+    color: #ffffff;
+}
+.btn-info:hover {
+    background-color: #2c7a7b;
+    border-color: #2c7a7b;
+    color: #ffffff;
+}
+.alert {
+    background-color: #2d3748;
+    border: 1px solid #4a5568;
+    color: #e2e8f0;
+}
+.alert-success {
+    background-color: #22543d;
+    border-color: #38a169;
+    color: #9ae6b4;
+}
+.alert-danger {
+    background-color: #742a2a;
+    border-color: #c53030;
+    color: #feb2b2;
+}
+.text-muted {
+    color: #a0aec0 !important;
+}
+.badge {
+    color: #ffffff;
+}
+.modal-content {
+    background-color: #1e2634;
+    border: 1px solid #2d3748;
+}
+.modal-header {
+    background-color: #2d3748;
+    border-bottom: 1px solid #4a5568;
+    color: #e2e8f0;
+}
+.modal-body {
+    background-color: #1e2634;
+    color: #e2e8f0;
+}
+.modal-footer {
+    background-color: #2d3748;
+    border-top: 1px solid #4a5568;
+}
+</style>
+
 @section('content')
 <div style="margin-top: 100px;" class="container-fluid">
     <div class="row">
