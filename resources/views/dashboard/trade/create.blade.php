@@ -169,12 +169,12 @@
                                 <div class="row mt-4">
                                     <div class="col-6">
                                         <button type="submit" class="btn btn-primary w-100" onclick="setTradeType('buy')">
-                                            <i class="fas fa-arrow-up"></i> Buy
+                                            <i class="fas fa-arrow-up"></i> Call
                                         </button>
                                     </div>
                                     <div class="col-6">
                                         <button type="submit" class="btn btn-danger w-100" onclick="setTradeType('sell')">
-                                            <i class="fas fa-arrow-down"></i> Sell
+                                            <i class="fas fa-arrow-down"></i> Put
                                         </button>
                                     </div>
                                 </div>

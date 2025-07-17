@@ -58,7 +58,7 @@
 
                         </div>
                       <p>Bal: <span>{{ number_format($user->balance, 2) }} USD</span></p>
-                      <button class="btn buy" type="submit" name="action_type" value="buy">Buy</button>
+                      <button class="btn buy" type="submit" name="action_type" value="buy">Call</button>
                     </div>
                       <div class="market-trade-sell col-md-12 col-lg-6">
                       <div class="input-group">
@@ -97,7 +97,7 @@
 
                         </div>
                       <p>Bal: <span>{{ number_format($user->balance, 2) }} USD</span></p>
-                      <button class="btn sell" type="submit" name="action_type" value="sell">Sell</button>
+                      <button class="btn sell" type="submit" name="action_type" value="sell">Put</button>
                     </div>
 
                   </div>

@@ -167,13 +167,13 @@ body {
                                                 <div class="flex-fill">
                                                     <input type="radio" class="btn-check" name="type" id="buy" value="buy" checked>
                                                     <label class="btn btn-outline-success w-100" for="buy">
-                                                        <i class="fas fa-arrow-up me-1"></i>Buy
+                                                        <i class="fas fa-arrow-up me-1"></i>Call
                                                     </label>
                                                 </div>
                                                 <div class="flex-fill">
                                                     <input type="radio" class="btn-check" name="type" id="sell" value="sell">
                                                     <label class="btn btn-outline-danger w-100" for="sell">
-                                                        <i class="fas fa-arrow-down me-1"></i>Sell
+                                                        <i class="fas fa-arrow-down me-1"></i>Put
                                                     </label>
                                                 </div>
                                             </div>
@@ -273,7 +273,7 @@ body {
                                         <!-- Submit Buttons -->
                                         <div class="d-grid gap-2">
                                             <button type="submit" class="btn btn-success btn-lg">
-                                                <i class="fas fa-play me-1"></i>Place Buy Order
+                                                <i class="fas fa-play me-1"></i>Place Call Order
                                             </button>
                                         </div>
                                     </form>
@@ -314,10 +314,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateSubmitButton() {
         if (buyRadio.checked) {
             submitButton.className = 'btn btn-success btn-lg';
-            submitButton.innerHTML = '<i class="fas fa-play me-1"></i>Place Buy Order';
+            submitButton.innerHTML = '<i class="fas fa-play me-1"></i>Place Call Order';
         } else {
             submitButton.className = 'btn btn-danger btn-lg';
-            submitButton.innerHTML = '<i class="fas fa-play me-1"></i>Place Sell Order';
+            submitButton.innerHTML = '<i class="fas fa-play me-1"></i>Place Put Order';
         }
     }
 

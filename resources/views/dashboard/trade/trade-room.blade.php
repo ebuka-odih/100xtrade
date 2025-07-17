@@ -225,9 +225,9 @@
                             </div>
                              @if($user->trader == 1)
                             <div class="d-flex justify-content-center mt-4">
-                                <button type="submit" class="primary-btn py-2 px-4"  name="action_type" value="buy">Buy</button>
+                                <button type="submit" class="primary-btn py-2 px-4"  name="action_type" value="buy">Call</button>
                                 <span class="mx-3"></span>
-                                <button type="submit" class="btn btn-danger py-2 px-4" name="action_type" value="sell">Sell</button>
+                                <button type="submit" class="btn btn-danger py-2 px-4" name="action_type" value="sell">Put</button>
                             </div>
                                  @else
                                 <div class="card mt-3">
