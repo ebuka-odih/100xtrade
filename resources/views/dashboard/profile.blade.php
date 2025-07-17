@@ -7,7 +7,13 @@
           <div class="col-sm-6 col-lg-5 col-xl-4 col-xxl-3">
             <div class="profile">
               <div class="profile-img">
-                <img style="border-radius: 50%" width="150" height="150" src="{{ asset('storage/'.$user->avatar ?? 'img/trader.jpg') }}" alt="">
+                @if($user->hasAvatarImage())
+                    <img style="border-radius: 50%" width="150" height="150" src="{{ $user->avatar_display }}" alt="">
+                @else
+                    <div style="border-radius: 50%; width: 150px; height: 150px; display: flex; justify-content: center; align-items: center; background: #798bff; color: white; font-size: 48px; font-weight: 500;">
+                        {{ $user->initials }}
+                    </div>
+                @endif
               </div>
               <h4 class="text-white fw-semibold text-center mt-3 mb-1">{{ $user->name }}</h4>
 

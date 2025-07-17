@@ -218,8 +218,14 @@
                 <div class="nav-item dropdown">
                     <a class="d-flex gap-2 align-items-center" href="#" id="navbarDropdown4" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img style="border-radius: 50%" height="40" width="40" class="img-fluid"
-                             src="{{ asset('storage/'.auth()->user()->avatar ?? 'img/trader.jpg') }}" alt="user">
+                        @if(auth()->user()->hasAvatarImage())
+                            <img style="border-radius: 50%" height="40" width="40" class="img-fluid"
+                                 src="{{ auth()->user()->avatar_display }}" alt="user">
+                        @else
+                            <div class="user-avatar-sm" style="border-radius: 50%; height: 40px; width: 40px; display: flex; justify-content: center; align-items: center; background: #798bff; color: white; font-weight: 500;">
+                                {{ auth()->user()->initials }}
+                            </div>
+                        @endif
                         <div class="d-flex flex-column d-none d-xl-block">
                             <p class="mb-0 text-white fw-semibold">{{ auth()->user()->name }}</p>
                         </div>

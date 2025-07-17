@@ -87,8 +87,8 @@ class Trade extends Model
     public function getTypeBadgeAttribute(): string
     {
         return match($this->type) {
-            'buy' => '<span class="badge bg-success">Buy</span>',
-            'sell' => '<span class="badge bg-danger">Sell</span>',
+            'buy' => '<span class="badge bg-success">Call</span>',
+            'sell' => '<span class="badge bg-danger">Put</span>',
             default => '<span class="badge bg-secondary">Unknown</span>'
         };
     }

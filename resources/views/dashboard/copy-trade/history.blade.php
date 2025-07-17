@@ -49,7 +49,17 @@
                                @foreach($data as $item)
                                    <tr>
                                        <td class="d-flex align-items-center gap-2">
-                                          <img style="border-radius: 50%" src="{{ asset($item->copy_trader->avatar) }}" alt="{{ $item->stock->name ?? '' }}" width="30" height="30">
+                                          @if($item->copy_trader && $item->copy_trader->hasAvatarImage())
+                                              <img style="border-radius: 50%" src="{{ $item->copy_trader->avatar_display }}" alt="{{ $item->stock->name ?? '' }}" width="30" height="30">
+                                          @elseif($item->copy_trader)
+                                              <div style="border-radius: 50%; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; background: #798bff; color: white; font-size: 12px; font-weight: 500;">
+                                                  {{ $item->copy_trader->initials }}
+                                              </div>
+                                          @else
+                                              <div style="border-radius: 50%; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; background: #798bff; color: white; font-size: 12px; font-weight: 500;">
+                                                  N/A
+                                              </div>
+                                          @endif
                                           {{  $item->copy_trader->name  ?? ''}}
                                         </td>
                                        <td>${{ number_format($item->amount, 2) ?? ''}}</td>

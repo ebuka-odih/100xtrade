@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Storage;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -83,6 +84,50 @@ class User extends Authenticatable implements MustVerifyEmail
             'id',           // This user's ID
             'user_id'       // Referred user's ID in referrals table
         );
+    }
+
+    /**
+     * Get user initials from name
+     */
+    public function getInitialsAttribute(): string
+    {
+        $name = trim($this->name);
+        if (empty($name)) {
+            return 'U';
+        }
+
+        $words = explode(' ', $name);
+        $initials = '';
+
+        if (count($words) >= 2) {
+            // Get first letter of first name and first letter of last name
+            $initials = strtoupper(substr($words[0], 0, 1) . substr($words[count($words) - 1], 0, 1));
+        } else {
+            // If only one word, get first two letters
+            $initials = strtoupper(substr($name, 0, 2));
+        }
+
+        return $initials;
+    }
+
+    /**
+     * Get avatar display (either image or initials)
+     */
+    public function getAvatarDisplayAttribute(): string
+    {
+        if ($this->avatar && Storage::disk('public')->exists($this->avatar)) {
+            return asset('storage/' . $this->avatar);
+        }
+        
+        return ''; // Return empty string to indicate no image, use initials instead
+    }
+
+    /**
+     * Check if user has avatar image
+     */
+    public function hasAvatarImage(): bool
+    {
+        return $this->avatar && Storage::disk('public')->exists($this->avatar);
     }
 
     public function trades()

@@ -50,9 +50,15 @@
                                                 @foreach($traders as $index => $item)
                                                     <tr>
                                                         <td>
-                                                            <img style="border-radius: 50%"
-                                                                 src="{{ asset('storage/'.$item->avatar ?? 'img/default-avatar.png') }}"
-                                                                 height="25" width="25" alt="">
+                                                            @if($item->hasAvatarImage())
+                                                                <img class="rounded-circle"
+                                                                     src="{{ $item->avatar_display }}"
+                                                                     alt="Profile Pic" style="width: 50px; height: 50px;">
+                                                            @else
+                                                                <div class="rounded-circle" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; background: #798bff; color: white; font-size: 16px; font-weight: 500;">
+                                                                    {{ $item->initials }}
+                                                                </div>
+                                                            @endif
                                                         </td>
                                                         <td>{{ $item->name ?? '' }}</td>
                                                         <td>${{ number_format($item->min_amount, 2) ?? '' }}</td>

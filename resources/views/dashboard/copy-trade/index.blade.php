@@ -64,10 +64,16 @@
                                             @foreach($traders as $item)
                                                 <div class="col-lg-4 col-md-6 col-sm-12">
                                                     <div class="card text-center">
-                                                        <img
-                                                            src="{{ asset('storage/'.$item->avatar ?? 'img/default-avatar.png') }}"
-                                                            class="card-img-top rounded-circle mx-auto mt-3"
-                                                            alt="Profile Pic" style="width: 100px; height: 100px;">
+                                                        @if($item->hasAvatarImage())
+                                                            <img
+                                                                src="{{ $item->avatar_display }}"
+                                                                class="card-img-top rounded-circle mx-auto mt-3"
+                                                                alt="Profile Pic" style="width: 100px; height: 100px;">
+                                                        @else
+                                                            <div class="card-img-top rounded-circle mx-auto mt-3" style="width: 100px; height: 100px; display: flex; justify-content: center; align-items: center; background: #798bff; color: white; font-size: 32px; font-weight: 500;">
+                                                                {{ $item->initials }}
+                                                            </div>
+                                                        @endif
                                                         <div class="card-body">
                                                             <h5 class="card-title">
                                                                 {{ $item->name ?? ''}}

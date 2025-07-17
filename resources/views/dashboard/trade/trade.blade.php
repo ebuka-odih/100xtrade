@@ -515,7 +515,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <!-- Sell Orders -->
+                        <!-- Put Orders -->
                         <tr class="red-bg-80">
                             <td class="red">0.022572</td>
                             <td>1.253415</td>
@@ -565,7 +565,7 @@
                         {{--              </tr>--}}
                         </tbody>
                         <tbody>
-                        <!-- Buy Orders -->
+                        <!-- Call Orders -->
                         <tr class="green-bg">
                             <td class="green">0.158373</td>
                             <td>1.209515</td>
@@ -729,7 +729,7 @@
                                         <th>Time</th>
                                         <th>Pairs</th>
                                         <th>Type</th>
-                                        <th>Buy/Sell</th>
+                                        <th>Call/Put</th>
                                         <th>Amount</th>
                                         <th>Leverage</th>
                                         <th>Duration</th>
@@ -766,7 +766,7 @@
                                         <th>Time</th>
                                         <th>Pairs</th>
                                         <th>Type</th>
-                                        <th>Buy/Sell</th>
+                                        <th>Call/Put</th>
                                         <th>Amount</th>
                                         <th>Leverage</th>
                                         <th>Duration</th>
@@ -797,7 +797,7 @@
         </div>
     </div>
     <script>
-        function randomizeBuySellOrders() {
+        function randomizeCallPutOrders() {
             const rows = document.querySelectorAll('#order-book tbody tr:not(.ob-heading)');
 
             rows.forEach(row => {
@@ -848,9 +848,9 @@
             setInterval(randomizeLastPriceUSDChange, 1000);
         }, 1000);
 
-        // Start randomizing the buy/sell orders after 10 seconds and repeat every 3 seconds
+        // Start randomizing the call/put orders after 10 seconds and repeat every 3 seconds
         setTimeout(() => {
-            setInterval(randomizeBuySellOrders, 1000);
+            setInterval(randomizeCallPutOrders, 1000);
         }, 1000);
 
     </script>

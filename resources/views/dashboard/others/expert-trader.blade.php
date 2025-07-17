@@ -25,8 +25,14 @@
                      <div class="col-md-4 py-3">
                     <div style="background-color: #212b39; color: white" class="card">
                         <div class="card-body">
-                            <img src="{{ asset($item->avatar ?? 'img/trader.jpg') }}" class="rounded-circle"
-                                 style="width: 100px">
+                            @if($item->hasAvatarImage())
+                                <img src="{{ $item->avatar_display }}" class="rounded-circle"
+                                     alt="Profile Pic" style="width: 100px; height: 100px;">
+                            @else
+                                <div class="rounded-circle" style="width: 100px; height: 100px; display: flex; justify-content: center; align-items: center; background: #798bff; color: white; font-size: 32px; font-weight: 500;">
+                                    {{ $item->initials }}
+                                </div>
+                            @endif
                             <h4 class="my-2">{{ $item->name ?? '' }}</h4>
                             <div class="my-4">
 									<span class="p-2 mr-2 mb-2 rounded border d-inline-block">

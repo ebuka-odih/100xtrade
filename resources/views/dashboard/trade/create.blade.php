@@ -165,7 +165,7 @@
                                 <!-- Hidden trade type field -->
                                 <input type="hidden" name="type" id="trade_type" value="buy">
 
-                                <!-- Buy/Sell Buttons -->
+                                <!-- Call/Put Buttons -->
                                 <div class="row mt-4">
                                     <div class="col-6">
                                         <button type="submit" class="btn btn-primary w-100" onclick="setTradeType('buy')">
