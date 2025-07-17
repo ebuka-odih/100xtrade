@@ -87,7 +87,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <th scope="row">Profit Share</th>
-                                                                    <td>$ <span class="text-success fw-bolder">{{ number_format($item->profit_share, 2) ?? 'N/A' }}</span></td>
+                                                                    <td><span class="text-success fw-bolder">{{ number_format($item->profit_share, 2) ?? 'N/A' }}%</span></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <th scope="row">Wins</th>
