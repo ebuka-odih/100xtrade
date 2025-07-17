@@ -266,31 +266,43 @@ class TradeController extends Controller
 
         try {
             DB::transaction(function () use ($trade) {
-                $currentPrice = $this->getCurrentPriceBySymbol($trade->market, $trade->symbol);
-                
-                if (!$currentPrice) {
-                    throw new \Exception('Unable to get current price');
+                $user = $trade->user;
+                $pnl = $trade->pnl; // Use existing PnL if admin set it
+                $currentPrice = null;
+                $exitValue = null;
+
+                // If no PnL is set, calculate it based on current market price
+                if ($pnl === null) {
+                    $currentPrice = $this->getCurrentPriceBySymbol($trade->market, $trade->symbol);
+                    
+                    if (!$currentPrice) {
+                        throw new \Exception('Unable to get current price');
+                    }
+
+                    $exitValue = $trade->quantity * $currentPrice;
+                    $pnl = $trade->type === 'buy' 
+                        ? $exitValue - $trade->amount 
+                        : $trade->amount - $exitValue;
                 }
 
-                $exitValue = $trade->quantity * $currentPrice;
-                $pnl = $trade->type === 'buy' 
-                    ? $exitValue - $trade->amount 
-                    : $trade->amount - $exitValue;
-
+                // Update trade with final values
                 $trade->update([
-                    'exit_price' => $currentPrice,
+                    'exit_price' => $currentPrice ?? $trade->exit_price,
                     'pnl' => $pnl,
                     'status' => 3, // Closed
                     'closed_at' => now()
                 ]);
 
-                // Update user balance
-                $user = $trade->user;
-                if ($trade->type === 'buy') {
-                    $user->balance += $exitValue;
-                } else {
-                    $user->balance += $trade->amount + $pnl;
+                // Update user balance based on PnL
+                if ($pnl > 0) {
+                    // Profit: Add PnL to user balance
+                    $user->balance += $pnl;
+                } elseif ($pnl < 0) {
+                    // Loss: Subtract PnL from user balance (PnL is negative, so we add it)
+                    $user->balance += $pnl; // Adding negative number = subtraction
                 }
+                // If PnL is 0, no balance change needed
+
                 $user->save();
             });
 

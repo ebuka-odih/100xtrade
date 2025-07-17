@@ -344,7 +344,7 @@ a:hover {
                                                             ${{ number_format($trade->pnl, 2) }}
                                                         </span>
                                                         <br>
-                                                        <small class="text-muted">Admin Set</small>
+                                                        
                                                     @elseif($trade->entry_price)
                                                         <!-- Show calculated percentage if no admin PnL -->
                                                         @php
@@ -447,10 +447,10 @@ a:hover {
                                                                 @if(abs($trade->pnl - $calculatedPnl) < 0.01)
                                                                     Calculated
                                                                 @else
-                                                                    Admin Set
+                                                                   null
                                                                 @endif
                                                             @else
-                                                                Admin Set
+                                                            null
                                                             @endif
                                                         </small>
                                                     @else
