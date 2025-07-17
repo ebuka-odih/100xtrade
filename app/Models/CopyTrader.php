@@ -11,7 +11,7 @@ class CopyTrader extends Model
     use HasUuids;
     protected $guarded = [];
 
-    public function copied_trades()
+     public function copied_trades()
     {
         return $this->hasMany(CopiedTrade::class, 'copy_trader_id');
     }

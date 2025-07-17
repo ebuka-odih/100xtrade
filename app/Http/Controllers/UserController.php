@@ -9,6 +9,7 @@ use App\Models\Stock;
 use App\Models\StockHolding;
 use App\Models\User;
 use App\Models\Withdrawal;
+use App\Services\StockService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -16,13 +17,43 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
+    protected $stockService;
+
+    public function __construct(StockService $stockService)
+    {
+        $this->stockService = $stockService;
+    }
+
     public function index()
     {
         $user = Auth::user();
         $withdrawal = Withdrawal::whereUserId(auth()->id())->where('status', 1)->sum('amount');
         $deposit = Deposit::whereUserId(auth()->id())->where('status', 1)->sum('amount');
         $invested = StockHolding::where('user_id', auth()->id())->sum('total_amount');
-        return view('dashboard.index', compact('user', 'withdrawal', 'deposit', 'invested'));
+        
+        // Get stock holdings with current values
+        $stockHoldings = StockHolding::where('user_id', auth()->id())
+            ->with('stock')
+            ->get();
+        
+        // Calculate current values and total holdings
+        $symbols = $stockHoldings->pluck('stock.symbol')->unique()->toArray();
+        $latestStockData = $this->stockService->fetchStockData($symbols);
+        $stockPrices = collect($latestStockData)->pluck('price', 'symbol');
+        
+        $totalHoldingsValue = 0;
+        $stockHoldings->each(function ($holding) use ($stockPrices, &$totalHoldingsValue) {
+            $latestPrice = $stockPrices[$holding->stock->symbol] ?? null;
+            if ($latestPrice) {
+                $holding->current_value = $holding->total_shares * $latestPrice;
+                $totalHoldingsValue += $holding->current_value;
+            } else {
+                $holding->current_value = $holding->total_amount;
+                $totalHoldingsValue += $holding->total_amount;
+            }
+        });
+        
+        return view('dashboard.index', compact('user', 'withdrawal', 'deposit', 'invested', 'stockHoldings', 'totalHoldingsValue'));
     }
 
     public function profile()

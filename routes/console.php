@@ -14,8 +14,8 @@ Schedule::command('orders:check-limits')
         ->withoutOverlapping();
 
 Schedule::command('stocks:update-prices')
-        ->everyMinute()
-        ->withoutOverlapping();
+             ->everyMinute()
+             ->withoutOverlapping();
 
 // Trade Processing and Management
 Schedule::command('trades:process-orders')

@@ -65,10 +65,10 @@
                                                 <div class="col-lg-4 col-md-6 col-sm-12">
                                                     <div class="card text-center">
                                                         @if($item->hasAvatarImage())
-                                                            <img
+                                                        <img
                                                                 src="{{ $item->avatar_display }}"
-                                                                class="card-img-top rounded-circle mx-auto mt-3"
-                                                                alt="Profile Pic" style="width: 100px; height: 100px;">
+                                                            class="card-img-top rounded-circle mx-auto mt-3"
+                                                            alt="Profile Pic" style="width: 100px; height: 100px;">
                                                         @else
                                                             <div class="card-img-top rounded-circle mx-auto mt-3" style="width: 100px; height: 100px; display: flex; justify-content: center; align-items: center; background: #798bff; color: white; font-size: 32px; font-weight: 500;">
                                                                 {{ $item->initials }}
