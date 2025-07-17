@@ -52,7 +52,7 @@ class TradeController extends Controller
             'take_profit' => 'nullable|numeric|min:0',
             'order_type' => 'required|in:market,limit,stop',
             'limit_price' => 'nullable|required_if:order_type,limit|numeric|min:0',
-            'interval' => 'nullable|string|in:' . implode(',', array_keys(Trade::getAvailableIntervals())),
+            'interval' => 'nullable',
         ]);
 
         $user = auth()->user();
@@ -66,6 +66,24 @@ class TradeController extends Controller
             DB::transaction(function () use ($request, $tradePair, $user) {
                 $currentPrice = $this->getCurrentPrice($tradePair);
                 
+                // Process interval based on market type
+                $interval = null;
+                $scheduledAt = null;
+                
+                if ($request->interval) {
+                    if ($tradePair->market === 'stock') {
+                        // For stocks, interval is a datetime string
+                        $scheduledAt = $request->interval;
+                        $interval = 'custom'; // Use 'custom' to indicate custom date
+                    } else {
+                        // For crypto/forex, validate interval is in available options
+                        if (!in_array($request->interval, array_keys(Trade::getAvailableIntervals()))) {
+                            throw new \Exception('Invalid interval selected.');
+                        }
+                        $interval = $request->interval;
+                    }
+                }
+                
                 $trade = Trade::create([
                     'user_id' => $user->id,
                     'market' => $tradePair->market,
@@ -78,11 +96,12 @@ class TradeController extends Controller
                     'status' => 1, // Pending
                     'order_type' => $request->order_type,
                     'limit_price' => $request->limit_price,
-                    'interval' => $request->interval,
+                    'interval' => $interval,
+                    'scheduled_at' => $scheduledAt,
                 ]);
 
                 // Calculate scheduled time if interval is provided
-                if ($request->interval) {
+                if ($interval && $interval !== 'custom') {
                     $trade->calculateScheduledTime();
                     $trade->save();
                 }

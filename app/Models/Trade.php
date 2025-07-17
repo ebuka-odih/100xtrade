@@ -261,6 +261,12 @@ class Trade extends Model
             return 'Immediate';
         }
 
+        // For stocks with custom date
+        if ($this->interval === 'custom' && $this->scheduled_at) {
+            return $this->scheduled_at->format('M d, Y H:i');
+        }
+
+        // For crypto/forex with predefined intervals
         $intervals = self::getAvailableIntervals();
         return $intervals[$this->interval] ?? $this->interval;
     }

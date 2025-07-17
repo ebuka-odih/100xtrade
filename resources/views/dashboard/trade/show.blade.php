@@ -242,36 +242,43 @@ body {
 
                                         <!-- Interval -->
                                         <div class="mb-3">
-                                            <label for="interval" class="form-label">{{ $tradePair->market === 'stock' ? 'Expiry Interval' : 'Execution Interval' }}</label>
-                                            <select class="form-control" id="interval" name="interval">
-                                                <option value="">{{ $tradePair->market === 'stock' ? 'No Expiry' : 'Execute Immediately' }}</option>
-                                                <option value="5min">5 Minutes</option>
-                                                <option value="10min">10 Minutes</option>
-                                                <option value="15min">15 Minutes</option>
-                                                <option value="30min">30 Minutes</option>
-                                                <option value="1hour">1 Hour</option>
-                                                <option value="2hour">2 Hours</option>
-                                                <option value="4hour">4 Hours</option>
-                                                <option value="6hour">6 Hours</option>
-                                                <option value="8hour">8 Hours</option>
-                                                <option value="12hour">12 Hours</option>
-                                                <option value="1day">1 Day</option>
-                                                <option value="2day">2 Days</option>
-                                                <option value="3day">3 Days</option>
-                                                <option value="1week">1 Week</option>
-                                                <option value="2week">2 Weeks</option>
-                                                <option value="1month">1 Month</option>
-                                                <option value="3month">3 Months</option>
-                                                <option value="6month">6 Months</option>
-                                                <option value="1year">1 Year</option>
-                                            </select>
-                                            <small class="form-text text-muted">
-                                                @if($tradePair->market === 'stock')
+                                            <label for="interval" class="form-label">{{ $tradePair->market === 'stock' ? 'Expiry Date' : 'Execution Interval' }}</label>
+                                            
+                                            @if($tradePair->market === 'stock')
+                                                <!-- Date picker for stocks -->
+                                                <input type="datetime-local" class="form-control" id="interval" name="interval" 
+                                                       min="{{ date('Y-m-d\TH:i') }}" 
+                                                       placeholder="Select expiry date and time">
+                                                <small class="form-text text-muted">
                                                     Choose when this trade expires. Leave empty for no expiry.
-                                                @else
+                                                </small>
+                                            @else
+                                                <!-- Dropdown for crypto/forex -->
+                                                <select class="form-control" id="interval" name="interval">
+                                                    <option value="">Execute Immediately</option>
+                                                    <option value="5min">5 Minutes</option>
+                                                    <option value="10min">10 Minutes</option>
+                                                    <option value="15min">15 Minutes</option>
+                                                    <option value="30min">30 Minutes</option>
+                                                    <option value="1hour">1 Hour</option>
+                                                    <option value="2hour">2 Hours</option>
+                                                    <option value="4hour">4 Hours</option>
+                                                    <option value="6hour">6 Hours</option>
+                                                    <option value="12hour">12 Hours</option>
+                                                    <option value="1day">1 Day</option>
+                                                    <option value="2day">2 Days</option>
+                                                    <option value="3day">3 Days</option>
+                                                    <option value="1week">1 Week</option>
+                                                    <option value="2week">2 Weeks</option>
+                                                    <option value="1month">1 Month</option>
+                                                    <option value="3month">3 Months</option>
+                                                    <option value="6month">6 Months</option>
+                                                    <option value="1year">1 Year</option>
+                                                </select>
+                                                <small class="form-text text-muted">
                                                     Choose when to execute this trade. Leave empty for immediate execution.
-                                                @endif
-                                            </small>
+                                                </small>
+                                            @endif
                                         </div>
 
                                         <!-- Submit Buttons -->
@@ -294,40 +301,67 @@ body {
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Handle order type change
-    const orderTypeSelect = document.getElementById('order_type');
-    const limitPriceDiv = document.getElementById('limit_price_div');
-    const limitPriceInput = document.getElementById('limit_price');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Handle order type change
+        const orderTypeSelect = document.getElementById('order_type');
+        const limitPriceDiv = document.getElementById('limit_price_div');
+        const limitPriceInput = document.getElementById('limit_price');
 
-    orderTypeSelect.addEventListener('change', function() {
-        if (this.value === 'limit') {
-            limitPriceDiv.style.display = 'block';
-            limitPriceInput.required = true;
-        } else {
-            limitPriceDiv.style.display = 'none';
-            limitPriceInput.required = false;
+        orderTypeSelect.addEventListener('change', function() {
+            if (this.value === 'limit') {
+                limitPriceDiv.style.display = 'block';
+                limitPriceInput.required = true;
+            } else {
+                limitPriceDiv.style.display = 'none';
+                limitPriceInput.required = false;
+            }
+        });
+
+        // Handle trade type change
+        const buyRadio = document.getElementById('buy');
+        const sellRadio = document.getElementById('sell');
+        const submitButton = document.querySelector('button[type="submit"]');
+
+        function updateSubmitButton() {
+            if (buyRadio.checked) {
+                submitButton.className = 'btn btn-success btn-lg';
+                submitButton.innerHTML = '<i class="fas fa-play me-1"></i>Place {{ $tradePair->market === "stock" ? "Call" : "Buy" }} Order';
+            } else {
+                submitButton.className = 'btn btn-danger btn-lg';
+                submitButton.innerHTML = '<i class="fas fa-play me-1"></i>Place {{ $tradePair->market === "stock" ? "Put" : "Sell" }} Order';
+            }
         }
+
+        buyRadio.addEventListener('change', updateSubmitButton);
+        sellRadio.addEventListener('change', updateSubmitButton);
+
+        // Initialize button text
+        updateSubmitButton();
+
+        // Date picker enhancement for stocks
+        @if($tradePair->market === 'stock')
+        const dateInput = document.getElementById('interval');
+        
+        // Set minimum date to current date/time
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        
+        dateInput.min = `${year}-${month}-${day}T${hours}:${minutes}`;
+        
+        // Add some styling for better UX
+        dateInput.addEventListener('change', function() {
+            if (this.value) {
+                this.style.borderColor = '#28a745';
+            } else {
+                this.style.borderColor = '#5b5b5b';
+            }
+        });
+        @endif
     });
-
-    // Handle trade type change
-    const buyRadio = document.getElementById('buy');
-    const sellRadio = document.getElementById('sell');
-    const submitButton = document.querySelector('button[type="submit"]');
-
-    function updateSubmitButton() {
-        if (buyRadio.checked) {
-            submitButton.className = 'btn btn-success btn-lg';
-            submitButton.innerHTML = '<i class="fas fa-play me-1"></i>Place {{ $tradePair->market === "stock" ? "Call" : "Buy" }} Order';
-        } else {
-            submitButton.className = 'btn btn-danger btn-lg';
-            submitButton.innerHTML = '<i class="fas fa-play me-1"></i>Place {{ $tradePair->market === "stock" ? "Put" : "Sell" }} Order';
-        }
-    }
-
-    buyRadio.addEventListener('change', updateSubmitButton);
-    sellRadio.addEventListener('change', updateSubmitButton);
-});
 </script>
 
 @endsection 
