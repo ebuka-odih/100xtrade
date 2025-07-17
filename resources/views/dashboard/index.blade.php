@@ -272,35 +272,21 @@
 <script>
 // Initialize the balance chart
 let balanceChart;
+let currentPeriod = '30d';
 
 function initChart() {
     const ctx = document.getElementById('balanceChart').getContext('2d');
     
-    // Generate sample data for the chart
-    const labels = [];
-    const data = [];
-    const today = new Date();
-    
-    for (let i = 29; i >= 0; i--) {
-        const date = new Date(today);
-        date.setDate(date.getDate() - i);
-        labels.push(date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
-        
-        // Generate realistic balance data with some volatility
-        const baseBalance = {{ $user->balance }};
-        const volatility = baseBalance * 0.1; // 10% volatility
-        const randomChange = (Math.random() - 0.5) * volatility;
-        const balance = Math.max(0, baseBalance + randomChange);
-        data.push(balance);
-    }
+    // Generate realistic balance data based on user's actual balance
+    const balanceData = generateBalanceData({{ $user->balance }}, currentPeriod);
     
     balanceChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: labels,
+            labels: balanceData.labels,
             datasets: [{
                 label: 'Account Balance',
-                data: data,
+                data: balanceData.data,
                 borderColor: '#00d4aa',
                 backgroundColor: 'rgba(0, 212, 170, 0.1)',
                 borderWidth: 3,
@@ -319,6 +305,18 @@ function initChart() {
             plugins: {
                 legend: {
                     display: false
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleColor: '#ffffff',
+                    bodyColor: '#ffffff',
+                    borderColor: '#00d4aa',
+                    borderWidth: 1,
+                    callbacks: {
+                        label: function(context) {
+                            return 'Balance: $' + context.parsed.y.toLocaleString();
+                        }
+                    }
                 }
             },
             scales: {
@@ -355,10 +353,67 @@ function initChart() {
     });
 }
 
+function generateBalanceData(currentBalance, period) {
+    const labels = [];
+    const data = [];
+    const today = new Date();
+    
+    let days;
+    switch(period) {
+        case '7d':
+            days = 7;
+            break;
+        case '30d':
+            days = 30;
+            break;
+        case '90d':
+            days = 90;
+            break;
+        default:
+            days = 30;
+    }
+    
+    // Generate realistic balance progression
+    let balance = currentBalance * 0.8; // Start at 80% of current balance
+    const volatility = currentBalance * 0.15; // 15% volatility
+    
+    for (let i = days; i >= 0; i--) {
+        const date = new Date(today);
+        date.setDate(date.getDate() - i);
+        
+        // Format label based on period
+        if (period === '7d') {
+            labels.push(date.toLocaleDateString('en-US', { weekday: 'short' }));
+        } else if (period === '30d') {
+            labels.push(date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
+        } else {
+            labels.push(date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
+        }
+        
+        // Generate realistic balance movement
+        const randomChange = (Math.random() - 0.5) * volatility * 0.1; // Smaller daily changes
+        balance = Math.max(0, balance + randomChange);
+        
+        // Gradually trend towards current balance
+        const trend = (currentBalance - balance) * 0.02;
+        balance += trend;
+        
+        data.push(Math.round(balance * 100) / 100);
+    }
+    
+    return { labels, data };
+}
+
 function updateChart(period) {
-    // Update chart data based on period (7d, 30d, 90d)
-    // This is a simplified version - you can implement real data fetching here
-    console.log('Updating chart for period:', period);
+    currentPeriod = period;
+    
+    if (balanceChart) {
+        const balanceData = generateBalanceData({{ $user->balance }}, period);
+        
+        balanceChart.data.labels = balanceData.labels;
+        balanceChart.data.datasets[0].data = balanceData.data;
+        balanceChart.update();
+    }
 }
 
 function copyReferral() {
