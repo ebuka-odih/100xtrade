@@ -34,6 +34,7 @@ class TradeController extends Controller
                 'change_24h' => $stock->change_24h,
                 'volume' => $stock->volume,
                 'last_updated' => $stock->last_updated,
+                'avatar' => $stock->avatar(), // Add avatar method result
             ];
         });
         
@@ -293,10 +294,10 @@ class TradeController extends Controller
                     'closed_at' => now()
                 ]);
 
-                // Update user balance based on PnL
+                // Update user balance/profit based on PnL
                 if ($pnl > 0) {
-                    // Profit: Add PnL to user balance
-                    $user->balance += $pnl;
+                    // Profit: Add PnL to user profit
+                    $user->profit += $pnl;
                 } elseif ($pnl < 0) {
                     // Loss: Subtract PnL from user balance (PnL is negative, so we add it)
                     $user->balance += $pnl; // Adding negative number = subtraction

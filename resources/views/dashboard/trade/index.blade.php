@@ -172,7 +172,7 @@
                                             <tr data-symbol="{{ strtolower($stock->symbol) }}" data-name="{{ strtolower($stock->name ?? $stock->symbol) }}" data-market="stock">
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <img src="{{ $stock->avatar() }}" 
+                                                        <img src="{{ asset($stock->avatar) }}" 
                                                              alt="{{ $stock->symbol }}" 
                                                              class="me-2" 
                                                              style="width: 30px; height: 30px; border-radius: 50%;">
