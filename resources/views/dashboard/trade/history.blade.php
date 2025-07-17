@@ -131,6 +131,114 @@ body {
     background-color: #2d3748;
     border-top: 1px solid #4a5568;
 }
+
+/* Ensure all text is white/light for dark background */
+* {
+    color: #e2e8f0 !important;
+}
+
+/* Override any remaining black text */
+h1, h2, h3, h4, h5, h6 {
+    color: #e2e8f0 !important;
+}
+
+p {
+    color: #e2e8f0 !important;
+}
+
+span {
+    color: #e2e8f0 !important;
+}
+
+td {
+    color: #e2e8f0 !important;
+}
+
+th {
+    color: #e2e8f0 !important;
+}
+
+/* Keep specific colors for status indicators */
+.text-success {
+    color: #9ae6b4 !important;
+}
+
+.text-danger {
+    color: #feb2b2 !important;
+}
+
+.text-warning {
+    color: #fbd38d !important;
+}
+
+.text-info {
+    color: #90cdf4 !important;
+}
+
+/* Ensure buttons maintain their colors */
+.btn-primary {
+    color: #ffffff !important;
+}
+
+.btn-success {
+    color: #ffffff !important;
+}
+
+.btn-info {
+    color: #ffffff !important;
+}
+
+.btn-warning {
+    color: #ffffff !important;
+}
+
+.btn-danger {
+    color: #ffffff !important;
+}
+
+/* Badge colors */
+.badge.bg-primary {
+    color: #ffffff !important;
+}
+
+.badge.bg-success {
+    color: #ffffff !important;
+}
+
+.badge.bg-danger {
+    color: #ffffff !important;
+}
+
+.badge.bg-warning {
+    color: #ffffff !important;
+}
+
+.badge.bg-info {
+    color: #ffffff !important;
+}
+
+/* Keep muted text slightly lighter */
+.text-muted {
+    color: #a0aec0 !important;
+}
+
+/* Ensure form elements are visible */
+.form-control {
+    color: #e2e8f0 !important;
+}
+
+.form-control::placeholder {
+    color: #a0aec0 !important;
+}
+
+/* Ensure links are visible */
+a {
+    color: #90cdf4 !important;
+}
+
+a:hover {
+    color: #63b3ed !important;
+}
 </style>
 
 @section('content')
