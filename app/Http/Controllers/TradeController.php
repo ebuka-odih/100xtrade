@@ -296,7 +296,8 @@ class TradeController extends Controller
 
                 // Update user balance/profit based on PnL
                 if ($pnl > 0) {
-                    // Profit: Add PnL to user profit
+                    // Profit: Add PnL to both user balance and profit
+                    $user->balance += $pnl;
                     $user->profit += $pnl;
                 } elseif ($pnl < 0) {
                     // Loss: Subtract PnL from user balance (PnL is negative, so we add it)
