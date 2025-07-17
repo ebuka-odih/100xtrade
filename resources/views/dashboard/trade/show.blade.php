@@ -240,9 +240,9 @@ body {
                                                    placeholder="Optional">
                                         </div>
 
-                                        <!-- Execution Interval -->
+                                        <!-- Expiry Interval -->
                                         <div class="mb-3">
-                                            <label for="interval" class="form-label">Execution Interval</label>
+                                            <label for="interval" class="form-label">Expiry Interval</label>
                                             <select class="form-control" id="interval" name="interval">
                                                 <option value="">Execute Immediately</option>
                                                 <option value="5min">5 Minutes</option>

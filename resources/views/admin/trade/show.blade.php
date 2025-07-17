@@ -174,7 +174,7 @@
                                     @if($trade->interval)
                                         <div class="row mb-3">
                                             <div class="col-6">
-                                                <strong>Execution Interval:</strong>
+                                                <strong>Expiry Interval:</strong>
                                             </div>
                                             <div class="col-6">
                                                 <span class="badge bg-info">{{ $trade->interval_display }}</span>
