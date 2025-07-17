@@ -239,6 +239,28 @@ a {
 a:hover {
     color: #63b3ed !important;
 }
+
+/* Dark header styling */
+.card-header {
+    background-color: #1f2937 !important;
+    border-bottom: 1px solid #4a5568 !important;
+    color: #e2e8f0 !important;
+}
+
+.card-title {
+    color: #e2e8f0 !important;
+}
+
+/* Ensure header text is visible */
+.card-header h4,
+.card-header .card-title {
+    color: #e2e8f0 !important;
+}
+
+/* Ensure header buttons maintain their colors */
+.card-header .btn {
+    color: #ffffff !important;
+}
 </style>
 
 @section('content')
