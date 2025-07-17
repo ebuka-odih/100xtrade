@@ -336,7 +336,7 @@ a:hover {
                                                 <td>{!! $trade->type_badge !!}</td>
                                                 <td>${{ number_format($trade->amount, 2) }}</td>
                                                 <td>${{ number_format($trade->entry_price ?? 0, 2) }}</td>
-                                                <td>{{ number_format($trade->quantity ?? 0, 4) }}</td>
+                                                <td>{{ number_format($trade->quantity ?? 0, 2) }}</td>
                                                 <td>
                                                     @if($trade->pnl !== null)
                                                         <!-- Show admin-set PnL if available -->
@@ -430,7 +430,7 @@ a:hover {
                                                 <td>${{ number_format($trade->amount, 2) }}</td>
                                                 <td>${{ number_format($trade->entry_price ?? 0, 2) }}</td>
                                                 <td>${{ number_format($trade->exit_price ?? 0, 2) }}</td>
-                                                <td>{{ number_format($trade->quantity ?? 0, 4) }}</td>
+                                                <td>{{ number_format($trade->quantity ?? 0, 2) }}</td>
                                                 <td>
                                                     @if($trade->pnl !== null)
                                                         <span class="{{ $trade->pnl >= 0 ? 'text-success' : 'text-danger' }}">
@@ -556,7 +556,7 @@ a:hover {
                                                                 <td width="40%"><strong>Entry Price:</strong></td>
                                                                 <td>
                                                                     @if($trade->entry_price)
-                                                                        <span class="fw-bold text-success">${{ number_format($trade->entry_price, 8) }}</span>
+                                                                        <span class="fw-bold text-success">${{ number_format($trade->entry_price, 2) }}</span>
                                                                     @else
                                                                         <span class="text-muted">Not set</span>
                                                                     @endif
@@ -566,7 +566,7 @@ a:hover {
                                                                 <td><strong>Exit Price:</strong></td>
                                                                 <td>
                                                                     @if($trade->exit_price)
-                                                                        <span class="fw-bold text-info">${{ number_format($trade->exit_price, 8) }}</span>
+                                                                        <span class="fw-bold text-info">${{ number_format($trade->exit_price, 2) }}</span>
                                                                     @else
                                                                         <span class="text-muted">Not set</span>
                                                                     @endif
@@ -576,7 +576,7 @@ a:hover {
                                                                 <td><strong>Quantity:</strong></td>
                                                                 <td>
                                                                     @if($trade->quantity)
-                                                                        <span class="fw-bold">{{ number_format($trade->quantity, 8) }}</span>
+                                                                        <span class="fw-bold">{{ number_format($trade->quantity, 2) }}</span>
                                                                     @else
                                                                         <span class="text-muted">Not calculated</span>
                                                                     @endif
@@ -629,19 +629,19 @@ a:hover {
                                                             @if($trade->limit_price)
                                                                 <tr>
                                                                     <td><strong>Limit Price:</strong></td>
-                                                                    <td>${{ number_format($trade->limit_price, 8) }}</td>
+                                                                    <td>${{ number_format($trade->limit_price, 2) }}</td>
                                                                 </tr>
                                                             @endif
                                                             @if($trade->stop_loss)
                                                                 <tr>
                                                                     <td><strong>Stop Loss:</strong></td>
-                                                                    <td><span class="text-danger">${{ number_format($trade->stop_loss, 8) }}</span></td>
+                                                                    <td><span class="text-danger">${{ number_format($trade->stop_loss, 2) }}</span></td>
                                                                 </tr>
                                                             @endif
                                                             @if($trade->take_profit)
                                                                 <tr>
                                                                     <td><strong>Take Profit:</strong></td>
-                                                                    <td><span class="text-success">${{ number_format($trade->take_profit, 8) }}</span></td>
+                                                                    <td><span class="text-success">${{ number_format($trade->take_profit, 2) }}</span></td>
                                                                 </tr>
                                                             @endif
                                                             @if($trade->interval)
