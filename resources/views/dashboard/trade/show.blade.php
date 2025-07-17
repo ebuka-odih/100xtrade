@@ -244,7 +244,7 @@ body {
                                         <div class="mb-3">
                                             <label for="interval" class="form-label">{{ $tradePair->market === 'stock' ? 'Expiry Interval' : 'Execution Interval' }}</label>
                                             <select class="form-control" id="interval" name="interval">
-                                                <option value="">No Expiry</option>
+                                                <option value="">{{ $tradePair->market === 'stock' ? 'No Expiry' : 'Execute Immediately' }}</option>
                                                 <option value="5min">5 Minutes</option>
                                                 <option value="10min">10 Minutes</option>
                                                 <option value="15min">15 Minutes</option>
@@ -265,7 +265,13 @@ body {
                                                 <option value="6month">6 Months</option>
                                                 <option value="1year">1 Year</option>
                                             </select>
-                                            <small class="form-text text-muted">Choose when this trade expires. Leave empty for no expiry.</small>
+                                            <small class="form-text text-muted">
+                                                @if($tradePair->market === 'stock')
+                                                    Choose when this trade expires. Leave empty for no expiry.
+                                                @else
+                                                    Choose when to execute this trade. Leave empty for immediate execution.
+                                                @endif
+                                            </small>
                                         </div>
 
                                         <!-- Submit Buttons -->

@@ -174,7 +174,7 @@
                                     @if($trade->interval)
                                         <div class="row mb-3">
                                             <div class="col-6">
-                                                <strong>Expiry Interval:</strong>
+                                                <strong>{{ $trade->market === 'stock' ? 'Expiry Interval:' : 'Execution Interval:' }}</strong>
                                             </div>
                                             <div class="col-6">
                                                 <span class="badge bg-info">{{ $trade->interval_display }}</span>
@@ -196,7 +196,7 @@
                                     @if($trade->scheduled_at && $trade->status == 1)
                                         <div class="row mb-3">
                                             <div class="col-6">
-                                                <strong>Time Until Expiry:</strong>
+                                                <strong>{{ $trade->market === 'stock' ? 'Time Until Expiry:' : 'Time Until Execution:' }}</strong>
                                             </div>
                                             <div class="col-6">
                                                 @php
@@ -279,12 +279,12 @@
                                 </div>
                             </div>
 
-                            <!-- Expiry Timing Information -->
+                            <!-- Timing Information -->
                             @if($trade->interval || $trade->scheduled_at)
                             <div class="card mt-3">
                                 <div class="card-header" style="background-color: #e3f2fd; border-bottom: 2px solid #2196f3;">
                                     <h6 class="mb-0 text-primary">
-                                        <i class="fas fa-clock me-2"></i>Expiry Timing
+                                        <i class="fas fa-clock me-2"></i>{{ $trade->market === 'stock' ? 'Expiry Timing' : 'Execution Timing' }}
                                     </h6>
                                 </div>
                                 <div class="card-body">
