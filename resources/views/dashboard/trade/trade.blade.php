@@ -487,10 +487,10 @@
 
                                             </div>
                                             <p>Bal: <span>{{ number_format($user->balance, 2) }} USD</span></p>
-                                            <button class="btn buy" type="submit" name="action_type" value="buy">Call
+                                            <button class="btn buy" type="submit" name="action_type" value="buy">Buy
                                             </button>
                                             <button class="btn sell" type="submit" name="action_type" value="sell">
-                                                Put
+                                                Sell
                                             </button>
                                         </div>
                                     </form>
@@ -729,7 +729,7 @@
                                         <th>Time</th>
                                         <th>Pairs</th>
                                         <th>Type</th>
-                                        <th>Call/Put</th>
+                                        <th>Buy/Sell</th>
                                         <th>Amount</th>
                                         <th>Leverage</th>
                                         <th>Duration</th>
@@ -766,7 +766,7 @@
                                         <th>Time</th>
                                         <th>Pairs</th>
                                         <th>Type</th>
-                                        <th>Call/Put</th>
+                                        <th>Buy/Sell</th>
                                         <th>Amount</th>
                                         <th>Leverage</th>
                                         <th>Duration</th>

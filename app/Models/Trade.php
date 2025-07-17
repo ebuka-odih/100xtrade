@@ -86,9 +86,11 @@ class Trade extends Model
 
     public function getTypeBadgeAttribute(): string
     {
+        $isStock = $this->market === 'stock';
+        
         return match($this->type) {
-            'buy' => '<span class="badge bg-success">Call</span>',
-            'sell' => '<span class="badge bg-danger">Put</span>',
+            'buy' => '<span class="badge bg-success">' . ($isStock ? 'Call' : 'Buy') . '</span>',
+            'sell' => '<span class="badge bg-danger">' . ($isStock ? 'Put' : 'Sell') . '</span>',
             default => '<span class="badge bg-secondary">Unknown</span>'
         };
     }

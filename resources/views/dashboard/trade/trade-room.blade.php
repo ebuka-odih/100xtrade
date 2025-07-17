@@ -225,9 +225,13 @@
                             </div>
                              @if($user->trader == 1)
                             <div class="d-flex justify-content-center mt-4">
-                                <button type="submit" class="primary-btn py-2 px-4"  name="action_type" value="buy">Call</button>
+                                <button type="submit" class="primary-btn py-2 px-4"  name="action_type" value="buy">
+                                    <span id="buy-text">Buy</span>
+                                </button>
                                 <span class="mx-3"></span>
-                                <button type="submit" class="btn btn-danger py-2 px-4" name="action_type" value="sell">Put</button>
+                                <button type="submit" class="btn btn-danger py-2 px-4" name="action_type" value="sell">
+                                    <span id="sell-text">Sell</span>
+                                </button>
                             </div>
                                  @else
                                 <div class="card mt-3">
@@ -381,6 +385,23 @@
                 forexPairs.style.display = 'block';
             } else if (selectedValue === 'stock') {
                 stockPairs.style.display = 'block';
+            }
+
+            // Update button text based on market type
+            updateButtonText(selectedValue);
+        }
+
+        // Function to update button text based on market type
+        function updateButtonText(market) {
+            const buyText = document.getElementById('buy-text');
+            const sellText = document.getElementById('sell-text');
+            
+            if (market === 'stock') {
+                buyText.textContent = 'Call';
+                sellText.textContent = 'Put';
+            } else {
+                buyText.textContent = 'Buy';
+                sellText.textContent = 'Sell';
             }
         }
 

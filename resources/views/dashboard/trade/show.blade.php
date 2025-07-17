@@ -167,13 +167,13 @@ body {
                                                 <div class="flex-fill">
                                                     <input type="radio" class="btn-check" name="type" id="buy" value="buy" checked>
                                                     <label class="btn btn-outline-success w-100" for="buy">
-                                                        <i class="fas fa-arrow-up me-1"></i>Call
+                                                        <i class="fas fa-arrow-up me-1"></i>{{ $tradePair->market === 'stock' ? 'Call' : 'Buy' }}
                                                     </label>
                                                 </div>
                                                 <div class="flex-fill">
                                                     <input type="radio" class="btn-check" name="type" id="sell" value="sell">
                                                     <label class="btn btn-outline-danger w-100" for="sell">
-                                                        <i class="fas fa-arrow-down me-1"></i>Put
+                                                        <i class="fas fa-arrow-down me-1"></i>{{ $tradePair->market === 'stock' ? 'Put' : 'Sell' }}
                                                     </label>
                                                 </div>
                                             </div>
@@ -273,7 +273,7 @@ body {
                                         <!-- Submit Buttons -->
                                         <div class="d-grid gap-2">
                                             <button type="submit" class="btn btn-success btn-lg">
-                                                <i class="fas fa-play me-1"></i>Place Call Order
+                                                <i class="fas fa-play me-1"></i>Place {{ $tradePair->market === 'stock' ? 'Call' : 'Buy' }} Order
                                             </button>
                                         </div>
                                     </form>
@@ -314,10 +314,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateSubmitButton() {
         if (buyRadio.checked) {
             submitButton.className = 'btn btn-success btn-lg';
-            submitButton.innerHTML = '<i class="fas fa-play me-1"></i>Place Call Order';
+            submitButton.innerHTML = '<i class="fas fa-play me-1"></i>Place {{ $tradePair->market === "stock" ? "Call" : "Buy" }} Order';
         } else {
             submitButton.className = 'btn btn-danger btn-lg';
-            submitButton.innerHTML = '<i class="fas fa-play me-1"></i>Place Put Order';
+            submitButton.innerHTML = '<i class="fas fa-play me-1"></i>Place {{ $tradePair->market === "stock" ? "Put" : "Sell" }} Order';
         }
     }
 

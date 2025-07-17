@@ -169,12 +169,12 @@
                                 <div class="row mt-4">
                                     <div class="col-6">
                                         <button type="submit" class="btn btn-primary w-100" onclick="setTradeType('buy')">
-                                            <i class="fas fa-arrow-up"></i> Call
+                                            <i class="fas fa-arrow-up"></i> <span id="buy-text">Buy</span>
                                         </button>
                                     </div>
                                     <div class="col-6">
                                         <button type="submit" class="btn btn-danger w-100" onclick="setTradeType('sell')">
-                                            <i class="fas fa-arrow-down"></i> Put
+                                            <i class="fas fa-arrow-down"></i> <span id="sell-text">Sell</span>
                                         </button>
                                     </div>
                                 </div>
@@ -197,6 +197,9 @@
                 
                 const market = this.dataset.market;
                 document.getElementById('selected_market').value = market;
+                
+                // Update button text based on market
+                updateButtonText(market);
                 
                 // Update symbols dropdown
                 updateSymbols(market);
@@ -258,10 +261,25 @@
         // Initialize with stock market
         document.querySelector('.market-btn[data-market="stock"]').classList.add('active');
         updateSymbols('stock');
+        updateButtonText('stock'); // Initialize button text for stock market
 
         // Function to set trade type before form submission
         function setTradeType(type) {
             document.getElementById('trade_type').value = type;
+        }
+
+        // Function to update button text based on market
+        function updateButtonText(market) {
+            const buyText = document.getElementById('buy-text');
+            const sellText = document.getElementById('sell-text');
+            
+            if (market === 'stock') {
+                buyText.textContent = 'Call';
+                sellText.textContent = 'Put';
+            } else {
+                buyText.textContent = 'Buy';
+                sellText.textContent = 'Sell';
+            }
         }
     </script>
 
