@@ -89,7 +89,7 @@
                                         <span class="nk-menu-text">Stock History</span>
                                     </a>
                                 </li>
-                                <li class="nk-menu-item">
+                                 <li class="nk-menu-item">
                                     <a href="{{ route('admin.trade.index') }}" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-trend-up"></em></span>
                                         <span class="nk-menu-text">Trade Management</span>

@@ -81,7 +81,7 @@ body {
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <h4 class="mb-0">{{ $tradePair->name }} ({{ $tradePair->symbol }})</h4>
-                            <!-- <p class="mb-0 text-muted">{{ $tradePair->market_badge }}</p> -->
+                            <p class="mb-0 text-muted">{!! $tradePair->market_badge !!}</p>
                         </div>
                         <div>
                             <a href="{{ route('user.trade.index') }}" class="btn btn-secondary">
@@ -140,6 +140,21 @@ body {
                                         </div>
                                     </div>
 
+                                    <!-- Current Stock Price -->
+                                    <div class="alert alert-secondary">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>Current Price:</span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <strong>${{ number_format($tradePair->current_price, 2) }}</strong>
+                                                @if(isset($tradePair->change_24h))
+                                                    <span class="badge {{ $tradePair->change_24h >= 0 ? 'bg-success' : 'bg-danger' }}">
+                                                        {{ $tradePair->change_24h >= 0 ? '+' : '' }}{{ number_format($tradePair->change_24h, 2) }}%
+                                                    </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     @if(session()->has('success'))
                                         <div class="alert alert-success">
                                             {{ session()->get('success') }}
@@ -157,7 +172,7 @@ body {
                                     @endif
 
                                     <!-- Trade Form -->
-                                    <form action="{{ route('user.trade.store', $tradePair) }}" method="POST">
+                                    <form action="{{ route('user.trade.store', $tradePair->symbol) }}" method="POST">
                                         @csrf
                                         
                                         <!-- Trade Type -->
@@ -371,10 +386,14 @@ body {
 
         // Entry price enhancement
         const entryPriceInput = document.getElementById('entry_price');
-        const currentPrice = {{ $tradePair->current_price }};
+        const currentPrice = {{ is_numeric($tradePair->current_price) ? $tradePair->current_price : 0 }};
         
         // Add placeholder with current price
-        entryPriceInput.placeholder = `Current price: $${currentPrice.toFixed(8)}`;
+        if (currentPrice && currentPrice > 0) {
+            entryPriceInput.placeholder = `Current price: $${currentPrice.toFixed(8)}`;
+        } else {
+            entryPriceInput.placeholder = 'Enter entry price';
+        }
         
         // Add visual feedback
         entryPriceInput.addEventListener('input', function() {
@@ -396,8 +415,12 @@ body {
         currentPriceButton.className = 'btn btn-sm btn-outline-secondary mt-1';
         currentPriceButton.innerHTML = '<i class="fas fa-clock"></i> Use Current Price';
         currentPriceButton.onclick = function() {
-            entryPriceInput.value = currentPrice.toFixed(8);
-            entryPriceInput.style.borderColor = '#28a745';
+            if (currentPrice && currentPrice > 0) {
+                entryPriceInput.value = currentPrice.toFixed(8);
+                entryPriceInput.style.borderColor = '#28a745';
+            } else {
+                alert('Current price not available');
+            }
         };
         entryPriceInput.parentNode.appendChild(currentPriceButton);
     });

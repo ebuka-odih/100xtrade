@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Trade;
 use App\Models\TradePair;
+use App\Models\Stock; // Added import for Stock model
 use App\Services\StockService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -23,7 +24,20 @@ class TradeController extends Controller
      */
     public function index()
     {
-        $stocks = TradePair::active()->byMarket('stock')->get();
+        // For stocks, use Stock model with real data
+        $stocks = Stock::all()->map(function ($stock) {
+            return (object) [
+                'symbol' => $stock->symbol,
+                'name' => $stock->symbol, // Stock model doesn't have name, use symbol
+                'market' => 'stock',
+                'current_price' => $stock->price,
+                'change_24h' => $stock->change_24h,
+                'volume' => $stock->volume,
+                'last_updated' => $stock->last_updated,
+            ];
+        });
+        
+        // For crypto and forex, keep using TradePair model
         $cryptos = TradePair::active()->byMarket('crypto')->get();
         $forexes = TradePair::active()->byMarket('forex')->get();
 
@@ -33,9 +47,33 @@ class TradeController extends Controller
     /**
      * Display the trading page for a specific pair
      */
-    public function show(TradePair $tradePair)
+    public function show($tradePair)
     {
         $user = auth()->user();
+        
+        // Handle both TradePair and Stock objects
+        if (is_string($tradePair)) {
+            // If it's a string (symbol), check if it's a stock first
+            $stock = Stock::where('symbol', $tradePair)->first();
+            if ($stock) {
+                $tradePair = (object) [
+                    'symbol' => $stock->symbol,
+                    'name' => $stock->symbol,
+                    'market' => 'stock',
+                    'current_price' => $stock->price,
+                    'change_24h' => $stock->change_24h,
+                    'volume' => $stock->volume,
+                    'last_updated' => $stock->last_updated,
+                    'min_amount' => 10, // Default minimum for stocks
+                    'max_amount' => 100000, // Default maximum for stocks
+                    'market_badge' => '<span class="badge bg-primary">Stock</span>',
+                    'trading_view_symbol' => 'NASDAQ:' . $stock->symbol,
+                ];
+            } else {
+                // If not a stock, try to find it as a TradePair
+                $tradePair = TradePair::where('symbol', $tradePair)->firstOrFail();
+            }
+        }
         
         return view('dashboard.trade.show', compact('tradePair', 'user'));
     }
@@ -43,8 +81,32 @@ class TradeController extends Controller
     /**
      * Execute a trade
      */
-    public function store(Request $request, TradePair $tradePair)
+    public function store(Request $request, $tradePair)
     {
+        // Handle both TradePair and Stock objects
+        if (is_string($tradePair)) {
+            // If it's a string (symbol), check if it's a stock first
+            $stock = Stock::where('symbol', $tradePair)->first();
+            if ($stock) {
+                $tradePair = (object) [
+                    'symbol' => $stock->symbol,
+                    'name' => $stock->symbol,
+                    'market' => 'stock',
+                    'current_price' => $stock->price,
+                    'change_24h' => $stock->change_24h,
+                    'volume' => $stock->volume,
+                    'last_updated' => $stock->last_updated,
+                    'min_amount' => 10, // Default minimum for stocks
+                    'max_amount' => 100000, // Default maximum for stocks
+                    'market_badge' => '<span class="badge bg-primary">Stock</span>',
+                    'trading_view_symbol' => 'NASDAQ:' . $stock->symbol,
+                ];
+            } else {
+                // If not a stock, try to find it as a TradePair
+                $tradePair = TradePair::where('symbol', $tradePair)->firstOrFail();
+            }
+        }
+
         $request->validate([
             'type' => 'required|in:buy,sell',
             'amount' => 'required|numeric|min:' . $tradePair->min_amount . '|max:' . $tradePair->max_amount,
@@ -65,7 +127,10 @@ class TradeController extends Controller
 
         try {
             DB::transaction(function () use ($request, $tradePair, $user) {
-                $currentPrice = $this->getCurrentPrice($tradePair);
+                // Get current price based on market type
+                $currentPrice = $tradePair->market === 'stock' 
+                    ? $this->getCurrentPriceBySymbol('stock', $tradePair->symbol)
+                    : $this->getCurrentPrice($tradePair);
                 
                 // Process interval based on market type
                 $interval = null;
@@ -239,10 +304,20 @@ class TradeController extends Controller
     /**
      * Get current price for a trade pair
      */
-    private function getCurrentPrice(TradePair $tradePair): float
+    private function getCurrentPrice($tradePair): float
     {
-        // For now, return the stored price
-        // In production, you would fetch real-time prices
+        // For stocks, use StockService to get real prices
+        if ($tradePair->market === 'stock') {
+            $stockData = $this->stockService->fetchStockData([$tradePair->symbol]);
+            if (!empty($stockData) && isset($stockData[0]['price']) && $stockData[0]['price'] !== null) {
+                return (float) $stockData[0]['price'];
+            }
+            
+            // Fallback to stored price if API fails
+            return $tradePair->current_price;
+        }
+        
+        // For crypto/forex, return the stored price (keep existing logic)
         return $tradePair->current_price;
     }
 
@@ -251,6 +326,19 @@ class TradeController extends Controller
      */
     private function getCurrentPriceBySymbol(string $market, string $symbol): ?float
     {
+        // For stocks, use StockService to get real prices
+        if ($market === 'stock') {
+            $stockData = $this->stockService->fetchStockData([$symbol]);
+            if (!empty($stockData) && isset($stockData[0]['price']) && $stockData[0]['price'] !== null) {
+                return (float) $stockData[0]['price'];
+            }
+            
+            // Fallback to Stock model if API fails
+            $stock = Stock::where('symbol', $symbol)->first();
+            return $stock ? (float) $stock->price : null;
+        }
+        
+        // For crypto/forex, use TradePair model (keep existing logic)
         $tradePair = TradePair::where('symbol', $symbol)->first();
         return $tradePair ? $tradePair->current_price : null;
     }
