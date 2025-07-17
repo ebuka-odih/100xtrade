@@ -48,21 +48,27 @@
                                                                    <th>Date</th>
                                                                     <th>User</th>
                                                                     <th>Stock</th>
+                                                                    <th>Shares</th>
+                                                                    <th>Price</th>
                                                                     <th>Amount</th>
-                                                                    <th>PNL</th>
+                                                                    <th>Current Price</th>
+                                                                    <th>PNL %</th>
                                                                     <th>Status</th>
                                                                     <th>Action</th>
                                                                </tr>
                                                                </thead>
                                                                <tbody >
-                                                               @foreach($data as $item)
+                                                               @foreach($buyOrders as $item)
                                                                    <tr>
                                                                        <td>{{ date('d M, Y h:i A', strtotime($item->created_at)) ?? '' }}</td>
                                                                        <td>{{ $item->user->name ?? '' }}</td>
                                                                        <td>{{ $item->stock->symbol ?? '' }}</td>
+                                                                       <td>{{ number_format($item->shares, 4) ?? '' }}</td>
+                                                                       <td>${{ number_format($item->price, 2) ?? '' }}</td>
                                                                        <td>${{ number_format($item->amount, 2) ?? ''}}</td>
+                                                                       <td>${{ $item->current_price ? number_format($item->current_price, 2) : 'N/A' }}</td>
                                                                        <td class="{{ $item->pnl > 0 ? 'text-success' : ($item->pnl < 0 ? 'text-danger' : '') }}">
-                                                                            {{ number_format($item->pnl, 2) ?? '' }}%
+                                                                            {{ $item->pnl ? number_format($item->pnl, 2) . '%' : 'N/A' }}
                                                                         </td>
                                                                        <td>{!! $item->status() !!}</td>
                                                                        <td>
@@ -76,7 +82,7 @@
                                                            </table>
                                                         </div>
 
-                                                     @foreach($data as $item)
+                                                     @foreach($buyOrders as $item)
                                                             <div class="modal fade" id="modalForm-{{ $item->id }}">
                                                                 <div class="modal-dialog" role="document">
                                                                     <div class="modal-content">
@@ -89,15 +95,15 @@
                                                                         <div class="modal-body">
                                                                             <form action="{{ route('admin.addStockProfit', $item->id) }}" method="POST" class="form-validate is-alter" enctype="multipart/form-data">
                                                                                 @csrf
-                                                                                <h4 class="m-3">${{ number_format($item->pnl, 2) }} </h4>
+                                                                                <h4 class="m-3">Current PnL: {{ $item->pnl ? number_format($item->pnl, 2) . '%' : 'N/A' }} </h4>
                                                                                 <div class="form-group">
-                                                                                    <label class="form-label" for="email-address">Amount</label>
+                                                                                    <label class="form-label" for="email-address">New PnL %</label>
                                                                                     <div class="form-control-wrap">
-                                                                                        <input type="number" step="0.000001" name="amount" class="form-control">
+                                                                                        <input type="number" step="0.01" name="amount" class="form-control" value="{{ $item->pnl ?? 0 }}">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <button type="submit" name="type" value="add" class="btn btn-primary">Add</button>
+                                                                                    <button type="submit" name="type" value="add" class="btn btn-primary">Update</button>
                                                                                 </div>
                                                                             </form>
                                                                         </div>
@@ -140,18 +146,28 @@
                                                                    <th>Date</th>
                                                                     <th>User</th>
                                                                     <th>Stock</th>
+                                                                    <th>Shares</th>
+                                                                    <th>Price</th>
                                                                     <th>Amount</th>
+                                                                    <th>Current Price</th>
+                                                                    <th>PNL %</th>
                                                                     <th>Status</th>
                                                                     <th>Action</th>
                                                                </tr>
                                                                </thead>
                                                                <tbody >
-                                                               @foreach($sellHistory as $item)
+                                                               @foreach($sellOrders as $item)
                                                                    <tr>
                                                                        <td>{{ date('d M, Y h:i A', strtotime($item->created_at)) ?? '' }}</td>
                                                                        <td>{{ $item->user->name ?? '' }}</td>
-                                                                       <td>{{ $item->buy_stock->stock->symbol ?? '' }}</td>
+                                                                       <td>{{ $item->stock->symbol ?? '' }}</td>
+                                                                       <td>{{ number_format($item->shares, 4) ?? '' }}</td>
+                                                                       <td>${{ number_format($item->price, 2) ?? '' }}</td>
                                                                        <td>${{ number_format($item->amount, 2) ?? ''}}</td>
+                                                                       <td>${{ $item->current_price ? number_format($item->current_price, 2) : 'N/A' }}</td>
+                                                                       <td class="{{ $item->pnl > 0 ? 'text-success' : ($item->pnl < 0 ? 'text-danger' : '') }}">
+                                                                            {{ $item->pnl ? number_format($item->pnl, 2) . '%' : 'N/A' }}
+                                                                        </td>
                                                                        <td>{!! $item->status() !!}</td>
                                                                        <td>
                                                                         <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $item->id }}">
@@ -165,7 +181,7 @@
                                                            </table>
                                                         </div>
 
-                                                     @foreach($sellHistory as $item)
+                                                     @foreach($sellOrders as $item)
                                                           <div class="modal fade" id="deleteModal-{{ $item->id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content">
