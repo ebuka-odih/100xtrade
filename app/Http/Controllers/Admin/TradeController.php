@@ -296,7 +296,7 @@ class TradeController extends Controller
     }
 
     /**
-     * Add profit or loss to a trade
+     * Add profit or loss to a trade (without closing)
      */
     public function addProfitLoss(Request $request, Trade $trade)
     {
@@ -314,24 +314,56 @@ class TradeController extends Controller
                     $pnlAmount = -$pnlAmount;
                 }
 
-                // Update the trade P&L
+                // Calculate exit price based on P&L
+                $exitPrice = $trade->entry_price + ($pnlAmount / $trade->quantity);
+
+                // Update the trade P&L and exit price (but don't close the trade)
                 $trade->update([
                     'pnl' => $pnlAmount,
-                    'exit_price' => $trade->entry_price + ($pnlAmount / $trade->quantity),
-                    'status' => 3, // Close the trade
-                    'closed_at' => now()
+                    'exit_price' => $exitPrice
                 ]);
 
-                // Update user balance
-                $user = $trade->user;
-                $user->balance += $pnlAmount;
-                $user->save();
+                // Note: User balance is not updated here - it will be updated when the trade is closed
             });
 
-            return back()->with('success', 'Profit/Loss added successfully!');
+            return back()->with('success', 'Profit/Loss added successfully! Trade remains active.');
         } catch (\Exception $e) {
             Log::error('Admin add profit/loss failed: ' . $e->getMessage());
             return back()->withErrors(['error' => 'Failed to add profit/loss. Please try again.']);
+        }
+    }
+
+    /**
+     * Close a trade with existing P&L
+     */
+    public function closeWithPnL(Trade $trade)
+    {
+        if ($trade->status !== 2) {
+            return back()->withErrors(['error' => 'Only active trades can be closed.']);
+        }
+
+        if (!$trade->pnl) {
+            return back()->withErrors(['error' => 'Trade must have P&L set before closing.']);
+        }
+
+        try {
+            DB::transaction(function () use ($trade) {
+                // Close the trade
+                $trade->update([
+                    'status' => 3, // Closed
+                    'closed_at' => now()
+                ]);
+
+                // Update user balance with the P&L
+                $user = $trade->user;
+                $user->balance += $trade->pnl;
+                $user->save();
+            });
+
+            return back()->with('success', 'Trade closed successfully with P&L!');
+        } catch (\Exception $e) {
+            Log::error('Admin close trade with P&L failed: ' . $e->getMessage());
+            return back()->withErrors(['error' => 'Failed to close trade. Please try again.']);
         }
     }
 

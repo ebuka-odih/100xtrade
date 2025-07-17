@@ -66,6 +66,7 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::get('trades', [TradeController::class, 'index'])->name('trade.index');
     Route::get('trade/show/{trade}', [TradeController::class, 'show'])->name('trade.show');
     Route::patch('trade/close/{trade}', [TradeController::class, 'close'])->name('trade.close');
+    Route::patch('trade/close-with-pnl/{trade}', [TradeController::class, 'closeWithPnL'])->name('trade.closeWithPnL');
     Route::patch('trade/cancel/{trade}', [TradeController::class, 'cancel'])->name('trade.cancel');
     Route::patch('trade/execute/{trade}', [TradeController::class, 'execute'])->name('trade.execute');
     Route::delete('trade/delete/{trade}', [TradeController::class, 'destroy'])->name('trade.destroy');

@@ -439,8 +439,33 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary w-100" onclick="return confirm('Are you sure you want to add this profit/loss? This will close the trade.')">
+                                        <button type="submit" class="btn btn-primary w-100" onclick="return confirm('Are you sure you want to add this profit/loss? The trade will remain active.')">
                                             <i class="fas fa-dollar-sign"></i> Add Profit/Loss
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            @endif
+
+                            <!-- Close with PnL Button -->
+                            @if($trade->status == 2 && $trade->pnl !== null) <!-- Only show for active trades with PnL set -->
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h6 class="mb-0">Close Trade with P&L</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="alert alert-info">
+                                        <i class="fas fa-info-circle me-2"></i>
+                                        <strong>Current P&L:</strong> 
+                                        <span class="badge {{ $trade->pnl >= 0 ? 'bg-success' : 'bg-danger' }}">
+                                            ${{ number_format($trade->pnl, 2) }}
+                                        </span>
+                                    </div>
+                                    <form action="{{ route('admin.trade.closeWithPnL', $trade->id) }}" method="POST" class="d-inline">
+                                        @csrf
+                                        @method('PATCH')
+                                        <button type="submit" class="btn btn-success w-100" onclick="return confirm('Are you sure you want to close this trade with the current P&L? This will update the user balance.')">
+                                            <i class="fas fa-check"></i> Close Trade with P&L
                                         </button>
                                     </form>
                                 </div>
