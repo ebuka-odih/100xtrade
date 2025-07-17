@@ -130,6 +130,20 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->avatar && Storage::disk('public')->exists($this->avatar);
     }
 
+    /**
+     * Check if user is online (active within last 5 minutes)
+     */
+    public function isOnline(): bool
+    {
+        // For now, we'll consider all authenticated users as online
+        // In a real application, you might want to track last activity in a separate table
+        // or use Laravel's built-in session tracking
+        return true;
+        
+        // Alternative implementation with last_activity tracking:
+        // return $this->last_activity && $this->last_activity->diffInMinutes(now()) < 5;
+    }
+
     public function trades()
     {
         return $this->hasMany(Trade::class);

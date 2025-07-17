@@ -26,7 +26,7 @@ class Trade extends Model
         'quantity',
         'order_type', // market, limit, stop
         'limit_price',
-        'interval', // execution interval
+        'interval', // expiry interval
         'scheduled_at', // scheduled execution time
         'filled_at',
         'closed_at'

@@ -196,7 +196,7 @@
                                     @if($trade->scheduled_at && $trade->status == 1)
                                         <div class="row mb-3">
                                             <div class="col-6">
-                                                <strong>Time Until Execution:</strong>
+                                                <strong>Time Until Expiry:</strong>
                                             </div>
                                             <div class="col-6">
                                                 @php
@@ -279,12 +279,12 @@
                                 </div>
                             </div>
 
-                            <!-- Execution Timing Information -->
+                            <!-- Expiry Timing Information -->
                             @if($trade->interval || $trade->scheduled_at)
                             <div class="card mt-3">
                                 <div class="card-header" style="background-color: #e3f2fd; border-bottom: 2px solid #2196f3;">
                                     <h6 class="mb-0 text-primary">
-                                        <i class="fas fa-clock me-2"></i>Execution Timing
+                                        <i class="fas fa-clock me-2"></i>Expiry Timing
                                     </h6>
                                 </div>
                                 <div class="card-body">

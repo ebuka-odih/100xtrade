@@ -42,6 +42,37 @@
             outline: none; /* Optional: to remove the default focus outline */
         }
 
+        /* Online status indicator */
+        .online-indicator {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 12px;
+            height: 12px;
+            background-color: #28a745;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 6px rgba(40, 167, 69, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+            }
+        }
+
+        .avatar-container {
+            position: relative;
+            display: inline-block;
+        }
+
     </style>
 
     <script src="//code.jivosite.com/widget/mkmE8hHuED" async></script>
@@ -219,11 +250,21 @@
                     <a class="d-flex gap-2 align-items-center" href="#" id="navbarDropdown4" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
                         @if(auth()->user()->hasAvatarImage())
-                            <img style="border-radius: 50%" height="40" width="40" class="img-fluid"
-                                 src="{{ auth()->user()->avatar_display }}" alt="user">
+                            <div class="avatar-container">
+                                <img style="border-radius: 50%" height="40" width="40" class="img-fluid"
+                                     src="{{ auth()->user()->avatar_display }}" alt="user">
+                                @if(auth()->user()->isOnline())
+                                    <span class="online-indicator"></span>
+                                @endif
+                            </div>
                         @else
-                            <div class="user-avatar-sm" style="border-radius: 50%; height: 40px; width: 40px; display: flex; justify-content: center; align-items: center; background: #798bff; color: white; font-weight: 500;">
-                                {{ auth()->user()->initials }}
+                            <div class="avatar-container">
+                                <div class="user-avatar-sm" style="border-radius: 50%; height: 40px; width: 40px; display: flex; justify-content: center; align-items: center; background: #798bff; color: white; font-weight: 500;">
+                                    {{ auth()->user()->initials }}
+                                </div>
+                                @if(auth()->user()->isOnline())
+                                    <span class="online-indicator"></span>
+                                @endif
                             </div>
                         @endif
                         <div class="d-flex flex-column d-none d-xl-block">
