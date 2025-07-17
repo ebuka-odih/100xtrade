@@ -297,7 +297,7 @@ a:hover {
                                             <th>Amount</th>
                                             <th>Entry Price</th>
                                             <th>Quantity</th>
-                                            <th>Current P&L</th>
+                                            <th>P&L</th>
                                             <th>Opened</th>
                                             <th>Actions</th>
                                         </tr>
@@ -316,7 +316,15 @@ a:hover {
                                                 <td>${{ number_format($trade->entry_price ?? 0, 2) }}</td>
                                                 <td>{{ number_format($trade->quantity ?? 0, 4) }}</td>
                                                 <td>
-                                                    @if($trade->entry_price)
+                                                    @if($trade->pnl !== null)
+                                                        <!-- Show admin-set PnL if available -->
+                                                        <span class="{{ $trade->pnl >= 0 ? 'text-success' : 'text-danger' }}">
+                                                            ${{ number_format($trade->pnl, 2) }}
+                                                        </span>
+                                                        <br>
+                                                        <small class="text-muted">Admin Set</small>
+                                                    @elseif($trade->entry_price)
+                                                        <!-- Show calculated percentage if no admin PnL -->
                                                         @php
                                                             $currentPrice = $trade->tradePair->current_price ?? $trade->entry_price;
                                                             $pnl = $trade->type === 'buy' 
@@ -326,6 +334,8 @@ a:hover {
                                                         <span class="{{ $pnl >= 0 ? 'text-success' : 'text-danger' }}">
                                                             {{ number_format($pnl, 2) }}%
                                                         </span>
+                                                        <br>
+                                                        <small class="text-muted">Calculated</small>
                                                     @else
                                                         <span class="text-muted">-</span>
                                                     @endif
@@ -404,6 +414,23 @@ a:hover {
                                                         <span class="{{ $trade->pnl >= 0 ? 'text-success' : 'text-danger' }}">
                                                             ${{ number_format($trade->pnl, 2) }}
                                                         </span>
+                                                        <br>
+                                                        <small class="text-muted">
+                                                            @if($trade->exit_price && $trade->entry_price)
+                                                                @php
+                                                                    $calculatedPnl = $trade->type === 'buy' 
+                                                                        ? ($trade->exit_price - $trade->entry_price) * $trade->quantity
+                                                                        : ($trade->entry_price - $trade->exit_price) * $trade->quantity;
+                                                                @endphp
+                                                                @if(abs($trade->pnl - $calculatedPnl) < 0.01)
+                                                                    Calculated
+                                                                @else
+                                                                    Admin Set
+                                                                @endif
+                                                            @else
+                                                                Admin Set
+                                                            @endif
+                                                        </small>
                                                     @else
                                                         <span class="text-muted">-</span>
                                                     @endif
@@ -440,121 +467,228 @@ a:hover {
                     <!-- Trade Details Modals -->
                     @foreach($openTrades->concat($closedTrades) as $trade)
                         <div class="modal fade" id="tradeModal{{ $trade->id }}" tabindex="-1">
-                            <div class="modal-dialog modal-lg">
+                            <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title">Trade Details - {{ $trade->symbol }}</h5>
+                                        <h5 class="modal-title">
+                                            <i class="fas fa-chart-line me-2"></i>
+                                            Trade Details - {{ $trade->symbol }}
+                                            <span class="badge ms-2 {{ $trade->pnl >= 0 ? 'bg-success' : 'bg-danger' }}">
+                                                @if($trade->pnl !== null)
+                                                    ${{ number_format($trade->pnl, 2) }}
+                                                @else
+                                                    Pending
+                                                @endif
+                                            </span>
+                                        </h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
+                                            <!-- Basic Information -->
                                             <div class="col-md-6">
-                                                <h6>Basic Information</h6>
-                                                <table class="table table-sm">
-                                                    <tr>
-                                                        <td><strong>Trade ID:</strong></td>
-                                                        <td>{{ $trade->id }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><strong>Symbol:</strong></td>
-                                                        <td>{{ $trade->symbol }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><strong>Market:</strong></td>
-                                                        <td>{!! $trade->market_badge !!}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><strong>Type:</strong></td>
-                                                        <td>{!! $trade->type_badge !!}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><strong>Amount:</strong></td>
-                                                        <td>${{ number_format($trade->amount, 2) }}</td>
-                                                    </tr>
-                                                </table>
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h6 class="mb-0"><i class="fas fa-info-circle me-2"></i>Basic Information</h6>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <table class="table table-sm table-borderless">
+                                                            <tr>
+                                                                <td width="40%"><strong>Trade ID:</strong></td>
+                                                                <td><code>{{ $trade->id }}</code></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>Symbol:</strong></td>
+                                                                <td><span class="fw-bold">{{ $trade->symbol }}</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>Market:</strong></td>
+                                                                <td>{!! $trade->market_badge !!}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>Type:</strong></td>
+                                                                <td>{!! $trade->type_badge !!}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>Amount:</strong></td>
+                                                                <td><span class="fw-bold text-primary">${{ number_format($trade->amount, 2) }}</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>Status:</strong></td>
+                                                                <td>{!! $trade->status_badge !!}</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
+
+                                            <!-- Price Information -->
                                             <div class="col-md-6">
-                                                <h6>Trade Details</h6>
-                                                <table class="table table-sm">
-                                                    <tr>
-                                                        <td><strong>Entry Price:</strong></td>
-                                                        <td>${{ number_format($trade->entry_price ?? 0, 2) }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><strong>Exit Price:</strong></td>
-                                                        <td>${{ number_format($trade->exit_price ?? 0, 2) }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><strong>Quantity:</strong></td>
-                                                        <td>{{ number_format($trade->quantity ?? 0, 4) }}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><strong>P&L:</strong></td>
-                                                        <td>
-                                                            @if($trade->pnl !== null)
-                                                                <span class="{{ $trade->pnl >= 0 ? 'text-success' : 'text-danger' }}">
-                                                                    ${{ number_format($trade->pnl, 2) }}
-                                                                </span>
-                                                            @else
-                                                                <span class="text-muted">-</span>
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h6 class="mb-0"><i class="fas fa-dollar-sign me-2"></i>Price Information</h6>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <table class="table table-sm table-borderless">
+                                                            <tr>
+                                                                <td width="40%"><strong>Entry Price:</strong></td>
+                                                                <td>
+                                                                    @if($trade->entry_price)
+                                                                        <span class="fw-bold text-success">${{ number_format($trade->entry_price, 8) }}</span>
+                                                                    @else
+                                                                        <span class="text-muted">Not set</span>
+                                                                    @endif
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>Exit Price:</strong></td>
+                                                                <td>
+                                                                    @if($trade->exit_price)
+                                                                        <span class="fw-bold text-info">${{ number_format($trade->exit_price, 8) }}</span>
+                                                                    @else
+                                                                        <span class="text-muted">Not set</span>
+                                                                    @endif
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>Quantity:</strong></td>
+                                                                <td>
+                                                                    @if($trade->quantity)
+                                                                        <span class="fw-bold">{{ number_format($trade->quantity, 8) }}</span>
+                                                                    @else
+                                                                        <span class="text-muted">Not calculated</span>
+                                                                    @endif
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>P&L:</strong></td>
+                                                                <td>
+                                                                    @if($trade->pnl !== null)
+                                                                        <span class="badge {{ $trade->pnl >= 0 ? 'bg-success' : 'bg-danger' }} fs-6">
+                                                                            ${{ number_format($trade->pnl, 2) }}
+                                                                        </span>
+                                                                    @else
+                                                                        <span class="text-muted">Not calculated</span>
+                                                                    @endif
+                                                                </td>
+                                                            </tr>
+                                                            @if($trade->pnl !== null && $trade->amount > 0)
+                                                                <tr>
+                                                                    <td><strong>ROI:</strong></td>
+                                                                    <td>
+                                                                        @php
+                                                                            $roi = ($trade->pnl / $trade->amount) * 100;
+                                                                        @endphp
+                                                                        <span class="badge {{ $roi >= 0 ? 'bg-success' : 'bg-danger' }}">
+                                                                            {{ number_format($roi, 2) }}%
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
                                                             @endif
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><strong>Status:</strong></td>
-                                                        <td>{!! $trade->status_badge !!}</td>
-                                                    </tr>
-                                                </table>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        <div class="row mt-3">
+                                            <!-- Order Information -->
+                                            <div class="col-md-6">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h6 class="mb-0"><i class="fas fa-cog me-2"></i>Order Information</h6>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <table class="table table-sm table-borderless">
+                                                            <tr>
+                                                                <td width="40%"><strong>Order Type:</strong></td>
+                                                                <td><span class="badge bg-info">{{ ucfirst($trade->order_type) }}</span></td>
+                                                            </tr>
+                                                            @if($trade->limit_price)
+                                                                <tr>
+                                                                    <td><strong>Limit Price:</strong></td>
+                                                                    <td>${{ number_format($trade->limit_price, 8) }}</td>
+                                                                </tr>
+                                                            @endif
+                                                            @if($trade->stop_loss)
+                                                                <tr>
+                                                                    <td><strong>Stop Loss:</strong></td>
+                                                                    <td><span class="text-danger">${{ number_format($trade->stop_loss, 8) }}</span></td>
+                                                                </tr>
+                                                            @endif
+                                                            @if($trade->take_profit)
+                                                                <tr>
+                                                                    <td><strong>Take Profit:</strong></td>
+                                                                    <td><span class="text-success">${{ number_format($trade->take_profit, 8) }}</span></td>
+                                                                </tr>
+                                                            @endif
+                                                            @if($trade->interval)
+                                                                <tr>
+                                                                    <td><strong>{{ $trade->market === 'stock' ? 'Expiry' : 'Execution' }}:</strong></td>
+                                                                    <td><span class="badge bg-warning">{{ $trade->interval_display }}</span></td>
+                                                                </tr>
+                                                            @endif
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Timeline Information -->
+                                            <div class="col-md-6">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h6 class="mb-0"><i class="fas fa-clock me-2"></i>Timeline</h6>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <table class="table table-sm table-borderless">
+                                                            <tr>
+                                                                <td width="40%"><strong>Created:</strong></td>
+                                                                <td>{{ $trade->created_at->format('M d, Y H:i:s') }}</td>
+                                                            </tr>
+                                                            @if($trade->filled_at)
+                                                                <tr>
+                                                                    <td><strong>Filled:</strong></td>
+                                                                    <td><span class="text-success">{{ $trade->filled_at->format('M d, Y H:i:s') }}</span></td>
+                                                                </tr>
+                                                            @endif
+                                                            @if($trade->closed_at)
+                                                                <tr>
+                                                                    <td><strong>Closed:</strong></td>
+                                                                    <td><span class="text-info">{{ $trade->closed_at->format('M d, Y H:i:s') }}</span></td>
+                                                                </tr>
+                                                            @endif
+                                                            @if($trade->scheduled_at)
+                                                                <tr>
+                                                                    <td><strong>Scheduled:</strong></td>
+                                                                    <td>{{ $trade->scheduled_at->format('M d, Y H:i:s') }}</td>
+                                                                </tr>
+                                                            @endif
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Additional Information -->
+                                        @if($trade->notes)
                                         <div class="row mt-3">
                                             <div class="col-12">
-                                                <h6>Order Information</h6>
-                                                <table class="table table-sm">
-                                                    <tr>
-                                                        <td><strong>Order Type:</strong></td>
-                                                        <td>{{ ucfirst($trade->order_type) }}</td>
-                                                    </tr>
-                                                    @if($trade->limit_price)
-                                                        <tr>
-                                                            <td><strong>Limit Price:</strong></td>
-                                                            <td>${{ number_format($trade->limit_price, 2) }}</td>
-                                                        </tr>
-                                                    @endif
-                                                    @if($trade->stop_loss)
-                                                        <tr>
-                                                            <td><strong>Stop Loss:</strong></td>
-                                                            <td>${{ number_format($trade->stop_loss, 2) }}</td>
-                                                        </tr>
-                                                    @endif
-                                                    @if($trade->take_profit)
-                                                        <tr>
-                                                            <td><strong>Take Profit:</strong></td>
-                                                            <td>${{ number_format($trade->take_profit, 2) }}</td>
-                                                        </tr>
-                                                    @endif
-                                                    <tr>
-                                                        <td><strong>Created:</strong></td>
-                                                        <td>{{ $trade->created_at->format('M d, Y H:i:s') }}</td>
-                                                    </tr>
-                                                    @if($trade->filled_at)
-                                                        <tr>
-                                                            <td><strong>Filled:</strong></td>
-                                                            <td>{{ $trade->filled_at->format('M d, Y H:i:s') }}</td>
-                                                        </tr>
-                                                    @endif
-                                                    @if($trade->closed_at)
-                                                        <tr>
-                                                            <td><strong>Closed:</strong></td>
-                                                            <td>{{ $trade->closed_at->format('M d, Y H:i:s') }}</td>
-                                                        </tr>
-                                                    @endif
-                                                </table>
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h6 class="mb-0"><i class="fas fa-sticky-note me-2"></i>Notes</h6>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <p class="mb-0">{{ $trade->notes }}</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        @endif
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                            <i class="fas fa-times me-1"></i>Close
+                                        </button>
                                     </div>
                                 </div>
                             </div>
