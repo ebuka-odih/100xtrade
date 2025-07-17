@@ -48,6 +48,7 @@ class TradeController extends Controller
         $request->validate([
             'type' => 'required|in:buy,sell',
             'amount' => 'required|numeric|min:' . $tradePair->min_amount . '|max:' . $tradePair->max_amount,
+            'entry_price' => 'nullable|numeric|min:0',
             'stop_loss' => 'nullable|numeric|min:0',
             'take_profit' => 'nullable|numeric|min:0',
             'order_type' => 'required|in:market,limit,stop',
@@ -84,6 +85,9 @@ class TradeController extends Controller
                     }
                 }
                 
+                // Use provided entry price or current price
+                $entryPrice = $request->entry_price ?: $currentPrice;
+                
                 $trade = Trade::create([
                     'user_id' => $user->id,
                     'market' => $tradePair->market,
@@ -91,6 +95,7 @@ class TradeController extends Controller
                     'type' => $request->type,
                     'amount' => $request->amount,
                     'price' => $currentPrice,
+                    'entry_price' => $entryPrice,
                     'stop_loss' => $request->stop_loss,
                     'take_profit' => $request->take_profit,
                     'status' => 1, // Pending
@@ -257,7 +262,7 @@ class TradeController extends Controller
     {
         $trade->update([
             'price' => $currentPrice,
-            'entry_price' => $currentPrice,
+            'entry_price' => $trade->entry_price ?: $currentPrice, // Use existing entry_price or current price
             'quantity' => $trade->amount / $currentPrice,
             'status' => 2, // Active
             'filled_at' => now()

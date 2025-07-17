@@ -14,22 +14,23 @@ class Trade extends Model
         'user_id',
         'market',
         'symbol',
-        'type', // buy/sell
+        'type',
         'amount',
         'price',
-        'stop_loss',
-        'take_profit',
-        'status', // pending, active, closed, cancelled
-        'pnl',
         'entry_price',
         'exit_price',
         'quantity',
-        'order_type', // market, limit, stop
+        'stop_loss',
+        'take_profit',
+        'status',
+        'pnl',
+        'order_type',
         'limit_price',
-        'interval', // expiry interval
-        'scheduled_at', // scheduled execution time
+        'interval',
+        'scheduled_at',
         'filled_at',
-        'closed_at'
+        'closed_at',
+        'notes',
     ];
 
     protected $casts = [

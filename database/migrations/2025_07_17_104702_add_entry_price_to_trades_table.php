@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('trades', function (Blueprint $table) {
-            //
+            $table->decimal('entry_price', 15, 8)->nullable()->after('price');
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('trades', function (Blueprint $table) {
-            //
+            $table->dropColumn('entry_price');
         });
     }
 };

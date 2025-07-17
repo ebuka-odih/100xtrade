@@ -69,6 +69,29 @@
                     <h4 class="mb-0">Trade Markets</h4>
                 </div>
                 <div class="card-body">
+                    <!-- Search Input -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-text bg-dark border-secondary">
+                                    <i class="fas fa-search text-light"></i>
+                                </span>
+                                <input type="text" class="form-control bg-dark border-secondary text-light" 
+                                       id="searchInput" 
+                                       placeholder="Search stocks, crypto, or forex by symbol or name..."
+                                       style="color: #e2e8f0 !important;">
+                                <button class="btn btn-outline-secondary" type="button" id="clearSearch">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <span class="text-muted" id="searchResults">
+                                Showing all items
+                            </span>
+                        </div>
+                    </div>
+
                     <!-- Market Tabs -->
                     <ul class="nav nav-tabs" id="marketTabs" role="tablist">
                         <li class="nav-item" role="presentation">
@@ -102,7 +125,7 @@
                                     </thead>
                                     <tbody>
                                         @foreach($stocks as $stock)
-                                            <tr>
+                                            <tr data-symbol="{{ strtolower($stock->symbol) }}" data-name="{{ strtolower($stock->name) }}" data-market="stock">
                                                 <td>
                                                     <div class="d-flex align-items-center">
                                                         <img src="{{ asset('img/stock/' . strtolower($stock->symbol) . '.png') }}" 
@@ -139,7 +162,7 @@
                                     </thead>
                                     <tbody>
                                         @foreach($cryptos as $crypto)
-                                            <tr>
+                                            <tr data-symbol="{{ strtolower($crypto->symbol) }}" data-name="{{ strtolower($crypto->name) }}" data-market="crypto">
                                                 <td>
                                                     <div class="d-flex align-items-center">
                                                         <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-2" 

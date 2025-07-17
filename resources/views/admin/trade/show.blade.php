@@ -116,15 +116,24 @@
                                         </div>
                                     </div>
 
-                                    @if($trade->entry_price)
-                                        <div class="row mb-3">
-                                            <div class="col-6">
-                                                <strong>Entry Price:</strong>
-                                            </div>
-                                            <div class="col-6">
-                                                ${{ number_format($trade->entry_price, 2) }}
-                                            </div>
+                                    <div class="row mb-3">
+                                        <div class="col-6">
+                                            <strong>Price:</strong>
                                         </div>
+                                        <div class="col-6">
+                                            ${{ number_format($trade->price, 8) }}
+                                        </div>
+                                    </div>
+
+                                    @if($trade->entry_price)
+                                    <div class="row mb-3">
+                                        <div class="col-6">
+                                            <strong>Entry Price:</strong>
+                                        </div>
+                                        <div class="col-6">
+                                            ${{ number_format($trade->entry_price, 8) }}
+                                        </div>
+                                    </div>
                                     @endif
 
                                     @if($trade->exit_price)

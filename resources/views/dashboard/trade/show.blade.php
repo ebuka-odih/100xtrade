@@ -197,6 +197,13 @@ body {
                                             </div>
                                         </div>
 
+                                        <!-- Entry Price -->
+                                        <div class="mb-3">
+                                            <label for="entry_price" class="form-label">Entry Price (Optional)</label>
+                                            <input type="number" class="form-control" id="entry_price" name="entry_price" step="0.00000001" placeholder="Enter entry price">
+                                            <small class="form-text text-muted">Leave empty to use current market price</small>
+                                        </div>
+
                                         <!-- Order Type -->
                                         <div class="mb-3">
                                             <label for="order_type" class="form-label">Order Type</label>
@@ -361,6 +368,38 @@ body {
             }
         });
         @endif
+
+        // Entry price enhancement
+        const entryPriceInput = document.getElementById('entry_price');
+        const currentPrice = {{ $tradePair->current_price }};
+        
+        // Add placeholder with current price
+        entryPriceInput.placeholder = `Current price: $${currentPrice.toFixed(8)}`;
+        
+        // Add visual feedback
+        entryPriceInput.addEventListener('input', function() {
+            if (this.value) {
+                const inputPrice = parseFloat(this.value);
+                if (inputPrice > 0) {
+                    this.style.borderColor = '#28a745';
+                } else {
+                    this.style.borderColor = '#dc3545';
+                }
+            } else {
+                this.style.borderColor = '#5b5b5b';
+            }
+        });
+        
+        // Add a button to set current price
+        const currentPriceButton = document.createElement('button');
+        currentPriceButton.type = 'button';
+        currentPriceButton.className = 'btn btn-sm btn-outline-secondary mt-1';
+        currentPriceButton.innerHTML = '<i class="fas fa-clock"></i> Use Current Price';
+        currentPriceButton.onclick = function() {
+            entryPriceInput.value = currentPrice.toFixed(8);
+            entryPriceInput.style.borderColor = '#28a745';
+        };
+        entryPriceInput.parentNode.appendChild(currentPriceButton);
     });
 </script>
 
