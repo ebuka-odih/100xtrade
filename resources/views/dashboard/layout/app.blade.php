@@ -88,8 +88,9 @@
         <div class="sidebar-heading">
             <a href="{{ route('index') }}">
                 {{--            <h3>{{ env('APP_NAME') }}</h3>--}}
-                <img style="margin-left: -80px; margin-top: -30px" src="{{ asset('img/logo2.png') }}" alt="logo"
-                     width="280" height="80">
+                {{-- <img style="margin-left: -80px; margin-top: -30px" src="{{ asset('img/logo2.png') }}" alt="logo"
+                     width="280" height="80"> --}}
+                <h3 class="text-white mb-0">Bitrader</h3>
             </a>
         </div>
         <nav class="sidebar mb-4">
