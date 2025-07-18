@@ -288,34 +288,34 @@
 
 /* Deposit Button */
 .deposit-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
     color: white;
 }
 
 .deposit-btn:hover {
-    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
     color: white;
     border-color: rgba(255, 255, 255, 0.3);
 }
 
 .deposit-btn .button-icon {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Withdraw Button */
 .withdraw-btn {
-    background: linear-gradient(135deg, #ffc107 0%, #ff8c00 100%);
+    background: linear-gradient(135deg, #c05621 0%, #9c4221 100%);
     color: white;
 }
 
 .withdraw-btn:hover {
-    background: linear-gradient(135deg, #e6ac00 0%, #e67e00 100%);
+    background: linear-gradient(135deg, #9c4221 0%, #7c2d12 100%);
     color: white;
     border-color: rgba(255, 255, 255, 0.3);
 }
 
 .withdraw-btn .button-icon {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive adjustments */
