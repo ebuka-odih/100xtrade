@@ -33,6 +33,8 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
 
     Route::get('/referrals', [ReferralController::class, 'index'])->name('referrals.index');
 
+    Route::get('wallet', [UserController::class, 'wallet'])->name('wallet');
+
     Route::get('deposit', [DepositController::class, 'deposit'])->name('deposit');
     Route::post('process/deposit/', [DepositController::class, 'processDeposit'])->name('processDeposit');
     Route::get('crypto/payment/{id}', [DepositController::class, 'cryptoPayment'])->name('cryptoPayment');

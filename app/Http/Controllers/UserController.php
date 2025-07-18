@@ -56,6 +56,15 @@ class UserController extends Controller
         return view('dashboard.index', compact('user', 'withdrawal', 'deposit', 'invested', 'stockHoldings', 'totalHoldingsValue'));
     }
 
+    public function wallet()
+    {
+        $user = Auth::user();
+        $withdrawal = Withdrawal::whereUserId(auth()->id())->where('status', 1)->sum('amount');
+        $deposit = Deposit::whereUserId(auth()->id())->where('status', 1)->sum('amount');
+        
+        return view('dashboard.wallet', compact('user', 'withdrawal', 'deposit'));
+    }
+
     public function profile()
     {
         $user = Auth::user();

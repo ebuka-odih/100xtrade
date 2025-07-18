@@ -102,21 +102,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex gap-2 align-items-center {{ Route::is('user.deposit') ? 'active' : '' }}"
-                       href="{{ route('user.deposit') }}">
-                    <span class="material-symbols-outlined fw-lighter">
-                        account_balance_wallet
-                    </span>
-                        <span class="fw-semibold">Deposit</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link d-flex gap-2 align-items-center {{ Route::is('user.withdrawal') ? 'active' : '' }}"
-                       href="{{ route('user.withdrawal') }}">
-              <span class="fa fa-arrow-up">
-
-              </span>
-                        <span class="fw-semibold">Withdraw</span>
+                    <a class="nav-link d-flex gap-2 align-items-center {{ Route::is('user.wallet') ? 'active' : '' }}"
+                       href="{{ route('user.wallet') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/>
+                            <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/>
+                            <path d="M18 12a2 2 0 0 0-2 2v4h4v-4a2 2 0 0 0-2-2z"/>
+                        </svg>
+                        <span class="fw-semibold">Wallet</span>
                     </a>
                 </li>
                 
