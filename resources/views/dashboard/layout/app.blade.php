@@ -90,7 +90,7 @@
                 {{--            <h3>{{ env('APP_NAME') }}</h3>--}}
                 {{-- <img style="margin-left: -80px; margin-top: -30px" src="{{ asset('img/logo2.png') }}" alt="logo"
                      width="280" height="80"> --}}
-                <h3 class="text-white mb-0">Bitrader</h3>
+                <h3 class="brand-logo">Bitrader</h3>
             </a>
         </div>
         <nav class="sidebar mb-4">
@@ -357,6 +357,30 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
 <script src="{{ asset('assets/js/chart.js') }}"></script>
+
+<style>
+.brand-logo {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.brand-logo:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+</style>
+
 </body>
 
 
