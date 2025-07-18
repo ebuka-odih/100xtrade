@@ -79,26 +79,38 @@
                             <div class="row g-3">
                                 <div class="col-6">
                                     <div class="text-center">
-                                        <h5 class="text-white mb-1">${{ number_format($user->balance, 2) }}</h5>
-                                        <small class="text-muted">Available Balance</small>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="text-center">
                                         <h5 class="text-white mb-1">${{ number_format($invested, 2) }}</h5>
                                         <small class="text-muted">Total Invested</small>
+                                        <div class="mt-1">
+                                            <small class="text-white-50">Money in stocks</small>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="text-center">
                                         <h5 class="text-white mb-1">${{ number_format($deposit, 2) }}</h5>
                                         <small class="text-muted">Total Deposits</small>
+                                        <div class="mt-1">
+                                            <small class="text-white-50">Funds added</small>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="text-center">
                                         <h5 class="text-white mb-1">${{ number_format($withdrawal, 2) }}</h5>
                                         <small class="text-muted">Total Withdrawals</small>
+                                        <div class="mt-1">
+                                            <small class="text-white-50">Funds withdrawn</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-center">
+                                        <h5 class="text-white mb-1">{{ $stockHoldings->count() }}</h5>
+                                        <small class="text-muted">Active Positions</small>
+                                        <div class="mt-1">
+                                            <small class="text-white-50">Current holdings</small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
