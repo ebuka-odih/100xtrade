@@ -46,6 +46,7 @@ class DepositController extends Controller
     public function confirmPayment(Request $request, $id)
     {
         $validated = $request->validate([
+            'txid' => 'nullable|string|max:255',
             'proof' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
@@ -54,6 +55,7 @@ class DepositController extends Controller
         }
 
         $deposit = Deposit::findOrFail($id);
+        $deposit->txid = $validated['txid'] ?? null;
         $deposit->proof = $avatarPath ?? null;
         $deposit->save();
 
@@ -79,6 +81,7 @@ class DepositController extends Controller
         $validated = $request->validate([
             'amount' => 'required',
             'payment_method_id' => 'required',
+            'txid' => 'nullable|string|max:255',
             'proof' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
@@ -90,6 +93,7 @@ class DepositController extends Controller
         $deposit->user_id = Auth::id();
         $deposit->amount = $validated['amount'];
         $deposit->payment_method_id = $validated['payment_method_id'];
+        $deposit->txid = $validated['txid'] ?? null;
         $deposit->proof = $avatarPath ?? null;
         $deposit->save();
 

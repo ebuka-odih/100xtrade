@@ -104,9 +104,15 @@
                                 <label>Amount</label>
                                 <input type="number" name="amount" class="form-control" required="">
                             </div>
-                            <div>
-                                <label>Payment Proof</label>
-                                <input type="file" class="form-control" name="proof" required>
+                            <div class="form-group mb-2">
+                                <label>Transaction Reference (Optional)</label>
+                                <input type="text" name="txid" class="form-control" placeholder="Enter bank reference number">
+                                <small class="text-muted">Enter the bank transfer reference number if available</small>
+                            </div>
+                            <div class="form-group mb-2">
+                                <label>Payment Screenshot <span class="text-muted">(Optional)</span></label>
+                                <input type="file" class="form-control" name="proof" accept="image/*">
+                                <small class="text-muted">Upload a screenshot of your bank transfer confirmation</small>
                             </div>
                             <div class="text-center mt-2">
                                  <button class="btn btn-success btn-block mt-3 ">Process Deposit</button>

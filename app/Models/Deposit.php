@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 class Deposit extends Model
 {
     use HasFactory, HasUuids;
-    protected $fillable = ['user_id', 'amount', 'payment_method_id', 'proof', 'status'];
+    protected $fillable = ['user_id', 'amount', 'payment_method_id', 'proof', 'txid', 'status'];
 
 
     public function user()

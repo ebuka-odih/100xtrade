@@ -15,13 +15,13 @@
                             <button class="btn btn-outline-light btn-sm" onclick="updateChart('30d')">30D</button>
                             <button class="btn btn-outline-light btn-sm" onclick="updateChart('90d')">90D</button>
                         </div>
-                    </div>
+                </div>
                     <div class="chart-container" style="position: relative; height: 400px;">
                         <canvas id="balanceChart"></canvas>
-                    </div>
-                </div>
+              </div>
+              </div>
             </div>
-        </div>
+          </div>
 
         <!-- Right Column - Stats Cards (4 columns) -->
         <div class="col-lg-4">
@@ -30,8 +30,8 @@
                 <div class="col-12">
                     <div class="card bg-gradient-primary border-0 shadow-lg">
                         <div class="card-body p-4">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div>
                                     <h6 class="text-white-50 mb-1">Total Profit</h6>
                                     <h3 class="text-white mb-0">${{ number_format($user->profit, 2) }}</h3>
                                     <small class="text-white-50">Lifetime earnings</small>
@@ -41,19 +41,19 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
                                             <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                                         </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
 
                 <!-- Stock Holdings Card -->
                 <div class="col-12">
                     <div class="card bg-gradient-success border-0 shadow-lg">
                         <div class="card-body p-4">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div>
                                     <h6 class="text-white-50 mb-1">Stock Holdings</h6>
                                     <h3 class="text-white mb-0">${{ number_format($totalHoldingsValue ?? 0, 2) }}</h3>
                                     <small class="text-white-50">{{ $stockHoldings->count() }} positions</small>
@@ -115,11 +115,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+              </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
+          </div>
 
     <!-- Stock Holdings Table -->
     @if($stockHoldings->count() > 0)
@@ -170,10 +170,10 @@
                                 @endforeach
                             </tbody>
                         </table>
-                    </div>
-                </div>
+              </div>
+              </div>
             </div>
-        </div>
+          </div>
     </div>
     @endif
 
@@ -183,70 +183,70 @@
             <div class="card bg-dark border-0 shadow-lg">
                 <div class="card-header bg-transparent border-0">
                     <h5 class="text-white mb-0">Market Overview</h5>
-                </div>
+        </div>
                 <div class="card-body p-0">
-                    <div class="tradingview-widget-container">
-                        <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>
                         <div class="tradingview-widget-copyright">
                             <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"></a>
                         </div>
-                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
-                        {
-                        "width": "100%",
+                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                  {
+                  "width": "100%",
                         "height": "400",
-                        "symbolsGroups": [
-                            {
-                                "name": "Indices",
-                                "originalName": "Indices",
-                                "symbols": [
-                                    {
-                                        "name": "FOREXCOM:SPXUSD",
-                                        "displayName": "S&P 500 Index"
-                                    },
-                                    {
-                                        "name": "FOREXCOM:NSXUSD",
-                                        "displayName": "US 100 Cash CFD"
-                                    },
-                                    {
-                                        "name": "FOREXCOM:DJI",
-                                        "displayName": "Dow Jones Industrial Average Index"
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "Stocks",
-                                "symbols": [
-                                    {
-                                        "name": "NASDAQ:NVDA",
-                                        "displayName": "NVDA"
-                                    },
-                                    {
-                                        "name": "NASDAQ:TSLA",
-                                        "displayName": "Tesla"
-                                    },
-                                    {
-                                        "name": "NASDAQ:AAPL",
-                                        "displayName": "APPLE INC"
-                                    },
-                                    {
-                                        "name": "NASDAQ:META",
-                                        "displayName": "META INC"
-                                    },
-                                    {
-                                        "name": "NASDAQ:MSFT",
-                                        "displayName": "MICROSOFT"
-                                    }
-                                ]
-                            }
-                        ],
-                        "showSymbolLogo": true,
-                        "isTransparent": false,
-                        "colorTheme": "dark",
-                        "locale": "en",
-                        "backgroundColor": "#131722"
+                  "symbolsGroups": [
+                    {
+                      "name": "Indices",
+                      "originalName": "Indices",
+                      "symbols": [
+                        {
+                          "name": "FOREXCOM:SPXUSD",
+                          "displayName": "S&P 500 Index"
+                        },
+                        {
+                          "name": "FOREXCOM:NSXUSD",
+                          "displayName": "US 100 Cash CFD"
+                        },
+                        {
+                          "name": "FOREXCOM:DJI",
+                          "displayName": "Dow Jones Industrial Average Index"
                         }
-                        </script>
-                    </div>
+                      ]
+                    },
+                    {
+                      "name": "Stocks",
+                      "symbols": [
+                        {
+                          "name": "NASDAQ:NVDA",
+                          "displayName": "NVDA"
+                        },
+                        {
+                          "name": "NASDAQ:TSLA",
+                          "displayName": "Tesla"
+                        },
+                        {
+                          "name": "NASDAQ:AAPL",
+                          "displayName": "APPLE INC"
+                        },
+                        {
+                          "name": "NASDAQ:META",
+                          "displayName": "META INC"
+                        },
+                        {
+                          "name": "NASDAQ:MSFT",
+                          "displayName": "MICROSOFT"
+                        }
+                      ]
+                    }
+                  ],
+                  "showSymbolLogo": true,
+                  "isTransparent": false,
+                  "colorTheme": "dark",
+                  "locale": "en",
+                  "backgroundColor": "#131722"
+                }
+                  </script>
+                </div>
                 </div>
             </div>
         </div>
@@ -254,15 +254,15 @@
 
     <!-- Referral Section -->
     <div class="row my-4">
-        <div class="col-12">
+                 <div class="col-12">
             <div class="card bg-dark border-0 shadow-lg">
                 <div class="card-body p-4">
                     <h6 class="text-white mb-3">Referral Program</h6>
                     <div class="input-group">
                         <input type="text" 
-                               value="{{ route('register', ['ref' => auth()->user()->referral->code]) }}" 
-                               id="referralLink" 
-                               readonly 
+                            value="{{ route('register', ['ref' => auth()->user()->referral->code]) }}"
+                            id="referralLink"
+                            readonly
                                class="form-control bg-dark text-white border-secondary">
                         <button class="btn btn-primary" onclick="copyReferral()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -274,9 +274,9 @@
                     </div>
                 </div>
             </div>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
 
 <!-- Chart.js CDN -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

@@ -46,8 +46,14 @@
 
                             </div>
                             <div class="mt-5">
-                                <label>Payment Proof</label>
-                                <input type="file" class="form-control" name="proof" required>
+                                <label>Transaction ID (TXID) <span class="text-muted">(Optional)</span></label>
+                                <input type="text" class="form-control" name="txid" placeholder="Enter transaction ID">
+                                <small class="text-muted">Enter the transaction hash/ID from your wallet</small>
+                            </div>
+                            <div class="mt-3">
+                                <label>Payment Screenshot <span class="text-muted">(Optional)</span></label>
+                                <input type="file" class="form-control" name="proof" accept="image/*">
+                                <small class="text-muted">Upload a screenshot of your payment confirmation</small>
                             </div>
                             <div class="text-center mt-2">
                                  <button class="btn btn-success btn-block mt-3 ">Confirm Deposit</button>

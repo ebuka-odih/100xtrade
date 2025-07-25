@@ -158,27 +158,27 @@
                                     <td>
                                         <div class="d-flex align-items-center gap-2">
                                             @if($transaction instanceof \App\Models\Deposit)
-                                                <span class="badge bg-success">Deposit</span>
+                                                <span class="badge bg-success text-white">Deposit</span>
                                             @else
-                                                <span class="badge bg-warning">Withdrawal</span>
+                                                <span class="badge bg-warning text-white">Withdrawal</span>
                                             @endif
                                         </div>
                                     </td>
                                     <td class="text-white">${{ number_format($transaction->amount, 2) }}</td>
                                     <td>
                                         @if($transaction->status == 1)
-                                            <span class="badge bg-success">Completed</span>
+                                            <span class="badge bg-success text-white">Completed</span>
                                         @elseif($transaction->status == 0)
-                                            <span class="badge bg-warning">Pending</span>
+                                            <span class="badge bg-warning text-white">Pending</span>
                                         @else
-                                            <span class="badge bg-danger">Failed</span>
+                                            <span class="badge bg-danger text-white">Failed</span>
                                         @endif
                                     </td>
                                     <td class="text-white">{{ $transaction->created_at->format('M d, Y') }}</td>
                                 </tr>
                                 @empty
                                 <tr>
-                                    <td colspan="4" class="text-center text-white-50 py-4">
+                                    <td colspan="4" class="text-center text-white py-4">
                                         No transactions found
                                     </td>
                                 </tr>
@@ -212,6 +212,12 @@
 .table-dark th,
 .table-dark td {
     border-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.table-dark th {
+    color: white;
+    font-weight: 600;
 }
 
 /* Action Button Styles */
@@ -266,10 +272,11 @@
     margin: 0;
     font-weight: 600;
     font-size: 1rem;
+    color: white;
 }
 
 .button-text small {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.8rem;
     margin-top: 2px;
     display: block;
