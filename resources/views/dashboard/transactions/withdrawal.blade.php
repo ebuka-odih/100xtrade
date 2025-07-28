@@ -66,14 +66,15 @@
                             <select id="withdrawalMethod" name="payment_method" class="form-control mb-3" onchange="toggleBeneficiaryFields()">
                                 <option value="">Select Payment Method</option>
                                 <option value="crypto">Crypto</option>
-                                <option value="bank">Bank Transfer</option>
-                                <option value="paypal">PayPal</option>
+                                <option value="bank" disabled>Bank Transfer</option>
+                                {{-- <option value="paypal">PayPal</option> --}}
                             </select>
 
                             <div id="beneficiaryField6" style="display: none;">
                                 <div class="form-group">
                                     <label>Wallet</label>
                                     <select name="wallet" id="" class="form-control">
+                                        <option value="USDT">USDT</option>
                                         <option value="Bitcoin">Bitcoin</option>
                                         <option value="Ethereum">Ethereum</option>
                                         <option value="Solana">Solana</option>
