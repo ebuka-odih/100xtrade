@@ -314,19 +314,26 @@ class TradeController extends Controller
                     $pnlAmount = -$pnlAmount;
                 }
 
-                // Calculate exit price based on P&L
-                $exitPrice = $trade->entry_price + ($pnlAmount / $trade->quantity);
+                // Get existing P&L (default to 0 if null)
+                $existingPnl = $trade->pnl ?? 0;
+                
+                // Add new P&L to existing P&L (accumulate)
+                $totalPnl = $existingPnl + $pnlAmount;
 
-                // Update the trade P&L and exit price (but don't close the trade)
+                // Calculate exit price based on total P&L
+                $exitPrice = $trade->entry_price + ($totalPnl / $trade->quantity);
+
+                // Update the trade with accumulated P&L and new exit price
                 $trade->update([
-                    'pnl' => $pnlAmount,
+                    'pnl' => $totalPnl,
                     'exit_price' => $exitPrice
                 ]);
 
                 // Note: User balance is not updated here - it will be updated when the trade is closed
             });
 
-            return back()->with('success', 'Profit/Loss added successfully! Trade remains active.');
+            $pnlType = $request->pnl_type === 'profit' ? 'Profit' : 'Loss';
+            return back()->with('success', "{$pnlType} added successfully! Total P&L: $" . number_format($trade->fresh()->pnl, 2) . ". Trade remains active.");
         } catch (\Exception $e) {
             Log::error('Admin add profit/loss failed: ' . $e->getMessage());
             return back()->withErrors(['error' => 'Failed to add profit/loss. Please try again.']);

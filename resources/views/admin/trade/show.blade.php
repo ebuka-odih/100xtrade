@@ -410,7 +410,7 @@
                             </div>
 
                             <!-- Profit/Loss Form -->
-                            @if($trade->status == 2) <!-- Only show for active trades -->
+                          <!-- Only show for active trades -->
                             <div class="card mt-3">
                                 <div class="card-header">
                                     <h6 class="mb-0">Add Profit/Loss</h6>
@@ -445,7 +445,7 @@
                                     </form>
                                 </div>
                             </div>
-                            @endif
+                           
 
                             <!-- Close with PnL Button -->
                             @if($trade->status == 2 && $trade->pnl !== null) <!-- Only show for active trades with PnL set -->
@@ -464,7 +464,7 @@
                                     <form action="{{ route('admin.trade.closeWithPnL', $trade->id) }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('PATCH')
-                                        <button type="submit" class="btn btn-success w-100" onclick="return confirm('Are you sure you want to close this trade with the current P&L? This will update the user balance.')">
+                                        <button type="submit" class="btn btn-danger w-100" onclick="return confirm('Are you sure you want to close this trade with the current P&L? This will update the user balance.')">
                                             <i class="fas fa-check"></i> Close Trade with P&L
                                         </button>
                                     </form>
