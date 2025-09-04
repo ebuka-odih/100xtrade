@@ -1,6 +1,6 @@
 @extends('pages.layout.app')
 @section('content')
-
+<br><br><br>
 <section class="sec-padding">
   <div class="container">
     <h2 class="section-heading">Privacy Policy</h2>

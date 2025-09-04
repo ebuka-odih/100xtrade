@@ -1,6 +1,8 @@
 @extends('pages.layout.app')
 @section('content')
 
+<br><br><br>
+
 <section style="margin-top: 20px; color: white" class="sec-padding">
   <div class="container">
     <h2 class="section-heading">Terms of Service</h2>
