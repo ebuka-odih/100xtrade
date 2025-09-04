@@ -1,7 +1,7 @@
 @extends('pages.layout.app')
 @section('content')
 
-<section class="sec-padding">
+<section style="margin-top: 20px; color: white" class="sec-padding">
   <div class="container">
     <h2 class="section-heading">Terms of Service</h2>
     <p>Welcome to <strong>100xTrader</strong>. By accessing or using our platform, you agree to comply with and be bound by these Terms of Service. Please read them carefully before trading or using any of our services.</p>
