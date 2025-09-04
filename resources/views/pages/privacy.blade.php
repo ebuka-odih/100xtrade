@@ -2,7 +2,7 @@
 @section('content')
 <br><br><br>
 <section class="sec-padding">
-  <div class="container">
+   <div class="container">
     <h2 class="section-heading">Privacy Policy</h2>
     <p>Your privacy is important to us at <strong>100xTrader</strong>. This Privacy Policy explains how we collect, use, and protect your personal information.</p>
 
@@ -36,6 +36,15 @@
 
     <h3>7. Updates to Privacy Policy</h3>
     <p>We may update this Privacy Policy from time to time. Continued use of our services indicates your acceptance of changes.</p>
+
+    <h3>8. Data Retention</h3>
+    <p>We retain your personal data only for as long as necessary to comply with legal obligations, resolve disputes, and provide our services effectively.</p>
+
+    <h3>9. Third-Party Services</h3>
+    <p>Our platform may integrate with third-party tools or services. We are not responsible for how these third parties handle your data. Please review their policies separately.</p>
+
+    <h3>10. Contact Information</h3>
+    <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at <a href="mailto:support@100xtrader.com">support@100xtrader.com</a>.</p>
   </div>
 </section>
 

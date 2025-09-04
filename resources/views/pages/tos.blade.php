@@ -29,6 +29,18 @@
 
     <h3>6. Amendments</h3>
     <p>We may update these Terms of Service at any time. Continued use of the platform after changes means you accept the revised terms.</p>
+
+    <h3>7. Termination of Service</h3>
+    <p>We reserve the right to suspend or terminate your account if you violate these terms or engage in activities harmful to the platform or community.</p>
+
+    <h3>8. Compliance with Laws</h3>
+    <p>You agree to comply with all applicable laws and regulations related to trading, taxation, and anti-money laundering in your jurisdiction.</p>
+
+    <h3>9. Intellectual Property</h3>
+    <p>All content, branding, and technology on our platform are the property of 100xTrader. Unauthorized use, copying, or distribution is strictly prohibited.</p>
+
+    <h3>10. Governing Law & Disputes</h3>
+    <p>These Terms of Service are governed by the laws of the jurisdiction in which 100xTrader operates. Any disputes shall be resolved through arbitration or the appropriate legal courts.</p>
   </div>
 </section>
 
