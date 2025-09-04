@@ -152,8 +152,6 @@
               <!-- <li><a href="#">Product</a></li> -->
               <li><a href="#">About</a></li>
               <li><a href="#">Features</a></li>
-              <li><a href="#">Affiliate</a></li>
-              <li><a href="#">Blog</a></li>
             </ul>
           </div>
           <div class="col-lg-2">
@@ -165,17 +163,7 @@
               <li><a href="#">Privacy Policy</a></li>
             </ul>
           </div>
-          <div class="col-lg-4">
-            <h3>NEWSLETTER</h3>
-            <form class="footer-form">
-              <input
-                type="text"
-                class="form-control mb-3"
-                placeholder="Enter your email address"
-              />
-              <input type="submit" class="form-control" />
-            </form>
-          </div>
+         
         </div>
       </div>
     </footer>
@@ -184,7 +172,7 @@
         <div class="row">
           <div class="col-lg-4 mx-auto">
             <p class="m-0">
-              © Copyright 2024, All Rights Reserved by 100xTrader
+              © Copyright 2025, All Rights Reserved by 100xTrader
             </p>
           </div>
         </div>
