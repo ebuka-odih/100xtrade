@@ -1,7 +1,5 @@
 @extends('pages.layout.app')
 @section('content')
- 
-
 
     <section class="count-sec sec-padding">
       <div class="container">
@@ -12,13 +10,21 @@
                 <img src="front/img/Polygon-common.png" alt="" />
               </div>
               <h2 class="section-heading">
-                Amplify Your <span>Trading Potential</span>
+                About <span>100xTrader</span>
               </h2>
               <p>
-                Experience the future of leveraged trading. 100xTrader provides 
-                institutional-grade tools with up to 100x leverage across crypto, 
-                stocks, and forex markets. Our advanced risk management and 
-                real-time analytics help you maximize profits while minimizing risks.
+                At <strong>100xTrader</strong>, we’re redefining what it means to trade with confidence 
+                and scale. Our mission is to <strong>amplify your trading potential</strong> by giving 
+                every trader—whether beginner or pro—access to institutional-grade tools, 
+                real-time analytics, and advanced risk management systems that were once 
+                reserved for the elite.
+              </p>
+              <p>
+                With <strong>50M+ leveraged trades executed</strong>, <strong>$25M+ in total volume</strong>, 
+                and a community of <strong>50K+ active traders</strong>, we’ve built a platform that thrives 
+                on trust, performance, and innovation. Our <strong>100x leverage system</strong> empowers 
+                you to take bold positions in crypto, stocks, and forex while ensuring your capital 
+                is protected through smart, automated safeguards.
               </p>
               <div class="video-box">
                 <img src="front/img/video-thumbnail.png" class="img-fluid" alt="" />
@@ -27,7 +33,6 @@
           </div>
           <div class="col-lg-6">
             <div class="hex d-flex position-relative">
-              <!-- {/* <img src={Hexagon} alt="" /> */} -->
               <div class="d-flex flex-column count-parent">
                 <div class="count-box">
                   <img src="front/img/ios-box-outline.png" class="img-fluid" alt="" />
@@ -35,11 +40,7 @@
                   <p>Leveraged Trades</p>
                 </div>
                 <div class="count-box">
-                  <img
-                    src="front/img/ios-heart-outline.png"
-                    class="img-fluid"
-                    alt=""
-                  />
+                  <img src="front/img/ios-heart-outline.png" class="img-fluid" alt="" />
                   <h3>+$25M</h3>
                   <p>Total Volume</p>
                 </div>
@@ -51,11 +52,7 @@
                   <p>Max Leverage</p>
                 </div>
                 <div class="count-box">
-                  <img
-                    src="front/img/ios-people-outline.png"
-                    class="img-fluid"
-                    alt=""
-                  />
+                  <img src="front/img/ios-people-outline.png" class="img-fluid" alt="" />
                   <h3>+50K</h3>
                   <p>Active Traders</p>
                 </div>
@@ -75,13 +72,12 @@
                 <img src="front/img/Polygon-common.png" alt="" />
               </div>
               <h2 class="section-heading">
-                Advanced <span>Leveraged Trading</span> Features
+                Why <span>Choose Us</span>
               </h2>
               <p class="m-0">
-                Harness the power of 100x leverage with our comprehensive suite of 
-                professional trading tools. From real-time market analysis to 
-                automated risk management, everything you need for successful 
-                leveraged trading.
+                Trading at 100x leverage requires more than ambition—it requires the right 
+                tools, insights, and support. That’s why we built <strong>100xTrader</strong> with 
+                features that empower you to succeed in high-leverage markets.
               </p>
             </div>
           </div>
@@ -109,9 +105,9 @@
                     data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body">
-                      Amplify your trading power with up to 100x leverage across 
-                      crypto, stocks, and forex markets. Our advanced margin system 
-                      allows you to control larger positions with smaller capital.
+                      Control larger positions with smaller capital. Our 
+                      advanced margin system allows you to maximize your 
+                      earning potential across crypto, stocks, and forex markets. 
                     </div>
                   </div>
                 </div>
@@ -134,9 +130,9 @@
                     data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body">
-                      Protect your capital with our sophisticated risk management 
-                      tools. Set stop-loss orders, take-profit levels, and leverage 
-                      limits to manage your exposure and maximize your trading success.
+                      Protect your investments with sophisticated risk management 
+                      tools. Customize stop-loss orders, take-profit levels, and 
+                      leverage limits to safeguard your capital while trading boldly. 
                     </div>
                   </div>
                 </div>
@@ -159,9 +155,9 @@
                     data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body">
-                      Access live market data, advanced charting tools, and 
-                      technical indicators. Our real-time analytics help you make 
-                      informed decisions in fast-moving leveraged markets.
+                      Stay ahead of the market with live data, advanced charting 
+                      tools, and technical indicators. Make informed decisions in 
+                      fast-moving leveraged markets. 
                     </div>
                   </div>
                 </div>
@@ -184,9 +180,9 @@
                     data-bs-parent="#accordionExample"
                   >
                     <div class="accordion-body">
-                      Follow and copy successful traders with proven track records. 
-                      Share your strategies, learn from the community, and build 
-                      your reputation as a skilled leveraged trader.
+                      Learn and grow with the community. Follow and copy successful 
+                      traders, share strategies, and build your reputation as a 
+                      skilled leveraged trader. 
                     </div>
                   </div>
                 </div>
@@ -205,7 +201,5 @@
         </div>
       </div>
     </section>
-
-
 
 @endsection

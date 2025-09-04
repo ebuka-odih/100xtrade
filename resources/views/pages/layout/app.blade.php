@@ -150,7 +150,7 @@
             <h3>PRODUCT</h3>
             <ul class="list-unstyled">
               <!-- <li><a href="#">Product</a></li> -->
-              <li><a href="#">About</a></li>
+              <li><a href="{{ route('about') }}">About</a></li>
               <li><a href="#">Features</a></li>
             </ul>
           </div>
