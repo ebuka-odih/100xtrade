@@ -20,10 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'pages.index')->name('index');
 Route::view('/about', 'pages.about')->name('about');
 Route::view('/contact', 'pages.contact')->name('contact');
-Route::view('/our-solutions', 'pages.our-solutions')->name('our-solutions');
-Route::view('/profit-calculator', 'pages.calculator')->name('calculator');
-Route::view('/fcm-disclosure', 'pages.disclosure')->name('disclosure');
-Route::view('/terms-condition', 'pages.terms')->name('terms');
+Route::view('/terms-of-service', 'pages.tos')->name('tos');
+Route::view('/privacy', 'pages.privacy')->name('privacy');
 
 Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 'user.'], function () {
 

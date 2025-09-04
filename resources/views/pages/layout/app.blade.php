@@ -151,16 +151,15 @@
             <ul class="list-unstyled">
               <!-- <li><a href="#">Product</a></li> -->
               <li><a href="{{ route('about') }}">About</a></li>
-              <li><a href="#">Features</a></li>
+              <li><a href="mailto:admin@100xtrader.com" target=_blank>Contact Us</a></li>
             </ul>
           </div>
           <div class="col-lg-2">
             <h3>LEGAL</h3>
             <ul class="list-unstyled">
               <!-- <li><a href="#">Legal</a></li> -->
-              <li><a href="#">Refund Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="{{ route('tos') }}">Terms of Service</a></li>
+              <li><a href="{{ route('privacy') }}">Privacy Policy</a></li>
             </ul>
           </div>
          
