@@ -1,190 +1,198 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
+  
+
 <head>
-    <!-- meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Premium HTML5 Template by Indonez">
-    <meta name="keywords" content="blockit, uikit3, indonez, handlebars, scss, javascript">
-    <meta name="author" content="Indonez">
-    <meta name="theme-color" content="#FC5B3F">
-    <!-- preload assets -->
-    <link rel="preload" href="{{ asset('fonts/fa-brands-400.woff2') }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ asset('fonts/fa-solid-900.woff2') }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ asset('fonts/inter-v12-latin-regular.woff2') }}" as="font" type="font/woff2"
-          crossorigin>
-    <link rel="preload" href="{{ asset('fonts/inter-v12-latin-500.woff2') }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ asset('fonts/inter-v12-latin-700.woff2') }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ asset('css/style.css') }}" as="style">
-    <link rel="preload" href="{{ asset('js/vendors/uikit.min.js') }}" as="script">
-    <link rel="preload" href="{{ asset('js/utilities.min.js') }}" as="script">
-    <link rel="preload" href="{{ asset('js/config-theme.js') }}" as="script">
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <!-- uikit -->
-    <script src="{{ asset('js/vendors/uikit.min.js') }}"></script>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <!-- touch icon -->
-    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon.png">
-    <title>{{ env('APP_NAME') }}</title>
-    <script src="//code.jivosite.com/widget/lBR9ssOUXB" async></script>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ env('APP_NAME')}}</title>
+    <link href="front/css/bootstrap-min.css" rel="stylesheet" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="front/css/style.css" rel="stylesheet" />
     <style>
-        /* Default: hide on large screens */
-        .mobile-register-btn {
-            display: none;
-        }
-
-        /* Show on mobile (screen width 768px and below) */
-        @media (max-width: 768px) {
-            .mobile-register-btn {
-                display: block;
-            }
-        }
+      .brand-text {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-decoration: none;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      
+      .navbar-brand .brand-text {
+        font-size: 1.8rem;
+      }
+      
+      .footer-logo .brand-text {
+        font-size: 1.5rem;
+        color: #333;
+        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .brand-text:hover {
+        text-decoration: none;
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+      }
     </style>
-</head>
-
-<body>
-<!-- page loader begin -->
-<div class="page-loader">
-    <div></div>
-    <div></div>
-    <div></div>
-</div>
-<!-- page loader end -->
-<!-- header begin -->
-<header style="display: none">
-    <div class="uk-section uk-padding-remove-vertical">
-        <nav class="uk-navbar-container" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
-            <div class="uk-container" data-uk-navbar>
-                <div class="uk-navbar-left">
-                    <a class="uk-navbar-item uk-logo" href="{{ route('index') }}">
-                        <img src="{{ asset('img/logo.png') }}" alt="logo" width="200" height="80">
-                    </a>
-                    <ul class="uk-navbar-nav uk-visible@m">
-
-                        <li><a href="{{ route('index') }}">Home</a></li>
-                        <li><a href="{{ route('about') }}">About STP</a></li>
-                        <li><a href="{{ route('contact') }}">Contact Us</a></li>
-                        <a
-                            style="padding: 10px; font-size: 17px; text-align: center; width: 100%; height: 50px"
-                            class="uk-button uk-button-primary uk-border-rounded mobile-register-btn"
-                            href="{{ route('register') }}"
-                        >
-                            Register
-                        </a>
-                    </ul>
-                </div>
-                <div class="uk-navbar-right">
-                    <div class="uk-navbar-item uk-visible@m in-optional-nav">
-                        <a href="{{ route('register') }}" class="uk-button uk-button-primary uk-border-rounded">Create
-                            account</a>
-                        <a href="{{ route('login') }}" class="uk-button uk-button-link">Sign in<i
-                                class="fas fa-user-circle"></i></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
-<!-- header end -->
-@yield('content')
-<!-- footer begin -->
-<footer style="display: none">
-    <div class="uk-section uk-section-secondary in-footer-feature uk-margin-medium-top">
-        <div class="uk-container">
-            <div class="uk-grid uk-flex uk-flex-center">
-                <div class="uk-width-5-6@m">
-                    <div class="uk-grid uk-grid-collapse uk-child-width-1-3@s" data-uk-grid="">
-                        <div class="uk-flex uk-flex-middle">
-                            <div class="in-icon-wrap uk-margin-right">
-                                <i class="fas fa-history"></i>
-                            </div>
-                            <div>
-                                <h6 class="uk-margin-remove">12 years of Excellence</h6>
-                            </div>
-                        </div>
-                        <div class="uk-flex uk-flex-middle uk-flex-center@m">
-                            <div class="in-icon-wrap uk-margin-right">
-                                <i class="fas fa-trophy"></i>
-                            </div>
-                            <div>
-                                <h6 class="uk-margin-remove">15+ Global Awards</h6>
-                            </div>
-                        </div>
-                        <div class="uk-flex uk-flex-middle uk-flex-right@m">
-                            <div class="in-icon-wrap uk-margin-right">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div>
-                                <h6 class="uk-margin-remove">24/7 Customer Support</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <script>
+      (function (w) {
+        w.fpr =
+          w.fpr ||
+          function () {
+            w.fpr.q = w.fpr.q || [];
+            w.fpr.q[arguments[0] == "set" ? "unshift" : "push"](arguments);
+          };
+      })(window);
+      fpr("init", { cid: "wj6y8k0k" });
+      fpr("click");
+    </script>
+    <script src="https://cdn.firstpromoter.com/fpr.js" async></script>
+    <script>
+      function getFPTid() {
+        return window.FPROM && window.FPROM.data.tid;
+      }
+      function initializeFPRPaymentLinks() {
+        console.log("initialized fpr on payment links");
+        setTimeout(function () {
+          var stripePaymentLinks = document.querySelectorAll(
+            'a[href^="https://buy.stripe.com/"]'
+          );
+          stripePaymentLinks.forEach(function (link) {
+            // Get current url
+            var oldStripePaymentUrl = link.getAttribute("href");
+            // Get the tid
+            var tid = getFPTid();
+            if (tid) {
+              var url = new URL(oldStripePaymentUrl.html);
+              url.searchParams.set("client_reference_id", tid);
+              link.setAttribute("href", url.toString());
+            }
+          });
+        }, 800);
+      }
+      if (window.attachEvent) {
+        window.attachEvent("onload", initializeFPRPaymentLinks);
+      } else {
+        window.addEventListener("load", initializeFPRPaymentLinks, false);
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <span class="brand-text">{{ config('app.name') }}</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  href="{{ route('register') }}"
+                  class="text-white nav-link"
+                >
+                  Sign up</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('login') }}" class="try-btn nav-link">Sign in</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
-    <div class="uk-section uk-background-secondary uk-light">
-        <div class="uk-container uk-text-small">
-            <div class="uk-child-width-1-2@m" data-uk-grid="">
-                <div class="in-footer-logo">
-                    <img src="{{ asset('img/logo.png') }}" alt="logo" width="200" height="80">
-                    {{--						<img src="img/in-lazy.gif" data-src="img/in-logo.svg" alt="logo" width="127" height="27" data-uk-img="">--}}
-                </div>
-            </div>
-            <div class="uk-child-width-1-2@s uk-child-width-1-4@m uk-margin-large-top" data-uk-grid="">
-                <div>
-                    <h5>Markets</h5>
-                    <ul class="uk-list uk-link-text">
-                        <li><a href="{{ route('user.dashboard') }}">Stocks</a></li>
-                        <li><a href="{{ route('user.dashboard') }}">Forex</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5>Company</h5>
-                    <ul class="uk-list uk-link-text">
-                        <li><a href="{{ route('disclosure') }}">FCM Disclosure</a></li>
-                        <li><a href="{{ route('terms') }}">Terms & Condition </a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5>Account Types</h5>
-                    <ul class="uk-list uk-link-text">
-                        <li><a href="{{ route('user.dashboard') }}">Demo account</a></li>
-                        <li><a href="{{ route('user.dashboard') }}">Standard account</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5>Learn to Trade</h5>
-                    <ul class="uk-list uk-link-text">
-                        <li><a href="{{ route('user.dashboard') }}">News and trade ideas</a></li>
-                        <li><a href="{{ route('user.dashboard') }}">Trading strategy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="uk-grid uk-margin-large-top">
-                <div class="uk-width-1-1">
-                    <p class="copyright-text uk-heading-line"><span>Copyright ©{{ Date('Y') }} {{ env('APP_NAME') }} Inc. All Rights Reserved.</span>
-                    </p>
+      </nav>
+    </header>
+    
 
-                </div>
-            </div>
+    @yield("content")
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <a class="footer-logo mb-4 d-flex" href="#">
+              <span class="brand-text">{{ config('app.name') }}</span>
+            </a>
+            <p class="pe-lg-5">
+              The premier leveraged trading platform offering up to 100x leverage 
+              across crypto, stocks, and forex markets. Advanced risk management, 
+              real-time analytics, and professional tools for serious traders.
+            </p>
+          </div>
+          <div class="col-lg-2">
+            <h3>PRODUCT</h3>
+            <ul class="list-unstyled">
+              <!-- <li><a href="#">Product</a></li> -->
+              <li><a href="#">About</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Affiliate</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2">
+            <h3>LEGAL</h3>
+            <ul class="list-unstyled">
+              <!-- <li><a href="#">Legal</a></li> -->
+              <li><a href="#">Refund Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h3>NEWSLETTER</h3>
+            <form class="footer-form">
+              <input
+                type="text"
+                class="form-control mb-3"
+                placeholder="Enter your email address"
+              />
+              <input type="submit" class="form-control" />
+            </form>
+          </div>
         </div>
-    </div>
-</footer>
-<!-- footer end -->
-<!-- to top begin -->
-<a href="#" class="to-top uk-visible@m" data-uk-scroll>
-    Top<i class="fas fa-chevron-up"></i>
-</a>
-<!-- to top end -->
-<!-- javascript -->
-<script src="{{ asset('js/utilities.min.js') }}"></script>
-<script src="{{ asset('js/config-theme.js') }}"></script>
-</body>
+      </div>
+    </footer>
+    <section class="bottom-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mx-auto">
+            <p class="m-0">
+              © Copyright 2024, All Rights Reserved by 100xTrader
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="front/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+  </body>
 
 
-<!-- Mirrored from www.indonez.com/html-demo/liquid/homepage4.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 22:31:41 GMT -->
 </html>
